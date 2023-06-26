@@ -1,0 +1,11 @@
+Interet simple
+
+VARIABLE
+    S est un réel
+    N est un entier
+    i est un réel
+    Valeur est un réel
+Debut programme
+    Ecrire "Quelle est la somme sur votre compte ?"
+    Lire <-- S
+    V <-- S()
