@@ -1,0 +1,13 @@
+VARIABLE
+    N1 est un entier
+    N2 est un entier
+    Resultat est un réel
+Debut programme
+    Ecrire "Saisir le premier nombre : "
+    Lire <-- N1
+    Ecrire "Saisir le second nombre : "
+    Lire <-- N2
+    Resultat <-- (N1 + N2)/2
+    Ecrire "La moyenne des deux nombres saisis est : "
+    Ecrire Resultat
+Fin programme
