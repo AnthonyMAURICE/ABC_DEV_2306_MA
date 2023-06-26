@@ -1,0 +1,15 @@
+VARIABLE
+    a est un entier
+    b est un entier
+    c est un entier
+Debut programme
+    Ecrire "Entrez la valeur de a : "
+    Lire <-- a
+    Ecrire "Entrez la valeur de b : "
+    Lire <-- b
+    Ecrire a + b
+    c <-- a
+    a <-- b
+    b <-- c
+    Ecrire a + b
+Fin programme    
