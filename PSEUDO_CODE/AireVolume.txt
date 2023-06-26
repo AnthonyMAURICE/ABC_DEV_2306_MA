@@ -1,0 +1,13 @@
+VARIABLE
+    Rayon est un réel
+    Aire est un réel
+    Volume est un réel
+Debut programme
+    Ecrire "Saisissez le rayon du cercle"
+    Lire <-- Rayon
+    Aire <-- 4*π*R^2
+    Volume <-- (4/3)*π*R^3
+    Ecrire "L'aire et le volume du cercle est de : "
+    Ecrire Aire
+    Ecrire Volume
+Fin programme
