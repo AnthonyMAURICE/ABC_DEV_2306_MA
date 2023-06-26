@@ -8,4 +8,20 @@ VARIABLE
 Debut programme
     Ecrire "Quelle est la somme sur votre compte ?"
     Lire <-- S
-    V <-- S()
+    Valeur <-- S(1 + N * i)
+    Ecrire "La valeur acquise par les intérêts est de : " + Valeur
+Fin programme
+
+Intérêt composé :
+
+VARIABLE
+    S est un réel
+    N est un entier
+    i est un réel
+    Valeur est un réel
+Debut programme
+    Ecrire "Quelle est la somme sur votre compte ?"
+    Lire <-- S
+    Valeur <-- S(1+i)^N
+    Ecrire "La valeur acquise par les intérêts composés est de : " + Valeur
+Fin programme
