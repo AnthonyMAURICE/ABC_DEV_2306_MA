@@ -7,7 +7,7 @@ Debut programme
     Lire <-- a
     Ecrire "Entrez la valeur de b : "
     Lire <-- b
-    Ecrire a + b
+    Ecrire "Les valeurs choisies sont : ",a, " et " ,b
     c <-- a
     a <-- b
     b <-- c
