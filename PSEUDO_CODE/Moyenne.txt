@@ -7,6 +7,6 @@ Début programme
     Lire <-- N1
     Ecrire "Saisir le second nombre : "
     Lire <-- N2
-    Resultat <-- (N1 + N2)/2
+    Resultat <-- (N1+N2)/2
     Ecrire "La moyenne des deux nombres saisis est : ",Resultat
 Fin programme
