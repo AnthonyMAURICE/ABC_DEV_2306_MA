@@ -9,5 +9,5 @@ Debut programme
     Lire <-- S
     Valeur1 <-- S*(1 + N * i)
     Valeur2 <-- S*(1+i)^N
-    Ecrire "Les valeurs acquisent par les intérêts est de : ",Valeur1, " et ", Valeur2
+    Ecrire "Les valeurs acquisent par les intérêts est de : ",Valeur1, " et ",Valeur2
 Fin programme
