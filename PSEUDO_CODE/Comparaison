@@ -1,8 +1,8 @@
 VARIABLE
-    age est entier
+    a est entier
 Debut programme
     Ecrire "Quel est votre âge ?"
-    Lire <-- age
+    Lire <-- a
     Si (a >= 18) alors
         Ecrire "Vous êtes majeur"
     Sinon si (a < 0) alors
