@@ -2,7 +2,7 @@ VARIABLE
     a est un entier
     b est un entier
     c est un entier
-Debut programme
+Début programme
     Ecrire "Entrez la valeur de a : "
     Lire <-- a
     Ecrire "Entrez la valeur de b : "

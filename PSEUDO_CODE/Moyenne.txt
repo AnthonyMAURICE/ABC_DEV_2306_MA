@@ -2,7 +2,7 @@ VARIABLE
     N1 est un entier
     N2 est un entier
     Resultat est un réel
-Debut programme
+Début programme
     Ecrire "Saisir le premier nombre : "
     Lire <-- N1
     Ecrire "Saisir le second nombre : "

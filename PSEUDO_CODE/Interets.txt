@@ -4,7 +4,7 @@ VARIABLE
     i est un réel
     Valeur1 est un réel
     Valeur2 est un réel
-Debut programme
+Début programme
     Ecrire "Quelle est la somme sur votre compte ?"
     Lire <-- S
     Valeur1 <-- S*(1 + N * i)

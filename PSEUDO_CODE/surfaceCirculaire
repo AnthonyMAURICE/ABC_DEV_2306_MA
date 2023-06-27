@@ -2,7 +2,7 @@ VARIABLE
     R est un réel
     A est un réel
     Resultat est un réel
-Debut programme
+Début programme
     Ecrire "Quelle est la valeur du rayon du cercle ? "
     Lire <-- R
     Ecrire "Quel est l'angle pour le calcul ? "

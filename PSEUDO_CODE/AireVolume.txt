@@ -2,7 +2,7 @@ VARIABLE
     R est un réel
     Aire est un réel
     Volume est un réel
-Debut programme
+Début programme
     Ecrire "Saisissez le rayon du cercle : "
     Lire <-- R
     Aire <-- 4*π*R^2
