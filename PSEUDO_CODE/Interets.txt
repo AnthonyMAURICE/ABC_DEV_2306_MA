@@ -1,4 +1,4 @@
-Interet simple
+//Interet simple
 
 VARIABLE
     S est un réel
@@ -12,7 +12,7 @@ Debut programme
     Ecrire "La valeur acquise par les intérêts est de : " + Valeur
 Fin programme
 
-Intérêt composé :
+//Intérêt composé :
 
 VARIABLE
     S est un réel
