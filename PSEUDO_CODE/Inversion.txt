@@ -11,5 +11,5 @@ Début programme
     c <-- a
     a <-- b
     b <-- c
-    Ecrire "Les valeurs finales sont : ",a," et ",b
+    Ecrire "Les valeurs finales (après inversion) sont : ",a," et ",b
 Fin programme    
