@@ -1,5 +1,3 @@
-//Interet simple
-
 VARIABLE
     S est un réel
     N est un entier
