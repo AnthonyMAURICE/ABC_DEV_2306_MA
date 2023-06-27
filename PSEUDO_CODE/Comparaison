@@ -5,7 +5,7 @@ Debut programme
     Lire <-- a
     Si (a >= 18) alors
         Ecrire "Vous êtes majeur"
-    Sinon si (a < 0) alors
+    Sinon Si (a < 0) alors
         Ecrire "Vous n'êtes pas encore né"
     Sinon
         Ecrire "Vous êtes mineur"
