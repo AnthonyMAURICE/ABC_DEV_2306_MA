@@ -7,5 +7,5 @@ Debut programme
     Lire <-- R
     Aire <-- 4*π*R^2
     Volume <-- (4/3)*π*R^3
-    Ecrire "L'aire et le volume du cercle est de : " + Aire + " et " + Volume
+    Ecrire "L'aire et le volume du cercle est de : ",Aire," et ",Volume
 Fin programme
