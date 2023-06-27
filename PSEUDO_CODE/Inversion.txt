@@ -11,5 +11,5 @@ Debut programme
     c <-- a
     a <-- b
     b <-- c
-    Ecrire "Les valeurs finales sont : " + a + b
+    Ecrire "Les valeurs finales sont : " + a+ " et " + b
 Fin programme    
