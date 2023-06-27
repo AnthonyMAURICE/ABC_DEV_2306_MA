@@ -2,6 +2,8 @@ VARIABLE
     R est un réel
     A est un réel
     Resultat est un réel
+CONSTANTE
+    π est un réel
 Début programme
     Ecrire "Quelle est la valeur du rayon du cercle ? "
     Lire <-- R
