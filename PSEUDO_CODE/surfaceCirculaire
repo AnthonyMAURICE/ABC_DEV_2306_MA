@@ -1,0 +1,12 @@
+VARIABLE
+    R est un réel
+    A est un réel
+    Resultat est un réel
+Debut programme
+    Ecrire "Quelle est la valeur du rayon du cercle ? "
+    Lire <-- R
+    Ecrire "Quel est l'angle pour le calcul ? "
+    Lire <-- A
+    Resultat <-- (π*R^2*A)/360
+    Ecrire "L'aire du secteur circulaire est de : " + Resultat
+Fin programme
