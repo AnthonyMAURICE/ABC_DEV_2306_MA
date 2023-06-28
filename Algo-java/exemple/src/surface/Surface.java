@@ -5,6 +5,22 @@ import java.util.Scanner;
 public class Surface {
 
 	public static void main(String[] args) {
+		/*
+		 VARIABLE
+		    R est un réel
+		    A est un réel
+		    Resultat est un réel
+		CONSTANTE
+		    Pi est un réel
+		Début programme
+		    Ecrire "Quelle est la valeur du rayon du cercle ? "
+		    Lire <-- R
+		    Ecrire "Quel est l'angle pour le calcul ? "
+		    Lire <-- A
+		    Resultat <-- (Pi*R^2*A)/360
+		    Ecrire "L'aire du secteur circulaire est de : ",Resultat
+		Fin programme
+		 */
 		Scanner scanner = new Scanner(System.in);
 			float rayon;
 			float angle;
