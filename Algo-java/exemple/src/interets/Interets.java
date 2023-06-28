@@ -20,7 +20,6 @@ public class Interets {
 		    Lire <-- i
 		    Ecrire "Sur combien d'années ?"
 		    Lire <-- N
-		
 		    Valeur1 <-- S*(1 + N * i)
 		    Valeur2 <-- S*(1+i)^N
 		    Ecrire "Les valeurs acquisent par les intérêts sont de : ",Valeur1, " et ",Valeur2
