@@ -22,8 +22,7 @@ public class Surface {
 		Fin programme
 		 */
 		Scanner scanner = new Scanner(System.in);
-			float rayon;
-			float angle;
+			float rayon, angle;
 			double resultat;
 			
 			System.out.println("Saisissez le rayon du cercle : ");

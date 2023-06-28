@@ -26,11 +26,9 @@ public class Interets {
 		Fin programme
 		 */
 		Scanner scanner = new Scanner(System.in);
-			float somme;
+			float somme, interet;
 			int annees;
-			float interet;
-			double valeur1;
-			double valeur2;
+			double valeur1, valeur2;
 			System.out.println("Saisissez la somme sur le compte : ");
 			somme = scanner.nextFloat();
 			System.out.println("Avec quel taux ?");

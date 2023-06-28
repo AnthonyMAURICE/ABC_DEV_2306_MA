@@ -22,9 +22,7 @@ public class Inversion {
 			    Ecrire "Les valeurs finales (après inversion) sont : ",a," et ",b
 			Fin programme    
 		 */
-		int a;
-		int b;
-		int c;
+		int a, b, c;
 		Scanner scanner = new Scanner(System.in);
 			System.out.println("Saisissez la valeur de \"a\" : ");
 			a = scanner.nextInt();

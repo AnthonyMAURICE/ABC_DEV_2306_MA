@@ -22,8 +22,7 @@ public class App {
 		    Ecrire "La moyenne des deux nombres saisis est : ",Resultat
 		Fin programme
 		 */
-		float n1;
-		float n2;
+		float n1, n2;
 		float result;
 		Scanner scanner = new Scanner(System.in);
 			System.out.println("Saisissez le premier nombre : ");

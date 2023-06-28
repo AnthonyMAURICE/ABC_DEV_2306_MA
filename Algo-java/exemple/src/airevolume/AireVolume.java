@@ -24,8 +24,7 @@ public class AireVolume {
 		*/
 		Scanner scanner = new Scanner(System.in);
 			float rayon;
-			double aire;
-			double volume;
+			double aire, volume;
 			
 			System.out.println("Saisissez le rayon de la sphere : ");
 			rayon = scanner.nextFloat();
