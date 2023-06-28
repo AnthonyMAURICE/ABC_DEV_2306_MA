@@ -15,7 +15,7 @@ public class App {
 			System.out.println("Vous etes donc majeur.");
 		}
 		else if (a < 0) {
-			System.out.println("Vous n'etes pas encore ne !");
+			System.out.println("Vous n'etes pas encore ne(e) !");
 		}
 		else {
 			System.out.println("Vous etes donc mineur.");
