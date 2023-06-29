@@ -26,7 +26,7 @@ public class Interets {
 		Fin programme
 		 */
 		Scanner scanner = new Scanner(System.in);
-			double somme, interet,valeur1, valeur2;
+			double somme, interet,valeur1, valeur2, gain1, gain2;
 			int annees;
 			System.out.println("Saisissez la somme sur le compte : ");
 			somme = scanner.nextFloat();
@@ -36,7 +36,12 @@ public class Interets {
 			annees = scanner.nextInt();
 			valeur1 = somme*(1 + annees * (interet/100));
 			valeur2 = somme*Math.pow(1+(interet/100), annees);
-			System.out.println("Les valeurs acquises par les interets sont de " + valeur1 + " pour le simple et de " + valeur2 + " pour le compose.");
+			gain1 = valeur1 - somme;
+			gain2 = valeur2 - somme;
+			System.out.println("Les valeurs acquises par les interets sont de " 
+								+ valeur1 + " pour le simple et de " 
+								+ valeur2 + " pour le compose, soit des gains respectifs de " 
+								+ gain1 + " et " + gain2);
 		scanner.close();
 	}
 
