@@ -31,7 +31,7 @@ public class App {
 			n1 = scanner.nextInt();
 			System.out.println("Saisissez le second nombre : ");
 			n2 = scanner.nextInt();
-			result = (n1 + n2)/2;
+			result = (n1 + n2)/2d; // le "d" force le double, même avec 2 int en entrée
 			System.out.println("La moyenne des deux nombres est : " + result);
 		scanner.close();
 	}
