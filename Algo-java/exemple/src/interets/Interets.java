@@ -26,17 +26,16 @@ public class Interets {
 		Fin programme
 		 */
 		Scanner scanner = new Scanner(System.in);
-			float somme, interet;
+			double somme, interet,valeur1, valeur2;
 			int annees;
-			double valeur1, valeur2;
 			System.out.println("Saisissez la somme sur le compte : ");
 			somme = scanner.nextFloat();
 			System.out.println("Avec quel taux ?");
 			interet = scanner.nextFloat();
 			System.out.println("Sur combien d'annees ?");
 			annees = scanner.nextInt();
-			valeur1 = somme*(1 + annees * interet);
-			valeur2 = somme*Math.pow(1+interet, annees);
+			valeur1 = somme*(1 + annees * (interet/100));
+			valeur2 = somme*Math.pow(1+(interet/100), annees);
 			System.out.println("Les valeurs acquises par les interets sont de " + valeur1 + " pour le simple et de " + valeur2 + " pour le compose.");
 		scanner.close();
 	}

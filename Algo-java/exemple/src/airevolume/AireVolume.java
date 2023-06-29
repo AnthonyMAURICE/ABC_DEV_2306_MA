@@ -23,14 +23,14 @@ public class AireVolume {
 		Fin programme
 		*/
 		Scanner scanner = new Scanner(System.in);
-			float rayon;
+			double rayon;
 			double aire, volume;
 			
 			System.out.println("Saisissez le rayon de la sphere : ");
 			rayon = scanner.nextFloat();
 			aire = 4*Math.PI*Math.pow(rayon, 2);
 			volume = (4/3)*Math.PI*Math.pow(rayon, 3);
-			System.out.println("L'aire et le volume de la sphere de rayon " + rayon + " sont : " + aire + ", " + volume);
+			System.out.println("L'aire et le volume de la sphere de rayon " + rayon + " sont : " + aire + " et " + volume);
 		scanner.close();
 	}
 
