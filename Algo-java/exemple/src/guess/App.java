@@ -11,7 +11,7 @@ public class App {
 		number = (int)(Math.random()*101);
 		while (guessed == false) {;
 			essais++;
-			System.out.println("Devinez le chiffre mystere");
+			System.out.println("Devinez le chiffre mystere entre 0 et 100");
 			guess = scanner.nextInt();
 			if (guess == number) {
 				System.out.println("Vous avez gagne !!!");
