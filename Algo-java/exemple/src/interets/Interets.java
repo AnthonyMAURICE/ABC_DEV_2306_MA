@@ -29,19 +29,19 @@ public class Interets {
 			double somme, interet,valeur1, valeur2, gain1, gain2;
 			int annees;
 			System.out.println("Saisissez la somme sur le compte : ");
-			somme = scanner.nextFloat();
+			somme = scanner.nextDouble();
 			System.out.println("Avec quel taux ?");
-			interet = scanner.nextFloat();
+			interet = scanner.nextDouble();
 			System.out.println("Sur combien d'annees ?");
 			annees = scanner.nextInt();
 			valeur1 = somme*(1 + annees * (interet/100));
 			valeur2 = somme*Math.pow(1+(interet/100), annees);
 			gain1 = valeur1 - somme;
 			gain2 = valeur2 - somme;
-			System.out.println("Les valeurs acquises par les interets sont de " 
-								+ valeur1 + " pour le simple et de " 
-								+ valeur2 + " pour le compose, soit des gains respectifs de " 
-								+ gain1 + " et " + gain2);
+			System.out.println("Les valeurs acquises (arrondis a deux decimales) par les interets sont de " 
+								+ Math.round(valeur1 * 100.0) / 100.0 + " pour le simple et de " 							// la méthode Math.round() arrondit, 
+								+ Math.round(valeur2 * 100.0) / 100.0 + " pour le compose, soit des gains respectifs (arrondis eux aussis) de " 	//et la multiplication suivie de la division par 100.0 
+								+ Math.round(gain1 * 100.0) / 100.0 + " et " + Math.round(gain2 * 100.0) / 100.0);			//retourne le résultat avec 2 décimales
 		scanner.close();
 	}
 

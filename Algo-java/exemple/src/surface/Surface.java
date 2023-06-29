@@ -30,7 +30,9 @@ public class Surface {
 			System.out.println("Saisissez l'angle : ");
 			angle = scanner.nextFloat();
 			resultat = (Math.PI*Math.pow(rayon, 2)*angle)/360;
-			System.out.println("L'aire du secteur circulaire est de : " + resultat);
+			System.out.println("L'aire du secteur circulaire (arrondie à deux decimales) est de : " 
+								+ (Math.round(resultat * 100.0)/ 100.0));
+			// la méthode Math.round() arrondit, et la multiplication suivie de la division par 100.0 retourne le résultat avec 2 décimales
 		scanner.close();
 	}
 

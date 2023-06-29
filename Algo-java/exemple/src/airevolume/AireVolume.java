@@ -29,7 +29,9 @@ public class AireVolume {
 			rayon = scanner.nextDouble();
 			aire = 4*Math.PI*Math.pow(rayon, 2);
 			volume = (4/3)*Math.PI*Math.pow(rayon, 3);
-			System.out.println("L'aire et le volume de la sphere de rayon " + rayon + " sont : " + aire + " et " + volume);
+			System.out.println("L'aire et le volume (arrondis à deux decimales) de la sphere de rayon " 
+								+ rayon + " sont : " + Math.round(aire * 100.0)/100.0 	// la méthode Math.round() arrondit, 
+								+ " et " + Math.round(volume * 100.0) / 100.0);			//et la multiplication suivie de la division par 100.0 retourne le résultat avec 2 décimales
 		scanner.close();
 	}
 
