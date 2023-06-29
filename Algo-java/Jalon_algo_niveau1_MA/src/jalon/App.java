@@ -12,10 +12,10 @@ public class App {
 			prenom = scanner.next();
 			System.out.println("Entrez votre nom : ");
 			nom = scanner.next();
-			System.out.println("Saisissez le numéro de votre département : ");
+			System.out.println("Saisissez le numero de votre departement : ");
 			departement = scanner.nextInt();
 			System.out.println("Les deux adresses mail que nous vous proposons sont : \"" + prenom + nom + departement + mail
-								+ "\" ou \"" + nom + departement + prenom + mail + "\"");
+								+ "\" et \"" + nom + departement + prenom + mail + "\"");
 		scanner.close();
 	}
 
