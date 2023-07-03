@@ -1,4 +1,5 @@
 package guess;
+import java.util.Random;
 import java.util.Scanner;
 public class App {
 
@@ -6,6 +7,7 @@ public class App {
 		// TODO Auto-generated method stub
 		int number, guess, essais;
 		boolean guessed = false;
+		Random rand = new Random();
 		essais = 0;
 		Scanner scanner = new Scanner(System.in);
 		number = (int)(Math.random()*101);
@@ -18,9 +20,10 @@ public class App {
 				guessed = true;
 			}else if (guess < number){
 				System.out.println("Vous etes en dessous...");
-				
+				System.out.println("Entre " + (number-rand.nextInt(10)) + " et " + (number+rand.nextInt(10)));
 			}else {
 				System.out.println("Vous etes au dessus...");
+				System.out.println("Entre " + (number-rand.nextInt(10)) + " et " + (number+rand.nextInt(10)));
 			}
 		}
 		System.out.println("Bravo ! vous avez reussi en " + essais + " essais !");
