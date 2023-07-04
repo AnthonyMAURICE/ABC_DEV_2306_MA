@@ -6,6 +6,7 @@ public class App {
 		// TODO Auto-generated method stub
 
 		double a, b, c;
+		String message = "La chaine reorganisee est ";
 		
 		Scanner scanner = new Scanner(System.in);
 			System.out.println("Entrez le premier nombre : ");
@@ -17,23 +18,23 @@ public class App {
 			
 			if(c < b && a > c) {
 				if(a < b) {
-					System.out.println("La chaine reorganisee est \"c\" \"a\" \"b\" " + c + " " + a + " " + b);
+					System.out.println(message + "\"c\" \"a\" \"b\" " + c + " " + a + " " + b);
 				}else {
-					System.out.println("La chaine reorganisee est \"c\" \"b\" \"a\" " + c + " " + b + " " + a);
+					System.out.println(message + "\"c\" \"b\" \"a\" " + c + " " + b + " " + a);
 				}
 			
 			}else if(a < b) {
 				if(b < c) {
-					System.out.println("La chaine reorganisee est  \"a\" \"b\" \"c\" : " + a + " " + b + " " + c);
+					System.out.println(message + " \"a\" \"b\" \"c\" : " + a + " " + b + " " + c);
 				}else {
-					System.out.println("La chaine reorganisee est \"a\" \"c\" \"b\" " + a + " " + c + " " + b);
+					System.out.println(message + "\"a\" \"c\" \"b\" " + a + " " + c + " " + b);
 				}	
 			
 			}else{
 				if(a < c) {
-					System.out.println("La chaine reorganisee est \"b\" \"a\" \"c\" " + b + " " + a + " " + c);
+					System.out.println(message + "\"b\" \"a\" \"c\" " + b + " " + a + " " + c);
 				}else {
-					System.out.println("La chaine reorganisee est \"b\" \"c\" \"a\" " + b + " " + c + " " + a);
+					System.out.println(message + "\"b\" \"c\" \"a\" " + b + " " + c + " " + a);
 				}
 			}
 			

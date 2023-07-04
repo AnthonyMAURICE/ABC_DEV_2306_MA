@@ -8,14 +8,15 @@ public class App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int array [] = new int[5];
-		int number;
+		int number, count = 0;
 		boolean check = false;
 		
 		System.out.println("Rentrez 5 chiffres : ");
 		Scanner scanner = new Scanner(System.in);
 			for (int i = 0; i < 5; i++) {
+				count++;
+				System.out.println("Nombre " + count);
 				array[i] = scanner.nextInt();
-				System.out.println("Valeur : " + array[i]);
 			}
 			
 			Arrays.sort(array);
