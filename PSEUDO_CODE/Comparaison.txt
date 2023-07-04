@@ -1,12 +1,12 @@
 VARIABLE
-    a est entier
+    a est un entier
 Debut programme
     Ecrire "Quel est votre âge ?"
     Lire <-- a
     Si a >= 18 Alors
         Ecrire "Vous êtes majeur"
     Sinon Si a < 0 Alors
-        Ecrire "Vous n'êtes pas encore né"
+        Ecrire "Vous n'êtes pas encore né(e)"
     Sinon
         Ecrire "Vous êtes mineur"
     Fin Si

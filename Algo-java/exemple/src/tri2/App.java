@@ -15,27 +15,25 @@ public class App {
 			System.out.println("Entrez le troisieme nombre : ");
 			c = scanner.nextDouble();
 			
-			while(a >= c) {
+			while(a > c) {
 				d = c;
 				c = a;
 				a = d;
 			}
 			
-			while(a >= b) {
+			while(a > b) {
 				d = b;
 				b = a;
 				a = d;
 			}
 			
-			while(b >= c) {
+			while(b > c) {
 				d = c;
 				c = b;
 				b = d;
 			}
-			
 
-			
-			System.out.println("Les valeurs reorganisees donnent : a = " + a + ", b = " + b + " et c = " + c);
+			System.out.println("Les valeurs reorganisees donnent : \"a\" = " + a + ", \"b\" = " + b + " et \"c\" = " + c);
 		scanner.close();
 	}
 

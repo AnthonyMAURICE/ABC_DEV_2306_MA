@@ -31,7 +31,7 @@ public class App {
 			}
 			
 			if (check == true) {
-				System.out.println("Le nombre figure parmi les elements");
+				System.out.println("Le nombre " + number + " figure parmi les elements");
 			}else {
 				System.out.println("404 Number Not Found");
 			}
