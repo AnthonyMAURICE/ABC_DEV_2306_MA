@@ -23,7 +23,7 @@ public class App {
 				}else {
 					kiloError = scanner.next();
 					if (kiloError.equals("q")) {
-						System.exit(0);;
+						System.exit(0);
 					}else {
 						System.out.println("Entree invalide !");
 					}
