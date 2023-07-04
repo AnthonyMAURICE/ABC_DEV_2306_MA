@@ -1,0 +1,31 @@
+(Avec boucle while)
+VARIABLES
+a est un réel
+b est un réel
+c est un réel
+d est un réel
+
+Debut Programme
+    Ecrire "Entrez le premier nombre"
+    Lire <-- a
+    Ecrire "Entrez le second nombre"
+    Lire <-- b
+    Ecrire "Entrez le troisième nombre"
+    Lire <-- c
+    Tant Que a > c
+        d <-- c
+        c <-- a
+        a <-- d
+    Fin Tant Que
+    Tant Que a > b
+        d <-- b
+        b <-- a
+        a <-- d
+    Fin Tant Que
+    Tant Que b > c
+        d <-- c
+        c <-- b
+        b <-- d
+    Fin Tant Que
+    Ecrire "Les valeurs réorganisées donnent : a : ", a, " b : ", b, " et c : ", c
+Fin Programme

@@ -1,0 +1,14 @@
+VARIABLE
+divi est un entier
+Debut Programme
+    Ecrire "Entrez un nombre : "
+    Lire <-- divi
+    Ecrire "Les diviseurs de ", divi, " sont : "
+    Pour i < divi
+        Faire
+        Si (divi % i == 0 ET i != 1 ET i != divi)
+            Alors
+            Ecrire i
+        Fin Si
+    Fin Pour
+Fin Programme
