@@ -3,9 +3,11 @@ VARIABLE
 Debut programme
     Ecrire "Quel est votre âge ?"
     Lire <-- a
-    Si a >= 18 Alors
+    Si a >= 18 
+    Alors
         Ecrire "Vous êtes majeur"
-    Sinon Si a < 0 Alors
+    Sinon Si a < 0 
+    Alors
         Ecrire "Vous n'êtes pas encore né(e)"
     Sinon
         Ecrire "Vous êtes mineur"

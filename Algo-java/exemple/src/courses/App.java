@@ -20,7 +20,7 @@ public class App {
 				System.out.println("Entree invalide");
 			}
 			
-			shops += 1;
+			shops++;
 			System.out.println("Avec la somme de depart de : " + money + ", Barnabe a fait ses courses dans " + shops + " magasins.");
 		
 		scanner.close();
