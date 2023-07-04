@@ -6,15 +6,15 @@ public class App {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int a;
+		int age;
 		
 		System.out.println("Entrez votre age : ");
-		a = scanner.nextInt();
+		age = scanner.nextInt();
 		
-		if (a >= 18) {
+		if (age >= 18) {
 			System.out.println("Vous etes donc majeur.");
 		}
-		else if (a < 0) {
+		else if (age < 0) {
 			System.out.println("Vous n'etes pas encore ne(e) !");
 		}
 		else {

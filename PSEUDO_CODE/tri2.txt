@@ -11,23 +11,26 @@ Debut Programme
     Lire <-- b
     Ecrire "Entrez le troisième nombre"
     Lire <-- c
-    Si a > c
-        Alors
-        d <-- c
-        c <-- a
-        a <-- d
+    Debut Si
+        Si a > c
+            Alors
+            d <-- c
+            c <-- a
+            a <-- d
     Fin Si
-    Si a > b
-        Alors
-        d <-- b
-        b <-- a
-        a <-- d
+    Debut Si
+        Si a > b
+            Alors
+            d <-- b
+            b <-- a
+            a <-- d
     Fin Si
-    Si b > c
-        Alors
-        d <-- c
-        c <-- b
-        b <-- d
+    Debut Si
+        Si b > c
+            Alors
+            d <-- c
+            c <-- b
+            b <-- d
     Fin Si
     Ecrire "Les valeurs réorganisées dans l'ordre croissant donnent : a : ", a, " b : ", b, " et c : ", c
 Fin Programme

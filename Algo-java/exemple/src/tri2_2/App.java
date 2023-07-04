@@ -4,7 +4,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-double a, b, c, d;
+		double a, b, c, d;
 		
 		Scanner scanner = new Scanner(System.in);
 			System.out.println("Entrez le premier nombre : ");

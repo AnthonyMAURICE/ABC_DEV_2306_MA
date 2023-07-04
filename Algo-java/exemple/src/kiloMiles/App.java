@@ -31,7 +31,7 @@ public class App {
 				
 			}
 			
-			miles = kilo*1.609;
+			miles = kilo*0.62;
 			System.out.println(kilo + "km donne en miles : " + miles);		
 		
 	}

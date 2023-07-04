@@ -6,10 +6,11 @@ Debut Programme
     Lire <-- a
     Ecrire "Entrez la valeur de b"
     Lire <-- b
-    Si a <  b
-        Alors
-        Ecrire "a : ", a, "est plus petit que b : ", b
-    Sinon
-        Ecrire "b : ", b, "est plus petit que a : ", a
+    Debut Si
+        Si a <  b
+            Alors
+            Ecrire "a : ", a, "est plus petit que b : ", b
+        Sinon
+            Ecrire "b : ", b, "est plus petit que a : ", a
     Fin Si
 Fin Programme
