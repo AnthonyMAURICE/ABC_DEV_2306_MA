@@ -9,7 +9,7 @@ public class App {
 		ArrayList<Integer> binary = new ArrayList<Integer>();
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Entrez un nombre decimal : ");
+		System.out.println("Entrez un nombre en base dix : ");
 		decimal = scanner.nextInt();
 		firstNum = decimal;
 		while (decimal > 1 ) {
@@ -19,7 +19,7 @@ public class App {
 		}
 			binary.add(1);
 			Collections.reverse(binary);
-			System.out.println(firstNum + " en decimal donne : " + binary + " en binaire.");
+			System.out.println(firstNum + " en base dix donne : " + binary + " en binaire.");
 			
 			scanner.close();
 	}
