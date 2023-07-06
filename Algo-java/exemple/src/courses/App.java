@@ -4,16 +4,17 @@ public class App {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int s, shops = 0, money;
+		int somme, shops = 0, money;
 		
 		
 		Scanner scanner = new Scanner(System.in);
 			System.out.println("Quelle est la somme de depart ?");
-			s = scanner.nextInt();
-			money = s;
-			if(s > 1) {
-				while(s>3) {
-					s = s / 2 + 1;
+			somme = scanner.nextInt();
+			money = somme;
+			if(somme > 1) {
+				while(somme>2) {
+					System.out.println(somme);
+					somme = somme / 2 + 1;
 					shops +=1;
 				}
 			}else {

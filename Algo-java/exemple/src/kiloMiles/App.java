@@ -5,7 +5,8 @@ public class App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-			double  kilo = 0, miles;
+			double  kilo = 0;
+			double	miles;
 			String kiloError;
 			boolean legit = false;
 			
@@ -28,11 +29,10 @@ public class App {
 						System.out.println("Entree invalide !");
 					}
 				}
-				
 			}
 			
 			miles = kilo*0.62;
-			System.out.println(kilo + "km donne en miles : " + miles);		
+			System.out.println(kilo + "km donne : " + miles + " miles");		
 		
 	}
 

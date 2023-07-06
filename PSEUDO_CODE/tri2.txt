@@ -5,32 +5,37 @@ c est un réel
 d est un réel
 
 Debut Programme
-    Ecrire "Entrez le premier nombre"
+    Ecrire "Entrez le premier nombre (a)"
     Lire <-- a
-    Ecrire "Entrez le second nombre"
+    Ecrire "Entrez le second nombre (b)"
     Lire <-- b
-    Ecrire "Entrez le troisième nombre"
+    Ecrire "Entrez le troisième nombre (c)"
     Lire <-- c
     Debut Si
-        Si a > c
+        Si (c < b ET c < a)
             Alors
-            d <-- c
-            c <-- a
-            a <-- d
+                Debut Si
+                    Si (a < b)
+                    Alors
+                    Ecrire "c, a, b"
+                Sinon
+                    Ecrire "c, b, a"
+                Fin Si
+    
+        Sinon Si (a < b)
+            Alors 
+            Debut Si
+                Si (b < c)
+                    Ecrire "a, b, c"
+                    Sinon
+                    Ecrire "a, c, b"
+                Fin Si
+            Fin Si         
+        Sinon
+            Si (a < c)
+                Ecrire "b, a, c"
+                Sinon
+                Ecrire "b, c, a"
+            Fin Si
     Fin Si
-    Debut Si
-        Si a > b
-            Alors
-            d <-- b
-            b <-- a
-            a <-- d
-    Fin Si
-    Debut Si
-        Si b > c
-            Alors
-            d <-- c
-            c <-- b
-            b <-- d
-    Fin Si
-    Ecrire "Les valeurs réorganisées dans l'ordre croissant donnent : a : ", a, " b : ", b, " et c : ", c
 Fin Programme
