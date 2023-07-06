@@ -7,13 +7,16 @@ public class App {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int array [] = new int[5];
+		int length = 0;
 		int number, count = 0;
 		boolean check = false;
 		
-		System.out.println("Rentrez 5 chiffres : ");
 		Scanner scanner = new Scanner(System.in);
-			for (int i = 0; i < 5; i++) {
+			System.out.println("Saisissez la taille du tableau : ");
+			length = scanner.nextInt();
+			System.out.println("Saisissez "+ length +" chiffres : ");
+			int array [] = new int[length];
+			for (int i = 0; i < array.length; i++) {
 				count++;
 				System.out.println("Nombre " + count);
 				array[i] = scanner.nextInt();
@@ -22,9 +25,7 @@ public class App {
 			Arrays.sort(array);
 			
 			System.out.println("Entrez un nombre");
-			
 			number = scanner.nextInt();
-			
 			for ( int j = 0; j< array.length; j++) {
 				if (number == array[j]) {
 					check = true;

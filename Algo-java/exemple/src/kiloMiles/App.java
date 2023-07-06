@@ -6,13 +6,13 @@ public class App {
 		// TODO Auto-generated method stub
 		
 			double  kilo = 0;
-			double	miles;
+			double	miles = 0;
 			String kiloError;
 			boolean legit = false;
 			
 		Scanner scanner = new Scanner(System.in);
 			while (legit == false) {
-				System.out.println("Entrez le nombre de kilometres : ");
+				System.out.println("Entrez le nombre de kilometres entre 0.01 et 1.000.000 (ou entrez \"q\" ou \"Q\" pour quitter) : ");
 				if (scanner.hasNextDouble()) {
 					kilo = scanner.nextDouble();
 					if (kilo < 0.01 || kilo > 1000000) {
@@ -23,7 +23,7 @@ public class App {
 					}
 				}else {
 					kiloError = scanner.next();
-					if (kiloError.equals("q")) {
+					if ((kiloError.equals("q")) || (kiloError.equals("Q"))) {
 						System.exit(0);
 					}else {
 						System.out.println("Entree invalide !");
@@ -31,9 +31,8 @@ public class App {
 				}
 			}
 			
-			miles = kilo*0.62;
+			miles = Math.round((kilo/1.609)*100.0)/100.0;
 			System.out.println(kilo + "km donne : " + miles + " miles");		
 		
 	}
-
 }

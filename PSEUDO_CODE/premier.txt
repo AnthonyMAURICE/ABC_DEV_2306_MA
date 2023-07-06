@@ -1,0 +1,34 @@
+VARIABLES
+    nombre est un entier
+    isPrime est un booléen
+Debut Programme
+    Ecrire "Entrez un nombre"
+    Lire <-- nombre
+    Debut Si
+        Si nombre est inférieur à 2
+            Alors
+            isPrime <-- false
+        Sinon
+            Pour i égal 2 à i égal nombre
+                Faire
+                Debut Si
+                    Si nombre modulo de i est égal à 0
+                        Alors
+                        isPrime égal faux
+                Fin Si
+            Fin Pour
+    Fin Si
+    Debut Si
+        Si isPrime est égal à vrai
+            Alors
+            Ecrire "C'est un nombre premier"
+        Sinon
+            Debut Si
+                Si nombre est supérieur à 0
+                    Alors
+                    Ecrire "C'est un nombre premier"
+                Sinon
+                    Ecrire "Vous avez entré un nombre négatif ou égal à 0"
+            Fin Si
+    Fin Si
+Fin Programme

@@ -1,0 +1,35 @@
+VARIABLES
+    kilo est un réel
+    miles est un réel
+    kiloError est une chaine de caractères
+    legit est un booléen
+Debut Programme
+    Debut Tant Que
+        Tant Que legit est égal à false
+            Faire
+            Ecrire "Entrez le nombre de kilometres entre 0.01 et 1.000.000 (ou entrez \"q\" ou \"Q\" pour quitter) : "
+            Lire <-- kilo
+                Debut Si
+                    Si kilo est un réel
+                        Alors
+                        Debut Si
+                            Si kilo est inférieur ou égal à 0.01 ET kilo est supérieur ou égal à 1000000
+                                Alors
+                                Ecrire "Entrée invalide"
+                            Sinon
+                                legit est égal à vrai
+                        Fin Si
+                    Sinon
+                        Lire <-- kiloError
+                        Debut Si
+                            Si kiloError est égal à "q" OU "Q"
+                                Alors
+                                Ecrire "Fin du Programme"
+                            Sinon
+                                Ecrire "Entrée invalide"
+                        Fin Si
+    Fin Tant Que
+
+    miles <-- kilo/1.609
+    Ecrire kilo, " kilomètres donnent : ", miles, " miles"
+Fin Programme
