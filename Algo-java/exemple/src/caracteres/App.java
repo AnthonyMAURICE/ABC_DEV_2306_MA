@@ -14,12 +14,12 @@ public class App {
 		Scanner scanner = new Scanner(System.in);
 			while (legit == false) { 
 				System.out.println("Entrez un mot ou une phrase : ");	
-					if (scanner.hasNextLine()) {
-						legit = true;
-						chaine = scanner.nextLine() + ".";
-					}else {
-						System.out.println("Entree non conforme");
-					}
+				if (scanner.hasNextLine()) {
+					legit = true;
+					chaine = scanner.nextLine() + ".";
+				}else {
+					System.out.println("Entree non conforme");
+				}
 			}
 			
 			if (chaine.equals("") || chaine.equals(".")) {

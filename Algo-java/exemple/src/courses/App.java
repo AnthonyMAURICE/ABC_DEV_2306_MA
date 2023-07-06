@@ -14,7 +14,7 @@ public class App {
 			if(somme > 1) {
 				while(somme>2) {
 					System.out.println(somme);
-					somme = somme / 2 + 1;
+					somme = somme / 2 - 1;
 					shops +=1;
 				}
 			}else {
