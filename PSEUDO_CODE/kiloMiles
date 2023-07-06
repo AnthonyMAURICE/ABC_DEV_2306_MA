@@ -4,6 +4,7 @@ VARIABLES
     kiloError est une chaine de caractères
     legit est un booléen
 Debut Programme
+    legit est égal à false
     Debut Tant Que
         Tant Que legit est égal à false
             Faire
@@ -29,7 +30,6 @@ Debut Programme
                                 Ecrire "Entrée invalide"
                         Fin Si
     Fin Tant Que
-
     miles <-- kilo/1.609
     Ecrire kilo, " kilomètres donnent : ", miles, " miles"
 Fin Programme

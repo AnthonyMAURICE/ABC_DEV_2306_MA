@@ -13,18 +13,18 @@ public class App {
 		Scanner scanner = new Scanner(System.in);
 			while (legit == false) {
 				System.out.println("Entrez le nombre de kilometres entre 0.01 et 1.000.000 (ou entrez \"q\" ou \"Q\" pour quitter) : ");
-				if (scanner.hasNextDouble()) {
-					kilo = scanner.nextDouble();
+				if (scanner.hasNextDouble()) { // méthode qui "détecte" le type de la saisie et renvoit "true" ou "false" selon le type renseigné
+					kilo = scanner.nextDouble(); // ici, un double
 					if (kilo < 0.01 || kilo > 1000000) {
 						System.out.println("Entree invalide !");
 					}else {
 						legit = true;
 						scanner.close();
 					}
-				}else {
+				}else { // les autres types passent dans le else, comme ici une chaine de caractères
 					kiloError = scanner.next();
 					if ((kiloError.equals("q")) || (kiloError.equals("Q"))) {
-						System.exit(0);
+						System.exit(0); // quitte le programme
 					}else {
 						System.out.println("Entree invalide !");
 					}

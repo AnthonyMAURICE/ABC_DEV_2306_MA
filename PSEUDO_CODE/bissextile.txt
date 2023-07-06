@@ -1,12 +1,12 @@
 VARIABLE
-a est un entier
+annee est un entier
 Debut Programme
     Ecrire "Entrez une année : "
-    Lire <-- a
-    Si (a % 4 != 0 OU a % 4 == 0 ET (a % 100 == 0 ET a % 400 != 0))
+    Lire <-- annee
+    Si (annee % 4 != 0 OU annee % 4 == 0 ET (annee % 100 == 0 ET annee % 400 != 0))
         Alors
-        Ecrire "L'année ", a, " est bissextile"
+        Ecrire "L'année ", annee, " n'est pas bissextile"
     Sinon
-        Ecrire "L'année ", a, " n'est pas bissextile"
+        Ecrire "L'année ", annee, " est bissextile"  
     Fin Si
 Fin Programme

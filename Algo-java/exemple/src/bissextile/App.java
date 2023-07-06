@@ -6,16 +6,16 @@ public class App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int a;
+		int annee;
 		
 		Scanner scanner = new Scanner(System.in);
 			System.out.println("Entrez une annee : ");		
 			if (scanner.hasNextInt()) {
-				a = scanner.nextInt();
-				if (a % 4 != 0 || a % 4 == 0 && (a % 100 == 0 && a % 400 != 0)) {
-					System.out.println("L'annee " + a + " n'est pas bissextile.");
+				annee = scanner.nextInt();
+				if (annee % 4 != 0 || annee % 4 == 0 && (annee % 100 == 0 && annee % 400 != 0)) {
+					System.out.println("L'annee " + annee + " n'est pas bissextile.");
 				}else {
-					System.out.println("L'annee " + a + " est bissextile.");
+					System.out.println("L'annee " + annee + " est bissextile.");
 				}
 			}else {
 				System.out.println("Vous n'avez pas saisi un nombre !");
