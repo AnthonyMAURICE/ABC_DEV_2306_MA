@@ -18,11 +18,10 @@ public class App {
 			}else {
 				student = false;
 			}
-			
-			System.out.println("Quel jour souhaitez vous venir ? ");
-			jour = scanner.nextLine().toLowerCase();
-			
+					
 			if (student == true) {
+				System.out.println("Quel jour souhaitez vous venir ? ");
+				jour = scanner.nextLine().toLowerCase();				
 				if(jour.equals("mercredi")) {
 					reduction = 50;
 				}else if(jour.equals("jeudi")){
@@ -39,7 +38,7 @@ public class App {
 			}
 			
 			if (reduction !=0) {
-			System.out.println("Selon votre situation, vous beneficiez d'une reduction de " + reduction + "%");
+			System.out.println("Selon votre situation et le jour choisi, vous beneficiez d'une reduction de " + reduction + "%");
 			}else {
 				System.out.println("Desole, mais vous n'avez le droit a aucune reduction.");
 			}
