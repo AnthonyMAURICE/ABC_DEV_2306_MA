@@ -6,21 +6,25 @@ public class App {
 
 	public static void main(String[] args) {
 		int decimal, modulo, firstNum;
-		ArrayList<Integer> binary = new ArrayList<Integer>();
+
+		ArrayList<Integer> binary = new ArrayList<Integer>(); // déclaration d'un tableau liste, car extensible au besoin
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Entrez un nombre en base dix : ");
+		System.out.println("Entrez un nombre (en base dix) : ");
 		decimal = scanner.nextInt();
-		firstNum = decimal;
+		firstNum = decimal; // enregistre le nombre choisi dans une variable pour conserver sa valeur
 		while (decimal > 1 ) {
-			modulo = decimal % 2;
-			decimal = decimal /2;
-			binary.add(modulo);
+			modulo = decimal % 2; //enregistre le modulo de la division par 2
+			decimal = decimal /2; // puis divise le nombre par deux pour le passage suivant dans la boucle
+			binary.add(modulo); // ajout le modulo au tableau
 		}
-			binary.add(1);
-			Collections.reverse(binary);
-			System.out.println(firstNum + " en base dix donne : " + binary + " en binaire.");
-			
+			binary.add(1); //ajoute 1, c'est à dire le dernier modulo
+			Collections.reverse(binary); // méthode qui inverse le tableau pour la lecture de gauche à droite
+			System.out.print(firstNum + " en base dix donne : ");
+			for (int i = 0; i < binary.size(); i++) { // boucle for pour extraire chaque valeur du tableau
+				System.out.print(binary.get(i)); // pour les afficher l'une après l'autre
+			}
+			System.out.print(" en binaire.");
 			scanner.close();
 	}
 		
