@@ -27,9 +27,9 @@ public class App {
 				}else if(jour.equals("jeudi")){
 					reduction = 20;
 				}else {
-					if (jour.equals("lundi") || jour.equals("mardi") || jour.equals("vendredi") || jour.equals("samedi") || jour.equals("dimanche"))
+					if (jour.equals("lundi") || jour.equals("mardi") || jour.equals("vendredi") || jour.equals("samedi") || jour.equals("dimanche")) {
 					reduction = 0;
-					else {
+					}else {
 						System.out.println("Vous n'avez pas entre un jour valide !");
 					}
 				}
