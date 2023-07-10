@@ -21,7 +21,7 @@ public class App {
 			}
 			
 			if (firstNum == 0) {
-				binary.add(0); //ajoute 1, c'est à dire le dernier modulo
+				binary.add(0); //ajoute 0, pour le cas où le nombre entré est 0
 			}else {
 				binary.add(1); //ajoute 1, c'est à dire le dernier modulo
 			}
