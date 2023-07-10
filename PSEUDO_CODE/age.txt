@@ -1,0 +1,20 @@
+VARIABLES
+age est un entier
+Debut Programme
+    Ecrire "Saisissez votre age"
+    Lire <-- age
+        Debut Si
+            Si age est inférieur à 6
+                Ecrire "Vous êtes trop jeune"
+            Sinon Si age est égal supérieur ou égal à 6 ET inférieur ou égal à 7
+                Ecrire "Vous êtes poussin"
+            Sinon Si age est supérieur ou égal à 8 ET inférieur à 10
+                Ecrire "Vous êtes Pupille"
+            Sinon Si age est supérieur ou égal à 10 et inférieur à 12
+                Ecrire "Vous êtes Minime""
+            Sinon Si age est supérieur ou égal à 12 ET inférieur à 18
+                Ecrire "Vous êtes Cadet"
+            Sinon 
+                Ecrire "Vous êtes adulte.
+        Fin Si
+Fin Programme"

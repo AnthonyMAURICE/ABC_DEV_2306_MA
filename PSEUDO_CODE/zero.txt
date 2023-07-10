@@ -1,0 +1,15 @@
+VARIABLES
+nombre est un entier
+Debut Programme
+Ecrire "Entrez un nombre différend de zéro, positif ou négatif"
+Lire <-- nombre
+    Debut Si
+        Si nombre est supérieur à zéro
+            Alors
+            Ecrire "Le nombre est positif"
+        //Sinon Si nombre est égal à 0
+        //  Ecrire "le nombre vaut zéro"
+        Sinon
+            Ecrire "Le nombre est négatif"
+    Fin Si
+Fin Programme

@@ -1,0 +1,18 @@
+VARIABLES
+nombre1 est un entier
+nombre 2 est un entier
+Debut Programme
+    Ecrire "Saisissez la valeur du premier nombre"
+    Lire <-- nombre1
+    Ecrire "Saisissez la valeur du second nombre"
+    Lire <-- nombre2
+    Debut Si
+        Si nombre1 est inférieur à 0 OU(exclusif) nombre2 est inférieur à 0
+            Alors
+            Ecrire "Le produit des deux nombre sera négatif"
+        //Sinon Si nombre1 est égal à 0 OU nombre2 est égal à 0
+        //  Ecrire "Le produit sera égal à 0"
+        Sinon
+            Ecrire "Le produit des deux nombres sera positif"
+    Fin Si
+Fin Programme
