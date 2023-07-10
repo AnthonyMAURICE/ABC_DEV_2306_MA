@@ -20,6 +20,7 @@ public class App {
 			}else {
 				System.out.println("Le produit de " + number1 + " et " + number2 + " sera positif");
 			}
+		scanner.close();
 	}
 
 }

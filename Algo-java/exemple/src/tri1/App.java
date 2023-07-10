@@ -11,9 +11,11 @@ public class App {
 		System.out.println("Entrez la valeur de \"b\" : ");
 		b = scanner.nextInt();
 		if (a < b) {
-			System.out.println("\"a\" est plus petit (" + a + ") que b (" + b + ")");
+			System.out.println("\"a\" est plus petit (" + a + ") que \"b\" (" + b + ")");
+		}else if (a == b){
+			System.out.println("\"b\" est egal (" + b + ") a \"a\" (" + a + ")");
 		}else {
-			System.out.println("\"b\" est plus petit (" + b + ") que a (" + a + ")");
+			System.out.println("\"b\" est plus petit (" + b + ") que \"a\" (" + a + ")");
 		}
 		scanner.close();
 	}
