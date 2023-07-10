@@ -17,10 +17,15 @@ public class App {
 			while (decimal > 1 ) {
 				modulo = decimal % 2; //enregistre le modulo de la division par 2
 				decimal = decimal /2; // puis divise le nombre par deux pour le passage suivant dans la boucle
-				binary.add(modulo); // ajout le modulo au tableau
+				binary.add(modulo); // ajout du modulo au tableau
 			}
 			
-			binary.add(1); //ajoute 1, c'est à dire le dernier modulo
+			if (firstNum == 0) {
+				binary.add(0); //ajoute 1, c'est à dire le dernier modulo
+			}else {
+				binary.add(1); //ajoute 1, c'est à dire le dernier modulo
+			}
+			
 			
 			Collections.reverse(binary); // méthode qui inverse le tableau pour la lecture de gauche à droite
 			
