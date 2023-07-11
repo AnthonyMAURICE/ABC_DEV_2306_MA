@@ -25,13 +25,13 @@ public class App {
 		
 		if (infos == true) {
 			
-			if(day == 31 && (month == 2 || month == 4 || month == 6 || month == 9 || month == 11)) {
+			if(day == 31 && (month == 2 || month == 4 || month == 6 || month == 9 || month == 11)) { // contrôle les mois à 30 jours
 				System.out.println("Il n'y a pas de 31 ces mois. Date non valide.");
-			}else if (month == 2 && day >29) {
-				System.out.println("Il n'y a pas de 30 fevrier.");
-			}else if(month == 2 && day >= 29 && (year % 4 != 0 || year % 4 == 0 && (year % 100 == 0 && year % 400 != 0))) {
+			}else if (month == 2 && day >29) { // contrôle le mois de février
+				System.out.println("Il n'y a pas de 30 fevrier. Date non valide.");
+			}else if(month == 2 && day >= 29 && (year % 4 != 0 || year % 4 == 0 && (year % 100 == 0 && year % 400 != 0))) { // contrôle les années bissextiles
 				System.out.println("Ce n'est pas une annee bissextile. Date non valide.");
-			}else {
+			}else { // et si cela arrive jusqu'à cette condition, la date est valide
 				System.out.println("Cette date est valide");
 			}
 		}
