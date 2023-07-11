@@ -2,7 +2,6 @@ VARIABLES
 a est un réel
 b est un réel
 c est un réel
-d est un réel
 
 Debut Programme
     Ecrire "Entrez le premier nombre (a)"
