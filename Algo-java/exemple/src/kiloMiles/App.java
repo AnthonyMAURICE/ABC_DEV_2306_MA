@@ -22,8 +22,8 @@ public class App {
 						scanner.close();
 					}
 				}else { // les autres types passent dans le else, comme ici une chaine de caractères
-					kiloError = scanner.next();
-					if ((kiloError.equals("q")) || (kiloError.equals("Q"))) {
+					kiloError = scanner.next().toLowerCase();
+					if (kiloError.equals("q")) {
 						System.exit(0); // quitte le programme
 					}else {
 						System.out.println("Entree invalide !");

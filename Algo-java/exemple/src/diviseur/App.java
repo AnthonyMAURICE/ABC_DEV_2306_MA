@@ -12,9 +12,8 @@ public class App {
 			divi = scanner.nextInt();
 			System.out.println("Les diviseurs de " + divi + " sont : ");
 			for(int i = 2; i < divi; i++) {
-				
 				if (divi % i == 0) {
-					System.out.print(i + ", ");
+					System.out.print(i + " ");
 				}
 			}
 		

@@ -22,12 +22,32 @@ public class App {
 					}else {
 						tarif +=0;
 					}
-			
-			
-			
-			
-			
-			
+				System.out.println("Combien d'accidents responsables");
+				accidents = scanner.nextInt();
+					if(accidents >=1) {
+						tarif -= accidents;
+					}
+				System.out.println("Chez nous depuis combien de temps ?");
+				anciennete = scanner.nextInt();
+					if (anciennete >5) {
+						tarif++;
+					}
+					
+				System.out.println(tarif);
+				
+							
+				if(tarif <0) {
+					System.out.println("Nous refusons de vous assurer");
+				}else if (tarif == 0) {
+					System.out.println("Vous serez au tarif rouge");
+				}else if (tarif == 1) {
+					System.out.println("Vous serez au tarif orange");
+				}else if (tarif == 2) {
+					System.out.println("Vous serez au tarif vert");
+				}else {
+					System.out.println("Vous serez au tarif bleu");
+				}
+				
 			scanner.close();
 
 	}
