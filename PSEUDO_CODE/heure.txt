@@ -22,5 +22,10 @@ Debut Programme
                 heure est égal à heure + 1
                 minutes est égal à 0
         Fin Si
+        Debut Si
+            Si heure est égal à 24
+            Alors
+                heure est égal à 0
+        Fin Si
     Ecrire "Dans une seconde il sera ", heure, "h", minutes, " minutes et ", secondes, " seconde(s)" 
 Fin Programme

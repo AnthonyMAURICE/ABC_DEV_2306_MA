@@ -1,0 +1,21 @@
+VARIABLES
+    prix est un réel
+    copies est un entier
+Debut Programme
+    Ecrire "Nombre de photocopies ?"
+    Lire <-- copies
+    Debut Pour
+        Pour i allant de copies à 0
+            Faire
+            Debut Si
+                Si i est supérieur à 30
+                Alors
+                    prix est égal à prix + 0.08
+                Sinon Si i est supérieur à 10 ET prix est inférieur ou égal à 30
+                    prix est égal à prix + 0.09
+                Sinon
+                    prix est égal à prix + 0.1
+            Fin Si
+    Fin Pour
+    Ecrire "Le prix pour ", copies, " copies est de ", prix, " euro(s)"
+Fin Programme

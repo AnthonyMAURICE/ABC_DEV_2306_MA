@@ -1,0 +1,29 @@
+VARIABLES
+    score1 est un réel
+    score2 est un réel
+    score3 est un réel
+    score4 est un réel
+Debut Programme
+    Ecrire "Entrez le score du candidat 1"
+    Lire <-- score1
+    Ecrire "Entrez le score du candidat 2"
+    Lire <-- score2
+    Ecrire "Entrez le score du candidat 3"
+    Lire <-- score3
+    Ecrire "Entrez le score du candidat 4"
+    Lire <-- score4
+    Debut Si
+        Si score1 est supérieur à 50
+        Alors 
+            Ecrire "Le candidat 1 est réelu au premier tour"
+        Sinon Si score est supérieur à 12.5
+            Debut Si
+                Si score 1 est supérieur à score 2 ET score 1 est supérieur à score 3 ET score1 est supérieur à score4
+                    Ecrire "le candidat 1 est en ballotage favorable"
+                Sinon
+                    Ecrire "le candidat 1 est en ballotage défavorable"
+            Fin Si
+        Sinon
+            Ecrire "le candidat 1 est battu"
+    Fin Si
+Fin Programme

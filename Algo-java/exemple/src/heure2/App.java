@@ -26,6 +26,10 @@ public class App {
 				minutes = 0;
 			}
 			
+			if(heure == 24) {
+				heure = 0;
+			}
+			
 			if(minutes < 10) {
 				ajustement = "0";
 			}else {

@@ -31,7 +31,7 @@ public class App {
 				
 			}
 			
-			if((genre.equals("h") && age >= 20) || (genre.equals("f") && (age >= 18 && age <=35))){
+			if(genre.equals("h") && age >= 20 || genre.equals("f") && age >= 18 && age <=35){
 				System.out.println("Vous paierez des impots");
 			}else {
 				System.out.println("Vous n'etes pas imposable");

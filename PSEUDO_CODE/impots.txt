@@ -1,0 +1,18 @@
+VARIABLES
+    age est un entier
+    genre est une chaine de caractères
+Debut Programme
+    Ecrire "(H)omme ou (F)emme ?"
+    Lire <-- genre
+    Ecrire "Votre age ?"
+    Lire <-- age
+    Debut Si
+        Si genre est égal à H ET age est supérieur ou égal à 20
+            Alors
+            Ecrire "Vous paierez des impots"
+        Sinon Si genre est égal à F ET (age est supérieur ou égal à 18 OU age est inférieur ou égal à 35)
+            Ecrire "Vous paierez des impots"
+        Sinon
+            Ecrire "Vous n'êtes pas imposable"
+    Fin Si
+Fin Programme

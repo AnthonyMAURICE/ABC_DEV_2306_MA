@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class App {
 
 	public static void main(String[] args) {
-		float price = 0;
+		double price = 0;
 		int copies;
 		
 		Scanner scanner = new Scanner(System.in);
@@ -18,7 +18,7 @@ public class App {
 					price += 0.1;
 				}
 			}
-			System.out.println("Le prix final pour " + copies + " copies est de : " + Math.round((price)*100.00)/100.00);
+			System.out.println("Le prix final pour " + copies + " copies est de : " + Math.round((price)*100.00)/100.00 + " euro(s)");
 		
 		scanner.close();
 	}
