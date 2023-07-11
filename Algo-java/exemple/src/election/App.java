@@ -20,7 +20,7 @@ public class App {
 			
 			scoreGlobal = score1 + score2 + score3 +score4;
 			if(scoreGlobal > 100) {
-				System.out.println("Il y a manifestement eu bourrage d'urnes...");
+				System.out.println("Il y a manifestement bourrage d'urnes...");
 				legit = false;
 			}else {
 				legit = true;

@@ -22,7 +22,7 @@ public class App {
 				}
 			}
 			
-			if (isPrime == true) { // condition sur le booléen
+			if (isPrime) { // condition sur le booléen
 				System.out.println("C'est un nombre premier");
 			}else {
 				if(number >0) { // détecte si le nombre entré est supérieur à 0
