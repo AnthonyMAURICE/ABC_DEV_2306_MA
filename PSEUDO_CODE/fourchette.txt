@@ -1,0 +1,31 @@
+VARIABLES
+    nombre est un entier
+    nombreChoisi est un entier
+    essais est un entier
+    coupsRestants est un entier
+    fourchetteHaute est un entier
+    fourchetteBasse est un entier
+    trouve est un booleen
+Debut Programme
+trouve est faux
+number <-- rand(0, 100)
+essais <-- 0
+coupsRestants <-- 5
+Debut Tant que
+    Tant que trouve est faux ET coupsRestants est supérieur à 0
+    Faire
+        essais++
+        Ecrire "Saisissez un nombre entre 0 et 100"
+        Lire <-- nombreChoisi
+        Debut Si 
+            Si nombre est égal à nombreChoisi
+            Alors
+                trouve est égal à true 
+            Sinon Si nombreChoisi est inférieur à nombre
+                fourchetteHaute = nombre + rand(1, 10)
+                fourchetteBasse = nombre - rand(1, 10)
+                Ecrire "Vous êtes en dessous, le nombre est compris entre ", fourchetteBasse, " et ", fourchetteHaute
+            Sinon
+                fourchetteHaute = nombre + rand(1, 10)
+                fourchetteBasse = nombre - rand(1, 10)
+                Ecrire "Vous êtes au dessus, le nombre est compris entre ", fourchetteBasse, " et ", fourchetteHaute

@@ -16,7 +16,7 @@ public class App {
 				System.out.println("Entrez un mot ou une phrase : ");	
 				if (scanner.hasNextLine()) {
 					legit = true;
-					chaine = scanner.nextLine() + ".";
+					chaine = scanner.nextLine().toLowerCase() + ".";
 				}else {
 					System.out.println("Entree non conforme");
 				}
@@ -25,8 +25,9 @@ public class App {
 			if (chaine.equals("") || chaine.equals(".")) {
 				System.out.println("LA CHAINE EST VIDE");		
 			}else {	
-				System.out.println("Entrez une letter pour la comparaison : ");
+				System.out.println("Entrez une lettre pour la comparaison : ");
 				comp = (scanner.next().charAt(0)); // enregistre la lettre de comparaison dans un char
+				comp = Character.toLowerCase(comp);
 				for (int i = 0; i < chaine.length(); i++) { // boucle sur la chaine de caractères
 					letter = chaine.charAt(i); // extrait la lettre à chaque passage dans la boucle
 					comparison =Character.compare(letter, comp); // pour la comparer avec "comp", renvoit 0 si la comparaison est vérifiée
