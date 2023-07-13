@@ -37,9 +37,9 @@ public class App {
 				}
 					
 				if(count >= 1) { // si le compteur est positif -> la lettre a été trouvée au moins une fois
-					System.out.println("Le caractere " + comp + " est present " + count + " fois dans la chaine de caractere testee.");
+					System.out.println("Le caractere \"" + comp + "\" est present " + count + " fois dans la chaine de caractere testee.");
 				}else{ // sinon, elle n'a pas été trouvée
-					System.out.println("Le caractere " + comp + " n'est pas present.");
+					System.out.println("Le caractere \"" + comp + "\" n'est pas present.");
 				}
 			}
 		
