@@ -4,7 +4,7 @@ public class App {
 
 	public static void main(String[] args) {
 		double score1, score2, score3, score4, scoreGlobal;
-		boolean legit;
+		boolean legit, scoreFirst, scoreSecond, scoreThird, scoreFourth;
 		
 		Scanner scanner = new Scanner(System.in);
 		
@@ -17,6 +17,11 @@ public class App {
 			score3 = scanner.nextDouble();
 			System.out.println("Saisissez le score du candidat 4");
 			score4 = scanner.nextDouble();
+	
+			scoreFirst = score1 > 50;
+			scoreSecond = score2 > 50;
+			scoreThird = score3 > 50;
+			scoreFourth = score4 > 50;
 			
 			scoreGlobal = score1 + score2 + score3 +score4;
 			if(scoreGlobal > 100) {
@@ -26,11 +31,12 @@ public class App {
 				legit = true;
 			}
 			
+			
 		}while(legit == false);
 		
-		if(score1 > 50) {
+		if(scoreFirst) {
 			System.out.println("Le candidat 1 a ete reelu au premier tour avec " + score1 + "% des voix");
-		}else if (score1 > 12.5) {
+		}else if (score1 > 12.5 && (!scoreSecond && !scoreThird && !scoreFourth)) {
 			if (score1 > score2 && score1 > score3 && score1 > score4) {
 				System.out.println("Le candidat 1 est qualifie au second tour en ballotage favorable");
 			}else {

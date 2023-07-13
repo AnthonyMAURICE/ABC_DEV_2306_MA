@@ -10,15 +10,16 @@ public class App {
 				age = scanner.nextInt();
 					if(age < 18) {
 						System.out.println("Vous n'avez pas l'age d'avoir le permis");
+						System.exit(0);
 					}else if (age >= 25) {
 						tarif++;
 					}
 				System.out.println("Depuis combien d'annees avez-vous le permis ?");
 				permis = scanner.nextInt();
-					if(permis > 2) {
+					if(permis >= 2) {
 						tarif++;
 					}
-				System.out.println("Combien d'accidents responsables");
+				System.out.println("Combien d'accidents responsables ?");
 				accidents = scanner.nextInt();
 					if(accidents >=1) {
 						tarif -= accidents;
@@ -31,7 +32,7 @@ public class App {
 					
 				System.out.println(tarif);
 				
-							
+						
 				if(tarif <0) {
 					System.out.println("Nous refusons de vous assurer");
 				}else if (tarif == 0) {
