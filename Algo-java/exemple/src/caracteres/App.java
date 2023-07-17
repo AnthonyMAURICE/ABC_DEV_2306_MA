@@ -12,7 +12,7 @@ public class App {
 		boolean legit = false;
 
 		Scanner scanner = new Scanner(System.in);
-			while (legit == false) { // test si la saisie est conforme
+			while (!legit) { // test si la saisie est conforme
 				System.out.println("Entrez un mot ou une phrase : ");	
 				if (scanner.hasNextLine()) {
 					legit = true;

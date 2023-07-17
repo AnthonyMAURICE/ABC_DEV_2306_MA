@@ -3,17 +3,25 @@ import java.util.Scanner;
 public class App {
 
 	public static void main(String[] args) {
-		int heure, minutes, secondes;
+		int heure = 0, minutes = 0, secondes = 0;
 		String ajustement;
+		boolean realistic = false;
 		
 		Scanner scanner = new Scanner(System.in);
-			System.out.println("Entrez une heure : ");
-			heure = scanner.nextInt();
-			System.out.println("Entrez les minutes : ");
-			minutes = scanner.nextInt();
-			System.out.println("Entrez les secondes : ");
-			secondes = scanner.nextInt();
-			
+			while(!realistic) {
+				System.out.println("Entrez une heure : ");
+				heure = scanner.nextInt();
+				System.out.println("Entrez les minutes : ");
+				minutes = scanner.nextInt();
+				System.out.println("Entrez les secondes : ");
+				secondes = scanner.nextInt();
+				if(heure >=0 && heure < 24 && minutes > 0 && minutes < 60 && secondes >=0 && secondes < 60) {
+					realistic = true;
+				}else {
+					System.out.println("Entrez une heure valide !");
+				}
+				
+			}
 			secondes++;
 			
 			if (secondes == 60) {
