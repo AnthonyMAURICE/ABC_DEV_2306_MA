@@ -15,7 +15,7 @@ public class App {
 				while(somme>2) {
 					System.out.println(somme);
 					somme = somme / 2 - 1;
-					shops +=1;
+					shops ++;
 				}
 			}else {
 				System.out.println("Entree invalide");

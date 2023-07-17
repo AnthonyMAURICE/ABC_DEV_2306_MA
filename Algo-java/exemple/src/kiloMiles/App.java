@@ -29,8 +29,7 @@ public class App {
 						System.out.println("Entree invalide !");
 					}
 				}
-			}
-			
+			}			
 			scanner.close();		
 	}
 }

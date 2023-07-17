@@ -26,7 +26,7 @@ public class App {
 				binary.add(1); //ajoute 1, c'est à dire le dernier modulo
 			}
 			
-			
+		
 			Collections.reverse(binary); // méthode qui inverse le tableau pour la lecture de gauche à droite
 			
 			System.out.print(firstNum + " en base dix donne : ");

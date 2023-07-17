@@ -5,8 +5,10 @@ VARIABLES
     coupsRestants est un entier
     fourchetteHaute est un entier
     fourchetteBasse est un entier
+    fourchette est un entier
     trouve est un booleen
 Debut Programme
+    fourchette <-- 10
     trouve est faux
     number <-- rand(0, 100)
     essais <-- 0
@@ -17,8 +19,8 @@ Debut Programme
             essais++
             Ecrire "Saisissez un nombre entre 0 et 100"
             Lire <-- nombreChoisi
-            fourchetteHaute = nombre + rand(1, 10)
-            fourchetteBasse = nombre - rand(1, 10)
+            fourchetteHaute = nombre + rand(1, fourchette)
+            fourchetteBasse = nombre - rand(1, fourchette)
             Debut Si 
                 Si nombre est égal à nombreChoisi
                 Alors
@@ -29,6 +31,7 @@ Debut Programme
                     Ecrire "Vous êtes au dessus, le nombre est compris entre ", fourchetteBasse, " et ", fourchetteHaute
             Fin Si
             coupsRestants--
+            fourchette -= 2
         Fin Tant que
         Debut Si
             Si trouve est égal à vrai

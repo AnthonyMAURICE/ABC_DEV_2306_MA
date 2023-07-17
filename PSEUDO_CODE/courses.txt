@@ -1,0 +1,23 @@
+VARIABLES
+    somme est un entier
+    argent est un entier
+    magasins est un entier
+Debut Programme
+    Ecrire "Quelle est la somme de départ ?"
+    Lire <-- somme
+    argent <-- somme
+    Debut Si
+        Si somme est supérieur à 1
+            Alors
+            debut Tant Que
+                Tant que somme est supérieur à 2
+                    Faire
+                    somme <-- somme / 2 - 1
+                    magasins += 1
+            Fin Tant Que
+        Sinon
+            Ecrire "entrée invalide"
+    Fin Si
+    magasins += 1
+    Ecrire "Avec la somme de départ de : ", argent, " Barnabé a fait ses courses dans ", magasins, " magasins."
+Fin Programme
