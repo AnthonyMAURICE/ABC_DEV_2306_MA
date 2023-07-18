@@ -21,7 +21,7 @@ Fin Programme
 
 Fin de la première fourchette
 
-Deuxième fourchette, avec les mêmes VARIABLES
+Deuxième fourchette, avec les mêmes variables
 
 Debut Programme
     right <-- faux
