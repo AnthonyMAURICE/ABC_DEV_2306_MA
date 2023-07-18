@@ -1,0 +1,27 @@
+VARIABLES
+nombre est un entier
+counter est un entier
+Debut Programme
+Ecrire "Saisissez un nombre"
+Lire <-- nombre
+counter <-- nombre + 1
+
+// Boucle tant que
+Debut Programme
+    Debut Tant que
+        Tant que counter <= nombre + 10
+        Faire
+            Ecrire counter
+            counter++
+    Fin Tant que
+Fin Programme
+
+// boucle pour
+
+Debut Programme
+    Debut pour
+        Pour counter allant de nombre + 1 à nombre + 10
+        Faire
+            Ecrire counter
+    Fin pour
+Fin Programme

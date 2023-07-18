@@ -18,18 +18,18 @@ public class App {
 				System.out.println("Entrez un mot ou une phrase : ");	
 				if (scanner.hasNextLine()) {
 					legit = true;
-					chaine = scanner.nextLine().toLowerCase() + ".";
+					chaine = scanner.nextLine().toLowerCase() + "."; // enregistre un mot ou une phrase, forcée en minuscule, Java étant sensible à la casse
 				}else {
 					System.out.println("Entree non conforme");
 				}
 			}
 			
-			if (chaine.equals(".")) {
+			if (chaine.equals(".")) {// vu que la chaine de caractères doit finir par un ".", c'est le seul cas où elle sera considérée comme vide
 				System.out.println("LA CHAINE EST VIDE");		
 			}else {	
 				System.out.println("Entrez une lettre pour la comparaison (si d'aventure vous rentrez un mot, seule la premiere lettre sera prise en compte, vous etes prevenus) : ");
 				comp = (scanner.next().charAt(0)); // enregistre la lettre (à l'index 0, prendra la première lettre si un mot est rentré) de comparaison dans un char
-				comp = Character.toLowerCase(comp);
+				comp = Character.toLowerCase(comp);// force le caractère en minuscule, rend la recherche insensible à la casse, tout comme la chaine de caractères enregistrée avant
 				for (int i = 0; i < chaine.length(); i++) { // boucle sur la chaine de caractères
 					letter = chaine.charAt(i); // extrait la lettre à chaque passage dans la boucle
 					comparison = Character.compare(letter, comp); // pour la comparer avec "comp", renvoit 0 si la comparaison est vérifiée

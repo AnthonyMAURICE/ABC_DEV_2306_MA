@@ -1,0 +1,44 @@
+VARIABLES
+    nombre est un entier
+    right est un booléen
+Debut Programme
+    right <-- faux
+    Debut Tant que
+        tant que right est faux
+        Faire
+            Ecrire "Entrez un nombre entre 1 et 3"
+            Lire <-- nombre
+            Debut Si
+                Si nombre < 1 OU nombre > 3
+                Alors
+                    Ecrire "Saisie incorrecte, recommencez"
+                Sinon
+                    right <-- vrai
+            Fin Si
+    Fin Tant que
+    Ecrire "Nombre conforme"
+Fin Programme
+
+Fin de la première fourchette
+
+Deuxième fourchette, avec les mêmes VARIABLES
+
+Debut Programme
+    right <-- faux
+    Debut Tant que
+        Tant que right est faux
+        Faire
+            Ecrire "Entrez un nombre entre 10 et 20"
+            Lire <-- nombre
+            Debut Si
+                Si nombre < 10
+                Alors
+                    Ecrire "Plus grand..."
+                Sinon Si nombre > 20
+                    Ecrire "Plus petit"
+                Sinon
+                    right <-- vrai
+            Fin Si
+    Fin Tant que
+    Ecrire "Nombre conforme"
+Fin Programme
