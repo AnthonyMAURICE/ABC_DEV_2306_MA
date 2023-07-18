@@ -1,4 +1,5 @@
 package caracteres;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
@@ -10,6 +11,7 @@ public class App {
 		int count = 0;
 		int comparison;
 		boolean legit = false;
+		ArrayList<Integer> index = new ArrayList<Integer>();// liste pour enregistrer, s'il y a comparaison positive par la suite, l'index de cette comparaison
 
 		Scanner scanner = new Scanner(System.in);
 			while (!legit) { // test si la saisie est conforme
@@ -33,11 +35,12 @@ public class App {
 					comparison = Character.compare(letter, comp); // pour la comparer avec "comp", renvoit 0 si la comparaison est vérifiée
 					if(comparison == 0){ // à chaque fois qu'elle l'est
 						count += 1; // ajoute 1 à une variable de compteur
+						index.add(i); // ajoute à la liste l'index de la comparaison vérifiée
 					}
 				}
 					
 				if(count >= 1) { // si le compteur est positif -> la lettre a été trouvée au moins une fois
-					System.out.println("Le caractere \"" + comp + "\" est present " + count + " fois dans la chaine de caractere testee.");
+					System.out.println("Le caractere \"" + comp + "\" est present " + count + " fois dans la chaine de caractere testee, index : " + index);
 				}else{ // sinon, elle n'a pas été trouvée
 					System.out.println("Le caractere \"" + comp + "\" n'est pas present.");
 				}

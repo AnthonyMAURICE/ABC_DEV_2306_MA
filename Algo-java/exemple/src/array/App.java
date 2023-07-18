@@ -8,18 +8,17 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		int length = 0;
-		int number, count = 0;
+		int length = 0, number, count = 0;
 		boolean check = false, validLength = false;
 		ArrayList<Integer> index = new ArrayList<Integer>();
 		
 		Scanner scanner = new Scanner(System.in);
 			// premier bloc, contrôle de saisie
-			while (validLength == false) {
+			while (!validLength) {
 				System.out.println("Saisissez la taille du tableau (entre 2 et 10) : ");
 				length = scanner.nextInt();
 				if (length < 2 || length > 10) {// contrôle si la saisie utilisateur est correcte, sinon boucle
-					System.out.println("Entrez une valeur realiste pour votre tableau !");
+					System.out.println("Entrez une valeur pour votre tableau dans les parametres demandes !");
 				}else {
 					validLength = true;// permet de sortir de la boucle si la saisie est conforme
 				}
@@ -45,7 +44,7 @@ public class App {
 			}
 			//quatrième bloc, sortie conditionnée par la comparaison du bloc 3
 			if (check == true) {
-				System.out.println("Le nombre " + number + " figure parmi les elements, a/aux index : " + index + " apres tri par ordre croissant des valeurs.");
+				System.out.println("Le nombre " + number + " figure parmi les elements, index : " + index + ", apres tri par ordre croissant des valeurs.");
 			}else {
 				System.out.println("Error 404 : Number Not Found");
 			}

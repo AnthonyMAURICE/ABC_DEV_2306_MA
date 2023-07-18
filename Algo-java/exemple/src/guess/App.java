@@ -10,36 +10,36 @@ public class App {
 		Random rand = new Random();
 		essais = 0;
 		Scanner scanner = new Scanner(System.in);
-			number = (int)(Math.random()*101);
-			while (guessed == false && remaining > 0)  {;
-				essais++;
+			number = (int)(Math.random()*101);// sélection d'un nombre aléatoire entre 1 et 100 
+			while (guessed == false && remaining > 0)  {; //boucle tant que l booléen est faux et que le nombre de coups restants est supérieur à 0
+				essais++; // incrémentation de la ariable qui traque le nombre d'essais
 				System.out.println("Devinez le chiffre mystere entre 0 et 100 (vous avez "+ remaining +" coups pour reussir)");
-				guess = scanner.nextInt();
+				guess = scanner.nextInt(); // nombre proposé par le joueur
 				if (guess == number) {
-					System.out.println("Vous avez gagne !!!");
-					guessed = true;
-				}else {
+					System.out.println("Vous avez gagne !");
+					guessed = true; // le booléen passe à true si le nombre est trouvé
+				}else { // sinon la fourchette est donnée
 					if (guess < number){
-						System.out.println("Vous etes en dessous...");
+						System.out.print("Vous etes en dessous... ");
 					}else {
-						System.out.println("Vous etes au dessus...");	
+						System.out.print("Vous etes au dessus... ");	
 					}
-					forkUp = number + rand.nextInt(forkReduce);
+					forkUp = number + rand.nextInt(forkReduce); // deux calculs de définition de la fourchette (fourchette haute et fourchette basse) à chaque essai infructueux
 					forkDown = number - rand.nextInt(forkReduce);
-					if(forkDown < 0) {
+					if(forkDown < 0) { // simple condition pour éviter les fourchettes hors paramètres
 						forkDown = 0;
 					}else if (forkUp > 100) {
 						forkUp = 100;
 					}
 					
-					System.out.println("Entre " + forkDown + " et " + forkUp);
+					System.out.println("Entre " + forkDown + " et " + forkUp); // affiche la fourchette basse puis haute
 				}
-				remaining--;
-				forkReduce -= 2;	
+				remaining--; // le nombre de coups restants diminue de 1 à chaque passage dans la boucle (avec 5 au départ)
+				forkReduce -= 2;// la variable d'amplitude de la fourchette diminue elle aussi (avec 10 au départ)
 			}
-			if(guessed == true) {
+			if(guessed) { //condition de fin
 				System.out.println("Bravo ! vous avez reussi en " + essais + " essais !");
-			}else {
+			}else {//avec guessed à false si l'utilisateur n'a pas trouvé au terme des 5 coups
 				System.out.println("Vous n'avez plus de coups, vous avez perdu...");
 			}
 		scanner.close();
