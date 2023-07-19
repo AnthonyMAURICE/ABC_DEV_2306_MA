@@ -8,22 +8,22 @@ public class App {
 		
 		Scanner scanner = new Scanner(System.in);
 			
-			do {
+			do { // boucle do while pour la saisie des prix
 				System.out.println("Prix du produit (entrez 0 pour terminer vos achats)");
 				tempPrix = scanner.nextInt();
-				prix += tempPrix;
-			}while(tempPrix != 0);
+				prix += tempPrix; // ajoutés dans la variable à chaque passage
+			}while(tempPrix != 0); // tant que 0 n'est pas entré par l'utilisateur
 			
-			do {
+			do { // boucle donnant la somme finale, et contrôlant le paiement
 				System.out.println("Vous devez la somme de : " + prix + " euros");
 				System.out.println("Entrez le montant de votre paiement : ");
 				somme = scanner.nextInt();
 				if(somme < prix) {
 					System.out.println("Vous etes en dessous de ce que vous devez...");
 				}
-			}while (somme < prix);
+			}while (somme < prix); // tant qu'un montant supérieur à la somme totale n'est pas entrée
 			
-			while(somme - prix != 0) {
+			while(somme - prix != 0) { // boucle while qui détermine par une suite de conditions le nombre de billets (ou pièce) de chaque type demandé qui sera reversé
 				if (somme - prix >= 10) {
 					bill10++;
 					somme -= 10;
