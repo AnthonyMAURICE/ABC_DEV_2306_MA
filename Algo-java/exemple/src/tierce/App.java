@@ -10,6 +10,7 @@ public class App {
 		
 		Scanner scanner = new Scanner(System.in);
 		
+			// saisie et contrôle des valeurs
 			while(!verif) {
 				System.out.println("Entrez le nombre de chevaux partants : ");
 				chevauxPartants = scanner.nextInt();
@@ -24,6 +25,7 @@ public class App {
 				
 			}
 			
+			// calcul des factorielles
 			for(int i = 1; i <= chevauxPartants; i++) {
 				factorielleN *= i;
 			}
@@ -35,7 +37,7 @@ public class App {
 			for(int k = 1; k <= (chevauxPartants - chevauxJoues); k++) {
 				factorielleNP *= k;
 			}
-			
+			//stockage des calculs dans les variables pour restitution par la suite dans la console
 			x = factorielleN / factorielleNP;
 			y = factorielleN / (factorielleP * factorielleNP);
 			

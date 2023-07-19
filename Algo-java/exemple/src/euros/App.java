@@ -4,47 +4,39 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		int somme = 0, prix = 0, tempPrix = 0;
-		boolean shopping = true, checkout = false, payment = false;
+		int somme = 0, prix = 0, tempPrix = 0, bill10 = 0, bill5 = 0, p1 = 0;
 		
 		Scanner scanner = new Scanner(System.in);
-			while(shopping) {
+			
+			do {
 				System.out.println("Prix du produit (entrez 0 pour terminer vos achats)");
 				tempPrix = scanner.nextInt();
-				if(tempPrix != 0) {
-					prix += tempPrix;
-				}else {
-					shopping = false;
-				}
-			}
+				prix += tempPrix;
+			}while(tempPrix != 0);
 			
-			System.out.println("Vous devez la somme de : " + prix + " euros");
-			
-			while(!checkout) {
-				System.out.println("Entrez votre paiement : ");
+			do {
+				System.out.println("Vous devez la somme de : " + prix + " euros");
+				System.out.println("Entrez le montant de votre paiement : ");
 				somme = scanner.nextInt();
 				if(somme < prix) {
 					System.out.println("Vous etes en dessous de ce que vous devez...");
-				}else {
-					checkout = true;
 				}
-			}
+			}while (somme < prix);
 			
-			while(!payment) {
-				if (somme - prix > 10) {
-					System.out.println("Je vous rends un billet de 10");
+			while(somme - prix != 0) {
+				if (somme - prix >= 10) {
+					bill10++;
 					somme -= 10;
-				}else if(somme - prix > 5){
-					System.out.println("Je vous rends un billet de 5");
+				}else if(somme - prix >= 5){
+					bill5++;
 					somme -= 5;
-				}else if (somme - prix >= 1) {
-					System.out.println("Je vous rends une piece de 1");
-					somme -= 1;
-				}else {
-					System.out.println("Merci, revenez nous voir !");
-					payment = true;
+				}else{
+					p1++;
+					somme--;
 				}
 			}
+			System.out.println("Le magasin vous rend " + bill10 + " billets de 10E, " + bill5 + " billets de 5E et " + p1 + " pieces de 1E.");
+			System.out.println("Merci, revenez nous voir !");
 		
 		scanner.close();
 	}
