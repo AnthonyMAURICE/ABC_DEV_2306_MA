@@ -9,7 +9,8 @@ public class App {
 			System.out.println("Saisissez un nombre");
 				nombre = scanner.nextInt();
 				counter = nombre + 1;
-				
+				scanner.close();
+
 				System.out.println("Avec boucle while");
 				
 				while(counter <= nombre + 10) {
@@ -23,8 +24,7 @@ public class App {
 					System.out.print(counter + " ");
 				}
 		
-		scanner.close();
-
+		
 	}
 
 }

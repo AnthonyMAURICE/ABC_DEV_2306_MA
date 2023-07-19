@@ -23,7 +23,7 @@ public class App {
 				}
 			}
 			index++; // incrémentation car le tableau commence à 0 et non à 1
-			System.out.println("La valeur la plus elevee est : " + temp + " qui est en position : " + index);
+			System.out.println("La valeur la plus elevee est : " + temp + " qui etait le numero " + index);
 			
 			
 			//récupération de la valeur la plus grande par la méthode sort()
