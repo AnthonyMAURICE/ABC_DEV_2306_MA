@@ -28,11 +28,12 @@ public class AireVolume {
 			System.out.println("Saisissez le rayon de la sphere : ");
 			rayon = scanner.nextDouble();
 			aire = 4*Math.PI*Math.pow(rayon, 2);
-			volume = (4/3)*Math.PI*Math.pow(rayon, 3);
-			System.out.println("L'aire et le volume (arrondis à deux decimales) de la sphere de rayon " 
+			volume = (4d/3)*Math.PI*Math.pow(rayon, 3); // ne pas oublier le "d", qui force le résultat de 4/3 en double
+			System.out.println("L'aire et le volume (arrondis a deux decimales) de la sphere de rayon " 
 								+ rayon + " sont : " + Math.round(aire * 100.0)/100.0 	// la méthode Math.round() arrondit, 
 								+ " et " + Math.round(volume * 100.0) / 100.0);			//et la multiplication suivie de la division par 100.0 retourne le résultat avec 2 décimales
 		scanner.close();
+
 	}
 
 }

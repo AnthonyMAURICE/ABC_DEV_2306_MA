@@ -10,7 +10,7 @@ public class App {
 			System.out.println("Saisissez un nombre, nous calculerons la somme des entiers jusque celui-ci.");
 			nombre = scanner.nextInt();
 			
-			for(int i = 0; i <= nombre; i++) {
+			for(int i = 1; i <= nombre; i++) {
 				temp +=i;
 			}
 			

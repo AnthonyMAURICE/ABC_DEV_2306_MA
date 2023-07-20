@@ -21,7 +21,7 @@ public class App {
 				if(somme < prix) {
 					System.out.println("Vous etes en dessous de ce que vous devez...");
 				}
-			}while (somme < prix); // tant qu'un montant supérieur à la somme totale n'est pas entrée
+			}while (somme < prix); // tant qu'un montant supérieur au prix total n'est pas entrée
 			
 			while(somme - prix > 0) { // boucle while qui détermine par une suite de conditions le nombre de billets (ou pièce) de chaque type demandé qui sera reversé
 				if (somme - prix >= 10) {
@@ -35,7 +35,7 @@ public class App {
 					somme--;
 				}
 			}
-			System.out.println("Le magasin vous rend " + bill10 + " billets de 10E, " + bill5 + " billets de 5E et " + p1 + " pieces de 1E.");
+			System.out.println("Le magasin vous rend " + bill10 + " billet(s) de 10E, " + bill5 + " billet(s) de 5E et " + p1 + " piece(s) de 1E.");
 			System.out.println("Merci, revenez nous voir !");
 		
 		scanner.close();

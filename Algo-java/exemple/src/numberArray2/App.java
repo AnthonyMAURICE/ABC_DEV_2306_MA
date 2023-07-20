@@ -22,7 +22,7 @@ public class App {
 				}
 			}
 			index++; // incrémentation pour récupérer la position, car le tableau commence à 0 et non à 1
-			System.out.println("La valeur la plus elevee est : " + temp + " qui est en position : " + index);
+			System.out.println("La valeur la plus elevee est : " + temp + " qui est en position " + index);
 		
 		scanner.close();
 

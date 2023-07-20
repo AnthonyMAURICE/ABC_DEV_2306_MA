@@ -35,6 +35,7 @@ public class App {
 			}
 			System.out.print(" en binaire.");
 		scanner.close();
+
 	}
 		
 }
