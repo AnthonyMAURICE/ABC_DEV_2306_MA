@@ -29,7 +29,7 @@ public class App {
 			
 			
 			for(int i = 1; i <= nombre; i++) {
-				temp *= i;
+				temp = temp * i;
 			}
 			
 			System.out.println("La factorielle de " + nombre + " donne : " + temp);

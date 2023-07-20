@@ -23,7 +23,7 @@ public class App {
 				}
 			}while (somme < prix); // tant qu'un montant supérieur à la somme totale n'est pas entrée
 			
-			while(somme - prix != 0) { // boucle while qui détermine par une suite de conditions le nombre de billets (ou pièce) de chaque type demandé qui sera reversé
+			while(somme - prix > 0) { // boucle while qui détermine par une suite de conditions le nombre de billets (ou pièce) de chaque type demandé qui sera reversé
 				if (somme - prix >= 10) {
 					bill10++;
 					somme -= 10;

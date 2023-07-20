@@ -4,8 +4,7 @@ import java.util.Scanner;
 public class App {
 
 	public static void main(String[] args) {
-		int chevauxPartants = 0, chevauxJoues = 0; 
-		long factorielleN = 1, factorielleP = 1, factorielleNP = 1, x, y;
+		int chevauxPartants = 0, chevauxJoues = 0, factorielleN = 1, factorielleP = 1, factorielleNP = 1, x, y;
 		boolean verif = false;
 		
 		Scanner scanner = new Scanner(System.in);
@@ -26,17 +25,18 @@ public class App {
 			}
 			
 			// calcul des factorielles
-			for(int i = 1; i <= chevauxPartants; i++) {
-				factorielleN *= i;
+			for(int i = 2; i <= chevauxPartants; i++) {
+				factorielleN = factorielleN * i;
 			}
 			
-			for(int j = 1; j <= chevauxJoues; j++) {
-				factorielleP *= j;
+			for(int j = 2; j <= chevauxJoues; j++) {
+				factorielleP = factorielleP * j;
 			}
 				
-			for(int k = 1; k <= (chevauxPartants - chevauxJoues); k++) {
-				factorielleNP *= k;
+			for(int k = 2; k <= (chevauxPartants - chevauxJoues); k++) {
+				factorielleNP = factorielleNP * k;
 			}
+			
 			//stockage des calculs dans les variables pour restitution par la suite dans la console
 			x = factorielleN / factorielleNP;
 			y = factorielleN / (factorielleP * factorielleNP);
@@ -44,6 +44,7 @@ public class App {
 			System.out.println("Vous avez dans l'ordre : 1 chance sur " + x + " et dans le desordre : 1 chance sur " + y + " de gagner");
 		
 		scanner.close();
+		
 
 	}
 

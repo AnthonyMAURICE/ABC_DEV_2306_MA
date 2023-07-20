@@ -1,0 +1,14 @@
+VARIABLES
+nombre est un entier
+temp est un entier
+Debut Programme
+temps <-- 0
+Ecrire "Saisissez un nombre"
+lire <-- nombre
+    Debut Pour
+        Pour i allant de 0 à nombre
+        Faire
+            temp += i
+            Ecrire "La somme des entiers entre 0 et ", nombre, " donne ", temp
+    Fin Pour
+Fin Programme

@@ -1,0 +1,22 @@
+VARIABLES
+counter est un entier
+index est un entier
+nombre est un entier
+tempNumber est un entier
+Debut Programme
+counter <-- 1
+tempNumber <-- 0
+Debut Tant que
+    tant que counter < 20
+    Faire 
+        Ecrire "Saisissez un nombre (numéro ", counter, ") sur 20"
+        Lire <-- nombre
+        Debut Si
+            Si nombre > tempNumber
+            Alors  
+                tempNumber <-- nombre
+                index <-- counter
+        Fin Si
+Fin tant que
+Ecrire "le nombre saisi le plus grand est : ", tempNumber, " en position ", index
+Fin Programme

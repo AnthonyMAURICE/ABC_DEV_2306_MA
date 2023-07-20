@@ -1,0 +1,44 @@
+VARIABLES
+somme est un entier
+prix est un entier
+tempPrix est un entier
+billet10 est un entier
+billet5 est un entier
+piece1 est un entier
+Debut Programme
+    Debut tant que
+    Tant que prix est différend de 0
+        Faire
+        Ecrire "Prix de vos articles"
+        Lire <-- tempPrix
+        prix += tempPrix
+    Fin tant que
+    Debut tant que
+        tant que somme est inférieur à prix
+        Faire
+            Ecrire "Votre facture s'élève à : ", prix 
+            Ecrire "Montant de votre paiement ?"
+            Lire <-- somme
+            Debut Si
+                Si somme est inférieur à prix
+                Alors
+                    Ecrire "Veuillez ne pas m'arnaquer s'il vous plaît"
+            Fin Si
+    Fin tant que
+    Debut tant que
+    Tant que (somme - prix) est supérieur à 0
+    Faire
+        Debut Si
+            Si (somme - prix) est supérieur à 10
+            Alors
+                billet10 <-- billet10 + 1
+                somme <-- somme - 10
+            Sinon Si (somme - prix) est supérieur à 5
+                billet5 <-- billet5 + 1
+                somme <-- somme - 5
+            Sinon
+                piece1 <-- piece1 + 1
+                somme <-- somme - 1
+        Fin Si
+    Ecrire "Je vous rends donc ", billet10, " billets de 10, ", billet5, " billets de 5 et ", piece1, " pieces de 1"
+Fin Programme

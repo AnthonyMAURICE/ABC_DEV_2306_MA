@@ -1,0 +1,32 @@
+VARIABLES
+chevauxPartants est un entier
+chevauxJoues est un entier
+factorielleN est un entier
+factorielleP est un entier
+factorielleNP est un entier
+x est un entier
+y est un entier
+Debut Programme
+    Ecrire "Combien de chevaux au départ"
+    Lire <-- chevauxPartants
+    Ecrire "Combien de chevaux joués"
+    Lire <-- chevauxJoues
+        Debut Pour
+            Pour i allant de 2 à chevauxPartants
+            Faire
+                factorielleN = factorielleN * i
+        Fin Pour
+        Debut Pour
+            Pour j allant de 2 à chevauxJoues
+            Faire
+                factorielleP = factorielleP * i
+        Fin Pour
+        Debut Pour
+            Pour i allant de 2 à (chevauxPartants - chevauxJoues)
+            Faire
+                factorielleNP = factorielleNP * i
+        Fin Pour
+    x <-- factorielleN / factorielleNP
+    y <-- factorielleN / (factorielleP * factorielleNP)
+    Ecrire "Vous avez, dans l'ordre 1 chance sur ", x, " et dans le désordre 1 chance sur ", y, " de gagner"
+Fin Programme
