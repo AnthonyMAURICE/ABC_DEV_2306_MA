@@ -11,7 +11,7 @@ public class App {
 			while(reload.equals("o")){ // boucle tant que reload est égal à "o"
 				System.out.println("Saisir un nombre entre 1 et 10");
 				nombre = scanner.nextInt();
-				if(nombre <= 10 && nombre > 1) { // contrôle si la saisie est dans les paramètres demandés
+				if(nombre <= 10 && nombre >= 1) { // contrôle si la saisie est dans les paramètres demandés
 					for(multiplicateur = 0; multiplicateur <= 10; multiplicateur++) { // boucle for qui fait le calcul et l'affichage des tables
 						resultat = nombre * multiplicateur;
 						System.out.println(multiplicateur + " * " + nombre + " = " + resultat);
