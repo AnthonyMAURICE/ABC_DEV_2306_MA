@@ -16,13 +16,13 @@ public class App {
 			}while(number != 0);
 
 			for(int j = 0; j < values.size(); j++) { // boucle sur la liste de valeurs
-				if (temp <= values.get(j)) { // si la valeur de la variable de stockage est infÃ©rieure ou Ã©gale Ã  la valeur prÃ©sente dans la liste
+				if (temp <= values.get(j)) { // si la valeur de la variable de stockage est inférieure ou égale à  la valeur présente dans la liste
 					temp = values.get(j); // elle prend sa valeur
 					index = j; // et index stocke sa position dans la liste
 				}
 			}
-			index++; // incrÃ©mentation pour rÃ©cupÃ©rer la position, car le tableau commence Ã  0 et non Ã  1
-			System.out.println("La valeur la plus elevee est : " + temp + " qui est en position " + index);
+			index++; // incrémentation pour récupérer la position, car le tableau commence à  0 et non à  1
+			System.out.println("La valeur la plus élevée est : " + temp + " qui est en position " + index);
 		
 		scanner.close();
 

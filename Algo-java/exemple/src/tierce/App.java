@@ -9,15 +9,15 @@ public class App {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-			// saisie et contrÃ´le des valeurs
+			// saisie et contrôle des valeurs
 			while(!verif) {
 				System.out.println("Entrez le nombre de chevaux partants : ");
 				chevauxPartants = scanner.nextInt();
-				System.out.println("Entrez le nombre de chevaux joues : ");
+				System.out.println("Entrez le nombre de chevaux joués : ");
 				chevauxJoues = scanner.nextInt();
 				
 				if (chevauxJoues > chevauxPartants) {
-					System.out.println("Entrez des nombres de chevaux joues inferieurs a ceux partants : ");
+					System.out.println("Entrez des nombres de chevaux joués inférieurs a ceux partants : ");
 				}else {
 					verif = true;
 				}
@@ -41,7 +41,7 @@ public class App {
 			x = factorielleN / factorielleNP;
 			y = factorielleN / (factorielleP * factorielleNP);
 			
-			System.out.println("Vous avez dans l'ordre : 1 chance sur " + x + " et dans le desordre : 1 chance sur " + y + " de gagner");
+			System.out.println("Vous avez dans l'ordre : 1 chance sur " + x + " et dans le désordre : 1 chance sur " + y + " de gagner");
 		
 		scanner.close();
 		

@@ -5,28 +5,37 @@ public class App {
 
 	public static void main(String[] args) {
 
-		int temp = 0, index = 0;
+		int temp = 0, index = 0, indexForEach = 0;
 		int[] values = new int[20];
 		
 		Scanner scanner = new Scanner(System.in);
 			for (int i = 0; i < values.length; i++) {
-				System.out.println("entrez le nombre " + (i+1) + " sur 20");
+				System.out.println("Entrez le nombre " + (i+1) + " sur 20");
 				values[i] = scanner.nextInt();
 			}
 			
-			// rÃ©cupÃ©ration de la valeur la plus Ã©levÃ©e avec son index
+			// récupération de la valeur la plus élevée avec son index
 			
-			for(int j = 0; j < values.length; j++) { // boucle sur le tableau de valeurs
-				if (temp <= values[j]) { // si la valeur de la variable de stockage est infÃ©rieure ou Ã©gale Ã  la valeur prÃ©sente dans le tableau
+			/*for(int j = 0; j < values.length; j++) { // boucle sur le tableau de valeurs (boucle for)
+				if (temp <= values[j]) { // si la valeur de la variable de stockage est inférieure ou égale à  la valeur présente dans le tableau
 					temp = values[j]; // elle prend sa valeur
 					index = j; // et index stocke sa position dans le tableau
 				}
+			}*/
+			
+			for(int i : values) {// boucle for-each (index seulement récupérable avec une variable dédiée)
+				if (temp <= i) { // si la valeur de la variable de stockage est inférieure ou égale à  la valeur présente dans le tableau
+					temp = i; // elle prend sa valeur
+					index = indexForEach; // index prend la valeur de la variable dédiée seulement si la condition est remplie
+				}
+				indexForEach++; // incrémentation de la variable d'index de la boucle for-each
 			}
-			index++; // incrÃ©mentation car le tableau commence Ã  0 et non Ã  1
-			System.out.println("La valeur la plus elevee est : " + temp + " qui etait le numero " + index);
+			
+			index++; // incrémentation car le tableau commence à  0 et non à  1
+			System.out.println("La valeur la plus élevée est : " + temp + " qui était le numéro " + index);
 			
 			
-			//rÃ©cupÃ©ration de la valeur la plus grande par la mÃ©thode sort()
+			//récupération de la valeur la plus grande par la méthode sort()
 
 			Arrays.sort(values);
 			
