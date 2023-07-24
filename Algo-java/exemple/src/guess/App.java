@@ -15,7 +15,7 @@ public class App {
 			while (guessed == false && remaining > 0)  {; //boucle tant que l booléen est faux et que le nombre de coups restants est supérieur à  0
 				essais++; // incrémentation de la variable qui traque le nombre d'essais
 				System.out.println("Devinez le chiffre mystere entre 0 et 100 (vous avez "+ remaining +" coups pour reussir)");
-				if(scanner.hasNextInt()) {
+				if(scanner.hasNextInt()) { // contrôle que la saisie est bien un nombre
 					guess = scanner.nextInt(); // nombre proposé par le joueur
 					if (guess == number) {
 						System.out.println("Vous avez gagne !");
@@ -36,7 +36,7 @@ public class App {
 						
 						System.out.println("Entre " + forkDown + " et " + forkUp); // affiche la fourchette basse puis haute
 					}
-				}else {
+				}else { // sinon, si c'est une chaîne de caractères, passe dans le "else"
 					error = scanner.next();
 					System.out.println("Vous avez entré : " + error + ". Saisie incorrecte. Vous perdez ce tour !");
 				}
