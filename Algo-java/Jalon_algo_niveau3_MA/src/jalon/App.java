@@ -23,7 +23,7 @@ public class App {
 						System.out.println("Souhaitez-vous afficher une autre table ? Oui(O) ou Non(N)");
 						reload = scanner.next().toLowerCase(); // input qui détermine la sortie ou non de la boucle
 							if (reload.equals("n") || reload.equals("o")) { // si l'entrée est conforme, passe à la suite
-								if (reload.equals("n")) { // condition en cas de fon de programme
+								if (reload.equals("n")) { // condition en cas de fin de programme
 									System.out.println("Fin du programme");
 								}
 								control = true; // booléen qui détermine si la sasie est correcte et passe à "true"

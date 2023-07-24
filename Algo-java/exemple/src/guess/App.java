@@ -6,40 +6,46 @@ public class App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int number, guess, essais, remaining = 5, forkUp, forkDown, forkReduce = 10;
+		String error;
 		boolean guessed = false;
 		Random rand = new Random();
 		essais = 0;
 		Scanner scanner = new Scanner(System.in);
-			number = (int)(Math.random()*101);// s√©lection d'un nombre al√©atoire entre 1 et 100 
-			while (guessed == false && remaining > 0)  {; //boucle tant que l bool√©en est faux et que le nombre de coups restants est sup√©rieur √† 0
-				essais++; // incr√©mentation de la ariable qui traque le nombre d'essais
+			number = (int)(Math.random()*101);// sÈlection d'un nombre alÈatoire entre 1 et 100 
+			while (guessed == false && remaining > 0)  {; //boucle tant que l boolÈen est faux et que le nombre de coups restants est supÈrieur ‡† 0
+				essais++; // incrÈmentation de la variable qui traque le nombre d'essais
 				System.out.println("Devinez le chiffre mystere entre 0 et 100 (vous avez "+ remaining +" coups pour reussir)");
-				guess = scanner.nextInt(); // nombre propos√© par le joueur
-				if (guess == number) {
-					System.out.println("Vous avez gagne !");
-					guessed = true; // le bool√©en passe √† true si le nombre est trouv√©
-				}else { // sinon la fourchette est donn√©e
-					if (guess < number){
-						System.out.print("Vous etes en dessous... ");
-					}else {
-						System.out.print("Vous etes au dessus... ");	
+				if(scanner.hasNextInt()) {
+					guess = scanner.nextInt(); // nombre proposÈ par le joueur
+					if (guess == number) {
+						System.out.println("Vous avez gagne !");
+						guessed = true; // le boolÈen passe ‡† true si le nombre est trouvÈ
+					}else { // sinon la fourchette est donnÈe
+						if (guess < number){
+							System.out.print("Vous etes en dessous... ");
+						}else {
+							System.out.print("Vous etes au dessus... ");	
+						}
+						forkUp = number + rand.nextInt(forkReduce); // deux calculs de dÈfinition de la fourchette (fourchette haute et fourchette basse) ‡† chaque essai infructueux
+						forkDown = number - rand.nextInt(forkReduce);
+						if(forkDown < 0) { // simple condition pour Èviter les fourchettes hors paramËtres
+							forkDown = 0;
+						}else if (forkUp > 100) {
+							forkUp = 100;
+						}
+						
+						System.out.println("Entre " + forkDown + " et " + forkUp); // affiche la fourchette basse puis haute
 					}
-					forkUp = number + rand.nextInt(forkReduce); // deux calculs de d√©finition de la fourchette (fourchette haute et fourchette basse) √† chaque essai infructueux
-					forkDown = number - rand.nextInt(forkReduce);
-					if(forkDown < 0) { // simple condition pour √©viter les fourchettes hors param√®tres
-						forkDown = 0;
-					}else if (forkUp > 100) {
-						forkUp = 100;
-					}
-					
-					System.out.println("Entre " + forkDown + " et " + forkUp); // affiche la fourchette basse puis haute
+				}else {
+					error = scanner.next();
+					System.out.println("Vous avez entrÈ : " + error + ". Saisie incorrecte. Vous perdez ce tour !");
 				}
-				remaining--; // le nombre de coups restants diminue de 1 √† chaque passage dans la boucle (avec 5 au d√©part)
-				forkReduce -= 2;// la variable d'amplitude de la fourchette diminue elle aussi (avec 10 au d√©part)
+				remaining--; // le nombre de coups restants diminue de 1 ‡† chaque passage dans la boucle (avec 5 au dÈpart)
+				forkReduce -= 2;// la variable d'amplitude de la fourchette diminue elle aussi (avec 10 au dÈpart)
 			}
 			if(guessed) { //condition de fin
 				System.out.println("Bravo ! vous avez reussi en " + essais + " essais !");
-			}else {//avec guessed √† false si l'utilisateur n'a pas trouv√© au terme des 5 coups
+			}else {//avec guessed ‡† false si l'utilisateur n'a pas trouvÈ au terme des 5 coups
 				System.out.println("Vous n'avez plus de coups, vous avez perdu...");
 			}
 		scanner.close();
