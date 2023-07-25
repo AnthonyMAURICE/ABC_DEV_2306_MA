@@ -1,0 +1,13 @@
+VARIABLES
+    zeroArray[7] est un tableau d'entiers
+    i est un entier
+
+Debut Programme
+    Debut pour
+        Pour i allant de 0 à 6
+        Faire
+            zeroArray[i] <-- 0
+        Ecrire zeroArray[i]
+        i suivant
+    Fin pour
+Fin Programme

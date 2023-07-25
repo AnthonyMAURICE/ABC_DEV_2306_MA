@@ -19,8 +19,7 @@ public class App {
 				}
 			}
 			
-			index++;
-			System.out.println("La valeur la plus grande dans le tableau est : " + greater + " en position : " + index);
+			System.out.println("La valeur la plus grande dans le tableau est : " + greater + " à l'index : " + index + ", soit la position : " +(index+1));
 			
 		scanner.close();
 	}
