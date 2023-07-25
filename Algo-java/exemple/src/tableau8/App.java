@@ -9,15 +9,13 @@ public class App {
 			for (int i = 0; i < numberArray.length ; i++) {
 				System.out.println("Saisissez la valeur " + counter);
 				numberArray[i] = scanner.nextInt(); 
+				if(greater <= numberArray[i]) {
+					greater = numberArray[i];
+					index = i;
+				}
 				counter++;
 			}
-			
-			for(int j = 0; j< numberArray.length; j++) {
-				if(greater <= numberArray[j]) {
-					greater = numberArray[j];
-					index = j;
-				}
-			}
+
 			
 			System.out.println("La valeur la plus grande dans le tableau est : " + greater + " à l'index : " + index + ", soit la position : " +(index+1));
 			

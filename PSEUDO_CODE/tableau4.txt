@@ -1,0 +1,16 @@
+VARIABLES
+number est un entier
+sumArray[5] est un tableau d'entiers
+Debut Programme
+sumArray[0] <-- 5
+sumArray[1] <-- 18
+sumArray[2] <-- -40
+sumArray[3] <-- 289
+sumArray[4] <-- 42
+    Debut pour
+        pour i allant de 0 à 4
+        Faire
+            sumArray[i] <-- sumArray[i] + 1
+            Ecrire sumArray[i], " "
+    Fin pour
+Fin Programme

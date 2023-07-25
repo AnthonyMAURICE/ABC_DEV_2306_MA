@@ -4,21 +4,28 @@ public class App {
 
 	public static void main(String[] args) {
 		int length, counter = 1;
+		boolean check = false;
 		
 		Scanner scanner = new Scanner(System.in);
+		while(!check) {
 			System.out.println("Saisissez la taille du tableau : ");
 			length = scanner.nextInt();
-			int[] numberArray = new int[length];
-			for(int i = 0; i < numberArray.length; i++) {
-				System.out.println("Entrez la valeur numéro " + counter);
-				numberArray[i] = scanner.nextInt() + 1;
-				counter++;
+			if(length > 1 && length < 25) {
+				check = true;
+				int[] numberArray = new int[length];
+				for(int i = 0; i < numberArray.length; i++) {
+					System.out.println("Entrez la valeur numéro " + counter);
+					numberArray[i] = scanner.nextInt() + 1;
+					counter++;
+				}
+				for(int j : numberArray) {
+					System.out.print(j + " ");
+				}
+			}else {
+				System.out.println("Saisie incorrecte ! Recommencez !");
 			}
+		}
 			
-			for(int j : numberArray) {
-				System.out.print(j + " ");
-			}
-		
 		scanner.close();
 
 	}

@@ -1,0 +1,29 @@
+VARIABLES
+    length est un entier
+    numberArray[n] est un tableau d'entiers
+    i est un entier
+    posCount est un entier
+    negCount est un entier
+    zero est un entier
+    count est un entier
+Debut Programme
+    Ecrire "Saisissez la taille du tableau"
+    Lire <-- length
+    n <-- length
+    Debut Pour
+        pour i allant de 0 à length
+        Faire
+            Ecrire "entrez la valeur", count
+            lire <-- numberArray[i]
+            Debut Si
+                Si numberArray[i] est supérieur à 0
+                    Alors posCount++
+                Sinon Si numberArray[i] est inférieur à 0
+                    Alors negCount++
+                Sinon
+                    zero++
+            Fin Si
+            count++
+    Fin pour
+    Ecrire "nombre(s) positif(s) : ", posCount, ", nombre(s) négatif(s) : ",negCount, " et ",zero," zero(s)"
+Fin Programme
