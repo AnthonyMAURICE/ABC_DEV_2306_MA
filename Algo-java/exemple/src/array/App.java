@@ -39,12 +39,12 @@ public class App {
 			for ( int j = 0; j< array.length; j++) { // boucle pour chercher si la valeur de comparaison existe dans le tableau
 				if (number == array[j]) {
 					check = true; // si oui, passe le booléen à  true
-					index.add(j); // sauvegarde le(s) index trouvés
+					index.add(j + 1); // sauvegarde le(s) index trouvés
 				}
 			}
 			//quatrième bloc, sortie conditionnée par la comparaison du bloc 3
 			if (check == true) {
-				System.out.println("Le nombre " + number + " figure parmi les elements, index : " + index + ", apres tri par ordre croissant des valeurs.");
+				System.out.println("Le nombre " + number + " figure parmi les elements, position : " + index + ", apres tri par ordre croissant des valeurs.");
 			}else {
 				System.out.println("Error 404 : Number Not Found");
 			}

@@ -1,13 +1,13 @@
 VARIABLES
-    somme est un entier
-    argent est un entier
+    somme est un réel
+    argent est un réel
     magasins est un entier
 Debut Programme
     Ecrire "Quelle est la somme de départ ?"
     Lire <-- somme
     argent <-- somme
     Debut Si
-        Si somme est supérieur à 1
+        Si somme est supérieur ou égal à 1
             Alors
             debut Tant Que
                 Tant que somme est supérieur à 2

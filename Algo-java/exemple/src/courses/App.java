@@ -4,26 +4,24 @@ public class App {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int somme, shops = 0, money;
-		
+		int shops = 0;
+		double somme, money;
 		
 		Scanner scanner = new Scanner(System.in);
 			System.out.println("Quelle est la somme de depart ?");
-			somme = scanner.nextInt();
+			somme = scanner.nextDouble();
 			money = somme;
-			if(somme > 1) {
+			if(somme >= 1) {
 				while(somme>2) {
-					System.out.println(somme);
 					somme = somme / 2 - 1;
 					shops ++;
 				}
+				shops++;
+				System.out.println("Avec la somme de depart de : " + money + ", Barnabe a fait ses courses dans " + shops + " magasins.");
 			}else {
-				System.out.println("Entree invalide");
+				System.out.println("Barnabé n'a pu faire ses courses das aucun magasin.");
 			}
-			
-			shops++;
-			System.out.println("Avec la somme de depart de : " + money + ", Barnabe a fait ses courses dans " + shops + " magasins.");
-		
+	
 		scanner.close();
 	}
 
