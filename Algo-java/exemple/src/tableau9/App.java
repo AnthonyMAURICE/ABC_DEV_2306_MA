@@ -25,8 +25,18 @@ public class App {
 			
 			moyenne = noteSomme / notes.length;
 			
+			// avec boucle for
+			/*
 			for(int j = 0; j < notes.length; j++) {
 				if(notes[j] > moyenne) {
+					greaterNotes++;
+				}
+			}
+			*/
+			
+			// avec boucle for each
+			for(double j : notes) {
+				if(j > moyenne) {
 					greaterNotes++;
 				}
 			}
