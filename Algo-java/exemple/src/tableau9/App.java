@@ -12,7 +12,7 @@ public class App {
 			double[] notes = new double[length];
 			
 			for(int i = 0; i < notes.length; i++) {
-				System.out.println("Entrez la note : " + counter);
+				System.out.println("Entrez la note " + counter + " : ");
 				notes[i] = scanner.nextDouble();
 				if(notes[i] > 0 && notes[i] <=20) {
 					noteSomme += notes[i];

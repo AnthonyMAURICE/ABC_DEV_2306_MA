@@ -10,9 +10,9 @@ public class App {
 		for(int i = 0; i < array2.length; i++) {
 			for(int j = 0; j < array1.length; j++) {
 				System.out.print(array2[i] + " * " + array1[j]);
-				String calcul = (signe < (array1.length * array2.length)-1) ? " + " : " = ";
+				String signeAffiche = (signe < (array1.length * array2.length)-1) ? " + " : " = ";
 				signe++;
-				System.out.print(calcul);
+				System.out.print(signeAffiche);
 				temp = array2[i]*array1[j];
 				resultat += temp;
 			}
