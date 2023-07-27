@@ -26,7 +26,7 @@ public class App {
 		
 		perimeter = a + b + c;
 		
-		aire = Math.sqrt((perimeter /2 - a) * (perimeter / 2 - b) * (perimeter / 2 - c));
+		aire = Math.pow((perimeter /2 - a) * (perimeter / 2 - b) * (perimeter / 2 - c), 1/2);
 		
 		System.out.println("Le périmètre du triangle est de : " + perimeter + " et son aire de : " + Math.round(aire * 100.0) / 100.0);
 	}

@@ -17,11 +17,13 @@ public class App {
 				nombre = scanner.nextInt();
 				if(nombre != 0) {// condition pour lancer le programme seulement si la saisie est différente de "0"
 					
-					System.out.println("Les " + nombre + " premiers nombres de la suite de Fibonacci sont\n");
+					
 					
 					if(nombre < 2) { // condition pour répondre au critère qu'au moins 2 nombres de la suite soient affichés
 						nombre = 2;
 					}
+					
+					System.out.println("Les " + nombre + " premiers nombres de la suite de Fibonacci sont\n");
 			
 					int[]suite = new int[nombre]; // déclaration du tableau avec en longueur la saisie utilisateur
 					

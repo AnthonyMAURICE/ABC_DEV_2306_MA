@@ -9,18 +9,15 @@ public class App {
 		Scanner scanner = new Scanner(System.in);
 			System.out.println("entrez une chaine de caractères");
 			chaine = scanner.nextLine();
-
 			inversionChaine(chaine);
 		scanner.close();
 	}
 
 	private static void inversionChaine(String origin) {
-		char[] reversed = new char[origin.length()];
-		int j = 0;
-		
-		for(int i = origin.length()-1; i >= 0; i--) {
-			reversed[j] = origin.charAt(i);
-			j++;
+		String reversed = "";
+				
+		for(int i = 0; i < origin.length() ; i++) {
+			reversed = origin.charAt(i) + reversed;
 		}
 		
 		System.out.println(reversed);
