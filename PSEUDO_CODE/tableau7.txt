@@ -1,0 +1,37 @@
+VARIABLES
+numberArray[n] est un tableau d'entiers
+n est un entier
+compteur est un entier
+i est un entier
+j est un entier
+check est un booléen
+Debut Programme
+compteur <-- 1
+check <-- faux
+    Debut tant que
+        tant que check est faux
+        Faire
+            Ecrire "Saisissez la taille du tableau (entre 2 et 25)"
+            Lire <-- n
+            Debut Si
+                Si n est supérieur à 1 ET n est inférieur ou égal à 25
+                Alors
+                    check <-- vrai
+                    Debut pour 
+                        pour i allant de 0 à n-1
+                        Faire
+                            Ecrire "Entrez la valeur ", compteur
+                            Lire <-- numberArray[i]  
+                            compteur <-- compteur + 1
+                    Fin pour
+                Ecrire "les valeurs entrées auxquelles on a ajouté 1 donnent : "
+                Debut pour
+                    pour j allant de 0 à n-1
+                    Faire
+                        Ecrire numberArray[j]
+                Fin pour
+            Sinon
+                Ecrire "Saisie incorrecte, veuillez recommencer"
+            Fin Si
+    Fin tant que
+Fin Programme

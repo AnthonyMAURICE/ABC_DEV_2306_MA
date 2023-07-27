@@ -1,0 +1,35 @@
+VARIABLES
+array1[4] est un tableau d'entiers
+array2[2] est un tableau d'entiers
+i est un entier
+j est un entier
+resultat est un entier
+signe est un entier
+signeAffiche est une chaine de caractères
+temp et un entier
+Debut Programme
+array1 <-- [4, 8, 7, 12]
+array2 <-- [3, 6]
+signe <-- 0
+    Debut pour
+    pour i allant de 0 à 1
+    Faire
+        Debut pour
+        pour j allant de 0 à 3
+        Faire
+            Ecrire array2[i, " * ", array1[i]]
+                Debut Si
+                    Si signe < 5
+                    Alors
+                        signeAffiche <-- " + "
+                    Sinon
+                        signeAffiche <-- " = "
+                Fin si
+            signe <-- signe + 1
+            Ecrire signeAffiche
+            temp <-- array2[i] * array1[i]
+            resultat <-- resultat + temp
+        Fin pour
+    Fin pour
+Ecrire resultat
+Fin Programme
