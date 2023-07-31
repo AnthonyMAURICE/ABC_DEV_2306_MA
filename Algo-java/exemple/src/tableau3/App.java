@@ -23,9 +23,9 @@ public class App {
 				counter++;
 			}
 			
-			System.out.println("Il y a dans le tableau " + posCount + " valeur(s) positives, " 
-								+ negCount + " valeur(s) négatives et " 
-								+zeroCount + " fois zéro");
+			System.out.println("Il y a dans le tableau " + posCount + " valeur(s) positive(s), " 
+								+ negCount + " valeur(s) négative(s) et " 
+								+ zeroCount + " fois zéro");
 		scanner.close();
 
 	}
