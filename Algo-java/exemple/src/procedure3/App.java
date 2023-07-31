@@ -9,10 +9,14 @@ public class App {
 		Scanner scanner = new Scanner(System.in);
 			System.out.println("entrez une chaine de caractères");
 			chaine = scanner.nextLine();
-			inversionChaine(chaine);
+			//inversionChaine(chaine);
+			
+			System.out.println(inverted(chaine));
 		scanner.close();
 	}
-
+	
+	// avec une procédure
+	/*
 	private static void inversionChaine(String origin) {
 		String reversed = "";
 				
@@ -22,5 +26,15 @@ public class App {
 		
 		System.out.println(reversed);
 
+	}
+	*/
+	
+	// avec une fonction
+	private static String inverted(String origin) {
+		String reversed = "";
+		for(int i = 0; i < origin.length() ; i++) {
+			reversed = origin.charAt(i) + reversed;
+		}
+		return reversed;
 	}
 }
