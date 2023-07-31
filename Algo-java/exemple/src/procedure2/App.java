@@ -21,12 +21,13 @@ public class App {
 	}
 	
 	private static void perimAire(double a, double b, double c) {
-		double perimeter;
+		double perimeter, demiperimeter;
 		double aire;
 		
 		perimeter = a + b + c;
+		demiperimeter = perimeter / 2;
 		
-		aire = Math.sqrt((perimeter /2 - a) * (perimeter / 2 - b) * (perimeter / 2 - c));
+		aire = Math.sqrt(demiperimeter * ((demiperimeter - a) * (demiperimeter - b) * (demiperimeter - c)));
 		
 		System.out.println("Le périmètre du triangle est de : " + perimeter + " et son aire de : " + Math.round(aire * 100.0) / 100.0);
 	}
