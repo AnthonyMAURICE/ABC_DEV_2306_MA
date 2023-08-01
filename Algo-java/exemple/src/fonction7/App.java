@@ -62,6 +62,8 @@ public class App {
 			System.out.println("Merci d'avoir joué.");		
 		scanner.close();
 	}
+	
+	
 	private static int aleatoire(int a, int b) {
 		Random rand = new Random();
 		int number = rand.nextInt(a, b);

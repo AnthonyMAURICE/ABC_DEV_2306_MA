@@ -21,8 +21,7 @@ public class App {
 	}
 	
 	private static void perimAire(double a, double b, double c) {
-		double perimeter, demiperimeter;
-		double aire;
+		double perimeter, demiperimeter, aire;
 		
 		perimeter = a + b + c;
 		demiperimeter = perimeter / 2;
