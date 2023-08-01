@@ -7,7 +7,7 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		boolean encore = false; 
+		boolean encore = false; // initialisée au début car condition de la première boucle "do while"
 		
 		Scanner scanner = new Scanner(System.in);
 			do {
@@ -16,7 +16,7 @@ public class App {
 				String rejouer;																	// car besoin de les réinitialiser à chaque 
 				boolean trouve = false, victoire = false;										// début de partie
 				encore = false;																	
-				nombre = fourchette(1, 100);													// généré aléatoirement
+				nombre = aleatoire(1, 100);													// généré aléatoirement
 				Random random = new Random();
 				do {
 					System.out.println(nombre);
@@ -41,7 +41,7 @@ public class App {
 							forkUp = 100;
 						}
 						System.out.println("Entre " + forkDown + " et " + forkUp); // affiche la fourchette basse puis haute
-						nombreOrdi = fourchette(downFork, upFork);  // arguments "d'affinage" du résultat de l'ordinateur, commencent à 1 et 100 par défaut
+						nombreOrdi = aleatoire(downFork, upFork);  // arguments "d'affinage" du résultat de l'ordinateur, commencent à 1 et 100 par défaut
 						
 						if(nombreOrdi > nombre) {					// condition qui permet "d'affiner" le résultat de l'ordinateur
 							upFork = nombreOrdi;					// avec des fourchettes hautes et basses
@@ -57,7 +57,7 @@ public class App {
 						
 					}
 					essais++;
-					forkReduce -= 2;// la variable d'amplitude de la fourchette diminue elle aussi (avec 10 au départ)
+					forkReduce -= 2;// la variable d'amplitude de la fourchette diminue à chaque tour (avec 10 au départ)
 				}while(!trouve);
 				
 				if(victoire) {
@@ -83,7 +83,7 @@ public class App {
 
 	}
 	
-	private static int fourchette(int a, int b) {
+	private static int aleatoire(int a, int b) {
 		int number;
 		Random rand = new Random();
 		number = rand.nextInt(a, b);
