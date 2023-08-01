@@ -19,7 +19,6 @@ public class App {
 				nombre = aleatoire(1, 100);													// généré aléatoirement
 				Random random = new Random();
 				do {
-					System.out.println(nombre);
 					System.out.println("Entrez un nombre, tentez de trouver le bon.");
 					nombreChoisi = scanner.nextInt();
 					
@@ -48,8 +47,6 @@ public class App {
 						}else{
 							downFork = nombreOrdi;
 						}
-						
-						System.out.println(nombreOrdi);
 						
 						if(nombreOrdi == nombre) { // quand l'ordinateur trouve, le jeu s'arrête mais le booléen de victoire reste à false
 							trouve = true;
