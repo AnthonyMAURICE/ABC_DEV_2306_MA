@@ -12,7 +12,7 @@ public class App {
 		Scanner scanner = new Scanner(System.in);
 			do {
 				int nombreChoisi, nombre, essais = 0, nombreOrdi = 0, upFork = 100, downFork = 1; // variables déclarées et initilisées ici
-				int forkUp, forkDown, forkReduce = 10;
+				int forkUp, forkDown, forkReduce = 10; // variables pour la fourchette du joueur
 				String rejouer;																	// car besoin de les réinitialiser à chaque 
 				boolean trouve = false, victoire = false;										// début de partie
 				encore = false;																	
