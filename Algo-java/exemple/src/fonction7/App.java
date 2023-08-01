@@ -12,11 +12,12 @@ public class App {
 		Scanner scanner = new Scanner(System.in);
 			do {
 				int nombreChoisi, nombre, essais = 0, nombreOrdi = 0, upFork = 100, downFork = 1; // variables déclarées et initilisées ici
+				int forkUp, forkDown, forkReduce = 10;
 				String rejouer;																	// car besoin de les réinitialiser à chaque 
 				boolean trouve = false, victoire = false;										// début de partie
 				encore = false;																	
 				nombre = fourchette(1, 100);													// généré aléatoirement
-				
+				Random random = new Random();
 				do {
 					System.out.println(nombre);
 					System.out.println("Entrez un nombre, tentez de trouver le bon.");
@@ -32,7 +33,15 @@ public class App {
 						}else {
 							System.out.println("Vous êtes au dessus.");
 						}
-						nombreOrdi = fourchette(downFork, upFork);  // arguments "d'affinage" du résultat de l'ordinateur
+						forkUp = nombre + random.nextInt(forkReduce); // deux calculs de définition de la fourchette du joueur (fourchette haute et fourchette basse) à  chaque essai infructueux
+						forkDown = nombre - random.nextInt(forkReduce);
+						if(forkDown < 0) { // simple condition pour éviter les fourchettes hors paramètres
+							forkDown = 0;
+						}else if (forkUp > 100) {
+							forkUp = 100;
+						}
+						System.out.println("Entre " + forkDown + " et " + forkUp); // affiche la fourchette basse puis haute
+						nombreOrdi = fourchette(downFork, upFork);  // arguments "d'affinage" du résultat de l'ordinateur, commencent à 1 et 100 par défaut
 						
 						if(nombreOrdi > nombre) {					// condition qui permet "d'affiner" le résultat de l'ordinateur
 							upFork = nombreOrdi;					// avec des fourchettes hautes et basses
@@ -48,6 +57,7 @@ public class App {
 						
 					}
 					essais++;
+					forkReduce -= 2;// la variable d'amplitude de la fourchette diminue elle aussi (avec 10 au départ)
 				}while(!trouve);
 				
 				if(victoire) {
