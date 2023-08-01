@@ -12,7 +12,7 @@ public class App {
 		Scanner scanner = new Scanner(System.in);
 			do {
 				int nombreChoisi, nombre, essais = 0, nombreOrdi = 0, upFork = 100, downFork = 1; // variables déclarées et initilisées ici
-				int forkUp, forkDown, forkReduce = 10; // variables pour la fourchette du joueur
+				int forkUp, forkDown, forkReduce = 20; // variables pour la fourchette du joueur
 				String rejouer;																	// car besoin de les réinitialiser à chaque 
 				boolean trouve = false, victoire = false;										// début de partie
 				encore = false;																	
@@ -41,20 +41,20 @@ public class App {
 						}
 						System.out.println("Entre " + forkDown + " et " + forkUp); // affiche la fourchette basse puis haute
 						nombreOrdi = aleatoire(downFork, upFork);  // arguments "d'affinage" du résultat de l'ordinateur, commencent à 1 et 100 par défaut
-						
-						if(nombreOrdi > nombre) {					// condition qui permet "d'affiner" le résultat de l'ordinateur
-							upFork = nombreOrdi;					// avec des fourchettes hautes et basses
-						}else{
-							downFork = nombreOrdi;
-						}
+						System.out.println("L'odinateur tente : " + nombreOrdi);
 						
 						if(nombreOrdi == nombre) { // quand l'ordinateur trouve, le jeu s'arrête mais le booléen de victoire reste à false
 							trouve = true;
 						}
-						
+						else if(nombreOrdi > nombre) {					// condition qui permet "d'affiner" le résultat de l'ordinateur
+							upFork = nombreOrdi;					// avec des fourchettes hautes et basses basées sur ses coups précédents
+						}else{
+							downFork = nombreOrdi;
+						}
+
 					}
 					essais++;
-					forkReduce -= 2;// la variable d'amplitude de la fourchette diminue à chaque tour (avec 10 au départ)
+					forkReduce -= 4;// la variable d'amplitude de la fourchette diminue à chaque tour (avec 20 au départ)
 				}while(!trouve);
 				
 				if(victoire) {
@@ -81,9 +81,8 @@ public class App {
 	}
 	
 	private static int aleatoire(int a, int b) {
-		int number;
 		Random rand = new Random();
-		number = rand.nextInt(a, b);
+		int number = rand.nextInt(a, b);
 		return number;
 	}
 
