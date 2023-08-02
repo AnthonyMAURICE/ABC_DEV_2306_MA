@@ -31,17 +31,20 @@ public class App {
 	}
 	
 	private static boolean validDay(int a, int b, int c) {
-		boolean valid = false;
-		if(a == 31 && (b == 2 || b == 4 || b == 6 || b == 9 || b == 11)) { // contrôle les mois à 30 jours
-			valid = false;
-		}else if (b == 2 && a >29) { // contrôle le mois de février
-			valid = false;
-		}else if(b == 2 && a >= 29 && (c % 4 != 0 || c % 4 == 0 && (c % 100 == 0 && c % 400 != 0))) { // contrôle les années bissextiles
-			valid = false;
-		}else { // et si cela arrive jusqu'à cette condition, la date est valide
+		boolean valid = false, cas1, cas2, cas3, cas4;
+		boolean bissextile;
+		bissextile = (c%4 == 0 && c%100 != 0) || c%400 == 0;
+		cas1 = (b == 1 || b == 3 || b == 5 || b == 8 || b == 10 || b == 12) && (a >= 1 && a <= 31);
+		cas2 = (b == 4 || b == 6 || b == 9 || b == 11) && (a >= 1 && a <= 30);
+		cas3 = b == 2 && bissextile  && a >= 1 && a <= 29;
+		cas4 = b == 2 && a >= 1 && a <= 28;
+		
+		if(cas1 || cas2 || cas3 || cas4){
 			valid = true;
 		}
-		
+		else{
+			valid = false;
+		}
 		return valid;
 	}
 

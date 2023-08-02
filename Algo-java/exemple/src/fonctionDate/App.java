@@ -79,7 +79,7 @@ public class App {
 		}while(!weekDay);
 					
 		dayOfWeek = dayOfWeek(year, month, day);	
-		System.out.println(dayOfWeek);
+		System.out.println("Le jour entré est, était ou sera un " + dayOfWeek);
 		
 		scanner.close();
 	}

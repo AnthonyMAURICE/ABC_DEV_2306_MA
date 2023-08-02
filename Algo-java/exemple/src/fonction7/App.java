@@ -10,7 +10,7 @@ public class App {
 		boolean encore; // initialisée au début car condition de la première boucle "do while"
 		Scanner scanner = new Scanner(System.in);
 			do {
-				int forkUp = 100, forkDown = 0; // variables pour la fourchette du joueur
+				int forkUp = 100, forkDown = 1; // variables pour la fourchette du joueur
 				int nombreChoisi, nombre, essais = 0, nombreOrdi = 0, upFork = 100, downFork = 1; // variables déclarées et initilisées ici
 				String rejouer;																	// car besoin de les réinitialiser à chaque 
 				boolean trouve = false, victoire = false;										// début de partie																
@@ -31,7 +31,6 @@ public class App {
 							forkUp = nombreChoisi;
 						}
 						System.out.println("Entre " + forkDown + " et " + forkUp); // affiche la fourchette basse puis haute
-						
 						//Tour de l'ordinateur
 						nombreOrdi = aleatoire(downFork, upFork);  // arguments "d'affinage" du résultat de l'ordinateur, commencent à 1 et 100 par défaut
 						System.out.println("L'ordinateur tente : " + nombreOrdi);
@@ -62,7 +61,6 @@ public class App {
 			System.out.println("Merci d'avoir joué.");		
 		scanner.close();
 	}
-	
 	
 	private static int aleatoire(int a, int b) {
 		Random rand = new Random();

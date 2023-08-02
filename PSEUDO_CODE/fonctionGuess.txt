@@ -1,0 +1,9 @@
+ENTIER FONCTION random (VAL ENTIER a, VAL ENTIER b)
+    nombre est un entier
+    nombre <-- random(a, b)
+    retourne nombre
+FIN FONCTION
+
+VARIABLES
+
+    
