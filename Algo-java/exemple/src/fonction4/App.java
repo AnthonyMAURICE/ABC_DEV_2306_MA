@@ -1,19 +1,34 @@
 package fonction4;
 
+import java.util.Scanner;
+
 public class App {
 
 	public static void main(String[] args) {
-		int cb = 5, cheques = 10, virements = 5, paiements = cb + cheques + virements;
+		int cb, cheques, virements, paiements;
 		
-		System.out.println("Nombre de paiements par Carte Bleue : " + cb);
-		System.out.println("Nombre de chèques émis : " + cheques);
-		System.out.println("Nombre de virements automatiques : " + virements);
+		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Vous avez émis " + paiements + " ordres de débit dont : ");
-		System.out.println("	" + pourcent(cb, paiements) + "% par Carte Bleue");
-		System.out.println("	" + pourcent(cheques, paiements) + "% par chèque");
-		System.out.println("	" + pourcent(virements, paiements) + "% par virement");
-
+			System.out.println("Précisez vos paiements : ");
+			System.out.println("Par carte bancaire : ");
+			cb = scanner.nextInt();
+			System.out.println("Par chèques : ");
+			cheques = scanner.nextInt();
+			System.out.println("Par virements : ");
+			virements = scanner.nextInt();
+			
+			paiements = cb + cheques + virements;
+		
+			System.out.println("Nombre de paiements par Carte Bleue : " + cb);
+			System.out.println("Nombre de chèques émis : " + cheques);
+			System.out.println("Nombre de virements automatiques : " + virements);
+			
+			System.out.println("Vous avez émis " + paiements + " ordres de débit dont : ");
+			System.out.println("	" + Math.round(pourcent(cb, paiements)*10.0)/10.0 + "% par Carte Bleue");
+			System.out.println("	" +  Math.round(pourcent(cheques, paiements)*10.0)/10.0 + "% par chèque");
+			System.out.println("	" +Math.round(pourcent(virements, paiements)*10.0)/10.0 + "% par virements");
+			
+		scanner.close();
 	}
 	
 	private static double pourcent(double a, double b) {

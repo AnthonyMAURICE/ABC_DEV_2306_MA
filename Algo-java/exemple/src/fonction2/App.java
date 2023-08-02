@@ -17,7 +17,7 @@ public class App {
 	
 	private static String bissextile(int a) {
 		String bissextile = "";
-		if (a % 4 != 0 || a % 4 == 0 && (a % 100 == 0 && a % 400 != 0)) {
+		if ((a%4 == 0 && a%100 != 0) || a%400 == 0){
 			bissextile = "L'année n'est pas bissextile.";			
 		}else {
 			bissextile = "L'année est bissextile.";
