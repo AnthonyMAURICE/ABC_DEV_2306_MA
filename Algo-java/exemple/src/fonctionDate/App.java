@@ -44,8 +44,7 @@ public class App {
 	}
 	
 	private static boolean validDate(int a, int b, int c) {
-		boolean valid = false, cas1, cas2, cas3, cas4;
-		boolean bissextile;
+		boolean valid = false, cas1, cas2, cas3, cas4, bissextile;
 		bissextile = (c%4 == 0 && c%100 != 0) || c%400 == 0;
 		cas1 = (b == 1 || b == 3 || b == 5 || b == 8 || b == 10 || b == 12) && (a >= 1 && a <= 31);
 		cas2 = (b == 4 || b == 6 || b == 9 || b == 11) && (a >= 1 && a <= 30);

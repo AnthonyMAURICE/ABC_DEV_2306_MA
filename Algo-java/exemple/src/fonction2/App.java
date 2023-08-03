@@ -43,9 +43,7 @@ public class App {
 	}
 	
 	private static boolean bissextile(int a) {
-		boolean bissextile;
-		bissextile = (a%4 == 0 && a%100 != 0) || a%400 == 0;
-		return bissextile;
+		return (a%4 == 0 && a%100 != 0) || a%400 == 0;
 	}
 
 }
