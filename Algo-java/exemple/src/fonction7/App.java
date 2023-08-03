@@ -10,7 +10,7 @@ public class App {
 		boolean encore; // initialisée au début car condition de la première boucle "do while"
 		Scanner scanner = new Scanner(System.in);
 			do {
-				int nombreChoisi, nombre, essais = 0, nombreOrdi = 0, upFork = 100, downFork = 1; // variables déclarées et initilisées ici
+				int nombreChoisi, nombre, essais = 0, nombreOrdi, upFork = 100, downFork = 1; // variables déclarées et initilisées ici
 				String rejouer;																	// car besoin de les réinitialiser à chaque 
 				boolean trouve = false, victoire = false;										// début de partie																
 				nombre = aleatoire(downFork, upFork); // généré aléatoirement
@@ -28,12 +28,13 @@ public class App {
 							System.out.println("Vous êtes au dessus.");
 							upFork = nombreChoisi;
 						}
+						//tour de l'ordinateur
 						nombreOrdi = aleatoire(downFork, upFork);  // arguments "d'affinage" du résultat de l'ordinateur, commencent à 1 et 100 par défaut
 						System.out.println("L'ordinateur tente : " +nombreOrdi);
 						trouve = check(nombreOrdi, nombre);
-						if(nombreOrdi < nombre) {
+						if(nombreOrdi < nombre && nombreOrdi > downFork) {
 							downFork = nombreOrdi;
-						}else {
+						}else if (nombreOrdi > nombre && nombreOrdi < upFork){
 							upFork = nombreOrdi;
 						}
 					}else {
