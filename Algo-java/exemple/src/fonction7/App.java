@@ -10,38 +10,34 @@ public class App {
 		boolean encore; // initialisée au début car condition de la première boucle "do while"
 		Scanner scanner = new Scanner(System.in);
 			do {
-				int forkUp = 100, forkDown = 1; // variables pour la fourchette du joueur
 				int nombreChoisi, nombre, essais = 0, nombreOrdi = 0, upFork = 100, downFork = 1; // variables déclarées et initilisées ici
 				String rejouer;																	// car besoin de les réinitialiser à chaque 
 				boolean trouve = false, victoire = false;										// début de partie																
-				nombre = aleatoire(1, 100); // généré aléatoirement
+				nombre = aleatoire(downFork, upFork); // généré aléatoirement
 				do {
-					System.out.println("Entrez un nombre, tentez de trouver le bon.");
+					System.out.println(nombre);
+					System.out.println("Entrez un nombre entre "+downFork+ " et " + upFork +", tentez de trouver le bon.");
 					nombreChoisi = scanner.nextInt();
 					// Tour de l'humain(e)
-					if(nombreChoisi == nombre) { // passe les deux booléens à true en cas de victoire
-						victoire = true;
-						trouve = true;
-					}else { // sinon, indication de positionnement et au tour de l'ordinateur "d'essayer"
+					trouve = check(nombreChoisi, nombre);
+					if(!trouve) {
 						if(nombreChoisi < nombre) {
 							System.out.println("Vous êtes en dessous.");
-							forkDown = nombreChoisi;
+							downFork = nombreChoisi;
 						}else {
 							System.out.println("Vous êtes au dessus.");
-							forkUp = nombreChoisi;
+							upFork = nombreChoisi;
 						}
-						System.out.println("Entre " + forkDown + " et " + forkUp); // affiche la fourchette basse puis haute
-						//Tour de l'ordinateur
 						nombreOrdi = aleatoire(downFork, upFork);  // arguments "d'affinage" du résultat de l'ordinateur, commencent à 1 et 100 par défaut
-						System.out.println("L'ordinateur tente : " + nombreOrdi);
-						
-						if(nombreOrdi == nombre) { // quand l'ordinateur trouve, le jeu s'arrête mais le booléen de victoire reste à false
-							trouve = true;
-						}else if(nombreOrdi < nombre) {					// condition qui permet "d'affiner" le résultat de l'ordinateur
-							downFork = nombreOrdi;					// avec des fourchettes hautes et basses basées sur ses coups précédents
-						}else{
+						System.out.println("L'ordinateur tente : " +nombreOrdi);
+						trouve = check(nombreOrdi, nombre);
+						if(nombreOrdi < nombre) {
+							downFork = nombreOrdi;
+						}else {
 							upFork = nombreOrdi;
 						}
+					}else {
+						victoire = true;
 					}
 					essais++;
 				}while(!trouve);
@@ -60,6 +56,14 @@ public class App {
 			}while(encore);
 			System.out.println("Merci d'avoir joué.");		
 		scanner.close();
+	}
+	
+	private static boolean check(int a, int b) {
+		boolean checked = false;
+		if (a==b) {
+			checked = true;
+		}
+		return checked;
 	}
 	
 	private static int aleatoire(int a, int b) {
