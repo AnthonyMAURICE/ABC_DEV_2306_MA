@@ -8,9 +8,7 @@ public class App {
 		String purgedChaine = origin;
 		
 		for(int i = 0; i < purger.length(); i++) {
-			String temporary = String.valueOf(purger.charAt(i));
-			purgedChaine = purgedChaine.replaceAll(temporary, "");
-
+			purgedChaine = purgedChaine.replaceAll(String.valueOf(purger.charAt(i)), "");
 		}
 		
 		return purgedChaine;
