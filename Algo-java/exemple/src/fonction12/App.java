@@ -20,9 +20,9 @@ public class App {
 		String characters;
 		Scanner scanner = new Scanner(System.in);
 			System.out.println("Entrez une chaine de caractères : ");
-			chaine = scanner.nextLine();
+			chaine = scanner.nextLine().toLowerCase();
 			System.out.println("Entrez les caractère à purger : ");
-			characters = scanner.nextLine();
+			characters = scanner.nextLine().toLowerCase();
 			System.out.println(purge(chaine, characters));
 		scanner.close();
 

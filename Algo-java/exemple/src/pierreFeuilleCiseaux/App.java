@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class App {
 
-	private static String choixOrdi() {
+	private static String choixOrdi() { // fonction qui renvoit le "choix" machine, basé sur de l'aléatoire
 		String choixMachine;
 		Random rand = new Random();
 		int choice = rand.nextInt(1, 3);
@@ -19,12 +19,12 @@ public class App {
 		return choixMachine;
 	}
 	
-	private static boolean confront(String a, String b) {
+	private static boolean confront(String a, String b) { // fonction qui renvoit un booléen, true si le point est à la machine, false à l'humain(e)
 		boolean lost = a.equals("p") && b.equals("f")|| a.equals("f") && b.equals("c") || a.equals("c")&& b.equals("p");
 		return lost;
 	}
 	
-	private static String choice(String a) {
+	private static String choice(String a) { //simple fonction pour renvoyer le nom complet du choix
 		String completeChoice = "";
 		if(a.equals("p")) {
 			completeChoice = "Pierre";
@@ -39,20 +39,20 @@ public class App {
 	public static void main(String[] args) {
 		int score1 = 0, score2 = 0, manche = 0;
 		String choix, ordi;
-		String continuer = "o";
+		String continuer = "o"; // initialisé à "o" en cas de mauvaise saisie, pour repasser dans la boucle
 		Scanner scanner = new Scanner(System.in);
 		do {
-			manche++;
+			manche++; // compteur de manches de jeu
 			System.out.println("(P)ierre, (F)euille ou (C)iseaux ?");
 			System.out.println("Manche " + manche);
 			choix = scanner.next().toLowerCase();
-			if (choix.equals("p")|| choix.equals("f") || choix.equals("c")) {
+			if (choix.equals("p")|| choix.equals("f") || choix.equals("c")) { // contrôle de saisie utilisateur
 				ordi = choixOrdi();
 				System.out.println("Vous : " + choice(choix) + " et l'ordinateur : " + choice(ordi));
 				if(choix.equals(ordi)) {
 					System.out.println("Égalité");
 				}else {
-					if(confront(choix, ordi)) {
+					if(confront(choix, ordi)) { // appelle la fonction de confrontation des choix
 						System.out.println("Un point pour SkyNet");
 						score2++;
 					}else {
@@ -62,14 +62,20 @@ public class App {
 				}
 				System.out.println("Souhaitez-vous faire une autre manche ? ((O)ui)");
 				continuer = scanner.next().toLowerCase();
-			}else{
+			}else{ // si la saisie est incorrecte, décrémente le nombre de manches pour la rejouer
 				manche--;
 				System.out.println("Entrée invalide");
 			}
 		}while(continuer.equals("o"));
 		System.out.println("Résultat final : ");
 		System.out.println("Humain(e) : " + score1 + " / SkyNet : " + score2);
+		if(score1>score2) { // condotion de score final, désignation du vainqueur
+			System.out.println("Vainqueur : Humain(e) !");
+		}else if(score2>score1) {
+			System.out.println("Vainqueur : Skynet !");
+		}else {
+			System.out.println("Égalité !");
+		}
 		scanner.close();
 	}
-
 }
