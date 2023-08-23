@@ -69,7 +69,7 @@ public class App {
 		}while(continuer.equals("o"));
 		System.out.println("Résultat final : ");
 		System.out.println("Humain(e) : " + score1 + " / SkyNet : " + score2);
-		if(score1>score2) { // condotion de score final, désignation du vainqueur
+		if(score1>score2) { // condition de score final, désignation du vainqueur
 			System.out.println("Vainqueur : Humain(e) !");
 		}else if(score2>score1) {
 			System.out.println("Vainqueur : Skynet !");
