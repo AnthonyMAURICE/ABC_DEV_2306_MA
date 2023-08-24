@@ -6,6 +6,9 @@ public class App {
 
 	public static void main(String[] args) {
 		double water;
+		String arret = "";
+		String choice = "";
+		boolean stop = false;
 		Scanner scanner = new Scanner(System.in);
 			//Bottle waterBottle = new Bottle();
 			Bottle waterBottle2 = new Bottle(1.5, 1.25, true, "Eau Minérale");
@@ -15,6 +18,7 @@ public class App {
 			boolean test3 = waterBottle2.remplirTout();
 			boolean test4 = waterBottle2.viderTout();
 			
+			
 			System.out.println("Remplir de combien ?");
 			water = scanner.nextDouble();
 			boolean test5 = waterBottle2.remplir(water);
@@ -22,7 +26,10 @@ public class App {
 			System.out.println("Vider de combien ?");
 			water = scanner.nextDouble();
 			boolean test6 = waterBottle2.vider(water);
-		
+								
+						
+
+			
 		scanner.close();
 	}
 }
