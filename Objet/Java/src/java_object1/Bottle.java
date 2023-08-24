@@ -40,18 +40,23 @@ public class Bottle {
 	}
 	
 	public boolean remplirTout(){
-		if (this.estOuverte) {
+		if (this.estOuverte && this.contenanceEnL != this.capaciteEnL) {
 			this.contenanceEnL = this.capaciteEnL;
 			return true;
 		}else {
-			System.out.println("Ouvrez la bouteille avant !");
-			return false;
+			if(!this.estOuverte) {
+				System.out.println("Ouvrez la bouteille avant !");
+				return false;
+			}else {
+				System.out.println("Elle est déjà pleine !");
+				return false;
+			}
 		}
 	}
 	
 	public boolean remplir(double _quantiteEnL){
-		if (estOuverte) {
-			if((this.contenanceEnL + _quantiteEnL) < this.capaciteEnL) {
+		if (estOuverte && this.contenanceEnL != this.capaciteEnL) {
+			if((this.contenanceEnL + _quantiteEnL) <= this.capaciteEnL) {
 				this.contenanceEnL += _quantiteEnL;
 				return true;
 			}else {
@@ -59,18 +64,29 @@ public class Bottle {
 				return false;
 			}
 		}else {
-			System.out.println("Ouvrez la bouteille avant !");
-			return false;
+			if(!this.estOuverte) {
+				System.out.println("Ouvrez la bouteille avant !");
+				return false;
+			}else {
+				System.out.println("Elle est déjà pleine !");
+				return false;
+			}
 		}
 	}
 	
 	public boolean viderTout() {
-		if (this.estOuverte) {
+		if (this.estOuverte && this.contenanceEnL != 0) {
 			this.contenanceEnL = 0;
 			return true;
 		}else {
-			System.out.println("Ouvrez la bouteille avant !");
-			return false;
+			if(!this.estOuverte) {
+				System.out.println("Ouvrez la bouteille avant !");
+				return false;
+			}else {
+				System.out.println("Elle est déjà vide !");
+				return false;
+			}
+			
 		}
 	}
 	
