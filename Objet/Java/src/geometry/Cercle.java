@@ -1,11 +1,9 @@
 package geometry;
 
-import java.util.Scanner;
-
 public class Cercle {
 	double rayon;
 	Point centre = new Point(3, 3);
-	double dx, dy, distancePoint;
+	double distancePoint;
 	
 	public double perimetre(double _rayon) {
 		
@@ -17,14 +15,8 @@ public class Cercle {
 		return Math.PI * Math.pow(_rayon, 2);
 	}
 	
-	public void testAppartenance(double _rayon) {
-		Scanner scanner = new Scanner(System.in);
-			System.out.println("Définissez l'abscisse du point de test : ");
-			dx = scanner.nextDouble();
-			System.out.println("Pareil pour l'ordonnée : ");
-			dy = scanner.nextDouble();
-		scanner.close();
-		distancePoint = Math.sqrt(Math.pow(dx - centre.abscisse, 2) + Math.pow(dy - centre.ordonnee, 2));
+	public void testAppartenance(double _x, double _y, double _rayon) {
+		distancePoint = Math.sqrt(Math.pow(_x - centre.abscisse, 2) + Math.pow(_y - centre.ordonnee, 2));
 		if(distancePoint > _rayon) {
 			System.out.println("Il n'appartient pas au cercle");
 		}else {
