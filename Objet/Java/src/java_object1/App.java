@@ -6,9 +6,6 @@ public class App {
 
 	public static void main(String[] args) {
 		double water;
-		String arret = "";
-		String choice = "";
-		boolean stop = false;
 		Scanner scanner = new Scanner(System.in);
 			//Bottle waterBottle = new Bottle();
 			Bottle waterBottle2 = new Bottle(1.5, 1.25, true, "Eau Minérale");

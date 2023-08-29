@@ -55,7 +55,7 @@ public class Bottle {
 	}
 	
 	public boolean remplir(double _quantiteEnL){
-		if (estOuverte && this.contenanceEnL != this.capaciteEnL) {
+		if (this.estOuverte && this.contenanceEnL != this.capaciteEnL) {
 			if((this.contenanceEnL + _quantiteEnL) <= this.capaciteEnL) {
 				this.contenanceEnL += _quantiteEnL;
 				return true;
@@ -96,7 +96,7 @@ public class Bottle {
 				this.contenanceEnL -= _quantiteEnL;
 				return true;
 			}else {
-				System.out.println("Vous briserez deux ou trois lois de la physique à vider quelque chose de déjà vide...");
+				System.out.println("Vous briserez deux ou trois lois de la physique à vider quelque chose de déjà vide, ou de survider la bouteille...");
 				return false;
 			}
 		}else {
