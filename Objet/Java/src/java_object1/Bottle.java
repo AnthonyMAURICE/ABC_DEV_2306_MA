@@ -92,7 +92,7 @@ public class Bottle {
 	
 	public boolean vider(double _quantiteEnL) {
 		if (this.estOuverte) {
-			if((this.contenanceEnL - _quantiteEnL) >= 0) {
+			if((this.contenanceEnL - _quantiteEnL) > 0) {
 				this.contenanceEnL -= _quantiteEnL;
 				return true;
 			}else {
