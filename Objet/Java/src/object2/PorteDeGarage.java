@@ -4,6 +4,8 @@ public class PorteDeGarage {
 	boolean verrouillee;
 	boolean estFermee;
 	int niveauOuverture;
+	final int niveauMin = 0;
+	final int niveauMax = 100;
 	boolean verified;
 	
 	
@@ -47,7 +49,7 @@ public class PorteDeGarage {
 	}
 	
 	public boolean fermer(int _angle) {
-		if(verified && !this.estFermee && _angle <= this.niveauOuverture) {
+		if(verified && !this.estFermee && this.niveauOuverture - _angle >= this.niveauMin) {
 			this.niveauOuverture -= _angle;
 			return true;
 		}else {
@@ -56,7 +58,7 @@ public class PorteDeGarage {
 	}
 	
 	public boolean ouvrir(int _angle) {
-		if(verified && !this.verrouillee && _angle <= (100 - this.niveauOuverture)) {
+		if(verified && !this.verrouillee && _angle <= (this.niveauMax - this.niveauOuverture)) {
 			this.estFermee = false;
 			this.niveauOuverture += _angle;
 			return true;
@@ -66,7 +68,7 @@ public class PorteDeGarage {
 	}
 	
 	public boolean ouvrirEntierement() {
-		if(verified && !this.verrouillee && this.niveauOuverture != 100) {
+		if(verified && !this.verrouillee && this.niveauOuverture != this.niveauMax) {
 			this.estFermee = false;
 			this.niveauOuverture = 100;
 			return true;

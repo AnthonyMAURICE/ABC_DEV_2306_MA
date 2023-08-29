@@ -75,7 +75,7 @@ public class Bottle {
 	}
 	
 	public boolean viderTout() {
-		if (this.estOuverte && this.contenanceEnL != 0) {
+		if (this.estOuverte && this.contenanceEnL > 0) {
 			this.contenanceEnL = 0;
 			return true;
 		}else {
