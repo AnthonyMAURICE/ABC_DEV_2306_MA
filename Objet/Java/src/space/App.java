@@ -36,7 +36,7 @@ public class App {
 				}
 			}
 			
-			while(!end) {
+			while(!end) { // boucle à revoir plus tard
 				vaisseau.combat(vaisseau, vaisseau2);
 				if(vaisseau2.getHull() <= 0) {
 					end = true;
