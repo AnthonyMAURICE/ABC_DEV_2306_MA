@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class App {
 
 	public static void main(String[] args) {
-		int choice, turn = 1;
-		boolean valid = false;
+		int choice;
+		boolean valid = false, win, end = false;
 				
 		Ship vaisseau = new Ship();
 		Ship vaisseau2 = new Ship();
@@ -28,7 +28,7 @@ public class App {
 					vaisseau.setHull(75);
 					vaisseau.setShields(25);
 					vaisseau.setCannons(8);
-					vaisseau.setEvasion(12);
+					vaisseau.setEvasion(14);
 					valid = true;
 				}else {
 					System.out.println("Saisie incorrecte");
@@ -36,13 +36,15 @@ public class App {
 				}
 			}
 			
-			while(vaisseau.getHull() > 0 && vaisseau2.getHull() > 0) {
-				vaisseau.afficher();
-				System.out.println("Contre : ");
-				vaisseau2.afficher();
-				System.out.println("Tour : " + turn);
+			while(!end) {
 				vaisseau.combat(vaisseau, vaisseau2);
+				if(vaisseau2.getHull() <= 0) {
+					end = true;
+				}
 				vaisseau.combat(vaisseau2, vaisseau);
+				if(vaisseau.getHull() <= 0) {
+					end = true;
+				}
 			}
 			
 			if(vaisseau.getHull() > 0) {

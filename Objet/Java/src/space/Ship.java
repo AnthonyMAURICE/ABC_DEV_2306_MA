@@ -4,7 +4,8 @@ import java.util.Random;
 
 public class Ship {
 	private String type;
-	private int hullPoints, shields, cannons, evasion;
+	private int hullPoints, shields, cannons;
+	private double evasion;
 	
 	public Ship() {
 		this.type = "Croiseur";
@@ -14,7 +15,7 @@ public class Ship {
 		this.evasion = 5;
 	}
 	
-	public Ship(String _type, int _hullPoints, int _shields, int _cannons, int _evasion) {
+	public Ship(String _type, int _hullPoints, int _shields, int _cannons, double _evasion) {
 		this.type = _type;
 		this.hullPoints = _hullPoints;
 		this.shields = _shields;
@@ -38,7 +39,7 @@ public class Ship {
 		return this.cannons;
 	}
 	
-	public int getEvasion() {
+	public double getEvasion() {
 		return this.evasion;
 	}
 	
@@ -58,24 +59,23 @@ public class Ship {
 		this.cannons = _cannons;
 	}
 	
-	public void setEvasion(int _evasion) {
+	public void setEvasion(double _evasion) {
 		this.evasion = _evasion;
 	}
 	
-	public void afficher() {
-		System.out.println(this.getType() + ", points de coque : " + this.getHull() + ", boucliers : " + this.getShields() 
-		+ ", cannons : " + this.getCannons() + ", évasion : " + this.getEvasion());
-	}
+	
 	
 
 	public void combat(Ship vaisseauAttack, Ship vaisseauDefense) {
 		int hitChance;
+		
 		int dammages;
 		Random rand = new Random();
-		hitChance = rand.nextInt(1, 20);
+		int modifier = rand.nextInt((4 - 1) + 1) + 1;
+		hitChance = rand.nextInt((20 - 1) + 1) + 1;
 		if(hitChance > vaisseauDefense.evasion) {
-			System.out.println("Touché");
-			dammages = (vaisseauAttack.cannons * rand.nextInt(1, 4));
+			System.out.println("Touché");			
+			dammages = (vaisseauAttack.cannons * modifier);
 			System.out.println("Le vaisseau prend " + dammages + " de dégats");
 			if (vaisseauDefense.shields > 0) {
 				vaisseauDefense.shields -= dammages;

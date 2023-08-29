@@ -1,22 +1,25 @@
 package object2;
 
 public class PorteDeGarage {
-	boolean verrouillee;
-	boolean estFermee;
-	int niveauOuverture;
-	final int niveauMin = 0;
-	final int niveauMax = 100;
-	boolean verified;
+	private final String marque;
+	private boolean verrouillee;
+	private boolean estFermee;
+	private int niveauOuverture;
+	private final int niveauMin = 0;
+	private final int niveauMax = 100;
+	private boolean verified;
 	
-	
+	/*
 	public PorteDeGarage() {
-		verrouillee = true;
-		estFermee = true;
-		niveauOuverture = 0;
-		verified = true;
+		this.marque = "Porthos";
+		this.verrouillee = true;
+		this.estFermee = true;
+		this.niveauOuverture = 0;
+		this.verified = true;
 	}
-	
-	public PorteDeGarage(boolean _verrouillee, boolean _estFermee, int _niveauOuverture) {
+	*/
+	public PorteDeGarage(final String _marque, boolean _verrouillee, boolean _estFermee, int _niveauOuverture) {
+		this.marque = _marque;
 		this.verrouillee = _verrouillee;
 		this.estFermee = _estFermee;
 		this.niveauOuverture = _niveauOuverture;
@@ -26,6 +29,7 @@ public class PorteDeGarage {
 		}else {
 			verified = false;
 		}
+		
 	}
 	
 	public boolean verrouillerPorte() {
@@ -33,7 +37,7 @@ public class PorteDeGarage {
 			this.verrouillee = true;
 			return true;
 		}else {
-			System.out.println("Ne peux verrouiller ce qui fermé n'est pas...");
+			//Ne peux verrouiller ce qui fermé n'est pas...
 			return false;
 		}
 	}
@@ -43,7 +47,7 @@ public class PorteDeGarage {
 			this.verrouillee = false;
 			return true;
 		}else {
-			System.out.println("Ne peux déverrouiller ce qui verrouillé n'est pas...");
+			//Ne peux déverrouiller ce qui verrouillé n'est pas...
 			return false;
 		}
 	}

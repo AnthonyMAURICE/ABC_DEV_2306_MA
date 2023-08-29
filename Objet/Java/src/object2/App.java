@@ -3,7 +3,7 @@ package object2;
 public class App {
 
 	public static void main(String[] args) {
-		PorteDeGarage maPorte = new PorteDeGarage(true, true, 0); 
+		PorteDeGarage maPorte = new PorteDeGarage("Porthos", true, true, 0); 
 		
 		boolean test1 = maPorte.deverrouillerPorte();
 		boolean test2 = maPorte.ouvrir(50);
