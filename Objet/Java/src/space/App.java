@@ -14,7 +14,7 @@ public class App {
 		Scanner scanner = new Scanner(System.in);
 		//choix du vaisseau
 			while(!valid) {
-				System.out.println("Quel type de vaisseau choisissez-vous ? 1 pour un croiseur (plus lourdement armé), 2 pour une frégate (plus rapide et réactif)");
+				System.out.println("Quel type de vaisseau choisissez-vous ? 1 pour un croiseur (plus lourdement armé), 2 pour une frégate (plus rapide et réactive)");
 				choice = scanner.nextInt();
 				if(choice == 1) {
 					vaisseau.setType("Croiseur");
@@ -31,7 +31,6 @@ public class App {
 					vaisseau.setEvasion(14);
 					valid = true;
 				}else {
-					System.out.println("Saisie incorrecte");
 					valid = false;
 				}
 			}
@@ -48,9 +47,9 @@ public class App {
 			}
 			
 			if(vaisseau.getHull() > 0) {
-				System.out.println("Vous avez gagné !");
+				win = true;
 			}else {
-				System.out.println("Vous avez perdu !");
+				win = false;
 			}
 		scanner.close();
 

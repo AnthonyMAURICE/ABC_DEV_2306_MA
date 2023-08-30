@@ -68,15 +68,14 @@ public class Ship {
 
 	public void combat(Ship vaisseauAttack, Ship vaisseauDefense) {
 		int hitChance;
-		
-		int dammages;
+		boolean touch;
+		int dammages ;
 		Random rand = new Random();
 		int modifier = rand.nextInt((4 - 1) + 1) + 1;
 		hitChance = rand.nextInt((20 - 1) + 1) + 1;
 		if(hitChance > vaisseauDefense.evasion) {
-			System.out.println("Touché");			
+			touch = true;			
 			dammages = (vaisseauAttack.cannons * modifier);
-			System.out.println("Le vaisseau prend " + dammages + " de dégats");
 			if (vaisseauDefense.shields > 0) {
 				vaisseauDefense.shields -= dammages;
 				if (vaisseauDefense.shields < 0) {
@@ -88,7 +87,7 @@ public class Ship {
 			}
 		
 		}else {
-			System.out.println("Manqué !");
+			touch = false;
 		}
 	}
 
