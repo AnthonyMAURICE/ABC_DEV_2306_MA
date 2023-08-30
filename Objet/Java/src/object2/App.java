@@ -7,7 +7,7 @@ public class App {
 		
 		boolean test1 = maPorte.deverrouillerPorte();
 		boolean test2 = maPorte.ouvrir(50);
-		boolean test3 = maPorte.fermer(60);
+		boolean test3 = maPorte.fermer(40);
 		boolean test4 = maPorte.ouvrirEntierement();
 		boolean test7 = maPorte.ouvrirEntierement(); // renvoit false car déjà ouverte au maximum
 		boolean test5 = maPorte.fermerEntierement();

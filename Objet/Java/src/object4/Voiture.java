@@ -1,8 +1,8 @@
 package object4;
 
 public class Voiture {
-	String marque;
-	double prix;
+	private String marque;
+	private double prix;
 	
 	public Voiture() {
 		marque = "Marque"; // je sais, pas inspiré...

@@ -24,30 +24,24 @@ public class PoupeeRusses {
 		public void ouvrir() {
 			if(!this.ouverte && !this.isInOther) {
 				this.ouverte = true;
-				System.out.println("Ouverte");
 			}else {
 				this.ouverte = false;
-				System.out.println("Fermée");
 			}
 		}
 		
 		public void fermer() {
 			if(this.ouverte && !this.isInOther) {
 				this.ouverte = false;
-				System.out.println("Fermée");
 			}else {
 				this.ouverte = true;
-				System.out.println("Ouverte");
 			}
 		}
 		
 		public void placerDans(PoupeeRusses firstDoll, PoupeeRusses p) {
 			if(!dollInP && p.ouverte && !firstDoll.isInOther && !p.hasIn && firstDoll.heigth < p.heigth) {
 				dollInP = true;
-				System.out.println("C'est bon");
 			}else if (!dollInP) {
 				dollInP = false;
-				System.out.println("C'est pas bon");
 			}else {
 				System.out.println("La poupée est déjà dedans.");
 			}

@@ -82,7 +82,7 @@ public class PorteDeGarage {
 	}
 	
 	public boolean fermerEntierement() {
-		if(verified && !this.estFermee) {
+		if(verified && this.niveauOuverture > 0) {
 			this.estFermee = true;
 			this.niveauOuverture = 0;
 			return true;
