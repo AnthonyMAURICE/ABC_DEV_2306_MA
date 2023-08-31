@@ -28,15 +28,7 @@ public class Plat {
 		return this.list;
 	}
 	
-	public boolean equals(ArrayList<Ingredient> _list1, ArrayList<Ingredient> _list2) {
-		if(_list1.equals(_list2)) {
-			return true;
-		}else {
-			return false;
-		}
-	}
-	
-	public boolean equality(Plat _plat) {
+	public boolean equality(Plat _plat) { // méthode de comparaison des plats
 				
 		if(this.name.equals(_plat.name) && this.list.equals(_plat.list)) {
 			return true ;

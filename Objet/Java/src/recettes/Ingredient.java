@@ -32,30 +32,30 @@ public class Ingredient {
 		return this.unite;
 	}
 	
-	public boolean comparison(Ingredient _ingredient, Ingredient _ingredient2) {
-		if(_ingredient.nomAliment.equals(_ingredient2.nomAliment) && _ingredient.etat1.equals(_ingredient2.etat1) && (_ingredient.etat2.equals(_ingredient2.etat2))) {
-			return true;
-		}else {
-			return false;
-		}
-	}
 	
 	public boolean cuire() {
-		if(this.etat1.equals("cuit ") || this.etat1.equals("cuite ")) {
+		if(this.etat1.equals("cuit(e) ")) {
 			return false;
 		}else {
-			this.etat1 = "cuit";
+			this.etat1 = "cuit(e) ";
 			return true;
-		}
-		
+		}	
 	}
 	
 	public boolean decouper() {
-		if(this.etat2.equals("découpé ") || this.etat2.equals("découpée ")) {
+		if(this.etat2.equals("découpé(e) ")) {
 			return false;
 		}else {
 			this.etat2 = "découpé(e)";
 			return true;
+		}
+	}
+	
+	public boolean isSame(Ingredient _ing) { // méthode de comparaison d'ingrédients
+		if(this.nomAliment.equals(_ing.nomAliment) && this.etat1.equals(_ing.etat1) && this.etat2.equals(_ing.etat2)) {
+			return true ;
+		}else {
+			return false;
 		}
 	}
 }
