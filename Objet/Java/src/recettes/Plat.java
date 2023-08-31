@@ -7,10 +7,10 @@ public class Plat {
 	private ArrayList <Ingredient> list;
 	
 	public Plat() {
-		this.name = "choucroute2";
+		this.name = "Choucroute";
 		this.list = new ArrayList<Ingredient>();
 	}
-	
+		
 	public Plat(String name, ArrayList<Ingredient> list) {
 		this.name = name;
 		this.list = list;
@@ -36,5 +36,12 @@ public class Plat {
 		}
 	}
 	
-	
+	public boolean equality(Plat _plat) {
+				
+		if(this.name.equals(_plat.name) && this.list.equals(_plat.list)) {
+			return true ;
+		}else {
+			return false;
+		}	 
+	}
 }
