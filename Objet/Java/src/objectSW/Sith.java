@@ -11,6 +11,6 @@ public class Sith extends Jedi{
 	
 	@Override
 	public String parler() {		
-		return "Obtempérez et mourrez !";
+		return "Obtempérez et mourez !";
 	}
 }

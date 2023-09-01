@@ -1,8 +1,13 @@
 package objectSW;
 
 public abstract class Weapons {
+	private int accuracy;
 	public Weapons(String _name, int _dammage, int _accuracy, boolean ranged) {
 		
+	}
+	
+	public int getAccuracy() {
+		return this.accuracy;
 	}
 	
 }
@@ -32,6 +37,8 @@ class Lightsaber extends Weapons{
 	public String getColor() {
 		return this.color;
 	}
+	
+	
 		
 	public void setIgnited() {
 		if(this.ignited) {

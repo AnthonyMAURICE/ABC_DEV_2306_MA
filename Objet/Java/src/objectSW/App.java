@@ -15,6 +15,7 @@ public class App {
 		Sith vador = new Sith("Darth Vader", 66, 66, 5, 120, ligthsaber4);
 		System.out.println(yoda.parler());
 		System.out.println(windu.parler());
+		System.out.println(vador.parler());
 		
 	}
 
