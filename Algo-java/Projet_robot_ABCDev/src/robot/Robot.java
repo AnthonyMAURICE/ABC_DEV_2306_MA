@@ -2,17 +2,23 @@ package robot;
 
 public class Robot {
 	// enum des différentes commandes pouvant se retrouver sur la manette finale
-	enum Control{
+	enum Mouvement{
 		AVANT,
 		ARRIERE,
 		GAUCHE,
-		DROITE,
-		AGIR;
+		DROITE;
+	}
+	
+	enum Actions{
+		SCANNER,
+		SAISIR,
+		LACHER,
+		DETRUIRE;
 	}
 	
 	private String name, type;
 	private int taille, posX, posY;
-	private boolean androide, powerOn;
+	private boolean androide, powerOn, porteDeja;
 	
 	//constructeur par défaut
 	public Robot() { 
@@ -65,11 +71,11 @@ public class Robot {
 	}
 	
 	// méthode de mouvement, prenant l'enum déclaré en début de classe, si toutefois le robot est activé
-	public boolean setControl(Control _command) {
+	public boolean setMouvement(Mouvement _command) {
 		if(this.powerOn) {
-			Control control = _command;
+			Mouvement Mouvement = _command;
 			
-			switch(control) {
+			switch(Mouvement) {
 				case AVANT:
 					this.posX +=1;
 					break;
@@ -82,9 +88,6 @@ public class Robot {
 				case DROITE:
 					this.posY += 1;
 					break;
-				case AGIR:
-					System.out.println("Le robot fait ce qu'il a à faire"); // à faire évoluer par la suite suivant le type de robot.
-					break;
 			}
 			return true;
 		}else {
@@ -92,6 +95,10 @@ public class Robot {
 			return false;
 		}
 		
+	}
+	
+	public boolean setActions(Actions _actions) {
+		return true;
 	}
 
 }
