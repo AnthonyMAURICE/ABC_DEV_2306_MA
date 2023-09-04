@@ -17,7 +17,7 @@ public class Robot {
 	
 	private String name, type;
 	private int taille, posX, posY, angleY;
-	private boolean android, powerOn, forward = true, left, scanObject = false, objectTaken;
+	private boolean android, powerOn, forward, left, scanObject = false, objectTaken;
 	
 	//constructeur par défaut
 	public Robot() { 
@@ -78,10 +78,12 @@ public class Robot {
 			
 			switch(Mouvement) {
 				case AVANT:
+					this.forward = true;
 					this.setMove(this.forward);
 					break;
 				case ARRIERE:
-					this.setMove(!this.forward);
+					this.forward = false;
+					this.setMove(this.forward);
 					break;
 				case GAUCHE:
 					this.left = true;

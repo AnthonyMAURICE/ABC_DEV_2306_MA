@@ -13,10 +13,12 @@ public class App {
 		Robot cylon = new Robot("Cylon", "WarBot", 200, true, false, 10, 0); //objet Robot construit avec paramètres
 		cylon.setPower();
 		test1 = cylon.setMouvement(Mouvement.AVANT); //renvoient true jusque test3, car le cylon est activé 
+		cylon.setMouvement(Mouvement.ARRIERE);
 		test2 = cylon.setMouvement(Mouvement.GAUCHE);
 		testLeft = cylon.setMouvement(Mouvement.AVANT); // test si le cylon avance bien sur le bon axe suite à sa première rotation
 		test3 = cylon.setMouvement(Mouvement.DROITE);
 		cylon.setMouvement(Mouvement.DROITE);
+		cylon.setMouvement(Mouvement.ARRIERE);
 		testRight = cylon.setMouvement(Mouvement.AVANT); // même test que précédement, cette fois après rotation à droite  
 		posX = cylon.getPosX(); // retour des positions du cylon sur les axes x et y
 		posY = cylon.getPosY();
