@@ -2,7 +2,7 @@ package robot;
 
 public class Robot {
 	// enum des différentes commandes pouvant se retrouver sur la manette finale
-	enum Mouvement{
+	enum Control{
 		AVANT,
 		ARRIERE,
 		GAUCHE,
@@ -65,9 +65,9 @@ public class Robot {
 	}
 	
 	// méthode de mouvement, prenant l'enum déclaré en début de classe, si toutefois le robot est activé
-	public boolean setControl(Mouvement _command) {
+	public boolean setControl(Control _command) {
 		if(this.powerOn) {
-			Mouvement control = _command;
+			Control control = _command;
 			
 			switch(control) {
 				case AVANT:
