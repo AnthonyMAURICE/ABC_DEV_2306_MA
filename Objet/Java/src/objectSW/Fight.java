@@ -15,8 +15,8 @@ public class Fight {
 		boolean jediVictory;
 		int jediHp = this.jedi.pointVie;
 		int sithHp = this.sith.pointVie;
-		int jediForce = this.jedi.force;
-		int sithForce = this.sith.force;
+		int jediForce = this.jedi.getForce();
+		int sithForce = this.sith.getForce();
 		int hitChance;
 		while(jediHp > 0 && sithHp > 0) {
 			Random rand = new Random();

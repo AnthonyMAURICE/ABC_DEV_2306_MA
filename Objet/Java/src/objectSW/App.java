@@ -12,11 +12,13 @@ public class App {
 		Lightsaber lightsaber3 = new Lightsaber(10, 95, 25, "bleu", false);
 		Jedi kenobi = new Jedi("Obi-Wan Kenobi", 40, 42, 5, 110, lightsaber3);
 		Lightsaber ligthsaber4 = new Lightsaber(10, 95, 25, "rouge", false);
-		Sith vador = new Sith("Darth Vader", 66, 66, 5, 120, ligthsaber4);
+		Sith vador = new Sith("Vader", 66, 66, 5, 120, ligthsaber4);
+		yoda.seDeplacer(2, 1, 1);
 		System.out.println(yoda.parler());
 		System.out.println(windu.parler());
 		System.out.println(vador.parler());
 		System.out.println(lightsaber1.getAccuracy());
+		System.out.println(kenobi.getNom());
 		
 	}
 

@@ -1,17 +1,16 @@
 package objectSW;
 
-public abstract class Personnage {
+public abstract class Personnage { // superclasse personnage de laquelle va découler Jedi, Sith et soldats
 	protected String nom;
-	protected int pointVie, x, y, v, force;
+	protected int pointVie, x, y, v;
 	
 	
-	public Personnage(String _n, int _x, int _y, int _v, int _force) {
+	public Personnage(String _n, int _x, int _y, int _v) {
 		this.nom = _n;
 		this.pointVie = 100;
 		this.x = _x;
 		this.y = _y;
 		this.v = _v;
-		this.force = _force;
 	}
 	
 	public String getNom() {
@@ -30,10 +29,6 @@ public abstract class Personnage {
 		return this.v;
 	}
 	
-	public int getForce() {
-		return this.force;
-	}
-	
 	public int getHp() {
 		return this.pointVie;
 	}
@@ -46,9 +41,9 @@ public abstract class Personnage {
 		this.y = _y;
 	}
 	
-	public void seDeplacer(int dx, int dy, int t) {
-		this.x = (int) ((this.x + dx*this.v*t) / Math.sqrt(dx * dy + dy * dy));
-		this.y = (int) ((this.y + dy*this.v*t) / Math.sqrt(dx * dy + dy * dy));
+	public void seDeplacer(int dx, int dy, int time) {
+		this.x = (int) (this.x + dx*this.v*time);
+		this.y = (int) (this.y + dy*this.v*time);
 	}
 	
 	public abstract String parler();
