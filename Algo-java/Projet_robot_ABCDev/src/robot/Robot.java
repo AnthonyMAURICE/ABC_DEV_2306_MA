@@ -74,24 +74,23 @@ public class Robot {
 	// méthode de mouvement, prenant l'enum déclaré en début de classe, si toutefois le robot est activé
 	public boolean setMouvement(Mouvement _command) {
 		if(this.powerOn) {
-			Mouvement Mouvement = _command;
-			
+			Mouvement Mouvement = _command;			
 			switch(Mouvement) {
 				case AVANT:
 					this.forward = true;
-					this.setMove(this.forward);
+					this.setMove();
 					break;
 				case ARRIERE:
 					this.forward = false;
-					this.setMove(this.forward);
+					this.setMove();
 					break;
 				case GAUCHE:
 					this.left = true;
-					this.setAngle(this.left);
+					this.setAngle();
 					break;
 				case DROITE:
 					this.left = false;
-					this.setAngle(this.left);
+					this.setAngle();
 					break;
 				case SCANNER:
 					this.scan();
@@ -111,11 +110,10 @@ public class Robot {
 			System.out.println("Le robot n'est pas activé");
 			return false;
 		}
-		
 	}
 	
 	// détermine l'angle sur l'axe Y après rotation, pour ensuite l'utiliser pour la phase de mouvement 
-	public void setAngle(boolean _left) {
+	public void setAngle() {
 		if(this.left) { // calcul de l'angle Y selon si la rotation est à gauche ou à droite
 			if(this.angleY >=90) {
 				this.angleY -= 90;
@@ -132,7 +130,7 @@ public class Robot {
 	}
 	
 	// méthode de mouvement, basé sur l'angle sur l'axe Y et si le robot avance ou recule
-	public void setMove(boolean _forward) { // booléen à true si le robot avance
+	public void setMove() { // booléen à true si le robot avance
 		switch(this.angleY) { // switch sur l'angle Y pour déterminer son déplacement sur les deux axes
 		case 0: // ici axe X
 			if(this.forward) {
@@ -164,7 +162,6 @@ public class Robot {
 			break;
 		}
 	}
-	
 	
 	// scan du terrain préalable à la prise d'objets
 	public void scan() {
@@ -198,7 +195,7 @@ public class Robot {
 	
 	// méthode humoristique, mais néanmoins sérieuse...
 	public boolean destroyAllMankind() {
-		if(this.getType().equals("WarBot")){
+		if(this.type.equals("WarBot")){
 			System.out.println("Les cylons ont été créés par les humains... Ils ont évolué... Ils se sont rebellés...");
 			return true;
 		}else {
