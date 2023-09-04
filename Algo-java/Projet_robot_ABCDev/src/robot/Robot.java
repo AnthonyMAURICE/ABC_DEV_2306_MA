@@ -1,19 +1,32 @@
 package robot;
 
 public class Robot {
-	public enum Mouvement{
+	// enum des différentes commandes pouvant se retrouver sur la manette finale
+	enum Mouvement{
 		AVANT,
 		ARRIERE,
 		GAUCHE,
 		DROITE,
-		AGIR,
-		STOP;
-
+		AGIR;
 	}
+	
 	private String name, type;
 	private int taille, posX, posY;
 	private boolean androide, powerOn;
 	
+	//constructeur par défaut
+	public Robot() { 
+		this.name = "Robot";
+		this.type = "Androïde";
+		this.taille = 180;
+		this.androide = true;
+		this.powerOn = true;
+		this.posX = 0;
+		this.posY = 0;
+		
+	}
+	
+	//constructeur avec paramètres
 	public Robot(String _name, String _type, int _taille, boolean _androide, boolean _powerOn, int _posX, int _posY) {
 		this.name = _name;
 		this.type = _type;
@@ -24,6 +37,25 @@ public class Robot {
 		this.posY = _posY;
 	}
 	
+	//Getters
+	public String getName() {
+		return this.name;
+	}
+	
+	public String getType() {
+		return this.type;
+	}
+	
+	public int getPosX() {
+		return this.posX;
+	}
+	
+	public int getPosY() {
+		return this.posY;
+	}
+	
+	//Setters
+	// méthode qui met ou non le robot en marche suivant son état initial
 	public void setPower() {
 		if(this.powerOn) {
 			this.powerOn = false;
@@ -32,10 +64,10 @@ public class Robot {
 		}
 	}
 	
-	public boolean setMouvement(String _command) {
+	// méthode de mouvement, prenant l'enum déclaré en début de classe, si toutefois le robot est activé
+	public boolean setControl(Mouvement _command) {
 		if(this.powerOn) {
-			String command = _command;
-			Mouvement control = Mouvement.valueOf(command);
+			Mouvement control = _command;
 			
 			switch(control) {
 				case AVANT:
@@ -53,12 +85,6 @@ public class Robot {
 				case AGIR:
 					System.out.println("Le robot fait ce qu'il a à faire"); // à faire évoluer par la suite suivant le type de robot.
 					break;
-				case STOP:
-					System.out.println("Le robot s'arrête.");
-					break;
-				default:
-					System.out.println("Commande invalide");
-					break;
 			}
 			return true;
 		}else {
@@ -67,6 +93,5 @@ public class Robot {
 		}
 		
 	}
-
 
 }
