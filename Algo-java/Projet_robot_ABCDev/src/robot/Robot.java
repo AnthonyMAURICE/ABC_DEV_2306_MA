@@ -1,24 +1,24 @@
 package robot;
 
+import java.util.Random;
+
 public class Robot {
 	// enum des différentes commandes pouvant se retrouver sur la manette finale
 	enum Mouvement{
 		AVANT,
 		ARRIERE,
 		GAUCHE,
-		DROITE;
-	}
-	
-	enum Actions{
+		DROITE,
 		SCANNER,
 		SAISIR,
 		LACHER,
 		DETRUIRE;
 	}
 	
+	
 	private String name, type;
 	private int taille, posX, posY;
-	private boolean androide, powerOn, porteDeja;
+	private boolean androide, powerOn, porteDeja, scanObject = false, objectTaken;
 	
 	//constructeur par défaut
 	public Robot() { 
@@ -88,6 +88,18 @@ public class Robot {
 				case DROITE:
 					this.posY += 1;
 					break;
+				case SCANNER:
+					this.scan();
+					break;
+				case SAISIR:
+					this.takeObject();
+					break;
+				case LACHER:
+					this.dropObject();
+					break;
+				case DETRUIRE:
+					this.destroyAllMankind();
+					break;
 			}
 			return true;
 		}else {
@@ -97,8 +109,46 @@ public class Robot {
 		
 	}
 	
-	public boolean setActions(Actions _actions) {
-		return true;
+	public void setMovement() {
+		
+	}
+	
+	
+	// scan du terrain préalable à la prise d'objets
+	public void scan() {
+		if(!this.scanObject) {
+			this.scanObject = true;
+		}else {
+			this.scanObject = false;
+		}
+	}
+	
+	// ne renvoit true que si un san préalable a été effectué et que si le robot ne porte pas déjà quelque chose
+	public boolean takeObject() {
+		if(this.scanObject && !this.objectTaken) {
+			this.objectTaken = true;
+			this.scanObject = false;
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public boolean dropObject() {
+		if(this.objectTaken) {
+			this.objectTaken = false;
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public boolean destroyAllMankind() {
+		if(this.getType().equals("WarBot")){
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 }
