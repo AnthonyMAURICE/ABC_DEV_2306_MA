@@ -1,6 +1,5 @@
 package robot;
 
-import java.util.Random;
 
 public class Robot {
 	// enum des différentes commandes pouvant se retrouver sur la manette finale
@@ -17,18 +16,19 @@ public class Robot {
 	
 	
 	private String name, type;
-	private int taille, posX, posY;
-	private boolean androide, powerOn, porteDeja, scanObject = false, objectTaken;
+	private int taille, posX, posY, angleY;
+	private boolean android, powerOn, forward = true, left, scanObject = false, objectTaken;
 	
 	//constructeur par défaut
 	public Robot() { 
 		this.name = "Robot";
 		this.type = "Androïde";
 		this.taille = 180;
-		this.androide = true;
+		this.android = true;
 		this.powerOn = true;
 		this.posX = 0;
 		this.posY = 0;
+		this.angleY = 0;
 		
 	}
 	
@@ -37,10 +37,11 @@ public class Robot {
 		this.name = _name;
 		this.type = _type;
 		this.taille = _taille;
-		this.androide = _androide;
+		this.android = _androide;
 		this.powerOn = _powerOn;
 		this.posX = _posX;
 		this.posY = _posY;
+		this.angleY = 0;
 	}
 	
 	//Getters
@@ -77,16 +78,18 @@ public class Robot {
 			
 			switch(Mouvement) {
 				case AVANT:
-					this.posX +=1;
+					this.setMove(this.forward);
 					break;
 				case ARRIERE:
-					this.posX -=1;
+					this.setMove(!this.forward);
 					break;
 				case GAUCHE:
-					this.posY -= 1;
+					this.left = true;
+					this.setAngle(this.left);
 					break;
 				case DROITE:
-					this.posY += 1;
+					this.left = false;
+					this.setAngle(this.left);
 					break;
 				case SCANNER:
 					this.scan();
@@ -109,8 +112,55 @@ public class Robot {
 		
 	}
 	
-	public void setMovement() {
-		
+	// détermine l'angle sur l'axe Y après rotation, pour ensuite l'utiliser pour la phase de mouvement 
+	public void setAngle(boolean _left) {
+		if(this.left) { // calcul de l'angle Y selon si la rotation est à gauche ou à droite
+			if(this.angleY >=90) {
+				this.angleY -= 90;
+			}else {
+				this.angleY = 270;
+			}
+		}else {
+			if(this.angleY < 270 ) {
+				this.angleY += 90;
+			}else {
+				this.angleY = 0;
+			}
+		}
+	}
+	
+	// méthode de mouvement, basé sur l'angle sur l'axe Y et si le robot avance ou recule
+	public void setMove(boolean _forward) { // booléen à true si le robot avance
+		switch(this.angleY) { // switch sur l'angle Y pour déterminer son déplacement sur les deux axes
+		case 0: // ici axe X
+			if(this.forward) {
+				this.posX +=1;
+			}else {
+				this.posX -=1;
+			}
+			break;	
+		case 90: // ici axe Y
+			if(this.forward) {
+				this.posY +=1;
+			}else {
+				this.posY -=1;
+			}
+			break;
+		case 180: // axe X
+			if(this.forward) {
+				this.posX -=1;
+			}else {
+				this.posX +=1;
+			}
+			break;
+		case 270: // axe Y
+			if(this.forward) {
+				this.posY -=1;
+			}else {
+				this.posY +=1;
+			}
+			break;
+		}
 	}
 	
 	
@@ -123,7 +173,7 @@ public class Robot {
 		}
 	}
 	
-	// ne renvoit true que si un san préalable a été effectué et que si le robot ne porte pas déjà quelque chose
+	// ne renvoit true que si un scan préalable a été effectué et que si le robot ne porte pas déjà quelque chose
 	public boolean takeObject() {
 		if(this.scanObject && !this.objectTaken) {
 			this.objectTaken = true;
@@ -134,6 +184,7 @@ public class Robot {
 		}
 	}
 	
+	// ne renvoit true que s'il a un objet à lâcher, et le lâche
 	public boolean dropObject() {
 		if(this.objectTaken) {
 			this.objectTaken = false;
@@ -143,8 +194,10 @@ public class Robot {
 		}
 	}
 	
+	// méthode humoristique, mais néanmoins sérieuse...
 	public boolean destroyAllMankind() {
 		if(this.getType().equals("WarBot")){
+			System.out.println("Les cylons ont été créés par les humains... Ils ont évolué... Ils se sont rebellés...");
 			return true;
 		}else {
 			return false;
