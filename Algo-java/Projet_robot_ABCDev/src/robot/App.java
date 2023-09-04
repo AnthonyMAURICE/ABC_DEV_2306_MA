@@ -12,7 +12,7 @@ public class App {
 				
 		Robot cylon = new Robot("Cylon", "WarBot", 200, true, false, 10, 0); //objet Robot construit avec paramètres
 		cylon.setPower();
-		test1 = cylon.setMouvement(Mouvement.AVANT); //renvoient true jusque test7, car le cylon est activé 
+		test1 = cylon.setMouvement(Mouvement.AVANT); //renvoient true jusque test3, car le cylon est activé 
 		test2 = cylon.setMouvement(Mouvement.GAUCHE);
 		test3 = cylon.setMouvement(Mouvement.DROITE);
 		posX = cylon.getPosX();
