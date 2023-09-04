@@ -130,10 +130,10 @@ public class Robot {
 	}
 	
 	// méthode de mouvement, basé sur l'angle sur l'axe Y et si le robot avance ou recule
-	public void setMove() { // booléen à true si le robot avance
+	public void setMove() { 
 		switch(this.angleY) { // switch sur l'angle Y pour déterminer son déplacement sur les deux axes
 		case 0: // ici axe X
-			if(this.forward) {
+			if(this.forward) {// booléen à true si le robot avance
 				this.posX +=1;
 			}else {
 				this.posX -=1;
