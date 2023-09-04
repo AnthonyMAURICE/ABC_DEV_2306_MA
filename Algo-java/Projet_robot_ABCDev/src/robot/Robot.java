@@ -16,7 +16,7 @@ public class Robot {
 	
 	
 	private String name, type;
-	private int taille, posX, posY, angleY;
+	private int taille, posX, posY, angle;
 	private boolean android, powerOn, forward, left, scanObject = false, objectTaken;
 	
 	//constructeur par défaut
@@ -28,7 +28,7 @@ public class Robot {
 		this.powerOn = true;
 		this.posX = 0;
 		this.posY = 0;
-		this.angleY = 0;
+		this.angle = 0;
 		
 	}
 	
@@ -41,7 +41,7 @@ public class Robot {
 		this.powerOn = _powerOn;
 		this.posX = _posX;
 		this.posY = _posY;
-		this.angleY = 0;
+		this.angle = 0;
 	}
 	
 	//Getters
@@ -115,23 +115,23 @@ public class Robot {
 	// détermine l'angle sur l'axe Y après rotation, pour ensuite l'utiliser pour la phase de mouvement 
 	public void setAngle() {
 		if(this.left) { // calcul de l'angle Y selon si la rotation est à gauche ou à droite
-			if(this.angleY >=90) {
-				this.angleY -= 90;
+			if(this.angle >=90) {
+				this.angle -= 90;
 			}else {
-				this.angleY = 270;
+				this.angle = 270;
 			}
 		}else {
-			if(this.angleY < 270 ) {
-				this.angleY += 90;
+			if(this.angle < 270 ) {
+				this.angle += 90;
 			}else {
-				this.angleY = 0;
+				this.angle = 0;
 			}
 		}
 	}
 	
 	// méthode de mouvement, basé sur l'angle sur l'axe Y et si le robot avance ou recule
 	public void setMove() { 
-		switch(this.angleY) { // switch sur l'angle Y pour déterminer son déplacement sur les deux axes
+		switch(this.angle) { // switch sur l'angle Y pour déterminer son déplacement sur les deux axes
 		case 0: // ici axe X
 			if(this.forward) {// booléen à true si le robot avance
 				this.posX +=1;
