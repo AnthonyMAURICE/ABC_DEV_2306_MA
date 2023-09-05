@@ -11,13 +11,14 @@ public class Robot {
 		SCANNER,
 		SAISIR,
 		LACHER,
+		AGIR,
 		DETRUIRE;
 	}
 	
 	
 	private String name, type;
 	private int taille, posX, posY, angle;
-	private boolean android, powerOn, forward, left, scanObject = false, objectTaken;
+	private boolean android, mobile, powerOn, forward, left, scanObject = false, objectTaken;
 	
 	//constructeur par défaut
 	public Robot() { 
@@ -25,6 +26,7 @@ public class Robot {
 		this.type = "Androïde";
 		this.taille = 180;
 		this.android = true;
+		this.mobile = true;
 		this.powerOn = true;
 		this.posX = 0;
 		this.posY = 0;
@@ -33,11 +35,12 @@ public class Robot {
 	}
 	
 	//constructeur avec paramètres
-	public Robot(String _name, String _type, int _taille, boolean _androide, boolean _powerOn, int _posX, int _posY) {
+	public Robot(String _name, String _type, int _taille, boolean _androide, boolean _mobile, boolean _powerOn, int _posX, int _posY) {
 		this.name = _name;
 		this.type = _type;
 		this.taille = _taille;
 		this.android = _androide;
+		this.mobile = _mobile;
 		this.powerOn = _powerOn;
 		this.posX = _posX;
 		this.posY = _posY;
@@ -101,12 +104,15 @@ public class Robot {
 				case LACHER:
 					this.dropObject();
 					break;
+				case AGIR:
+					this.agir();
+					break;
 				case DETRUIRE:
 					this.destroyAllMankind();
 					break;
 			}
 			return true;
-		}else {
+		}else{
 			System.out.println("Le robot n'est pas activé");
 			return false;
 		}
@@ -131,35 +137,39 @@ public class Robot {
 	
 	// méthode de mouvement, basé sur l'angle sur l'axe Y et si le robot avance ou recule
 	public void setMove() { 
-		switch(this.angle) { // switch sur l'angle Y pour déterminer son déplacement sur les deux axes
-		case 0: // ici axe X
-			if(this.forward) {// booléen à true si le robot avance
-				this.posX +=1;
-			}else {
-				this.posX -=1;
+		if(this.mobile) {
+			switch(this.angle) { // switch sur l'angle Y pour déterminer son déplacement sur les deux axes
+			case 0: // ici axe X
+				if(this.forward) {// booléen à true si le robot avance
+					this.posX +=1;
+				}else {
+					this.posX -=1;
+				}
+				break;	
+			case 90: // ici axe Y
+				if(this.forward) {
+					this.posY +=1;
+				}else {
+					this.posY -=1;
+				}
+				break;
+			case 180: // axe X
+				if(this.forward) {
+					this.posX -=1;
+				}else {
+					this.posX +=1;
+				}
+				break;
+			case 270: // axe Y
+				if(this.forward) {
+					this.posY -=1;
+				}else {
+					this.posY +=1;
+				}
+				break;
 			}
-			break;	
-		case 90: // ici axe Y
-			if(this.forward) {
-				this.posY +=1;
-			}else {
-				this.posY -=1;
-			}
-			break;
-		case 180: // axe X
-			if(this.forward) {
-				this.posX -=1;
-			}else {
-				this.posX +=1;
-			}
-			break;
-		case 270: // axe Y
-			if(this.forward) {
-				this.posY -=1;
-			}else {
-				this.posY +=1;
-			}
-			break;
+		}else {
+			System.out.println("Le robot n'est pas mobile");
 		}
 	}
 	
@@ -193,12 +203,23 @@ public class Robot {
 		}
 	}
 	
+	public boolean agir() {
+		if(this.powerOn) {
+			System.out.println("Le robot fait ce pour quoi il est conçu");
+			return true;
+		}else {
+			System.out.println("Le robot n'est pas activé");
+			return false;
+		}
+	}
+	
 	// méthode humoristique, mais néanmoins sérieuse...
 	public boolean destroyAllMankind() {
 		if(this.type.equals("WarBot")){
 			System.out.println("Les cylons ont été créés par les humains... Ils ont évolué... Ils se sont rebellés...");
 			return true;
 		}else {
+			System.out.println("Ce robot ne causera pas la chute de l'humanité.");
 			return false;
 		}
 	}
