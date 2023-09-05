@@ -186,7 +186,7 @@ public class Robot {
 		}
 	}
 	
-	// ne renvoit true que si un scan préalable a été effectué, que si le robot ne porte pas déjà quelque chose et qu'il est mobile
+	// ne retourne true que si un scan préalable a été effectué, que si le robot ne porte pas déjà quelque chose et qu'il est mobile
 	public boolean takeObject() {
 		if(this.mobile && this.scanObject && !this.objectTaken) {
 			this.objectTaken = true; // indique que le robot tient un objet
@@ -197,7 +197,7 @@ public class Robot {
 		}
 	}
 	
-	// ne renvoit true que s'il a un objet à lâcher, et le lâche
+	// ne retourne true que s'il a un objet à lâcher, et le lâche
 	public boolean dropObject() {
 		if(this.objectTaken) {
 			this.objectTaken = false;
