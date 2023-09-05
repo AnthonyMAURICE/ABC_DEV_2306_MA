@@ -56,6 +56,10 @@ public class Robot {
 		return this.type;
 	}
 	
+	public boolean getPower() {
+		return this.powerOn;
+	}
+	
 	public int getPosX() {
 		return this.posX;
 	}
