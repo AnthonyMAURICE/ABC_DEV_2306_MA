@@ -193,6 +193,7 @@ public class Robot {
 			this.scanObject = false; // réinitialise le scan à false
 			return true;
 		}else {
+			this.scanObject = false; // réinitialise le scan à false
 			return false;
 		}
 	}
