@@ -185,8 +185,8 @@ public class Robot {
 	// ne renvoit true que si un scan préalable a été effectué, que si le robot ne porte pas déjà quelque chose et qu'il est mobile
 	public boolean takeObject() {
 		if(this.mobile && this.scanObject && !this.objectTaken) {
-			this.objectTaken = true;
-			this.scanObject = false;
+			this.objectTaken = true; // indique que le robot tient un objet
+			this.scanObject = false; // réinitialise le scan à false
 			return true;
 		}else {
 			return false;
