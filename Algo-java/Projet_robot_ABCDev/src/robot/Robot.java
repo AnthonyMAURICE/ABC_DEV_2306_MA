@@ -182,9 +182,9 @@ public class Robot {
 		}
 	}
 	
-	// ne renvoit true que si un scan préalable a été effectué et que si le robot ne porte pas déjà quelque chose
+	// ne renvoit true que si un scan préalable a été effectué, que si le robot ne porte pas déjà quelque chose et qu'il est mobile
 	public boolean takeObject() {
-		if(this.scanObject && !this.objectTaken) {
+		if(this.mobile && this.scanObject && !this.objectTaken) {
 			this.objectTaken = true;
 			this.scanObject = false;
 			return true;
@@ -203,6 +203,7 @@ public class Robot {
 		}
 	}
 	
+	// méthode qui fait "agir" le robot, s'il est activé
 	public boolean agir() {
 		if(this.powerOn) {
 			System.out.println("Le robot fait ce pour quoi il est conçu");
