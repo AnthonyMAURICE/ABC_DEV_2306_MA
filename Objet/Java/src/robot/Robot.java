@@ -17,7 +17,7 @@ public class Robot {
 	
 	
 	private String name, type;
-	private int taille, posX, posY, angle;
+	private int taille, posX, posY, direction;
 	private boolean android, mobile, powerOn, forward, left, scanObject = false, objectTaken;
 	
 	//constructeur par défaut
@@ -30,7 +30,7 @@ public class Robot {
 		this.powerOn = true;
 		this.posX = 0;
 		this.posY = 0;
-		this.angle = 0;
+		this.direction = 0;
 		
 	}
 	
@@ -44,7 +44,7 @@ public class Robot {
 		this.powerOn = _powerOn;
 		this.posX = _posX;
 		this.posY = _posY;
-		this.angle = 0;
+		this.direction = 0;
 	}
 	
 	//Getters
@@ -93,11 +93,11 @@ public class Robot {
 					break;
 				case GAUCHE:
 					this.left = true;
-					this.setAngle();
+					this.setDirection();
 					break;
 				case DROITE:
 					this.left = false;
-					this.setAngle();
+					this.setDirection();
 					break;
 				case SCANNER:
 					this.scan();
@@ -122,27 +122,27 @@ public class Robot {
 		}
 	}
 	
-	// détermine l'angle sur l'axe Y après rotation, pour ensuite l'utiliser pour la phase de mouvement 
-	public void setAngle() {
-		if(this.left) { // calcul de l'angle Y selon si la rotation est à gauche ou à droite
-			if(this.angle >=90) {
-				this.angle -= 90;
+	// détermine la direction après rotation, pour ensuite l'utiliser pour la phase de mouvement 
+	public void setDirection() {
+		if(this.left) { // calcul de la direction Y selon si la rotation est à gauche ou à droite
+			if(this.direction >=90) {
+				this.direction -= 90;
 			}else {
-				this.angle = 270;
+				this.direction = 270;
 			}
 		}else {
-			if(this.angle < 270 ) {
-				this.angle += 90;
+			if(this.direction < 270 ) {
+				this.direction += 90;
 			}else {
-				this.angle = 0;
+				this.direction = 0;
 			}
 		}
 	}
 	
-	// méthode de mouvement, basé sur son angle (de 0 à 270) et si le robot avance ou recule
+	// méthode de mouvement, basé sur sa direction (de 0 à 270) et si le robot avance ou recule
 	public void setMove() { 
 		if(this.mobile) {
-			switch(this.angle) { // switch sur la valeur de l'angle pour déterminer son déplacement sur les deux axes
+			switch(this.direction) { // switch sur la valeur de la direction pour déterminer son déplacement sur les deux axes
 			case 0: // ici axe X
 				if(this.forward) {// booléen à true si le robot avance
 					this.posX +=1;
