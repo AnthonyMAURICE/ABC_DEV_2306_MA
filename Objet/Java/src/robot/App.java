@@ -38,11 +38,11 @@ public class App {
 		Robot c3po = new Robot(); // objet Robot androïde construit par défaut
 		test12 = c3po.setMouvement(Mouvement.AVANT); // renvoit true car activé dans le constructeur par défaut
 		
-		Robot mixer = new Robot("Mixer", "Robot de cuisine", 50, false, false, true, 10, 10); // création d'un robot de cuisine, non mobile
+		Robot mixer = new Robot("Mixeur", "Robot de cuisine", 50, false, false, true, 10, 10); // création d'un robot de cuisine, non mobile
 		testMixer = mixer.setMouvement(Mouvement.AVANT); // renvoit true car la commande est valide, mais ne déplace pas le robot car non mobile
 		testMixer2 = mixer.setMouvement(Mouvement.AGIR); // renvoit true, action de base du robot, à modeler selon le type
 		mixer.scan(); // parce que pourquoi pas, un mixer avec scan d'ingrédients par exemple
-		testMixer3 = mixer.takeObject(); // renverra false, un mixer ne peut saisir un objet
+		testMixer3 = mixer.takeObject(); // renverra false, un mixeur ne peut saisir un objet
 		
 	}
 
