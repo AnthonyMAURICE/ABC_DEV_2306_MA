@@ -1,5 +1,6 @@
 package robot;
 
+import robot.Robot.Mouvement;
 
 public class Robot {
 	// enum des différentes commandes pouvant se retrouver sur la manette finale
@@ -212,7 +213,7 @@ public class Robot {
 	
 	
 	
-	// méthode qui fait "agir" le robot, s'il est activé
+	// méthode qui fait "agir" le robot, s'il est activé, pourrait accueillir d'autres cas suivant les types de robots créés
 	public void agir() {
 		String action;
 		if(this.powerOn) {
@@ -226,7 +227,7 @@ public class Robot {
 				case "KitchenBot":
 					if(this.scanZone) {
 						action = "Le robot prépare un plat";
-						this.scanZone = false; // une fois le plat prêt, réinitialise le scan à false
+						this.scanZone = false; // une fois le plat prêt, réinitialise le scan à false, étant donné qu'il ne se déplace pas
 					}else {
 						action = "Avez-vous pensé à scanner les ingrédients avant ?";
 					}

@@ -9,9 +9,9 @@ public class App {
 		Robot cylon = new Robot("Cylon", "WarBot", 200, true, true, false, 10, 0); //objet Robot construit avec paramètres
 		cylon.setPower(); // "active" le robot (qui est désactivé à sa création)
 		boolean test1 = cylon.setMouvement(Mouvement.AVANT); //retourne true car le cylon est activé et modifie ses attributs de position
-		cylon.scan();
+		cylon.scan(); // test si le scan se réinitialise bien après le mouvement
 		cylon.setMouvement(Mouvement.ARRIERE); // repasse this.scan à false, changement de "zone"
-		cylon.scan();
+		cylon.scan(); // test si le scan ne se réinitialise pas cara simple rotation
 		boolean test2 = cylon.setMouvement(Mouvement.GAUCHE); // this.scan reste à true, simple rotation dans la même zone, passera à false au prochain ordre (Mouvement.AVANT)
 		cylon.setMouvement(Mouvement.AVANT); // test si le cylon avance bien sur le bon axe (ici axe Y) suite à sa rotation à gauche
 		boolean test3 = cylon.setMouvement(Mouvement.DROITE);
@@ -27,7 +27,7 @@ public class App {
 		boolean test10 = cylon.setMouvement(Mouvement.AGIR); // retourne true, est activé donc peut agir
 		cylon.setPower(); // "désactive" le robot
 
-		Robot r2d2 = new Robot("R2D2", "Astromech", 120, false, true, false, 15, 15); //objet Robot construit avec paramètres
+		Robot r2d2 = new Robot("R2D2", "Astromech", 120, false, true, false, 15, 15); //objet Robot construit avec paramètres, mobile, mais non anthropomorphique
 		boolean test11 = r2d2.setMouvement(Mouvement.AVANT); // retourne false, R2D2 n'est pas activé, donc ne se déplace pas
 		r2d2.setPower();// "active" le robot (qui est désactivé à sa création)
 		boolean test12 = r2d2.setMouvement(Mouvement.DETRUIRE); // retourne true car le mouvement est valide, mais pas le bon type de robot pour la méthode associée
@@ -35,15 +35,15 @@ public class App {
 		
 		Robot c3po = new Robot(); // objet Robot androïde construit par défaut
 		boolean test14 = c3po.setMouvement(Mouvement.AVANT); // retourne true car activé dans le constructeur par défaut
-		boolean test15 = c3po.setMouvement(Mouvement.AGIR);
+		boolean test15 = c3po.setMouvement(Mouvement.AGIR); // retourne true, le robot est activé et peut donc agir selon son type
 		boolean testDefault = c3po.setMouvement(Mouvement.DETRUIRE); // retourne true, le mouvement est valide, mais affiche un autre message
-		Robot mixeur = new Robot("Mixeur", "KitchenBot", 50, false, false, true, 10, 10); // création d'un robot de cuisine, non mobile
-		boolean testMixeur = mixeur.setMouvement(Mouvement.AVANT); // retourne true car la commande est valide, mais ne déplace pas le robot car non mobile
-		boolean testMixeur2 = mixeur.setMouvement(Mouvement.AGIR); // retourne true, mais ne peut faire l'action car absence de scan préalable
-		mixeur.scan(); // parce que pourquoi pas, un mixeur avec scan d'ingrédients
-		boolean testMixeur3 = mixeur.takeObject(); // renverra false, un mixeur ne peut saisir un objet
-		boolean testMixeur5 = mixeur.setMouvement(Mouvement.AGIR); // le robot cuisinier peut agir et préparer un plat
-		boolean testKitchen = mixeur.setMouvement(Mouvement.DETRUIRE); // retourne true, le mouvement est valide, mais affiche un autre message 
+		Robot KitchenBot = new Robot("Mixeur", "KitchenBot", 50, false, false, true, 10, 10); // création d'un robot de cuisine, non mobile
+		boolean testMixeur = KitchenBot.setMouvement(Mouvement.AVANT); // retourne true car la commande est valide, mais ne déplace pas le robot car non mobile
+		boolean testMixeur2 = KitchenBot.setMouvement(Mouvement.AGIR); // retourne true, mais ne peut faire l'action car absence de scan préalable
+		KitchenBot.scan(); // parce que pourquoi pas, un mixeur avec scan d'ingrédients
+		boolean testMixeur3 = KitchenBot.takeObject(); // renverra false, un mixeur ne peut saisir un objet
+		boolean testMixeur5 = KitchenBot.setMouvement(Mouvement.AGIR); // le robot cuisinier peut agir et préparer un plat
+		boolean testKitchen = KitchenBot.setMouvement(Mouvement.DETRUIRE); // retourne true, le mouvement est valide, mais affiche un autre message 
 	}
 
 }
