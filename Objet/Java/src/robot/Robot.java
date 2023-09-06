@@ -1,6 +1,5 @@
 package robot;
 
-import robot.Robot.Mouvement;
 
 public class Robot {
 	// enum des différentes commandes pouvant se retrouver sur la manette finale
@@ -32,8 +31,7 @@ public class Robot {
 		this.powerOn = true;
 		this.posX = 0;
 		this.posY = 0;
-		this.direction = 0;
-		
+		this.direction = 0;		
 	}
 	
 	//constructeur avec paramètres
@@ -213,7 +211,7 @@ public class Robot {
 	
 	
 	// méthode qui fait "agir" le robot, s'il est activé
-	public String agir() {
+	public void agir() {
 		String action;
 		if(this.powerOn) {
 			switch(this.type) {
@@ -226,7 +224,7 @@ public class Robot {
 				case "KitchenBot":
 					if(this.scanZone) {
 						action = "Le robot prépare un plat";
-						this.scanZone = false;
+						this.scanZone = false; // une fois le plat prêt, réinitialise le scan à false
 					}else {
 						action = "Avez-vous pensé à scanner les ingrédients avant ?";
 					}
@@ -239,7 +237,7 @@ public class Robot {
 		}else {
 			action = "Le robot n'est pas activé";
 		}
-		return action;
+		System.out.println(action);
 
 	}
 	
@@ -249,7 +247,7 @@ public class Robot {
 			System.out.println("Les cylons ont été créés par les humains... Ils ont évolué... Ils se sont rebellés...");
 			return true;
 		}else {
-			System.out.println("Ce robot ne causera pas la chute de l'humanité.");
+			System.out.println("Ce robot ne causera pas la chute de l'humanité. Du moins, en théorie...");
 			return false;
 		}
 	}
