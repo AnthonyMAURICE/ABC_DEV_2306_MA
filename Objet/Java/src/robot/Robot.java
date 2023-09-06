@@ -172,7 +172,7 @@ public class Robot {
 				}
 				break;
 			}
-			this.scanZone = false;
+			this.scanZone = false; // réinitialise le scan à false car changement de zone
 		}else {
 			System.out.println("Le robot n'est pas mobile");
 		}
@@ -182,8 +182,6 @@ public class Robot {
 	public void scan() {
 		if(!this.scanZone) {
 			this.scanZone = true;
-		}else {
-			this.scanZone = false;
 		}
 	}
 	
@@ -191,7 +189,6 @@ public class Robot {
 	public boolean takeObject() {
 		if(this.mobile && this.scanZone && !this.objectTaken) {
 			this.objectTaken = true; // indique que le robot tient un objet
-			this.scanZone = false; // réinitialise le scan à false
 			return true;
 		}else {
 			return false;

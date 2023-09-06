@@ -9,7 +9,9 @@ public class App {
 		Robot cylon = new Robot("Cylon", "WarBot", 200, true, true, false, 10, 0); //objet Robot construit avec paramètres
 		cylon.setPower();
 		boolean test1 = cylon.setMouvement(Mouvement.AVANT); //retourne true car le cylon est activé et mofidie ses attributs de position
+		cylon.scan();
 		cylon.setMouvement(Mouvement.ARRIERE);
+		cylon.scan();
 		boolean test2 = cylon.setMouvement(Mouvement.GAUCHE);
 		cylon.setMouvement(Mouvement.AVANT); // test si le cylon avance bien sur le bon axe suite à sa rotation à gauche
 		boolean test3 = cylon.setMouvement(Mouvement.DROITE);
@@ -19,8 +21,6 @@ public class App {
 		boolean test4 = cylon.takeObject(); // retourne false, pas de scan préalable
 		cylon.scan();
 		boolean test5 = cylon.takeObject(); // retourne true, scan effectué juste avant
-		boolean test6 = cylon.takeObject(); // retourne false, le scan a été réinitialisé à false
-		cylon.scan();
 		boolean test7 = cylon.takeObject(); // retourne false, le robot tient déjà un objet
 		boolean test8 = cylon.dropObject(); // lâche l'objet tenu, retourne true
 		boolean test9 = cylon.setMouvement(Mouvement.DETRUIRE); // le cylon peut effectuer l'action, retourne true
