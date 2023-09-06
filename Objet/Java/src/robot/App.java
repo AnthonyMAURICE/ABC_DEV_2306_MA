@@ -10,9 +10,9 @@ public class App {
 		cylon.setPower();
 		boolean test1 = cylon.setMouvement(Mouvement.AVANT); //retourne true car le cylon est activé et mofidie ses attributs de position
 		cylon.scan();
-		cylon.setMouvement(Mouvement.ARRIERE);
+		cylon.setMouvement(Mouvement.ARRIERE); // repasse this.scan à false, changement de "zone"
 		cylon.scan();
-		boolean test2 = cylon.setMouvement(Mouvement.GAUCHE);
+		boolean test2 = cylon.setMouvement(Mouvement.GAUCHE); // this.scan reste à true, simple rotation dans la même zone, passera à false au prochain ordre (Mouvement.AVANT)
 		cylon.setMouvement(Mouvement.AVANT); // test si le cylon avance bien sur le bon axe suite à sa rotation à gauche
 		boolean test3 = cylon.setMouvement(Mouvement.DROITE);
 		cylon.setMouvement(Mouvement.AVANT); // même test que précédement, cette fois après rotation à droite  

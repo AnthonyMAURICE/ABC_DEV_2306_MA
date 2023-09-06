@@ -4,6 +4,7 @@ package robot;
 public class Robot {
 	// enum des différentes commandes pouvant se retrouver sur la manette finale
 	enum Mouvement{
+		ACTIVATION,
 		AVANT,
 		ARRIERE,
 		GAUCHE,
@@ -25,8 +26,8 @@ public class Robot {
 	public Robot() { 
 		this.name = "Robot";
 		this.type = "Androïde";
-		this.taille = 180;
-		this.android = true;
+		this.taille = 180; //taille et déterminer si androïde ou pas inutilisés
+		this.android = true; // mais pourraient être utile sur une évolution potentielle du programme
 		this.mobile = true;
 		this.powerOn = true;
 		this.posX = 0;
@@ -83,6 +84,10 @@ public class Robot {
 		if(this.powerOn) {
 			Mouvement Ordre = _command;			
 			switch(Ordre) {
+				case ACTIVATION:
+					this.forward = true;
+					this.setPower();
+					break;
 				case AVANT:
 					this.forward = true;
 					this.setMove();
@@ -178,7 +183,7 @@ public class Robot {
 		}
 	}
 	
-	// scan du terrain préalable à la prise d'objets ou réalisation d'une recette (pour le robot de cuisine)
+	// scan du terrain préalable à la prise d'objets ou réalisation d'une recette (pour le robot de cuisine), reste à true tant qu'il n'y a pas changement de "zone"
 	public void scan() {
 		if(!this.scanZone) {
 			this.scanZone = true;
