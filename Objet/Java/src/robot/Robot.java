@@ -178,7 +178,7 @@ public class Robot {
 		}
 	}
 	
-	// scan du terrain préalable à la prise d'objets
+	// scan du terrain préalable à la prise d'objets ou réalisation d'une recette (pour le robot de cuisine)
 	public void scan() {
 		if(!this.scanZone) {
 			this.scanZone = true;
@@ -195,7 +195,7 @@ public class Robot {
 		}
 	}
 	
-	// ne retourne true que s'il a un objet à lâcher, et le lâche
+	// ne retourne true que s'il a un objet à lâcher, et le lâche, sinon retourne false
 	public boolean dropObject() {
 		if(this.objectTaken) {
 			this.objectTaken = false;
