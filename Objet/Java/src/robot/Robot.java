@@ -81,8 +81,8 @@ public class Robot {
 	// méthode de mouvement, prenant l'enum déclaré en début de classe, si toutefois le robot est activé
 	public boolean setMouvement(Mouvement _command) {
 		if(this.powerOn) {
-			Mouvement Mouvement = _command;			
-			switch(Mouvement) {
+			Mouvement Ordre = _command;			
+			switch(Ordre) {
 				case AVANT:
 					this.forward = true;
 					this.setMove();
@@ -187,7 +187,7 @@ public class Robot {
 		}
 	}
 	
-	// ne retourne true que si un scan préalable a été effectué, que si le robot ne porte pas déjà quelque chose et qu'il est mobile
+	// ne retourne true que si un scan préalable a été effectué, si le robot ne porte pas déjà quelque chose et qu'il est mobile
 	public boolean takeObject() {
 		if(this.mobile && this.scanZone && !this.objectTaken) {
 			this.objectTaken = true; // indique que le robot tient un objet
