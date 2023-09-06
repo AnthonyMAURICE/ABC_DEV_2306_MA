@@ -1,11 +1,9 @@
 package robot;
 
-import robot.Robot.Mouvement;
 
 public class Robot {
 	// enum des différentes commandes pouvant se retrouver sur la manette finale
 	enum Mouvement{
-		ACTIVATION,
 		AVANT,
 		ARRIERE,
 		GAUCHE,
@@ -27,7 +25,7 @@ public class Robot {
 	public Robot() { 
 		this.name = "Robot";
 		this.type = "Androïde";
-		this.taille = 180; //taille et déterminer si androïde ou pas inutilisés
+		this.taille = 180; //taille et déterminer si androïde ou pas sont inutilisés
 		this.android = true; // mais pourraient être utile sur une évolution potentielle du programme
 		this.mobile = true;
 		this.powerOn = true;
@@ -85,10 +83,6 @@ public class Robot {
 		if(this.powerOn) {
 			Mouvement Ordre = _command;			
 			switch(Ordre) {
-				case ACTIVATION:
-					this.forward = true;
-					this.setPower();
-					break;
 				case AVANT:
 					this.forward = true;
 					this.setMove();

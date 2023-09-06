@@ -21,23 +21,24 @@ public class App {
 		boolean test4 = cylon.takeObject(); // retourne false, pas de scan préalable
 		cylon.scan();
 		boolean test5 = cylon.takeObject(); // retourne true, scan effectué juste avant
-		boolean test7 = cylon.takeObject(); // retourne false, le robot tient déjà un objet
-		boolean test8 = cylon.dropObject(); // lâche l'objet tenu, retourne true
-		boolean test9 = cylon.setMouvement(Mouvement.DETRUIRE); // le cylon peut effectuer l'action, retourne true
-		boolean test10 = cylon.setMouvement(Mouvement.AGIR); // retourne true, est activé donc peut agir
+		boolean test6 = cylon.takeObject(); // retourne false, le robot tient déjà un objet
+		boolean test7 = cylon.dropObject(); // lâche l'objet tenu, retourne true
+		boolean test8 = cylon.setMouvement(Mouvement.DETRUIRE); // le cylon peut effectuer l'action, retourne true
+		boolean test9 = cylon.setMouvement(Mouvement.AGIR); // retourne true, est activé donc peut agir
 		cylon.setPower(); // "désactive" le robot
 
 		Robot r2d2 = new Robot("R2D2", "Astromech", 120, false, true, false, 15, 15); //objet Robot construit avec paramètres, mobile, mais non anthropomorphique
-		boolean test11 = r2d2.setMouvement(Mouvement.AVANT); // retourne false, R2D2 n'est pas activé, donc ne se déplace pas
+		boolean test10 = r2d2.setMouvement(Mouvement.AVANT); // retourne false, R2D2 n'est pas activé, donc ne se déplace pas
 		r2d2.setPower();// "active" le robot (qui est désactivé à sa création)
-		boolean test12 = r2d2.setMouvement(Mouvement.DETRUIRE); // retourne true car le mouvement est valide, mais pas le bon type de robot pour la méthode associée
-		boolean test13 = r2d2.setMouvement(Mouvement.AGIR); // retourne true, est activé donc peut agir
+		boolean test11 = r2d2.setMouvement(Mouvement.DETRUIRE); // retourne true car le mouvement est valide, mais pas le bon type de robot pour la méthode associée
+		boolean test12 = r2d2.setMouvement(Mouvement.AGIR); // retourne true, est activé donc peut agir
 		
 		Robot c3po = new Robot(); // objet Robot androïde construit par défaut
-		boolean test14 = c3po.setMouvement(Mouvement.AVANT); // retourne true car activé dans le constructeur par défaut
-		boolean test15 = c3po.setMouvement(Mouvement.AGIR); // retourne true, le robot est activé et peut donc agir selon son type
+		boolean test13 = c3po.setMouvement(Mouvement.AVANT); // retourne true car activé dans le constructeur par défaut
+		boolean test14 = c3po.setMouvement(Mouvement.AGIR); // retourne true, le robot est activé et peut donc agir selon son type
 		boolean testDefault = c3po.setMouvement(Mouvement.DETRUIRE); // retourne true, le mouvement est valide, mais affiche un autre message
-		Robot KitchenBot = new Robot("Mixeur", "KitchenBot", 50, false, false, true, 10, 10); // création d'un robot de cuisine, non mobile
+		
+		Robot KitchenBot = new Robot("Kitchen Bot", "KitchenBot", 50, false, false, true, 10, 10); // création d'un robot de cuisine, non mobile
 		boolean testMixeur = KitchenBot.setMouvement(Mouvement.AVANT); // retourne true car la commande est valide, mais ne déplace pas le robot car non mobile
 		boolean testMixeur2 = KitchenBot.setMouvement(Mouvement.AGIR); // retourne true, mais ne peut faire l'action car absence de scan préalable
 		KitchenBot.scan(); // parce que pourquoi pas, un mixeur avec scan d'ingrédients
