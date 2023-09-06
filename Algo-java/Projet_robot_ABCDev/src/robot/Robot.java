@@ -1,5 +1,6 @@
 package robot;
 
+import robot.Robot.Mouvement;
 
 public class Robot {
 	// enum des différentes commandes pouvant se retrouver sur la manette finale
@@ -17,8 +18,9 @@ public class Robot {
 	
 	
 	private String name, type;
-	private int taille, posX, posY, angle;
-	private boolean android, mobile, powerOn, forward, left, scanObject = false, objectTaken;
+	private int taille, posX, posY, direction;
+	private boolean android, mobile, forward, left, scanZone = false, objectTaken;
+	protected boolean powerOn;
 	
 	//constructeur par défaut
 	public Robot() { 
@@ -30,7 +32,7 @@ public class Robot {
 		this.powerOn = true;
 		this.posX = 0;
 		this.posY = 0;
-		this.angle = 0;
+		this.direction = 0;
 		
 	}
 	
@@ -44,7 +46,7 @@ public class Robot {
 		this.powerOn = _powerOn;
 		this.posX = _posX;
 		this.posY = _posY;
-		this.angle = 0;
+		this.direction = 0;
 	}
 	
 	//Getters
@@ -93,11 +95,11 @@ public class Robot {
 					break;
 				case GAUCHE:
 					this.left = true;
-					this.setAngle();
+					this.setDirection();
 					break;
 				case DROITE:
 					this.left = false;
-					this.setAngle();
+					this.setDirection();
 					break;
 				case SCANNER:
 					this.scan();
@@ -122,27 +124,27 @@ public class Robot {
 		}
 	}
 	
-	// détermine l'angle sur l'axe Y après rotation, pour ensuite l'utiliser pour la phase de mouvement 
-	public void setAngle() {
-		if(this.left) { // calcul de l'angle Y selon si la rotation est à gauche ou à droite
-			if(this.angle >=90) {
-				this.angle -= 90;
+	// détermine la direction après rotation, pour ensuite l'utiliser pour la phase de mouvement 
+	public void setDirection() {
+		if(this.left) { // calcul de la direction Y selon si la rotation est à gauche ou à droite
+			if(this.direction >=90) {
+				this.direction -= 90;
 			}else {
-				this.angle = 270;
+				this.direction = 270;
 			}
 		}else {
-			if(this.angle < 270 ) {
-				this.angle += 90;
+			if(this.direction < 270 ) {
+				this.direction += 90;
 			}else {
-				this.angle = 0;
+				this.direction = 0;
 			}
 		}
 	}
 	
-	// méthode de mouvement, basé sur son angle (de 0 à 270) et si le robot avance ou recule
+	// méthode de mouvement, basé sur sa direction (de 0 à 270) et si le robot avance ou recule
 	public void setMove() { 
 		if(this.mobile) {
-			switch(this.angle) { // switch sur la valeur de l'angle pour déterminer son déplacement sur les deux axes
+			switch(this.direction) { // switch sur la valeur de la direction pour déterminer son déplacement sur les deux axes
 			case 0: // ici axe X
 				if(this.forward) {// booléen à true si le robot avance
 					this.posX +=1;
@@ -172,6 +174,7 @@ public class Robot {
 				}
 				break;
 			}
+			this.scanZone = false;
 		}else {
 			System.out.println("Le robot n'est pas mobile");
 		}
@@ -179,25 +182,25 @@ public class Robot {
 	
 	// scan du terrain préalable à la prise d'objets
 	public void scan() {
-		if(!this.scanObject) {
-			this.scanObject = true;
+		if(!this.scanZone) {
+			this.scanZone = true;
 		}else {
-			this.scanObject = false;
+			this.scanZone = false;
 		}
 	}
 	
-	// ne renvoit true que si un scan préalable a été effectué, que si le robot ne porte pas déjà quelque chose et qu'il est mobile
+	// ne retourne true que si un scan préalable a été effectué, que si le robot ne porte pas déjà quelque chose et qu'il est mobile
 	public boolean takeObject() {
-		if(this.mobile && this.scanObject && !this.objectTaken) {
+		if(this.mobile && this.scanZone && !this.objectTaken) {
 			this.objectTaken = true; // indique que le robot tient un objet
-			this.scanObject = false; // réinitialise le scan à false
+			this.scanZone = false; // réinitialise le scan à false
 			return true;
 		}else {
 			return false;
 		}
 	}
 	
-	// ne renvoit true que s'il a un objet à lâcher, et le lâche
+	// ne retourne true que s'il a un objet à lâcher, et le lâche
 	public boolean dropObject() {
 		if(this.objectTaken) {
 			this.objectTaken = false;
@@ -207,15 +210,37 @@ public class Robot {
 		}
 	}
 	
+	
+	
 	// méthode qui fait "agir" le robot, s'il est activé
-	public boolean agir() {
+	public String agir() {
+		String action;
 		if(this.powerOn) {
-			System.out.println("Le robot fait ce pour quoi il est conçu");
-			return true;
+			switch(this.type) {
+				case "WarBot":
+					action ="Le robot tire sur ses créateurs";
+					break;
+				case "Astromech":
+					action = "Le robot répare le vaisseau";
+					break;
+				case "KitchenBot":
+					if(this.scanZone) {
+						action = "Le robot prépare un plat";
+						this.scanZone = false;
+					}else {
+						action = "Avez-vous pensé à scanner les ingrédients avant ?";
+					}
+					break;
+				default:
+					action = "Le robot fait ce pourquoi il est conçu";
+					break;
+			}
+		
 		}else {
-			System.out.println("Le robot n'est pas activé");
-			return false;
+			action = "Le robot n'est pas activé";
 		}
+		return action;
+
 	}
 	
 	// méthode humoristique, mais néanmoins sérieuse...
@@ -228,5 +253,5 @@ public class Robot {
 			return false;
 		}
 	}
-
+	
 }
