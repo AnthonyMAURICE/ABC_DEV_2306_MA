@@ -13,10 +13,6 @@ public class Lightsaber extends Weapons{
 		this.ignited = false;
 	}
 
-	public int getDeflect() {
-		return this.deflect;
-	}
-	
 	public String getColor() {
 		return this.color;
 	}
@@ -28,4 +24,10 @@ public class Lightsaber extends Weapons{
 			this.ignited = true;
 		}
 	}
+	
+	@Override
+	public int getDeflect() {
+		return this.deflect;
+	}
+	
 }

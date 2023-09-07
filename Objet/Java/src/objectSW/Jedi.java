@@ -11,9 +11,7 @@ public class Jedi extends Personnage{ // classe Jedi, qui est aussi parente de l
 		this.saber = _saber;	
 	}
 	
-	public Lightsaber getWeapon() {
-		return this.saber;
-	}
+	
 	
 	public int getForce() {
 		return this.force;
@@ -28,6 +26,11 @@ public class Jedi extends Personnage{ // classe Jedi, qui est aussi parente de l
 	@Override
 	public String parler() {		
 		return "Que la Force soit avec vous";
+	}
+	
+	@Override
+	public Lightsaber getWeapon() {
+		return this.saber;
 	}
 
 }

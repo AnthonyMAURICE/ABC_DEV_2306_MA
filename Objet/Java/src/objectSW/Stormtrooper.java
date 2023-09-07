@@ -7,6 +7,8 @@ public class Stormtrooper extends Personnage{
 		this.weapon = _blaster;
 	}
 	
+	
+	@Override
 	public Weapons getWeapon() {
 		return this.weapon;
 	}
