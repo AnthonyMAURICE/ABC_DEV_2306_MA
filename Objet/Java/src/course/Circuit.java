@@ -14,16 +14,22 @@ public class Circuit {
 		int course = this.tours * this.sections;
 		
 		while(course > 0) {
-			for(int i = 0; i < _voitures.length; i++) {
-				_voitures[i].accelerer();
+			if(course%0 == 2) {
+				this.line(_voitures);
+			}else {
+				this.virage(_voitures);	
 			}
-			
-			
-			
 			course--;
 		}
 		
 	}
-
+	
+	public void line(Voitures[] _voitures) {
+		
+	}
+	
+	public void virage(Voitures[] _voitures) {
+		
+	}
 
 }

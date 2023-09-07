@@ -3,7 +3,7 @@ package course;
 import java.util.Random;
 
 public class Voitures {
-	private int vMax, vitesse, acceleration, freinage, agilite; 
+	private int vMax, vitesse, acceleration, freinage, agilite, distance; 
 	private boolean boost;
 	private String nom;
 	
@@ -16,21 +16,29 @@ public class Voitures {
 		this.freinage = _freinage;
 		this.agilite = _agilite;
 		this.boost = _boost;
+		this.distance = 0;
 	}
 	
 	public int getVitesse() {
 		return this.vitesse;
 	}
 	
+	public int getDistance() {
+		return this.distance;
+	}
+	
 	public boolean accelerer() {
 		if(this.vitesse < this.vMax) {
 			Random rand = new Random();
 			this.vitesse += this.acceleration*(rand.nextInt(15-10) + 10);
+			this.distance += this.vitesse;
 			return true;
 		}else {
 			this.vitesse = this.vMax;
+			this.distance += this.vitesse;
 			return false;
 		}
+		
 	}
 	
 	public boolean freiner() {
