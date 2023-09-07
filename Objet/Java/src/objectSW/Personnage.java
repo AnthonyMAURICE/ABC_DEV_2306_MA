@@ -68,9 +68,9 @@ public abstract class Personnage { // superclasse personnage de laquelle va déco
 		}
 		
 		if(hp2 <= 0) {
-			System.out.println(this.getNom() + " a gagné");
+			System.out.println(this.nom + " a gagné");
 		}else {
-			System.out.println(_adversaire.getNom() + " a gagné");
+			System.out.println(_adversaire.nom + " a gagné");
 		}
 		
 	}
