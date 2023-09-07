@@ -29,8 +29,9 @@ public class App {
 		System.out.println(kenobi.getNom());
 		
 		Blaster blasterLourd = new Blaster("Blaster Lourd", 15, 80, true);
-		Mandalorian trooper = new Mandalorian("Mandalore", 60, 60, 5, blasterLourd, 0, 35);
+		Mandalorian trooper = new Mandalorian("Mandalore", 60, 60, 5, blasterLourd, 0, 50);
 		yoda.fight(vador);
+		vador.fight(kenobi);
 		windu.fight(trooper);
 	}
 
