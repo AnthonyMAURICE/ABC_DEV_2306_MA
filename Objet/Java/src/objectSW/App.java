@@ -19,6 +19,7 @@ public class App {
 		System.out.println(vador.parler());
 		System.out.println(lightsaber1.getAccuracy());
 		System.out.println(kenobi.getNom());
+		Blaster blasterE11 = new Blaster("E11", 10, 80, true);
 		
 	}
 
