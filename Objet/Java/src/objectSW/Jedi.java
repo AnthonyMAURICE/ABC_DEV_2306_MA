@@ -4,15 +4,14 @@ package objectSW;
 
 public class Jedi extends Personnage{ // classe Jedi, qui est aussi parente de la classe Sith
 	private Lightsaber saber;
-	private int force;
 	
-	public Jedi(String _n, int _x, int _y, int _v, int _force, Lightsaber _saber) {
-		super(_n, _x, _y, _v); // super constructeur pour hériter des attributs de la classe Personnage
+	public Jedi(String _n, int _x, int _y, int _v, Lightsaber _saber, int _force, int _cA) {
+		super(_n, _x, _y, _v, _force, _cA); // super constructeur pour hériter des attributs de la classe Personnage
 		this.force = _force;
 		this.saber = _saber;	
 	}
 	
-	public Lightsaber getSaber() {
+	public Lightsaber getWeapon() {
 		return this.saber;
 	}
 	

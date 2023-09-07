@@ -1,16 +1,20 @@
 package objectSW;
 
+import java.util.Random;
+
 public abstract class Personnage { // superclasse personnage de laquelle va découler Jedi, Sith et soldats
 	protected String nom;
-	protected int pointVie, x, y, v;
+	protected int pointVie, x, y, v, force, classeArmure;
+
 	
-	
-	public Personnage(String _n, int _x, int _y, int _v) {
+	public Personnage(String _n, int _x, int _y, int _v, int _force, int _cA) {
 		this.nom = _n;
 		this.pointVie = 100;
 		this.x = _x;
 		this.y = _y;
 		this.v = _v;
+		this.force = _force;
+		this.classeArmure = _cA;
 	}
 	
 	public String getNom() {
@@ -46,6 +50,34 @@ public abstract class Personnage { // superclasse personnage de laquelle va déco
 		this.y = (int) (this.y + dy*this.v*time);
 	}
 	
+	public boolean fight(Personnage _adversaire) {
+		int hp1 = this.pointVie;
+		int hp2 = _adversaire.pointVie;
+		int attack;
+		Random rand = new Random();
+		
+		while(hp1 > 0 && hp2 >0) {
+			attack = rand.nextInt(100) + 1;
+			if(attack >= _adversaire.classeArmure + _adversaire.getWeapon().getDeflect()) {
+				hp2 -= rand.nextInt(this.getWeapon().getDammage() + 1) ;
+			}
+			attack = rand.nextInt(100) + 1;
+			if(attack >= this.classeArmure + this.getWeapon().getDeflect()) {
+				hp1 -= rand.nextInt(_adversaire.getWeapon().getDammage() + 1);
+			}
+		}
+		
+		if(hp2 <= 0) {
+			System.out.println(this.getNom() + " a gagné");
+		}else {
+			System.out.println(_adversaire.getNom() + " a gagné");
+		}
+		
+		return true;
+	}
+	
+	protected abstract Weapons getWeapon();
+
 	public abstract String parler();
 }
 
