@@ -50,7 +50,7 @@ public abstract class Personnage { // superclasse personnage de laquelle va déco
 		this.y = (int) (this.y + dy*this.v);
 	}
 	
-	public boolean fight(Personnage _adversaire) {
+	public void fight(Personnage _adversaire) {
 		int hp1 = this.pointVie;
 		int hp2 = _adversaire.pointVie;
 		int attack;
@@ -73,7 +73,6 @@ public abstract class Personnage { // superclasse personnage de laquelle va déco
 			System.out.println(_adversaire.getNom() + " a gagné");
 		}
 		
-		return true;
 	}
 	
 	protected abstract Weapons getWeapon();
