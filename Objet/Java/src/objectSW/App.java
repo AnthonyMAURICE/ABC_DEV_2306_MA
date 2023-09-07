@@ -9,11 +9,14 @@ public class App {
 		yoda.getWeapon().setIgnited();
 		Lightsaber lightsaber2 = new Lightsaber("Sabre Laser", 10, 95, 25, "violet", false);
 		Jedi windu = new Jedi("Mace Windu", 42, 17, 5, lightsaber2, 120, 25);
+		windu.getWeapon().setIgnited();
 		Lightsaber lightsaber3 = new Lightsaber("Sabre Laser", 10, 95, 25, "bleu", false);
 		Jedi kenobi = new Jedi("Obi-Wan Kenobi", 40, 42, 5, lightsaber3, 110, 25);
+		kenobi.getWeapon().setIgnited();
 		Lightsaber ligthsaber4 = new Lightsaber("Sabre Laser", 10, 95, 25, "rouge", false);
 		Sith vador = new Sith("Vader", 66, 66, 5, ligthsaber4, 120, 20);
-		yoda.seDeplacer(2, 1, 1);
+		vador.getWeapon().setIgnited();
+		yoda.seDeplacer(2, 1);
 		System.out.println(yoda.parler());
 		System.out.println(windu.parler());
 		System.out.println(vador.parler());

@@ -45,9 +45,9 @@ public abstract class Personnage { // superclasse personnage de laquelle va déco
 		this.y = _y;
 	}
 	
-	public void seDeplacer(int dx, int dy, int time) {
-		this.x = (int) (this.x + dx*this.v*time);
-		this.y = (int) (this.y + dy*this.v*time);
+	public void seDeplacer(int dx, int dy) {
+		this.x = (int) (this.x + dx*this.v);
+		this.y = (int) (this.y + dy*this.v);
 	}
 	
 	public boolean fight(Personnage _adversaire) {
@@ -78,6 +78,6 @@ public abstract class Personnage { // superclasse personnage de laquelle va déco
 	
 	protected abstract Weapons getWeapon();
 
-	public abstract String parler();
+	protected abstract String parler();
 }
 
