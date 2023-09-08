@@ -15,9 +15,10 @@ public class Circuit {
 	
 
 	public void course(Voitures _voiture, Section[] _sections, Virage[] _virage) {
+		int indexTours = 0, indexTemps = 0;
 		while(tours > 0) {
 			System.out.println("La " + _voiture.getName() + " démarre la course.");
-			int i = 0, temps = 0;
+			int i = 0, temps = 0, temps2 = 0, j = 0;;
 			for(int sections = 0; sections < _sections.length; sections++) {
 				if(!this.virage) {
 					int index = i+1;
@@ -36,7 +37,6 @@ public class Circuit {
 					}
 					
 				}else {
-					int j = 0, temps2 = 0;
 					int index2 = j + 1;
 					System.out.println("La " + _voiture.getName() + " entamme le virage " + index2);
 					while (_voiture.getVitesse() > _virage[j].getVitesseVirage() + _voiture.bonusAgilite()) {
@@ -52,11 +52,15 @@ public class Circuit {
 					this.virage = false;
 				}
 			}
+			indexTours++;
+			System.out.println("La " + _voiture.getName() + " a terminé le tour " + indexTours + " en " + (temps + temps2) + " temps");
+			indexTemps += temps + temps2;
 			tours--;
 			
 			
 		}
-
+		
+		System.out.println("La " + _voiture.getName() + " a terminé la course en " + indexTemps + " temps");
 	}
 	
 	
