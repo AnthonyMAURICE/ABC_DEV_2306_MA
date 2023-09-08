@@ -19,6 +19,10 @@ public class Voitures {
 		this.distance = 0;
 	}
 	
+	public String getName() {
+		return this.nom;
+	}
+	
 	public int getVitesse() {
 		return this.vitesse;
 	}
@@ -31,6 +35,9 @@ public class Voitures {
 		if(this.vitesse < this.vMax) {
 			Random rand = new Random();
 			this.vitesse += this.acceleration*(rand.nextInt(15-10) + 10);
+			if(this.vitesse > this.vMax) {
+				this.vitesse = this.vMax;
+			} 
 			this.distance += this.vitesse;
 			return true;
 		}else {
@@ -41,6 +48,8 @@ public class Voitures {
 		
 	}
 	
+	
+	
 	public boolean freiner() {
 		if(this.vitesse > 0) {
 			Random rand = new Random();
@@ -50,6 +59,12 @@ public class Voitures {
 			this.vitesse = 0;
 			return false;
 		}
+	}
+	
+	public int bonusAgilite() {
+		Random rand2 = new Random();
+		int agilityBonus = rand2.nextInt(this.agilite - 0);
+		return agilityBonus;
 	}
 	
 
