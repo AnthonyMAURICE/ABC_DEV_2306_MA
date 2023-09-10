@@ -4,11 +4,14 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		Voitures gtr = new Voitures("Nissan GT-R", 0, 305, 15, 8, 15, true);
-		Voitures lambo = new Voitures("Lamborghini Murcielago", 0, 305, 15, 8, 8, true);
-		Voitures ferrari = new Voitures("Ferrari 458", 0, 305, 15, 8, 8, true);
-		Voitures aston = new Voitures("Aston Martin Vantage", 0, 305, 15, 8, 8, true);
-
+		Voitures[] supercar = new Voitures[3];
+		Voitures gtr = new Voitures("Nissan GT-R", 0, 315, 15, 8, 15, true);
+		Voitures lambo = new Voitures("Lamborghini Aventador", 0, 360, 12, 10, 10, true);
+		Voitures ferrari = new Voitures("Ferrari 458", 0, 325, 10, 10, 8, true);
+		supercar[0] = gtr;
+		supercar[1] = lambo;
+		supercar[2] = ferrari;
+		
 		
 		Section[] sections = new Section[5];
 		Section section1 = new Section(3000);
@@ -36,8 +39,11 @@ public class App {
 		virages[4] = virage5;
 		
 		
-		Circuit circuit1 = new Circuit("Circuit d'Alsace", 3);
-		circuit1.course(gtr, sections, virages);
+		Circuit circuit1 = new Circuit("Circuit d'Alsace");
+		for(int i = 0; i < supercar.length; i++) {
+			circuit1.course(supercar[i], sections, virages, 3);
+		}
+		
 
 	}
 
