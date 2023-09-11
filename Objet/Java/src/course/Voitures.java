@@ -1,9 +1,10 @@
 package course;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Voitures {
-	private int vMax, vitesse, acceleration, freinage, agilite, distance; 
+	private int vMax, vitesse, acceleration, freinage, agilite, classement; 
 	private boolean boost;
 	private String nom;
 	
@@ -16,7 +17,7 @@ public class Voitures {
 		this.freinage = _freinage;
 		this.agilite = _agilite;
 		this.boost = _boost;
-		this.distance = 0;
+		this.classement = 0;
 	}
 	
 	public String getName() {
@@ -27,9 +28,6 @@ public class Voitures {
 		return this.vitesse;
 	}
 	
-	public int getDistance() {
-		return this.distance;
-	}
 	
 	public boolean accelerer() {
 		if(this.vitesse < this.vMax) {
@@ -38,11 +36,9 @@ public class Voitures {
 			if(this.vitesse > this.vMax) {
 				this.vitesse = this.vMax;
 			} 
-			this.distance += this.vitesse;
 			return true;
 		}else {
 			this.vitesse = this.vMax;
-			this.distance += this.vitesse;
 			return false;
 		}
 		

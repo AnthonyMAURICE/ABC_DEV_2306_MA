@@ -1,5 +1,7 @@
 package robot;
 
+import javax.swing.SwingUtilities;
+
 import robot.Robot.Mouvement;
 
 public class App {
@@ -45,6 +47,13 @@ public class App {
 		boolean testMixeur3 = KitchenBot.takeObject(); // renverra false, un mixeur ne peut saisir un objet
 		boolean testMixeur5 = KitchenBot.setMouvement(Mouvement.AGIR); // le robot cuisinier peut agir et préparer un plat
 		boolean testKitchen = KitchenBot.setMouvement(Mouvement.DETRUIRE); // retourne true, le mouvement est valide, mais affiche un autre message 
+		
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				UserInterface userInterface = new UserInterface();
+				userInterface.setVisible(true);
+			}
+		});
 	}
 
 }
