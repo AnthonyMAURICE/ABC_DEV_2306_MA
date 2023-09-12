@@ -8,19 +8,27 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		Scanner scanner = new Scanner(System.in);
-		String input;
-			Robot cylon = new Robot("Cylon", "WarBot", 200, true, true, true, 10, 0); //objet Robot construit avec paramètres
+		//Scanner scanner = new Scanner(System.in);
+		//String input;
+			Robot cylon = new Robot("Cylon", "WarBot", 200, true, true, false, 10, 0); //objet Robot construit avec paramètres
 			Robot r2d2 = new Robot("R2D2", "Astromech", 120, false, true, false, 15, 15); //objet Robot construit avec paramètres, mobile, mais non anthropomorphique
 			Robot c3po = new Robot(); // objet Robot androïde construit par défaut
-			Robot KitchenBot = new Robot("Kitchen Bot", "KitchenBot", 50, false, false, true, 10, 10); // création d'un robot de cuisine, non mobile
+			Robot kitchenBot = new Robot("Kitchen Bot", "KitchenBot", 50, false, false, true, 10, 10); // création d'un robot de cuisine, non mobile
 			Manette manette1 = new Manette();
+			
+			
+			
+			/* Ancien programme, remplacé par l'interface graphique
 			do {
 				System.out.println("Contrôlez le " + cylon.getName() + " avec les touches z q s d pour les mouvements, p pour allumer ou éteindre le robot et 0 1 2 3 5 pour les actions. (Tapez n pour quitter)");
 				input = scanner.nextLine().toLowerCase();
 				manette1.control(cylon, input.charAt(0));
 			}while(!input.equals("n"));
 		scanner.close();
+		
+		
+		
+		 */
 		//tests
 		/*
 		cylon.setPower(); // "active" le robot (qui est désactivé à sa création)
@@ -66,7 +74,7 @@ public class App {
 
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				UserInterface userInterface = new UserInterface(cylon, manette1);
+				UserInterface userInterface = new UserInterface(r2d2, manette1);
 				userInterface.setVisible(true);
 			}
 		});

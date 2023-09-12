@@ -68,6 +68,22 @@ public class Robot {
 		return this.posY;
 	}
 	
+	public int getDirection() {
+		return this.direction;
+	}
+	
+	public boolean getScanned() {
+		return this.scanZone;
+	}
+	
+	public boolean getHold() {
+		if(this.objectTaken) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
 	//Setters
 	// méthode qui met ou non le robot en marche suivant son état initial
 	public void setPower() {

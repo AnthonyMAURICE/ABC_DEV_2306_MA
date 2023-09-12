@@ -14,8 +14,8 @@ import robot.Robot.Mouvement;
 public class UserInterface extends JFrame implements ActionListener{
 	private Robot bot;
 	private Manette manette;
-	private JButton avant, arriere, gauche, droite, scan, prendre, lacher, agir, detruire;
-	private JLabel label2;
+	private JButton power, avant, arriere, gauche, droite, scan, prendre, lacher, agir, detruire;
+	private JLabel label1, label2, label3, label4, label5;
 	public UserInterface(Robot _robot, Manette _manette) {
 		super();
 		this.bot = _robot;
@@ -25,7 +25,7 @@ public class UserInterface extends JFrame implements ActionListener{
 	
 	private void build() {
 		setTitle(this.bot.getName());
-		setSize(320, 240);
+		setSize(450, 400);
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -38,6 +38,7 @@ public class UserInterface extends JFrame implements ActionListener{
 		JLabel label = new JLabel("Vos insctructions :");
 		panel.add(label);
 		
+		power = new JButton("Power");
 		avant = new JButton("Avant");
 		arriere = new JButton("Arrière");
 		gauche = new JButton("Gauche");
@@ -48,38 +49,67 @@ public class UserInterface extends JFrame implements ActionListener{
 		agir = new JButton("Agir");
 		detruire = new JButton("Détruire");
 		
+		power.addActionListener(this);
+		panel.add(power);
+		if(!this.bot.getType().equals("KitchenBot")) {
+			avant.addActionListener(this);
+			panel.add(avant);
+			arriere.addActionListener(this);
+			panel.add(arriere);
+			gauche.addActionListener(this);
+			panel.add(gauche);
+			droite.addActionListener(this);
+			panel.add(droite);
+			prendre.addActionListener(this);
+			panel.add(prendre);
+			lacher.addActionListener(this);
+			panel.add(lacher);
+		}
 		
-		avant.addActionListener(this);
-		panel.add(avant);
-		arriere.addActionListener(this);
-		panel.add(arriere);
-		gauche.addActionListener(this);
-		panel.add(gauche);
-		droite.addActionListener(this);
-		panel.add(droite);
 		scan.addActionListener(this);
 		panel.add(scan);
-		prendre.addActionListener(this);
-		panel.add(prendre);
-		lacher.addActionListener(this);
-		panel.add(lacher);
+		
 		agir.addActionListener(this);
 		panel.add(agir);
-		detruire.addActionListener(this);
-		panel.add(detruire);
+		
+		if(this.bot.getType().equals("WarBot")) {
+			detruire.addActionListener(this);
+			panel.add(detruire);
+		}
 		
 
+		label1 = new JLabel("Power : " + this.bot.getPower() +  " | ");
+		label2 = new JLabel("Position : " + this.bot.getPosX() + " / " + this.bot.getPosY() + " | ");
+		label3 = new JLabel("Direction : " + direction() + " | ");
+		label4 = new JLabel("Scanner : " + this.bot.getScanned() + " | ");
+		label5 = new JLabel("Objet tenu : " + this.bot.getHold() + " | ");
 		
-		JLabel label2 = new JLabel("Position : " + this.bot.getPosX() + " / " + this.bot.getPosY());
+		panel.add(label1);
 		panel.add(label2);
+		panel.add(label3);
+		panel.add(label4);
+		panel.add(label5);
 		
 		return panel;
 	}
 	
-	public void actionPerformed(ActionEvent e) {
-		label2 = new JLabel("Position : " + this.bot.getPosX() + " / " + this.bot.getPosY());
+	public String direction() {
+		if (this.bot.getDirection() == 0) {
+			return "haut";
+		}else if (this.bot.getDirection() == 90) {
+			return "droite";
+		}else if(this.bot.getDirection() == 180) {
+			return "bas";
+		}else {
+			return "gauche";
+		}
+	}
+	
+	public void actionPerformed(ActionEvent e) {		
 		Object source = e.getSource();
-		if(source == avant) {
+		if(source == power) {
+			this.bot.setPower();
+		}else if(source == avant) {
 			this.bot.setMouvement(Mouvement.AVANT);
 		}else if (source == arriere) {
 			this.bot.setMouvement(Mouvement.ARRIERE);
@@ -100,8 +130,11 @@ public class UserInterface extends JFrame implements ActionListener{
 		}else {
 			System.out.println("Saisie invalide");
 		}
+		label1.setText("Power : " + this.bot.getPower() +  " | ");
+		label2.setText("Position : " + this.bot.getPosX() + " / " + this.bot.getPosY() + " | ");
+		label3.setText("Direction : " + direction() + " | ");
+		label4.setText("Scanner : " + this.bot.getScanned() + " | ");
+		label5.setText("Objet tenu : " + this.bot.getHold() + " | ");
 	}
-	
-	
-	
+
 }
