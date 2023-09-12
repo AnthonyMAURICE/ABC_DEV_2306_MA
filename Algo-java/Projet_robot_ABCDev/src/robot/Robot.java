@@ -172,6 +172,7 @@ public class Robot {
 				}
 				break;
 			}
+			System.out.println(this.getPosX() + " / " + this.getPosY());
 			this.scanZone = false; // réinitialise le scan à false car changement de zone
 		}else {
 			System.out.println("Le robot n'est pas mobile");
@@ -182,6 +183,9 @@ public class Robot {
 	public void scan() {
 		if(!this.scanZone) {
 			this.scanZone = true;
+			System.out.println("Scan effectué");
+		}else {
+			System.out.println("Scan déjà effectué");
 		}
 	}
 	
@@ -189,8 +193,10 @@ public class Robot {
 	public boolean takeObject() {
 		if(this.mobile && this.scanZone && !this.objectTaken) {
 			this.objectTaken = true; // indique que le robot tient un objet
+			System.out.println("Objet pris");
 			return true;
 		}else {
+			System.out.println("Impossible de prendre un objet, soit le robot en tient déjà un, soit il ne peut en saisir un.");
 			return false;
 		}
 	}
@@ -199,8 +205,10 @@ public class Robot {
 	public boolean dropObject() {
 		if(this.objectTaken) {
 			this.objectTaken = false;
+			System.out.println("Objet lâché");
 			return true;
 		}else {
+			System.out.println("Impossible de lâcher un objet le robot n'en porte pas.");
 			return false;
 		}
 	}

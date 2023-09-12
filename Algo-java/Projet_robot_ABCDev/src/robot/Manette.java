@@ -14,10 +14,10 @@ public class Manette {
 				_robot.setMouvement(Mouvement.AVANT);
 				break;
 			case 'q':
-				_robot.setMouvement(Mouvement.ARRIERE);
+				_robot.setMouvement(Mouvement.GAUCHE);
 				break;
 			case 's':
-				_robot.setMouvement(Mouvement.GAUCHE);
+				_robot.setMouvement(Mouvement.ARRIERE);
 				break;
 			case 'd':
 				_robot.setMouvement(Mouvement.DROITE);
