@@ -1,14 +1,26 @@
 package robot;
 
-import javax.swing.SwingUtilities;
-
-import robot.Robot.Mouvement;
+import java.util.Scanner;
 
 public class App {
 
 	public static void main(String[] args) {
 		
-		Robot cylon = new Robot("Cylon", "WarBot", 200, true, true, false, 10, 0); //objet Robot construit avec paramètres
+		Scanner scanner = new Scanner(System.in);
+		String input;
+			Robot cylon = new Robot("Cylon", "WarBot", 200, true, true, false, 10, 0); //objet Robot construit avec paramètres
+			Robot r2d2 = new Robot("R2D2", "Astromech", 120, false, true, false, 15, 15); //objet Robot construit avec paramètres, mobile, mais non anthropomorphique
+			Robot c3po = new Robot(); // objet Robot androïde construit par défaut
+			Robot KitchenBot = new Robot("Kitchen Bot", "KitchenBot", 50, false, false, true, 10, 10); // création d'un robot de cuisine, non mobile
+			Manette manette1 = new Manette();
+			do {
+				System.out.println("Contrôlez le " + cylon.getName() + " avec les touches z q s d pour les mouvements, p pour allumer ou éteindre le robot et 0 1 2 3 5 pour les actions. (Tapez n pour quitter)");
+				input = scanner.nextLine().toLowerCase();
+				manette1.control(cylon, input.charAt(0));
+			}while(!input.equals("n"));
+		scanner.close();
+		//tests
+		/*
 		cylon.setPower(); // "active" le robot (qui est désactivé à sa création)
 		boolean test1 = cylon.setMouvement(Mouvement.AVANT); //retourne true car le cylon est activé et modifie ses attributs de position
 		cylon.scan(); // test si le scan se réinitialise bien après le mouvement
@@ -29,31 +41,34 @@ public class App {
 		boolean test9 = cylon.setMouvement(Mouvement.AGIR); // retourne true, est activé donc peut agir
 		cylon.setPower(); // "désactive" le robot
 
-		Robot r2d2 = new Robot("R2D2", "Astromech", 120, false, true, false, 15, 15); //objet Robot construit avec paramètres, mobile, mais non anthropomorphique
+		
 		boolean test10 = r2d2.setMouvement(Mouvement.AVANT); // retourne false, R2D2 n'est pas activé, donc ne se déplace pas
 		r2d2.setPower();// "active" le robot (qui est désactivé à sa création)
 		boolean test11 = r2d2.setMouvement(Mouvement.DETRUIRE); // retourne true car le mouvement est valide, mais pas le bon type de robot pour la méthode associée
 		boolean test12 = r2d2.setMouvement(Mouvement.AGIR); // retourne true, est activé donc peut agir
 		
-		Robot c3po = new Robot(); // objet Robot androïde construit par défaut
+		
 		boolean test13 = c3po.setMouvement(Mouvement.AVANT); // retourne true car activé dans le constructeur par défaut
 		boolean test14 = c3po.setMouvement(Mouvement.AGIR); // retourne true, le robot est activé et peut donc agir selon son type
 		boolean testDefault = c3po.setMouvement(Mouvement.DETRUIRE); // retourne true, le mouvement est valide, mais affiche un autre message
 		
-		Robot KitchenBot = new Robot("Kitchen Bot", "KitchenBot", 50, false, false, true, 10, 10); // création d'un robot de cuisine, non mobile
+		
 		boolean testMixeur = KitchenBot.setMouvement(Mouvement.AVANT); // retourne true car la commande est valide, mais ne déplace pas le robot car non mobile
 		boolean testMixeur2 = KitchenBot.setMouvement(Mouvement.AGIR); // retourne true, mais ne peut faire l'action car absence de scan préalable
 		KitchenBot.scan(); // parce que pourquoi pas, un mixeur avec scan d'ingrédients
 		boolean testMixeur3 = KitchenBot.takeObject(); // renverra false, un mixeur ne peut saisir un objet
 		boolean testMixeur5 = KitchenBot.setMouvement(Mouvement.AGIR); // le robot cuisinier peut agir et préparer un plat
 		boolean testKitchen = KitchenBot.setMouvement(Mouvement.DETRUIRE); // retourne true, le mouvement est valide, mais affiche un autre message 
+		*/
 		
+		/*
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				UserInterface userInterface = new UserInterface();
 				userInterface.setVisible(true);
 			}
 		});
+		*/
 	}
 
 }
