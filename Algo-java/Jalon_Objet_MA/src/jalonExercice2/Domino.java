@@ -22,7 +22,7 @@ public class Domino {
 	}
 	
 	public boolean combo(Domino _autre) {
-		if(this.pointsFaceA == _autre.pointsFaceA || this.pointsFaceB == _autre.pointsFaceB) {
+		if(this.pointsFaceA == _autre.pointsFaceA || this.pointsFaceB == _autre.pointsFaceB || this.pointsFaceA == _autre.pointsFaceB || this.pointsFaceB == _autre.pointsFaceA) {
 			return true;
 		}else {
 			return false;
