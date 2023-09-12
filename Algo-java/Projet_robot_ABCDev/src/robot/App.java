@@ -2,13 +2,15 @@ package robot;
 
 import java.util.Scanner;
 
+import javax.swing.SwingUtilities;
+
 public class App {
 
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
 		String input;
-			Robot cylon = new Robot("Cylon", "WarBot", 200, true, true, false, 10, 0); //objet Robot construit avec paramètres
+			Robot cylon = new Robot("Cylon", "WarBot", 200, true, true, true, 10, 0); //objet Robot construit avec paramètres
 			Robot r2d2 = new Robot("R2D2", "Astromech", 120, false, true, false, 15, 15); //objet Robot construit avec paramètres, mobile, mais non anthropomorphique
 			Robot c3po = new Robot(); // objet Robot androïde construit par défaut
 			Robot KitchenBot = new Robot("Kitchen Bot", "KitchenBot", 50, false, false, true, 10, 10); // création d'un robot de cuisine, non mobile
@@ -61,14 +63,14 @@ public class App {
 		boolean testKitchen = KitchenBot.setMouvement(Mouvement.DETRUIRE); // retourne true, le mouvement est valide, mais affiche un autre message 
 		*/
 		
-		/*
+
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				UserInterface userInterface = new UserInterface();
+				UserInterface userInterface = new UserInterface(cylon, manette1);
 				userInterface.setVisible(true);
 			}
 		});
-		*/
+
 	}
 
 }

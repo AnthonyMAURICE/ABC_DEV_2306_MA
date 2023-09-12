@@ -72,8 +72,10 @@ public class Robot {
 	// méthode qui met ou non le robot en marche suivant son état initial
 	public void setPower() {
 		if(this.powerOn) {
+			System.out.println("Robot désactivé");
 			this.powerOn = false;
 		}else {
+			System.out.println("Robot activé");
 			this.powerOn = true;
 		}
 	}
@@ -196,7 +198,7 @@ public class Robot {
 			System.out.println("Objet pris");
 			return true;
 		}else {
-			System.out.println("Impossible de prendre un objet, soit le robot en tient déjà un, soit il ne peut en saisir un.");
+			System.out.println("Impossible de prendre un objet, soit le robot en tient déjà un, soit il ne peut en saisir un. Et un scan est requis.");
 			return false;
 		}
 	}

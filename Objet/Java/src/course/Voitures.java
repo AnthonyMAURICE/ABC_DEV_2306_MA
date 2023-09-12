@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Voitures {
-	private int vMax, vitesse, acceleration, freinage, agilite, classement; 
+	private int vMax, vitesse, acceleration, freinage, agilite; 
 	private boolean boost;
 	private String nom;
 	
@@ -17,7 +17,6 @@ public class Voitures {
 		this.freinage = _freinage;
 		this.agilite = _agilite;
 		this.boost = _boost;
-		this.classement = 0;
 	}
 	
 	public String getName() {
