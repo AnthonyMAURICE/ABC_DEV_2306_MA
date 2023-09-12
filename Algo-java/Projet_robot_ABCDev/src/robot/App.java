@@ -1,6 +1,6 @@
 package robot;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 import javax.swing.SwingUtilities;
 
@@ -14,7 +14,7 @@ public class App {
 			Robot r2d2 = new Robot("R2D2", "Astromech", 120, false, true, false, 15, 15); //objet Robot construit avec paramètres, mobile, mais non anthropomorphique
 			Robot c3po = new Robot(); // objet Robot androïde construit par défaut
 			Robot kitchenBot = new Robot("Kitchen Bot", "KitchenBot", 50, false, false, true, 10, 10); // création d'un robot de cuisine, non mobile
-			Manette manette1 = new Manette();
+			//Manette manette1 = new Manette();
 			
 			
 			
@@ -71,10 +71,10 @@ public class App {
 		boolean testKitchen = KitchenBot.setMouvement(Mouvement.DETRUIRE); // retourne true, le mouvement est valide, mais affiche un autre message 
 		*/
 		
-
+		// Appel de l'interface graphique
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				UserInterface userInterface = new UserInterface(r2d2, manette1);
+				UserInterface userInterface = new UserInterface(cylon);
 				userInterface.setVisible(true);
 			}
 		});

@@ -234,7 +234,7 @@ public class Robot {
 	
 	
 	// méthode qui fait "agir" le robot, s'il est activé, pourrait accueillir d'autres cas suivant les types de robots créés
-	public void agir() {
+	public String agir() {
 		String action;
 		if(this.powerOn) {
 			switch(this.type) {
@@ -261,18 +261,21 @@ public class Robot {
 			action = "Le robot n'est pas activé";
 		}
 		System.out.println(action);
+		return action;
+		
 
 	}
 	
 	// méthode humoristique, mais néanmoins sérieuse...
-	public boolean destroyAllMankind() {
+	public String destroyAllMankind() {
+		String destroy;
 		if(this.type.equals("WarBot")){
-			System.out.println("Les cylons ont été créés par les humains... Ils ont évolué... Ils se sont rebellés...");
-			return true;
+			destroy = "Les cylons ont été créés par les humains... Ils ont évolué... Ils se sont rebellés...";
+			
 		}else {
-			System.out.println("Ce robot ne causera pas la chute de l'humanité. Du moins, en théorie...");
-			return false;
+			destroy = "Ce robot ne causera pas la chute de l'humanité. Du moins, en théorie...";
 		}
+		return destroy;
 	}
 	
 }
