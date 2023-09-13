@@ -8,7 +8,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
 
 import robot.Robot.Mouvement;
 
@@ -16,7 +15,7 @@ public class UserInterface extends JFrame implements ActionListener{
 	private Robot bot;
 	//private Manette manette;
 	private JButton power, avant, arriere, gauche, droite, scan, prendre, lacher, agir, detruire;
-	private JLabel label1, label2, label3, label4, label5, label6, label7;
+	private JLabel label2, label3, label4, label5, label6, label7, label8, label9;
 	public UserInterface(Robot _robot) {
 		super();
 		this.bot = _robot;
@@ -26,7 +25,7 @@ public class UserInterface extends JFrame implements ActionListener{
 	
 	private void build() {
 		setTitle(this.bot.getName());
-		setSize(480, 400);
+		setSize(500, 300);
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -35,26 +34,41 @@ public class UserInterface extends JFrame implements ActionListener{
 	
 	private JPanel buildContentPane() {
 		JPanel panel = new JPanel();
-		panel.setLayout(new FlowLayout());
+		panel.setLayout(null);
 		JLabel label = new JLabel("Vos instructions :");
+		label.setBounds(180, 9, 121, 14);
 		panel.add(label);
 		
 		power = new JButton("Power");
+		power.setBounds(349, 5, 100, 23);
 		avant = new JButton("Avant");
+		avant.setBounds(73, 58, 100, 23);
 		arriere = new JButton("Arrière");
+		arriere.setBounds(68, 126, 100, 23);
 		gauche = new JButton("Gauche");
+		gauche.setBounds(10, 92, 100, 23);
 		droite = new JButton("Droite");
+		droite.setBounds(117, 92, 100, 23);
 		scan = new JButton("Scanner");
+		if (this.bot.getType().equals("KitchenBot")) {
+			scan.setBounds(100, 92, 100, 23);
+		}else {
+			scan.setBounds(301, 58, 100, 23);
+		}
 		prendre = new JButton("Saisir");
+		prendre.setBounds(301, 126, 100, 23);
 		lacher = new JButton("Lâcher");
+		lacher.setBounds(353, 92, 100, 23);
 		agir = new JButton("Agir");
+		agir.setBounds(243, 92, 100, 23);
+		
 		detruire = new JButton("Détruire");
+		detruire.setSize(111, 23);
+		detruire.setLocation(30, 5);
 		
 		power.addActionListener(this);
 		panel.add(power);
 		
-		
-		System.out.println(this.bot.getPower());
 		if(!this.bot.getType().equals("KitchenBot")) {
 			avant.addActionListener(this);
 			panel.add(avant);
@@ -73,43 +87,44 @@ public class UserInterface extends JFrame implements ActionListener{
 		panel.add(scan);
 		agir.addActionListener(this);
 		panel.add(agir);
-			
 		if(this.bot.getType().equals("WarBot")) {
 			detruire.addActionListener(this);
 			panel.add(detruire);
 		}
 		
-		label1 = new JLabel("Power : " + this.bot.getPower() +  " | ");
-		label2 = new JLabel("Position : " + this.bot.getPosX() + " / " + this.bot.getPosY() + " | ");
-		label3 = new JLabel("Direction : " + direction() + " | ");
-		label4 = new JLabel("Scanner : " + this.bot.getScanned() + " | ");
-		label5 = new JLabel("Objet tenu : " + this.bot.getHold() + " | ");
+		label2 = new JLabel("Position : " + this.bot.getPosX() + " / " + this.bot.getPosY());
+		label2.setBounds(185, 151, 121, 14);
+		label3 = new JLabel("Direction : " + direction());
+		label3.setBounds(185, 176, 158, 14);
+		label4 = new JLabel("Scanner : " + this.bot.getScanned());
+		label4.setBounds(180, 196, 163, 14);
+		label5 = new JLabel("Objet tenu : " + this.bot.getHold());
+		label5.setBounds(10, 192, 163, 23);
 		label6 = new JLabel("");
+		label6.setBounds(12, 35, 441, 23);
 		label7 = new JLabel("");
-		
-		panel.add(label1);
+		label7.setBounds(10, 35, 464, 23);
+		label8 = new JLabel(this.bot.getPower()? "Robot activé" : "<html><font color=\"red\">Robot désactivé</font></html>");
+		label8.setBounds(184, 226, 100, 23);
 		panel.add(label2);
 		panel.add(label3);
 		panel.add(label4);
-
-		if(!this.bot.getType().equals("KitchenBot")) {
-			panel.add(label5);
-		}
-		
+		panel.add(label5);
 		panel.add(label6);
 		panel.add(label7);
+		panel.add(label8);
 		return panel;
 	}
 	
 	public String direction() {
 		if (this.bot.getDirection() == 0) {
-			return "haut";
-		}else if (this.bot.getDirection() == 90) {
-			return "droite";
-		}else if(this.bot.getDirection() == 180) {
-			return "bas";
+			return "Nord";
+		}else if (this.bot.getDirection() == 1) {
+			return "Est";
+		}else if(this.bot.getDirection() == 2) {
+			return "Sud";
 		}else {
-			return "gauche";
+			return "Ouest";
 		}
 	}
 	
@@ -119,6 +134,7 @@ public class UserInterface extends JFrame implements ActionListener{
 		Object source = e.getSource();
 		if(source == power) {
 			this.bot.setPower();	
+			
 		}else if(source == avant) {
 			this.bot.setMouvement(Mouvement.AVANT);
 		}else if (source == arriere) {
@@ -138,17 +154,14 @@ public class UserInterface extends JFrame implements ActionListener{
 			this.bot.setMouvement(Mouvement.AGIR);
 		}else if (source == detruire) {
 			this.bot.setMouvement(Mouvement.DETRUIRE);
-			label7.setText(this.bot.destroyAllMankind());
-		}else {
-			System.out.println("Saisie invalide");
+			label6.setText("<html><font color=\"red\">" + this.bot.destroyAllMankind() + "</font></html>");
 		}
-
-		label1.setText("Power : " + this.bot.getPower() +  " | ");
-		label2.setText("Position : " + this.bot.getPosX() + " / " + this.bot.getPosY() + " | ");
-		label3.setText("Direction : " + direction() + " | ");
-		label4.setText("Scanner : " + this.bot.getScanned() + " | ");
-		label5.setText("Objet tenu : " + this.bot.getHold() + " | ");
 		
+		//label1.setText("Power : " + this.bot.getPower());
+		label2.setText("Position : " + this.bot.getPosX() + " / " + this.bot.getPosY());
+		label3.setText("Direction : " + direction());
+		label4.setText("Scanner : " + this.bot.getScanned());
+		label5.setText("Objet tenu : " + this.bot.getHold());
+		label8.setText(this.bot.getPower()? "Robot activé" : "<html><font color=\"red\">Robot désactivé</font></html>");
 	}
-
 }

@@ -72,15 +72,21 @@ public class Robot {
 		return this.direction;
 	}
 	
-	public boolean getScanned() {
-		return this.scanZone;
+	public String getScanned() {
+		String scanInfo;
+		if (this.scanZone) {
+			scanInfo = "Scan effectué";
+		}else {
+			scanInfo = "Scan non effectué";
+		}
+		return scanInfo;
 	}
 	
-	public boolean getHold() {
+	public String getHold() {
 		if(this.objectTaken) {
-			return true;
+			return "Oui";
 		}else {
-			return false;
+			return "Non";
 		}
 	}
 	
@@ -88,10 +94,8 @@ public class Robot {
 	// méthode qui met ou non le robot en marche suivant son état initial
 	public void setPower() {
 		if(this.powerOn) {
-			System.out.println("Robot désactivé");
 			this.powerOn = false;
 		}else {
-			System.out.println("Robot activé");
 			this.powerOn = true;
 		}
 	}
@@ -135,22 +139,22 @@ public class Robot {
 			}
 			return true;
 		}else{
-			System.out.println("Le robot n'est pas activé");
 			return false;
 		}
 	}
 	
+	
 	// détermine la direction après rotation, pour ensuite l'utiliser pour la phase de mouvement 
 	public void setDirection() {
 		if(this.left) { // calcul de la direction Y selon si la rotation est à gauche ou à droite
-			if(this.direction >=90) {
-				this.direction -= 90;
+			if(this.direction >=1) {
+				this.direction -= 1;
 			}else {
-				this.direction = 270;
+				this.direction = 3;
 			}
 		}else {
-			if(this.direction < 270 ) {
-				this.direction += 90;
+			if(this.direction < 3 ) {
+				this.direction += 1;
 			}else {
 				this.direction = 0;
 			}
@@ -190,10 +194,7 @@ public class Robot {
 				}
 				break;
 			}
-			System.out.println(this.getPosX() + " / " + this.getPosY());
 			this.scanZone = false; // réinitialise le scan à false car changement de zone
-		}else {
-			System.out.println("Le robot n'est pas mobile");
 		}
 	}
 	
@@ -201,9 +202,6 @@ public class Robot {
 	public void scan() {
 		if(!this.scanZone) {
 			this.scanZone = true;
-			System.out.println("Scan effectué");
-		}else {
-			System.out.println("Scan déjà effectué");
 		}
 	}
 	
@@ -211,10 +209,8 @@ public class Robot {
 	public boolean takeObject() {
 		if(this.mobile && this.scanZone && !this.objectTaken) {
 			this.objectTaken = true; // indique que le robot tient un objet
-			System.out.println("Objet pris");
 			return true;
 		}else {
-			System.out.println("Impossible de prendre un objet, soit le robot en tient déjà un, soit il ne peut en saisir un. Et un scan est requis.");
 			return false;
 		}
 	}
@@ -223,10 +219,8 @@ public class Robot {
 	public boolean dropObject() {
 		if(this.objectTaken) {
 			this.objectTaken = false;
-			System.out.println("Objet lâché");
 			return true;
 		}else {
-			System.out.println("Impossible de lâcher un objet le robot n'en porte pas.");
 			return false;
 		}
 	}
@@ -249,7 +243,7 @@ public class Robot {
 						action = "Le robot prépare un plat";
 						this.scanZone = false; // une fois le plat prêt, réinitialise le scan à false, étant donné qu'il ne se déplace pas
 					}else {
-						action = "Avez-vous pensé à scanner les ingrédients avant ?";
+						action ="<html><font color=\"red\">Avez-vous pensé à scanner les ingrédients avant ?</font></html>";
 					}
 					break;
 				default:
@@ -258,9 +252,9 @@ public class Robot {
 			}
 		
 		}else {
-			action = "Le robot n'est pas activé";
+			action = "<html><font color=\"red\">Robot non activé</font></html>";
 		}
-		System.out.println(action);
+		//System.out.println(action);
 		return action;
 		
 
@@ -269,13 +263,14 @@ public class Robot {
 	// méthode humoristique, mais néanmoins sérieuse...
 	public String destroyAllMankind() {
 		String destroy;
-		if(this.type.equals("WarBot")){
+		if (this.getPower()) {
 			destroy = "Les cylons ont été créés par les humains... Ils ont évolué... Ils se sont rebellés...";
-			
 		}else {
-			destroy = "Ce robot ne causera pas la chute de l'humanité. Du moins, en théorie...";
+			destroy = "Robot non activé";
 		}
-		return destroy;
+		
+		return destroy ;
+		
 	}
 	
 }
