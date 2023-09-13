@@ -68,8 +68,16 @@ public class Robot {
 		return this.posY;
 	}
 	
-	public int getDirection() {
-		return this.direction;
+	public String getDirection() {
+		if (this.direction == 0) {
+			return "Nord";
+		}else if (this.direction  == 1) {
+			return "Est";
+		}else if(this.direction  == 2) {
+			return "Sud";
+		}else {
+			return "Ouest";
+		}
 	}
 	
 	public String getScanned() {
@@ -172,21 +180,21 @@ public class Robot {
 					this.posX -=1;
 				}
 				break;	
-			case 90: // ici axe Y
+			case 1: // ici axe Y
 				if(this.forward) {
 					this.posY +=1;
 				}else {
 					this.posY -=1;
 				}
 				break;
-			case 180: // axe X
+			case 2: // axe X
 				if(this.forward) {
 					this.posX -=1;
 				}else {
 					this.posX +=1;
 				}
 				break;
-			case 270: // axe Y
+			case 3: // axe Y
 				if(this.forward) {
 					this.posY -=1;
 				}else {

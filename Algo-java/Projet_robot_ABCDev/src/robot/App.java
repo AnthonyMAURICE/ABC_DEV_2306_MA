@@ -1,5 +1,7 @@
 package robot;
 
+import java.util.Scanner;
+
 //import java.util.Scanner;
 
 import javax.swing.SwingUtilities;
@@ -75,6 +77,7 @@ public class App {
 			
 			
 		// Appel de l'interface graphique
+		
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				UserInterface userInterface = new UserInterface(cylon);

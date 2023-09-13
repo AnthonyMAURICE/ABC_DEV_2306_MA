@@ -94,14 +94,14 @@ public class UserInterface extends JFrame implements ActionListener{
 		
 		label2 = new JLabel("Position : " + this.bot.getPosX() + " / " + this.bot.getPosY());
 		label2.setBounds(185, 151, 121, 14);
-		label3 = new JLabel("Direction : " + direction());
+		label3 = new JLabel("Direction : " + this.bot.getDirection());
 		label3.setBounds(185, 176, 158, 14);
 		label4 = new JLabel("Scanner : " + this.bot.getScanned());
 		label4.setBounds(180, 196, 163, 14);
 		label5 = new JLabel("Objet tenu : " + this.bot.getHold());
 		label5.setBounds(10, 192, 163, 23);
 		label6 = new JLabel("");
-		label6.setBounds(12, 35, 441, 23);
+		label6.setBounds(12, 35, 462, 23);
 		label7 = new JLabel("");
 		label7.setBounds(10, 35, 464, 23);
 		label8 = new JLabel(this.bot.getPower()? "Robot activé" : "<html><font color=\"red\">Robot désactivé</font></html>");
@@ -115,19 +115,7 @@ public class UserInterface extends JFrame implements ActionListener{
 		panel.add(label8);
 		return panel;
 	}
-	
-	public String direction() {
-		if (this.bot.getDirection() == 0) {
-			return "Nord";
-		}else if (this.bot.getDirection() == 1) {
-			return "Est";
-		}else if(this.bot.getDirection() == 2) {
-			return "Sud";
-		}else {
-			return "Ouest";
-		}
-	}
-	
+
 	public void actionPerformed(ActionEvent e) {	
 		label6.setText("");
 		label7.setText("");
@@ -159,7 +147,7 @@ public class UserInterface extends JFrame implements ActionListener{
 		
 		//label1.setText("Power : " + this.bot.getPower());
 		label2.setText("Position : " + this.bot.getPosX() + " / " + this.bot.getPosY());
-		label3.setText("Direction : " + direction());
+		label3.setText("Direction : " + this.bot.getDirection());
 		label4.setText("Scanner : " + this.bot.getScanned());
 		label5.setText("Objet tenu : " + this.bot.getHold());
 		label8.setText(this.bot.getPower()? "Robot activé" : "<html><font color=\"red\">Robot désactivé</font></html>");
