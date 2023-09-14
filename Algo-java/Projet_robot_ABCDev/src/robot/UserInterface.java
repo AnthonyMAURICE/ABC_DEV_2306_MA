@@ -137,6 +137,7 @@ public class UserInterface extends JFrame implements ActionListener{
 	    im.put(KeyStroke.getKeyStroke("L"), MoveAction.Action.MOVE_TAKE);
 	    im.put(KeyStroke.getKeyStroke("M"), MoveAction.Action.MOVE_DROP);
 	    im.put(KeyStroke.getKeyStroke("P"), MoveAction.Action.MOVE_POWER);
+	    im.put(KeyStroke.getKeyStroke("A"), MoveAction.Action.MOVE_DESTROY);
 	    am.put(MoveAction.Action.MOVE_UP, new MoveAction(this, MoveAction.Action.MOVE_UP, this.bot, label6));
 	    am.put(MoveAction.Action.MOVE_DOWN, new MoveAction(this, MoveAction.Action.MOVE_DOWN, this.bot, label6));
 	    am.put(MoveAction.Action.MOVE_LEFT, new MoveAction(this, MoveAction.Action.MOVE_LEFT, this.bot, label6));
@@ -146,6 +147,7 @@ public class UserInterface extends JFrame implements ActionListener{
 	    am.put(MoveAction.Action.MOVE_TAKE, new MoveAction(this, MoveAction.Action.MOVE_TAKE, this.bot, label6));
 	    am.put(MoveAction.Action.MOVE_DROP, new MoveAction(this, MoveAction.Action.MOVE_DROP, this.bot, label6));
 	    am.put(MoveAction.Action.MOVE_POWER, new MoveAction(this, MoveAction.Action.MOVE_POWER, this.bot, label6));
+	    am.put(MoveAction.Action.MOVE_DESTROY, new MoveAction(this, MoveAction.Action.MOVE_DESTROY, this.bot, label6));
 	}
 
 	public void actionPerformed(ActionEvent e) {	

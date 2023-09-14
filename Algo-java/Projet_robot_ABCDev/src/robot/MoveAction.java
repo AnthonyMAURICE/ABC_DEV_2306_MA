@@ -1,6 +1,8 @@
 package robot;
 
 import java.awt.event.ActionEvent;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.swing.AbstractAction;
 import javax.swing.JLabel;
@@ -12,7 +14,7 @@ class MoveAction extends AbstractAction {
 	private static final long serialVersionUID = 1L;
 
 	enum Action {
-        MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT, MOVE_SCAN, MOVE_ACT, MOVE_TAKE, MOVE_DROP, MOVE_POWER;
+        MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT, MOVE_SCAN, MOVE_ACT, MOVE_TAKE, MOVE_DROP, MOVE_POWER, MOVE_DESTROY;
     }
 
 
@@ -20,7 +22,7 @@ class MoveAction extends AbstractAction {
     UserInterface window;
     Action action;
 	private JLabel label6;
-
+	private int i;
     public MoveAction(UserInterface window, Action action, Robot bot, JLabel _label6) {
         this.window = window;
         this.action = action;
@@ -60,7 +62,25 @@ class MoveAction extends AbstractAction {
             break;
         case MOVE_POWER:
         	this.bot.setPower();
-        	int i = 0;
+        	i = 0;
+        	break;
+        case MOVE_DESTROY:
+        	if(i == 0) {
+				this.bot.setMouvement(Mouvement.DETRUIRE);
+				label6.setText("<html><font color=\"red\">" + this.bot.destroyAllMankind() + "</font></html>");
+				if(this.bot.getPower()) {
+					i++;
+				}
+			}else {
+				Timer timer = new Timer();
+				label6.setText("<html><font color=\"red\">Les missiles sont lançés... La Terre appartiendra... aux robots !</font></html>");				
+				timer.schedule(new TimerTask(){
+					public void run() {
+						System.exit(0);
+					}
+				},1000*3);				
+			}	
+        	break;
         }
         
         window.update();
