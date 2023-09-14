@@ -2,7 +2,7 @@ package robot;
 
 import robot.Robot.Mouvement;
 
-public class Manette {
+public class Manette { //rendue obsolète par l'interface graphique
 	
 	public Manette() {
 		

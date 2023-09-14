@@ -16,10 +16,17 @@ public class App {
 			Robot r2d2 = new Robot("R2D2", "Astromech", 120, false, true, false, 15, 15); //objet Robot construit avec paramètres, mobile, mais non anthropomorphique
 			Robot c3po = new Robot(); // objet Robot androïde construit par défaut
 			Robot kitchenBot = new Robot("Kitchen Bot", "KitchenBot", 50, false, false, false, 10, 10); // création d'un robot de cuisine, non mobile
+			
+			// Appel de l'interface graphique
+			
+			SwingUtilities.invokeLater(new Runnable() {
+				public void run() {
+					UserInterface userInterface = new UserInterface(cylon);
+					userInterface.setVisible(true);
+				}
+			});
+			
 			//Manette manette1 = new Manette();
-			
-			
-			
 			/* Ancien programme, remplacé par l'interface graphique
 			do {
 				System.out.println("Contrôlez le " + cylon.getName() + " avec les touches z q s d pour les mouvements, p pour allumer ou éteindre le robot et 0 1 2 3 5 pour les actions. (Tapez n pour quitter)");
@@ -27,9 +34,7 @@ public class App {
 				manette1.control(cylon, input.charAt(0));
 			}while(!input.equals("n"));
 		scanner.close();
-		
-		
-		
+
 		 */
 		//tests
 		/*
@@ -72,19 +77,6 @@ public class App {
 		boolean testMixeur5 = KitchenBot.setMouvement(Mouvement.AGIR); // le robot cuisinier peut agir et préparer un plat
 		boolean testKitchen = KitchenBot.setMouvement(Mouvement.DETRUIRE); // retourne true, le mouvement est valide, mais affiche un autre message 
 		*/
-		
-			
-			
-			
-		// Appel de l'interface graphique
-		
-		SwingUtilities.invokeLater(new Runnable() {
-			public void run() {
-				UserInterface userInterface = new UserInterface(cylon);
-				userInterface.setVisible(true);
-			}
-		});
-
 	}
 
 }

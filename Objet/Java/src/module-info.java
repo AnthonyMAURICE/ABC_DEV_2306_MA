@@ -4,5 +4,6 @@
 /**
  * 
  */
-module Jalon_objet_12_09_23_MA {
+module java_object{
+	requires java.desktop;
 }
