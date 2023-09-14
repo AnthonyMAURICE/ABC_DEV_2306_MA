@@ -4,13 +4,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import javax.swing.AbstractAction;
+import javax.swing.ActionMap;
+import javax.swing.InputMap;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
-
+import javax.swing.KeyStroke;
+import robot.MoveAction.Action;
 import robot.Robot.Mouvement;
+
 
 public class UserInterface extends JFrame implements ActionListener{
 	private Robot bot;
@@ -20,6 +25,7 @@ public class UserInterface extends JFrame implements ActionListener{
 	public UserInterface(Robot _robot) {
 		super();
 		this.bot = _robot;
+		
 		build();
 		
 	}
@@ -116,10 +122,32 @@ public class UserInterface extends JFrame implements ActionListener{
 		panel.add(label6);
 		panel.add(label7);
 		panel.add(label8);
+		createKeyBindings(panel);
 		return panel;
 	}
 	
-
+	private void createKeyBindings(JPanel p) {
+	    InputMap im = p.getInputMap(JPanel.WHEN_IN_FOCUSED_WINDOW);
+	    ActionMap am = p.getActionMap();
+	    im.put(KeyStroke.getKeyStroke("Z"), MoveAction.Action.MOVE_UP);
+	    im.put(KeyStroke.getKeyStroke("S"), MoveAction.Action.MOVE_DOWN);
+	    im.put(KeyStroke.getKeyStroke("Q"), MoveAction.Action.MOVE_LEFT);
+	    im.put(KeyStroke.getKeyStroke("D"), MoveAction.Action.MOVE_RIGHT);
+	    im.put(KeyStroke.getKeyStroke("O"), MoveAction.Action.MOVE_SCAN);
+	    im.put(KeyStroke.getKeyStroke("K"), MoveAction.Action.MOVE_ACT);
+	    im.put(KeyStroke.getKeyStroke("L"), MoveAction.Action.MOVE_TAKE);
+	    im.put(KeyStroke.getKeyStroke("M"), MoveAction.Action.MOVE_DROP);
+	    im.put(KeyStroke.getKeyStroke("P"), MoveAction.Action.MOVE_POWER);
+	    am.put(MoveAction.Action.MOVE_UP, new MoveAction(this, MoveAction.Action.MOVE_UP, this.bot, label6));
+	    am.put(MoveAction.Action.MOVE_DOWN, new MoveAction(this, MoveAction.Action.MOVE_DOWN, this.bot, label6));
+	    am.put(MoveAction.Action.MOVE_LEFT, new MoveAction(this, MoveAction.Action.MOVE_LEFT, this.bot, label6));
+	    am.put(MoveAction.Action.MOVE_RIGHT, new MoveAction(this, MoveAction.Action.MOVE_RIGHT, this.bot, label6));
+	    am.put(MoveAction.Action.MOVE_SCAN, new MoveAction(this, MoveAction.Action.MOVE_SCAN, this.bot, label6));
+	    am.put(MoveAction.Action.MOVE_ACT, new MoveAction(this, MoveAction.Action.MOVE_ACT, this.bot, label6));
+	    am.put(MoveAction.Action.MOVE_TAKE, new MoveAction(this, MoveAction.Action.MOVE_TAKE, this.bot, label6));
+	    am.put(MoveAction.Action.MOVE_DROP, new MoveAction(this, MoveAction.Action.MOVE_DROP, this.bot, label6));
+	    am.put(MoveAction.Action.MOVE_POWER, new MoveAction(this, MoveAction.Action.MOVE_POWER, this.bot, label6));
+	}
 
 	public void actionPerformed(ActionEvent e) {	
 		label6.setText("");
@@ -162,18 +190,81 @@ public class UserInterface extends JFrame implements ActionListener{
 				},1000*3);				
 			}	
 		}
-				
+		this.update();
+		
+	}
+
+	
+	public void update() {
 		label2.setText("Position : " + this.bot.getPosX() + " / " + this.bot.getPosY());
 		label3.setText("Direction : " + this.bot.getDirection());
 		label4.setText(this.bot.getScanned()? "Scan effectué" : "<html><font color=\"red\">Scan non effectué</font></html>");
 		label5.setText(this.bot.getHold()? "<html><font color=\"black\">Objet saisi</font></html>" : "<html><font color=\"red\">Pas d'objet saisi</font></html>");
 		label8.setText(this.bot.getPower()? "Robot activé" : "<html><font color=\"red\">Robot désactivé</font></html>");
 	}
-
-	
-	
 	
 	
 
 	
+}
+
+class MoveAction extends AbstractAction {
+
+	private static final long serialVersionUID = 1L;
+
+	enum Action {
+        MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT, MOVE_SCAN, MOVE_ACT, MOVE_TAKE, MOVE_DROP, MOVE_POWER;
+    }
+
+
+    Robot bot;
+    UserInterface window;
+    Action action;
+	private JLabel label6;
+
+    public MoveAction(UserInterface window, Action action, Robot bot, JLabel _label6) {
+        this.window = window;
+        this.action = action;
+        this.bot = bot;
+        this.label6 = _label6;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+    	label6.setText("");
+    	System.out.println(e);
+        switch (action) {
+        case MOVE_UP:
+        	this.bot.setMouvement(Mouvement.AVANT);
+            break;
+        case MOVE_DOWN:
+        	this.bot.setMouvement(Mouvement.ARRIERE);
+            break;
+        case MOVE_LEFT:
+        	this.bot.setMouvement(Mouvement.GAUCHE);
+            break;
+        case MOVE_RIGHT:
+        	this.bot.setMouvement(Mouvement.DROITE);
+            break;
+        case MOVE_SCAN:
+        	this.bot.setMouvement(Mouvement.SCANNER);
+            break;
+        case MOVE_ACT:
+        	this.label6.setText(this.bot.agir());
+        	this.bot.setMouvement(Mouvement.AGIR);
+            break;
+        case MOVE_TAKE:
+        	
+        	this.bot.setMouvement(Mouvement.SAISIR);
+            break;
+        case MOVE_DROP:
+        	this.bot.setMouvement(Mouvement.LACHER);
+            break;
+        case MOVE_POWER:
+        	this.bot.setPower();
+        	int i = 0;
+        }
+        
+        window.update();
+    }
 }
