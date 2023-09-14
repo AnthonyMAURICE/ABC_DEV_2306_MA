@@ -1,9 +1,9 @@
 package robot;
 
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.util.Timer;
+import java.util.TimerTask;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -13,6 +13,7 @@ import robot.Robot.Mouvement;
 
 public class UserInterface extends JFrame implements ActionListener{
 	private Robot bot;
+	private int i = 0;
 	//private Manette manette;
 	private JButton power, avant, arriere, gauche, droite, scan, prendre, lacher, agir, detruire;
 	private JLabel label2, label3, label4, label5, label6, label7, label8, label9;
@@ -93,23 +94,25 @@ public class UserInterface extends JFrame implements ActionListener{
 		}
 		
 		label2 = new JLabel("Position : " + this.bot.getPosX() + " / " + this.bot.getPosY());
-		label2.setBounds(185, 151, 121, 14);
+		label2.setBounds(190, 130, 121, 23);
 		label3 = new JLabel("Direction : " + this.bot.getDirection());
-		label3.setBounds(185, 176, 158, 14);
-		label4 = new JLabel("Scanner : " + this.bot.getScanned());
-		label4.setBounds(180, 196, 163, 14);
-		label5 = new JLabel("Objet tenu : " + this.bot.getHold());
-		label5.setBounds(10, 192, 163, 23);
+		label3.setBounds(190, 160, 158, 23);
+		label4 = new JLabel("<html><font color=\"red\">Scan non effectué</font></html>");
+		label4.setBounds(349, 190, 163, 23);
+		label5 = new JLabel("<html><font color=\"red\">Pas d'objet saisi</font></html>");
+		label5.setBounds(10, 190, 163, 23);
 		label6 = new JLabel("");
 		label6.setBounds(12, 35, 462, 23);
 		label7 = new JLabel("");
 		label7.setBounds(10, 35, 464, 23);
 		label8 = new JLabel(this.bot.getPower()? "Robot activé" : "<html><font color=\"red\">Robot désactivé</font></html>");
-		label8.setBounds(184, 226, 100, 23);
+		label8.setBounds(190, 190, 100, 23);
 		panel.add(label2);
 		panel.add(label3);
 		panel.add(label4);
-		panel.add(label5);
+		if(!this.bot.getType().equals("KitchenBot")) {
+			panel.add(label5);
+		}
 		panel.add(label6);
 		panel.add(label7);
 		panel.add(label8);
@@ -122,7 +125,7 @@ public class UserInterface extends JFrame implements ActionListener{
 		Object source = e.getSource();
 		if(source == power) {
 			this.bot.setPower();	
-			
+			this.i = 0;
 		}else if(source == avant) {
 			this.bot.setMouvement(Mouvement.AVANT);
 		}else if (source == arriere) {
@@ -141,15 +144,31 @@ public class UserInterface extends JFrame implements ActionListener{
 			label6.setText(this.bot.agir());
 			this.bot.setMouvement(Mouvement.AGIR);
 		}else if (source == detruire) {
-			this.bot.setMouvement(Mouvement.DETRUIRE);
-			label6.setText("<html><font color=\"red\">" + this.bot.destroyAllMankind() + "</font></html>");
+			if(this.i == 0) {
+				this.bot.setMouvement(Mouvement.DETRUIRE);
+				label6.setText("<html><font color=\"red\">" + this.bot.destroyAllMankind() + "</font></html>");
+				if(this.bot.getPower()) {
+					this.i++;
+				}
+			}else {
+				Timer timer = new Timer();
+				label6.setText("<html><font color=\"red\">Les missiles sont lançés...</font></html>");
+				
+				timer.schedule(new TimerTask(){
+					public void run() {
+						System.exit(0);
+					}
+				},1000*3);				
+			}	
 		}
-		
+				
 		//label1.setText("Power : " + this.bot.getPower());
 		label2.setText("Position : " + this.bot.getPosX() + " / " + this.bot.getPosY());
 		label3.setText("Direction : " + this.bot.getDirection());
-		label4.setText("Scanner : " + this.bot.getScanned());
-		label5.setText("Objet tenu : " + this.bot.getHold());
+		label4.setText(this.bot.getScanned()? "Scan effectué" : "<html><font color=\"red\">Scan non effectué</font></html>");
+		label5.setText(this.bot.getHold()? "<html><font color=\"black\">Objet saisi</font></html>" : "<html><font color=\"red\">Pas d'objet saisi</font></html>");
 		label8.setText(this.bot.getPower()? "Robot activé" : "<html><font color=\"red\">Robot désactivé</font></html>");
 	}
+
+	
 }

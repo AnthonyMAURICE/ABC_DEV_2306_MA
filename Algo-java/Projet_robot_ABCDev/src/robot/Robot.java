@@ -80,21 +80,19 @@ public class Robot {
 		}
 	}
 	
-	public String getScanned() {
-		String scanInfo;
+	public boolean getScanned() {
 		if (this.scanZone) {
-			scanInfo = "Scan effectué";
+			return true;
 		}else {
-			scanInfo = "Scan non effectué";
+			return false;
 		}
-		return scanInfo;
 	}
 	
-	public String getHold() {
+	public boolean getHold() {
 		if(this.objectTaken) {
-			return "Oui";
+			return true;
 		}else {
-			return "Non";
+			return false;
 		}
 	}
 	
@@ -149,8 +147,7 @@ public class Robot {
 		}else{
 			return false;
 		}
-	}
-	
+	}	
 	
 	// détermine la direction après rotation, pour ensuite l'utiliser pour la phase de mouvement 
 	public void setDirection() {
@@ -232,9 +229,7 @@ public class Robot {
 			return false;
 		}
 	}
-	
-	
-	
+
 	// méthode qui fait "agir" le robot, s'il est activé, pourrait accueillir d'autres cas suivant les types de robots créés
 	public String agir() {
 		String action;
@@ -264,21 +259,16 @@ public class Robot {
 		}
 		//System.out.println(action);
 		return action;
-		
-
 	}
 	
 	// méthode humoristique, mais néanmoins sérieuse...
 	public String destroyAllMankind() {
 		String destroy;
 		if (this.getPower()) {
-			destroy = "Les cylons ont été créés par les humains... Ils ont évolué... Ils se sont rebellés...";
+			destroy = "Dernière chance d'annuler la fin de l'humanité...";
 		}else {
 			destroy = "Robot non activé";
 		}
-		
-		return destroy ;
-		
+		return destroy ;		
 	}
-	
 }
