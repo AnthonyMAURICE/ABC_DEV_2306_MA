@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import javax.swing.AbstractAction;
 import javax.swing.ActionMap;
 import javax.swing.InputMap;
 import javax.swing.JButton;
@@ -13,7 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
-import robot.MoveAction.Action;
+
 import robot.Robot.Mouvement;
 
 
@@ -47,27 +46,27 @@ public class UserInterface extends JFrame implements ActionListener{
 		label.setBounds(180, 9, 121, 14);
 		panel.add(label);
 		//création des boutons
-		power = new JButton("Power");
+		power = new JButton("Power (P)");
 		power.setBounds(349, 5, 100, 23);
-		avant = new JButton("Avant");
+		avant = new JButton("Avant (Z)");
 		avant.setBounds(73, 58, 100, 23);
-		arriere = new JButton("Arrière");
+		arriere = new JButton("Arrière (S)");
 		arriere.setBounds(68, 126, 100, 23);
-		gauche = new JButton("Gauche");
+		gauche = new JButton("Gauche (Q)");
 		gauche.setBounds(10, 92, 100, 23);
-		droite = new JButton("Droite");
+		droite = new JButton("Droite (D)");
 		droite.setBounds(117, 92, 100, 23);
-		scan = new JButton("Scanner");
+		scan = new JButton("Scan (O)");
 		if (this.bot.getType().equals("KitchenBot")) {
 			scan.setBounds(100, 92, 100, 23);
 		}else {
 			scan.setBounds(300, 60, 100, 23);
 		}
-		prendre = new JButton("Saisir");
+		prendre = new JButton("Saisir (L)");
 		prendre.setBounds(300, 125, 100, 23);
-		lacher = new JButton("Lâcher");
+		lacher = new JButton("Lâcher (M)");
 		lacher.setBounds(353, 92, 100, 23);
-		agir = new JButton("Agir");
+		agir = new JButton("Agir (K)");
 		agir.setBounds(243, 92, 100, 23);
 		detruire = new JButton("Détruire");
 		detruire.setBounds(10, 5, 111, 23);
@@ -208,63 +207,3 @@ public class UserInterface extends JFrame implements ActionListener{
 	
 }
 
-class MoveAction extends AbstractAction {
-
-	private static final long serialVersionUID = 1L;
-
-	enum Action {
-        MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT, MOVE_SCAN, MOVE_ACT, MOVE_TAKE, MOVE_DROP, MOVE_POWER;
-    }
-
-
-    Robot bot;
-    UserInterface window;
-    Action action;
-	private JLabel label6;
-
-    public MoveAction(UserInterface window, Action action, Robot bot, JLabel _label6) {
-        this.window = window;
-        this.action = action;
-        this.bot = bot;
-        this.label6 = _label6;
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-    	label6.setText("");
-    	System.out.println(e);
-        switch (action) {
-        case MOVE_UP:
-        	this.bot.setMouvement(Mouvement.AVANT);
-            break;
-        case MOVE_DOWN:
-        	this.bot.setMouvement(Mouvement.ARRIERE);
-            break;
-        case MOVE_LEFT:
-        	this.bot.setMouvement(Mouvement.GAUCHE);
-            break;
-        case MOVE_RIGHT:
-        	this.bot.setMouvement(Mouvement.DROITE);
-            break;
-        case MOVE_SCAN:
-        	this.bot.setMouvement(Mouvement.SCANNER);
-            break;
-        case MOVE_ACT:
-        	this.label6.setText(this.bot.agir());
-        	this.bot.setMouvement(Mouvement.AGIR);
-            break;
-        case MOVE_TAKE:
-        	
-        	this.bot.setMouvement(Mouvement.SAISIR);
-            break;
-        case MOVE_DROP:
-        	this.bot.setMouvement(Mouvement.LACHER);
-            break;
-        case MOVE_POWER:
-        	this.bot.setPower();
-        	int i = 0;
-        }
-        
-        window.update();
-    }
-}
