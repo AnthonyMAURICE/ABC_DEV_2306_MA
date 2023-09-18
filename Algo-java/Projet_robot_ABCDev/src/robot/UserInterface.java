@@ -203,9 +203,6 @@ public class UserInterface extends JFrame implements ActionListener{
 		label5.setText(this.bot.getHold()? "<html><font color=\"black\">Objet saisi</font></html>" : "<html><font color=\"red\">Pas d'objet saisi</font></html>");
 		label8.setText(this.bot.getPower()? "Robot activé" : "<html><font color=\"red\">Robot désactivé</font></html>");
 	}
-	
-	
 
-	
 }
 

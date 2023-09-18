@@ -8,6 +8,7 @@ import javax.swing.AbstractAction;
 import javax.swing.JLabel;
 
 import robot.Robot.Mouvement;
+import robot.RobotUI;
 
 class MoveAction extends AbstractAction {
 
