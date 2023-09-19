@@ -7,9 +7,6 @@ public class App {
 		Poll poll = new Poll();
 		
 		poll.fetching();
-		
-		
-		
 			
 	}
 
