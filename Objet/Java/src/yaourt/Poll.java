@@ -76,7 +76,7 @@ public class Poll {
 	public void sorting(int[] _colors, String[] _colors2, JSONArray _values) {
 		int tempNum;
 		String tempName;
-		for (int i = 0; i < _colors.length; i++){ // tri du tableau par deux boucles for imbriquées
+		for (int i = 0; i < _colors.length; i++){ // méthode de tri du tableau par deux boucles for imbriquées
             for (int j = i + 1; j < _colors.length; j++){
                 if (_colors[i] > _colors[j]){ 
                 
@@ -94,7 +94,7 @@ public class Poll {
 		
 		String[] sortedColors = _colors2;
 		
-		/* utilisation d'un IntStream
+		/* méthode de tri utilisant un IntStream
 		String[] sortedColors = IntStream.range(0, _colors.length) // instruction qui classe le tableau de nom par rapport aux valeurs du tableau d'entiers
 				.boxed().sorted((i, j) -> Integer.compare(_colors[i], _colors[j])) // en utilisant un Stream d'entiers, prenant comme base les valeurs du tableau d'entier
 				.map(i -> _colors2[i]).toArray(x -> new String[x]);// stockant les valeurs de chaque couleurs
