@@ -21,7 +21,6 @@ public class Game {
 		connection.setRequestMethod("GET");
 		connection.connect();
 		int responseCode = connection.getResponseCode();
-		System.out.println(responseCode);	
 		
 		// si le code est 200, poursuit, sinon renvoit le code d'erreur
 		if(responseCode !=200) {
@@ -39,8 +38,7 @@ public class Game {
 			JSONParser parser = new JSONParser(); // déclaration du parser JSON
 			JSONObject ob = (JSONObject) parser.parse(dice); // déclaration d'un objet JSON qui accueille les éléments passés par le parser
 			JSONArray values = (JSONArray) ob.get("results"); // déclaration d'un tableau JSON qui accueille les éléments "results" de l'API
-			
-			System.out.println(values);
+
 			scoring(values);
 			
 		}
@@ -84,7 +82,6 @@ public class Game {
 			}
 		}
 		if(checked) { // ne passe que si la saisie a été validée
-			System.out.println(_score);
 			calculScore(_score);
 		}
 	}
@@ -113,14 +110,12 @@ public class Game {
 			temp3 = 0; // réinitialisation de la variable à 0 pour le passage suivant dans la boucle
 		}
 		System.out.println("Les scores sont : ");
-		int bigger = 0, tempScore = scoreFinal.get(0);
+		int tempScore = scoreFinal.get(0);
 		for(int k = 0; k < scoreFinal.size(); k++) { // boucle pour déterminer le score le plus élevé	
 			System.out.println("Joueur " + (k+1) + " : " + scoreFinal.get(k));
 			if (tempScore <= scoreFinal.get(k)) {
 				tempScore = scoreFinal.get(k);
-				bigger = k; // bigger prend l'index de la liste "gagnante)
 			}
 		}
-		System.out.println("Le joueur " + (bigger+1) + " est arrivé le premier avec un score de " + scoreFinal.get(bigger) + " points."); // "bigger" est incrémentée pour être égale à l'id du joueur (+ 1 par rapport à l'index de la liste)
 	}
 }
