@@ -40,7 +40,7 @@ public class Game {
 	}
 	
 	public void scoring(JSONArray _values) {
-		ArrayList<ArrayList<Integer>> score = new ArrayList<ArrayList<Integer>>(3); // déclaration d'une liste pour contenir les trois listes de scores, une par joueur
+		ArrayList<ArrayList<Integer>> score = new ArrayList<ArrayList<Integer>>(); // déclaration d'une liste pour contenir les trois listes de scores, une par joueur
 		ArrayList<Integer> score1 = new ArrayList<Integer>(); //déclaration des listes de score
 		ArrayList<Integer> score2 = new ArrayList<Integer>();
 		ArrayList<Integer> score3 = new ArrayList<Integer>();
