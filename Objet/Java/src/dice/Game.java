@@ -49,8 +49,8 @@ public class Game {
 		score.add(score3);
 		for(int i = 0; i < _values.size(); i++) { // boucle for qui ajoute aux listes les scores, triés selon l'id du joueur (chiffre à l'index "0")
 			if(_values.get(i).toString().charAt(0) == '1') { // joueur 1
-				score1.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(2)))); // stocke les scores aux index 2 et 4 de chaque groupe de valeurs 
-				score1.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(4)))); // sous forme d'entiers
+				score1.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(2)))); // stocke les scores aux index 2 et 4 (les deux chiffres de score)
+				score1.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(4)))); // de chaque groupe de valeurs sous forme d'entiers
 			}else if (_values.get(i).toString().charAt(0) == '2') { // joueur 2
 				score2.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(2))));
 				score2.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(4))));
