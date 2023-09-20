@@ -49,8 +49,8 @@ public class Game {
 		score.add(score3);
 		for(int i = 0; i < _values.size(); i++) { // boucle for qui ajoute aux listes les scores, triés selon l'id du joueur (chiffre à l'index "0")
 			if(_values.get(i).toString().charAt(0) == '1') { // joueur 1
-				score1.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(2)))); // stocke les scores sous forme d'entiers
-				score1.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(4))));
+				score1.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(2)))); // stocke les scores aux index 2 et 4 de chaque groupe de valeurs 
+				score1.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(4)))); // sous forme d'entiers
 			}else if (_values.get(i).toString().charAt(0) == '2') { // joueur 2
 				score2.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(2))));
 				score2.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(4))));
@@ -67,10 +67,10 @@ public class Game {
 	
 	public void control(ArrayList<ArrayList<Integer>> _score) { // contrôle la validité des entrées
 		boolean checked = false;
-		for(int i = 0; i < _score.size(); i++) {
-			for(int j: _score.get(i)) {
-				if(j >= 1 || j <= 6) {
-					checked = true;	
+		for(int i = 0; i < _score.size(); i++) { // boucle for sur la liste de liste, les faisant passer l'une après l'autre
+			for(int j: _score.get(i)) { // dans une boucle for each, qui boucle sur les valeurs contenues dans les listes
+				if(j >= 1 || j <= 6) { // si elles sont conformes
+					checked = true;	// le booléen qui conditionne la suite de la procédure passe à true
 				}else {
 					System.out.println("Entrée non conforme détectée, fin de la procédure. Maudis pirates... To investigate...");
 				}
@@ -91,9 +91,9 @@ public class Game {
 				if(temp1 == temp2) { // si les valeurs sont identiques
 					temp3 -=2; // -2 au score
 				}else { // sinon
-					if(temp1 + temp2 >= 6 && temp1 + temp2 <=10){ // ajoute 1
+					if(temp1 + temp2 >= 6 && temp1 + temp2 <=10){ // ajoute 1 si leur somme est entre 6 et 10
 						temp3 += 1;
-					}else if (temp1 + temp2 > 10) { // ou 3 suivant le score total des deux dés
+					}else if (temp1 + temp2 > 10) { // ou 3 si elle est supérieure à 10
 						temp3 += 3;
 					}
 				}
