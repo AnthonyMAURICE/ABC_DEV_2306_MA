@@ -2,6 +2,7 @@ package yaourt;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 //import java.util.stream.IntStream;
@@ -109,7 +110,10 @@ public class Poll {
 				if(temp.equals(sortedColors[sortedColors.length - 2]) || temp.equals(sortedColors[sortedColors.length - 1])) { // si la première est trouvée en premier, passe le booléen à true
 					match = true;
 				}else if (temp.equals(sortedColors[sortedColors.length - 2])){ // si la deuxième est trouvée, la place en premier et passe le booléen à true
+					String tempString;
+					tempString = sortedColors[sortedColors.length - 1];
 					sortedColors[sortedColors.length - 1] = sortedColors[sortedColors.length - 2];
+					sortedColors[sortedColors.length - 2] = tempString;
 					match = true;
 				}else if (temp.equals(sortedColors[sortedColors.length - 3])){ // sin la troisième est trouvée, la place en second et passe le booléen à true
 					sortedColors[sortedColors.length - 2] = sortedColors[sortedColors.length - 3];
