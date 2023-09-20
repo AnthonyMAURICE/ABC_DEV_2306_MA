@@ -86,8 +86,8 @@ public class Game {
 		int temp1, temp2, temp3 = 0;
 		for(int i = 0; i < _score.size(); i++) { // première boucle for, boucle sur la liste principale contenant les trois autres
 			for(int j = 1; j < _score.get(i).size(); j++) { // deuxième boucle, boucle sur chaque liste de scores, commence à 1 pour éviter les erreurs de type "out of bound"
-				temp1 = _score.get(i).get(j); // récupère la valeur du 2ème dé (de score, pas l'id)
-				temp2 = _score.get(i).get(j - 1); // récupère celle du premier
+				temp1 = _score.get(i).get(j); // récupère la valeur du 2ème dé (de score)
+				temp2 = _score.get(i).get(j - 1); // récupère celle du premier (de score)
 				if(temp1 == temp2) { // si les valeurs sont identiques
 					temp3 -=2; // -2 au score
 				}else { // sinon
