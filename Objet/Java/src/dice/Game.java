@@ -20,27 +20,22 @@ public class Game {
 		HttpURLConnection connection = (HttpURLConnection)url.openConnection();
 		connection.setRequestMethod("GET");
 		connection.connect();
-		int responseCode = connection.getResponseCode();
-		
+		int responseCode = connection.getResponseCode();		
 		// si le code est 200, poursuit, sinon renvoit le code d'erreur
 		if(responseCode !=200) {
 			throw new RuntimeException("HttpResponseCode: " + responseCode);
 		}else {
 			String dice = ""; // chaine vide
 			Scanner scanner = new Scanner(url.openStream()); 
-
-			while(scanner.hasNext()) { // récupère par le scanner les valeurs et les ajoute à la chaine de caractères
-				dice += scanner.nextLine();
-			}
-			
+				while(scanner.hasNext()) { // récupère par le scanner les valeurs et les ajoute à la chaine de caractères
+					dice += scanner.nextLine();
+				}
 			scanner.close();
 			
 			JSONParser parser = new JSONParser(); // déclaration du parser JSON
 			JSONObject ob = (JSONObject) parser.parse(dice); // déclaration d'un objet JSON qui accueille les éléments passés par le parser
 			JSONArray values = (JSONArray) ob.get("results"); // déclaration d'un tableau JSON qui accueille les éléments "results" de l'API
-
 			scoring(values);
-			
 		}
 	}
 	
@@ -110,12 +105,8 @@ public class Game {
 			temp3 = 0; // réinitialisation de la variable à 0 pour le passage suivant dans la boucle
 		}
 		System.out.println("Les scores sont : ");
-		int tempScore = scoreFinal.get(0);
 		for(int k = 0; k < scoreFinal.size(); k++) { // boucle pour déterminer le score le plus élevé	
 			System.out.println("Joueur " + (k+1) + " : " + scoreFinal.get(k));
-			if (tempScore <= scoreFinal.get(k)) {
-				tempScore = scoreFinal.get(k);
-			}
 		}
 	}
 }
