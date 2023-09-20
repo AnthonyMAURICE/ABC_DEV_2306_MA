@@ -1,6 +1,5 @@
 package dice;
 
-import yaourt.Poll;
 
 public class App {
 

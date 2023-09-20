@@ -3,10 +3,9 @@ package dice;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
