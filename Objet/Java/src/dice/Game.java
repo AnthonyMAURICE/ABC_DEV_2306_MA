@@ -65,7 +65,7 @@ public class Game {
 		control(score);		
 	}
 	
-	public void control(ArrayList<ArrayList<Integer>> _score) { // contrôle la validité de la saisie
+	public void control(ArrayList<ArrayList<Integer>> _score) { // contrôle la validité des entrées
 		boolean checked = false;
 		for(int i = 0; i < _score.size(); i++) {
 			for(int j: _score.get(i)) {
@@ -76,7 +76,7 @@ public class Game {
 				}
 			}
 		}
-		if(checked) { // ne passe que si la saisie a été validée
+		if(checked) { // ne passe que si les entrées ont été validées
 			calculScore(_score);
 		}
 	}
@@ -93,7 +93,7 @@ public class Game {
 				}else { // sinon
 					if(temp1 + temp2 >= 6 && temp1 + temp2 <=10){ // ajoute 1
 						temp3 += 1;
-					}else if (temp1 + temp2 > 10) { // ou 3 suivent le score total des deux dés
+					}else if (temp1 + temp2 > 10) { // ou 3 suivant le score total des deux dés
 						temp3 += 3;
 					}
 				}
