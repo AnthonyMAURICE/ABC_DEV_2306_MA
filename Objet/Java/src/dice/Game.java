@@ -30,17 +30,17 @@ public class Game {
 			String dice = ""; // chaine vide
 			Scanner scanner = new Scanner(url.openStream()); 
 
-			while(scanner.hasNext()) { 
+			while(scanner.hasNext()) { // récupère par le scanner les valeurs et les ajoute à la chaine de caractères
 				dice += scanner.nextLine();
 			}
 			
 				
 			scanner.close();
 			
-			JSONParser parser = new JSONParser(); 
-			JSONObject ob = (JSONObject) parser.parse(dice); 
+			JSONParser parser = new JSONParser(); // déclaration du parser JSON
+			JSONObject ob = (JSONObject) parser.parse(dice); // déclaration d'un objet JSON qui accueille les éléments passés par le parser
 
-			JSONArray values = (JSONArray) ob.get("results"); 
+			JSONArray values = (JSONArray) ob.get("results"); // déclaration d'un tableau JSON qui accueille les éléments "results" de l'API
 			
 			System.out.println(values);
 			scoring(values);
@@ -49,21 +49,21 @@ public class Game {
 	}
 	
 	public void scoring(JSONArray _values) {
-		ArrayList<ArrayList<Integer>> score = new ArrayList<ArrayList<Integer>>(3); 
-		ArrayList<Integer> score1 = new ArrayList<Integer>();
+		ArrayList<ArrayList<Integer>> score = new ArrayList<ArrayList<Integer>>(3); // déclaration d'une liste pour contenir les trois listes de scores, une par joueur
+		ArrayList<Integer> score1 = new ArrayList<Integer>(); //déclaration des listes de score
 		ArrayList<Integer> score2 = new ArrayList<Integer>();
 		ArrayList<Integer> score3 = new ArrayList<Integer>();
-		score.add(score1);
+		score.add(score1); //ajout des 3 listes à la liste principale
 		score.add(score2);
 		score.add(score3);
-		for(int i = 0; i < _values.size(); i++) {
-			if(_values.get(i).toString().charAt(0) == '1') {
-				score1.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(2))));
+		for(int i = 0; i < _values.size(); i++) { // boucle for qui ajoute aux listes les scores, triés selon l'id du joueur (chiffre à l'index "0")
+			if(_values.get(i).toString().charAt(0) == '1') { // joueur 1
+				score1.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(2)))); // stocke les scores sous forme d'entiers
 				score1.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(4))));
-			}else if (_values.get(i).toString().charAt(0) == '2') {
+			}else if (_values.get(i).toString().charAt(0) == '2') { // joueur 2
 				score2.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(2))));
 				score2.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(4))));
-			}else if (_values.get(i).toString().charAt(0) == '3'){
+			}else if (_values.get(i).toString().charAt(0) == '3'){ // joueur 3
 				score3.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(2))));
 				score3.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(4))));
 			}else {
@@ -74,7 +74,7 @@ public class Game {
 		control(score);		
 	}
 	
-	public void control(ArrayList<ArrayList<Integer>> _score) {
+	public void control(ArrayList<ArrayList<Integer>> _score) { // contrôle la validité de la saisie
 		boolean checked = false;
 		for(int i = 0; i < _score.size(); i++) {
 			for(int j: _score.get(i)) {
@@ -85,44 +85,44 @@ public class Game {
 				}
 			}
 		}
-		if(checked) {
+		if(checked) { // ne passe que si la saisie a été validée
 			System.out.println(_score);
 			calculScore(_score);
 		}
 	}
 	
-	public void calculScore(ArrayList<ArrayList<Integer>> _score) {
+	public void calculScore(ArrayList<ArrayList<Integer>> _score) { // calcul du score
 		ArrayList<Integer>scoreFinal = new ArrayList<Integer>();
 		int temp1, temp2, temp3 = 0;
-		for(int i = 0; i < _score.size(); i++) {
-			for(int j = 1; j < _score.get(i).size(); j++) {
-				temp1 = _score.get(i).get(j);
-				temp2 = _score.get(i).get(j - 1);
-				if(temp1 == temp2) {
-					temp3 -=2;
-				}else {
-					if(temp1 + temp2 >= 6 && temp1 + temp2 <=10){
+		for(int i = 0; i < _score.size(); i++) { // première boucle for, boucle sur la liste principale contenant les trois autres
+			for(int j = 1; j < _score.get(i).size(); j++) { // deuxième boucle, boucle sur chaque liste de scores, commence à 1 pour éviter les erreurs de type "out of bound"
+				temp1 = _score.get(i).get(j); // récupère la valeur du 2ème dé (de score, pas l'id)
+				temp2 = _score.get(i).get(j - 1); // récupère celle du premier
+				if(temp1 == temp2) { // si les valeurs sont identiques
+					temp3 -=2; // -2 au score
+				}else { // sinon
+					if(temp1 + temp2 >= 6 && temp1 + temp2 <=10){ // ajoute 1
 						temp3 += 1;
-					}else if (temp1 + temp2 > 10) {
+					}else if (temp1 + temp2 > 10) { // ou 3 suivent le score total des deux dés
 						temp3 += 3;
 					}
 				}
 			}
 			
-			if(temp3 < 0) {
+			if(temp3 < 0) { // si le score est négatif, il passe à 0
 				temp3 = 0;
 			}
-			scoreFinal.add(temp3);
-			temp3 = 0;
+			scoreFinal.add(temp3); // le score final est ajouté à la liste correspondant à chaque joueur
+			temp3 = 0; // réinitialisation de la variable à 0 pour le passage suivant dans la boucle
 		}
 		System.out.println(scoreFinal);
 		int bigger = 0, tempScore = scoreFinal.get(0);
-		for(int k = 0; k < scoreFinal.size(); k++) {		
+		for(int k = 0; k < scoreFinal.size(); k++) { // boucle pour déterminer le score le plus élevé	
 			if (tempScore <= scoreFinal.get(k)) {
 				tempScore = scoreFinal.get(k);
-				bigger = k;
+				bigger = k; // bigger prend l'index de la liste "gagnante)
 			}
 		}
-		System.out.println("Le joueur " + (bigger+1) + " est arrivé le premier avec un score de " + scoreFinal.get(bigger) + " points.");
+		System.out.println("Le joueur " + (bigger+1) + " est arrivé le premier avec un score de " + scoreFinal.get(bigger) + " points."); // "bigger" est incrémentée pour être égale à l'id du joueur (+ 1 par rapport à l'index de la liste)
 	}
 }

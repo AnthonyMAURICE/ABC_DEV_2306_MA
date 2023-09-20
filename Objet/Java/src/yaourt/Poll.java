@@ -96,7 +96,7 @@ public class Poll {
 		
 		/* méthode de tri utilisant un IntStream
 		String[] sortedColors = IntStream.range(0, _colors.length) // instruction qui classe le tableau de nom par rapport aux valeurs du tableau d'entiers
-				.boxed().sorted((i, j) -> Integer.compare(_colors[i], _colors[j])) // en utilisant un Stream d'entiers, prenant comme base les valeurs du tableau d'entier
+				.boxed().sorted((i, j) -> Integer.compare(_colors[i], _colors[j])) // en utilisant un Stream d'entiers, prenant comme base les valeurs du tableau d'entiers
 				.map(i -> _colors2[i]).toArray(x -> new String[x]);// stockant les valeurs de chaque couleurs
 		*/
 		Arrays.sort(_colors); // tri du tableau d'entier par ordre croissant, pour tester les égalités des deuxième et troisième positions
