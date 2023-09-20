@@ -101,12 +101,15 @@ public class Poll {
 		*/
 		Arrays.sort(_colors); // tri du tableau d'entier par ordre croissant, pour tester les égalités des deuxième et troisième positions
 		
-		if(_colors[_colors.length - 2] == _colors[_colors.length - 3]) { // condition si la seconde et la troisième sont ex aequo
+		if(_colors[_colors.length - 2] == _colors[_colors.length - 3] || _colors[_colors.length - 1] == _colors[_colors.length - 2]) { // condition si la première et la deuxième ou si la seconde et la troisième sont ex aequo
 			int counter = 0;
 			boolean match = false;
 			while(!match) { // boucle tant qu'une des deux n'a pas été trouvée dans le tableau "results"
 				String temp = _values.get(counter).toString();
-				if(temp.equals(sortedColors[sortedColors.length - 2])) { // si la seconde est trouvée en premier, passe le booléen à true
+				if(temp.equals(sortedColors[sortedColors.length - 2]) || temp.equals(sortedColors[sortedColors.length - 1])) { // si la première est trouvée en premier, passe le booléen à true
+					match = true;
+				}else if (temp.equals(sortedColors[sortedColors.length - 2])){ // si la deuxième est trouvée, la place en premier et passe le booléen à true
+					sortedColors[sortedColors.length - 1] = sortedColors[sortedColors.length - 2];
 					match = true;
 				}else if (temp.equals(sortedColors[sortedColors.length - 3])){ // sin la troisième est trouvée, la place en second et passe le booléen à true
 					sortedColors[sortedColors.length - 2] = sortedColors[sortedColors.length - 3];

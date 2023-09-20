@@ -34,12 +34,10 @@ public class Game {
 				dice += scanner.nextLine();
 			}
 			
-				
 			scanner.close();
 			
 			JSONParser parser = new JSONParser(); // déclaration du parser JSON
 			JSONObject ob = (JSONObject) parser.parse(dice); // déclaration d'un objet JSON qui accueille les éléments passés par le parser
-
 			JSONArray values = (JSONArray) ob.get("results"); // déclaration d'un tableau JSON qui accueille les éléments "results" de l'API
 			
 			System.out.println(values);
@@ -107,8 +105,7 @@ public class Game {
 						temp3 += 3;
 					}
 				}
-			}
-			
+			}			
 			if(temp3 < 0) { // si le score est négatif, il passe à 0
 				temp3 = 0;
 			}
