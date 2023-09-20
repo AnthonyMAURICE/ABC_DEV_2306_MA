@@ -105,7 +105,7 @@ public class Game {
 			temp3 = 0; // réinitialisation de la variable à 0 pour le passage suivant dans la boucle
 		}
 		System.out.println("Les scores sont : ");
-		for(int k = 0; k < scoreFinal.size(); k++) { // boucle pour déterminer le score le plus élevé	
+		for(int k = 0; k < scoreFinal.size(); k++) { // boucle pour afficher les scores par joueurs
 			System.out.println("Joueur " + (k+1) + " : " + scoreFinal.get(k));
 		}
 	}
