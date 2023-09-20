@@ -64,9 +64,11 @@ public class Game {
 			}else if (_values.get(i).toString().charAt(0) == '2') {
 				score2.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(2))));
 				score2.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(4))));
-			}else {
+			}else if (_values.get(i).toString().charAt(0) == '3'){
 				score3.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(2))));
 				score3.add(Integer.parseInt(String.valueOf(_values.get(i).toString().charAt(4))));
+			}else {
+				System.out.println("Entrée non conforme détectée, fin de la procédure. Maudis pirates... To investigate...");
 			}
 			
 		}
