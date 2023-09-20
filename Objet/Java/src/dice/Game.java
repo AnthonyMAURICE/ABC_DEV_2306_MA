@@ -112,9 +112,10 @@ public class Game {
 			scoreFinal.add(temp3); // le score final est ajouté à la liste correspondant à chaque joueur
 			temp3 = 0; // réinitialisation de la variable à 0 pour le passage suivant dans la boucle
 		}
-		System.out.println(scoreFinal);
+		System.out.println("Les scores sont : ");
 		int bigger = 0, tempScore = scoreFinal.get(0);
 		for(int k = 0; k < scoreFinal.size(); k++) { // boucle pour déterminer le score le plus élevé	
+			System.out.println("Joueur " + (k+1) + " : " + scoreFinal.get(k));
 			if (tempScore <= scoreFinal.get(k)) {
 				tempScore = scoreFinal.get(k);
 				bigger = k; // bigger prend l'index de la liste "gagnante)
