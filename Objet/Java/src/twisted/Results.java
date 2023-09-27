@@ -60,8 +60,8 @@ public class Results {
 			}else {
 				break;
 			}
-			
 		}
+		
 		System.out.println(gain);
 		this.prize = this.prize /gain;
 		gagnants += "il y a " + gain + " gagnant(s) ";
@@ -89,7 +89,6 @@ public class Results {
 	}
 	
 	public String getWinners() {
-
 		return this.winners;
 	}
 	
