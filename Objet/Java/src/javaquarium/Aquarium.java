@@ -98,7 +98,6 @@ public class Aquarium {
 		this.addAlgue(10);
 		this.addAlgue(10);
 		this.addAlgue(10);
-		//this.addAlgue(10);
 	}
 	
 	/*
