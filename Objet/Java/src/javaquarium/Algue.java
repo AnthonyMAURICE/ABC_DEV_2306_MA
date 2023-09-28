@@ -41,7 +41,7 @@ public class Algue {
 	}
 	
 	public void reproduce() {
-		int randAlgueRepro = ThreadLocalRandom.current().nextInt(0, 2);
+		int randAlgueRepro = ThreadLocalRandom.current().nextInt(0, 5);
 		if(this.pv >=10 && randAlgueRepro == 1 && this.aquarium.getAlgues().size() < 20) {
 			this.pv /= 2;
 			this.aquarium.addAlgue(5);
@@ -50,7 +50,6 @@ public class Algue {
 	
 	public void setPv(int _pv) {
 		this.pv += _pv;
-		this.getExistence();
 	}
 	
 	

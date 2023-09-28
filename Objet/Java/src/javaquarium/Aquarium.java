@@ -1,7 +1,6 @@
 package javaquarium;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Aquarium {
@@ -24,8 +23,9 @@ public class Aquarium {
 	
 	public void state() {
 		for(int l = 0; l < this.getPoissons().size(); l++) {
-			System.out.println(this.getPoissons().get(l).getName() + " : " + this.getPoissons().get(l).getPv() + " pv");
+			System.out.println(this.getPoissons().get(l).getName() + " : " + this.getPoissons().get(l).getPv() + " pv");	
 		}
+		System.out.println("Il reste " + this.getAlgues().size() + " algues");
 	}
 		
 	public void addAlgue(int _pv) {	
@@ -43,7 +43,6 @@ public class Aquarium {
 			}
 		}
 		System.out.println("Une nouvelle algue est née");
-		System.out.println("Elles sont au nombre de " + this.getAlgues().size());
 	}
 	
 	public void removeAlgue() {
@@ -75,12 +74,12 @@ public class Aquarium {
 		Poissons carnivore1 = new Poissons("Léviathan", 10, 0, false, true, "Mérou", this);
 		Poissons carnivore2 = new Poissons("Kraken", 10, 0, true, true, "Thon", this);
 		Poissons carnivore3 = new Poissons("TerrorFish", 10, 0, true,true, "Poisson-clown", this);
-		Poissons herbivore1 = new Poissons("Écureuil", 10, 0, false, false, "Bar", this);
-		Poissons herbivore2 = new Poissons("FishNChips", 10, 0, true, false, "Sole", this);
-		Poissons herbivore3 = new Poissons("Magikarp", 10, 0, false, false, "Carpe", this);
 		Poissons carnivore4 = new Poissons("Cthulhu", 10, 0, false, true, "Thon", this);
 		Poissons carnivore5 = new Poissons("DrEvil", 10, 10, false, true, "Mérou", this);
 		Poissons carnivore6 = new Poissons("Bob", 10, 0, false, true, "Poisson-clown", this);
+		Poissons herbivore1 = new Poissons("Écureuil", 10, 0, false, false, "Bar", this);
+		Poissons herbivore2 = new Poissons("FishNChips", 10, 0, true, false, "Sole", this);
+		Poissons herbivore3 = new Poissons("Magikarp", 10, 0, false, false, "Carpe", this);
 		Poissons herbivore4 = new Poissons("Bar", 10, 10, true, false, "Bar", this);
 		Poissons herbivore5 = new Poissons("Meunière", 10, 0, false, false, "Sole", this);
 		Poissons herbivore6 = new Poissons("Carpette", 10, 0, true, false, "Carpe", this);
@@ -99,7 +98,7 @@ public class Aquarium {
 		this.addAlgue(10);
 		this.addAlgue(10);
 		this.addAlgue(10);
-		this.addAlgue(10);
+		//this.addAlgue(10);
 	}
 	
 	/*

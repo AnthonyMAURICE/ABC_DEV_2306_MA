@@ -1,13 +1,14 @@
 package javaquarium;
 
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Cycle {
 	public Cycle() {
 		
 	}
 	
-	public void cycling() {
+	public void cycling() throws InterruptedException {
 		int tours = 1; 
 		//int shop = 0;
 		//String choice = "";
@@ -17,7 +18,8 @@ public class Cycle {
 		
 		Scanner scanner = new Scanner(System.in);
 			while(tours <= 50) {
-				System.out.println("Tour " + tours);
+				TimeUnit.SECONDS.sleep(2);
+				System.out.println("===Tour " + tours+"===");
 				
 				/*
 				if(shop == 5) {
@@ -44,7 +46,7 @@ public class Cycle {
 					aquarium.getPoissons().get(i).advanceAge();
 					
 					aquarium.getPoissons().get(i).setGender();
-					if(aquarium.getPoissons().get(i).getPv() > 5) {
+					if(aquarium.getPoissons().get(i).getPv() > 5) { 
 						aquarium.getPoissons().get(i).reproduce();
 					}	
 				}
