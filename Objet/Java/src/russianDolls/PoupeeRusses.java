@@ -37,8 +37,8 @@ public class PoupeeRusses {
 			}
 		}
 		
-		public void placerDans(PoupeeRusses firstDoll, PoupeeRusses p) {
-			if(!dollInP && p.ouverte && !firstDoll.isInOther && !p.hasIn && firstDoll.heigth < p.heigth) {
+		public void placerDans(PoupeeRusses p) {
+			if(!dollInP && p.ouverte && !this.isInOther && !p.hasIn && this.heigth < p.heigth) {
 				dollInP = true;
 			}else if (!dollInP) {
 				dollInP = false;
@@ -47,7 +47,7 @@ public class PoupeeRusses {
 			}
 		}
 		
-		public void sortirDe(PoupeeRusses firstDoll, PoupeeRusses p) {
+		public void sortirDe(PoupeeRusses p) {
 			if(dollInP && p.ouverte) {
 				dollInP = false;
 				System.out.println("Extraction accomplie avec succès");

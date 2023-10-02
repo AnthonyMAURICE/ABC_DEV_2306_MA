@@ -1,0 +1,14 @@
+=== Tour 35: ===
+Léviathan 5 : 6 pv 
+Bob 4 : 5 pv 
+DrEvil 9 : 6 pv 
+DrEvil 8 : 3 pv 
+DrEvil 8 : 3 pv 
+DrEvil 5 : 4 pv 
+DrEvil 9 : 4 pv 
+DrEvil 6 : 5 pv 
+DrEvil 9 : 7 pv 
+DrEvil 7 : 8 pv 
+Léviathan 5 : 9 pv 
+DrEvil 9 : 9 pv 
+Il reste 24 algues

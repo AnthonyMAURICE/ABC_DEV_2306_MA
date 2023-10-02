@@ -12,7 +12,6 @@ public class Algue {
 		this.age = _age;
 		this.exist = _exist;
 		this.aquarium = _aquarium;
-		this.flag = _flag;
 	}
 	
 	public int getPv() {
@@ -29,7 +28,6 @@ public class Algue {
 		}else {
 			System.out.println("Une algue est morte...");
 			this.aquarium.getAlgues().remove(this);
-			this.aquarium.reduceFlag();
 			System.out.println("Elles sont au nombre de " + this.aquarium.getAlgues().size());
 			return this.exist = false;
 		}
@@ -41,8 +39,8 @@ public class Algue {
 	}
 	
 	public void reproduce() {
-		int randAlgueRepro = ThreadLocalRandom.current().nextInt(0, 5);
-		if(this.pv >=10 && randAlgueRepro == 1 && this.aquarium.getAlgues().size() < 20) {
+		int randAlgueRepro = ThreadLocalRandom.current().nextInt(0, 8);
+		if(this.pv >=10 && randAlgueRepro == 1 && this.aquarium.getAlgues().size() < 30) {
 			this.pv /= 2;
 			this.aquarium.addAlgue(5);
 		}

@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public  class Poissons {
 	private String name;
-	private int pv, age;
+	private int pv, age, generation = 0;
 	private boolean female;
 	private boolean carnivore;
 	private boolean hasReproducedThisTurn = false;
@@ -12,8 +12,9 @@ public  class Poissons {
 	private Aquarium aquarium;
 	private boolean isAlive = true;
 	
-	public Poissons(String _name, int _pv, int _age, boolean _female, boolean _carnivore, String _race, Aquarium _aquarium) {
+	public Poissons(String _name, int _generation, int _pv, int _age, boolean _female, boolean _carnivore, String _race, Aquarium _aquarium) {
 		this.name = _name;
+		this.generation = _generation;
 		this.pv = _pv;
 		this.age = _age;
 		this.female = _female;
@@ -28,6 +29,10 @@ public  class Poissons {
 	
 	public int getAge() {
 		return this.age;
+	}
+	
+	public int getGeneration() {
+		return this.generation;
 	}
 	
 	public boolean getGender() {
@@ -56,6 +61,7 @@ public  class Poissons {
 	
 	public void advanceAge() {
 		this.age++;
+		this.pv--;
 		if(this.isAlive) {
 			this.alive();
 		}	
@@ -84,20 +90,20 @@ public  class Poissons {
 		int menu = 0;
 		if(this.pv <= 5 && this.isAlive) {
 			if(this.carnivore) {
-				if(this.aquarium.getPoissons().size() > 0) {
+				if(this.aquarium.getPoissons().size() > 1) {
 					menu = ThreadLocalRandom.current().nextInt(0, this.aquarium.getPoissons().size());
 				
 				
 					if(this.aquarium.getPoissons().get(menu).getRace().equals(this.race)) {
 						System.out.println("Un poisson, même carnivore et affamé, ne peut attaquer un congénère.");
 					}else {
-						System.out.println(this.name + " attaque " + this.aquarium.getPoissons().get(menu).getName());
+						System.out.println(this.name  + " " + this.generation+ " attaque " + this.aquarium.getPoissons().get(menu).getName());
 						this.aquarium.getPoissons().get(menu).setPv(-4);
 						System.out.println(this.aquarium.getPoissons().get(menu).getName() + " perd 4 points de vie ! " 
 											+ (this.aquarium.getPoissons().get(menu).getGender()? "Elle":"Il") + " est à " 
 											+ this.aquarium.getPoissons().get(menu).getPv());
 						this.setPv(5);
-						System.out.println(this.name + " gagne 5 points de vie ! "+ (this.female? "Elle":"Il")+ " est à " + this.pv);
+						System.out.println(this.name + " " + this.generation+ " gagne 5 points de vie ! "+ (this.female? "Elle":"Il")+ " est à " + this.pv);
 					}
 				}	
 			}else {
@@ -107,29 +113,26 @@ public  class Poissons {
 					System.out.println("L'algue perd 2 points de vie ! Elle est à " 
 									+ this.aquarium.getAlgues().get(menu).getPv());
 					this.setPv(3);
-					System.out.println(this.name + " gagne 3 points de vie ! "+ (this.female? "Elle":"Il")+ " est à " + this.pv);
+					System.out.println(this.name + " " + this.generation + " gagne 3 points de vie ! "+ (this.female? "Elle":"Il")+ " est à " + this.pv);
 					this.aquarium.getAlgues().get(menu).getExistence();
 				}
 			}		
-		}else {
-			this.pv -= 1;
 		}
 	}
 	
 	public void reproduce() {
 		String name = "";
-		
 		int mate = ThreadLocalRandom.current().nextInt(0, this.aquarium.getPoissons().size());
 		if(this.age > 3 && this.aquarium.getPoissons().size()<30) {
-			if(this.race.equals("Sole") || this.race.equals("Poisson-clown")) {
+			if(this.race.equals("Sole") || this.race.equals("Poisson-clown") && this != this.aquarium.getPoissons().get(mate)) {
 				this.female = !this.aquarium.getPoissons().get(mate).getGender();
 			}
 			if(this.race.equals(this.aquarium.getPoissons().get(mate).getRace()) && this.female != this.aquarium.getPoissons().get(mate).getGender() && !this.hasReproducedThisTurn && !this.aquarium.getPoissons().get(mate).hasReproducedThisTurn) {	
 				this.hasReproducedThisTurn = true;
 				this.aquarium.getPoissons().get(mate).hasReproducedThisTurn = true;
-				name = this.name + " jr";
-				
-				this.aquarium.reproFish(name, this.race, this.carnivore);
+				name = this.name;
+				this.generation++;
+				this.aquarium.reproFish(name, this.generation, this.race, this.carnivore);
 			}
 		}
 	}

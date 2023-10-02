@@ -7,10 +7,10 @@ public class App {
 		PoupeeRusses p = new PoupeeRusses(true, false, false, 15);
 		firstDoll.ouvrir();
 		firstDoll.fermer();
-		firstDoll.placerDans(firstDoll, p);
-		firstDoll.placerDans(firstDoll, p);
-		firstDoll.sortirDe(firstDoll, p);
-		firstDoll.sortirDe(firstDoll, p);
-	}
+		firstDoll.placerDans(p);
+		firstDoll.placerDans(p);
+		firstDoll.sortirDe(p);
+		firstDoll.sortirDe(p);
+	} 
 
 }
