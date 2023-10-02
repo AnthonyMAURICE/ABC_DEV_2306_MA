@@ -41,10 +41,10 @@ Magikarp 1 : 7 pv
 Bar 1 : 7 pv 
 Meunière 1 : 7 pv 
 Carpette 1 : 7 pv 
-Il reste 7 algues
+Il reste 6 algues
 
 === Tour 4: ===
-Léviathan 2 : 6 pv 
+Léviathan 1 : 6 pv 
 Kraken 1 : 6 pv 
 TerrorFish 1 : 6 pv 
 Cthulhu 1 : 6 pv 
@@ -56,11 +56,10 @@ Magikarp 1 : 6 pv
 Bar 1 : 6 pv 
 Meunière 1 : 6 pv 
 Carpette 1 : 6 pv 
-Léviathan 2 : 9 pv 
 Il reste 7 algues
 
 === Tour 5: ===
-Léviathan 2 : 5 pv 
+Léviathan 1 : 5 pv 
 Kraken 1 : 5 pv 
 TerrorFish 1 : 5 pv 
 Cthulhu 1 : 5 pv 
@@ -72,794 +71,1267 @@ Magikarp 1 : 5 pv
 Bar 1 : 5 pv 
 Meunière 1 : 5 pv 
 Carpette 1 : 5 pv 
-Léviathan 2 : 8 pv 
-Il reste 8 algues
+Il reste 7 algues
 
 === Tour 6: ===
-Léviathan 2 : 1 pv 
-Kraken 1 : 5 pv 
-TerrorFish 1 : 4 pv 
-Cthulhu 2 : 9 pv 
-DrEvil 1 : 5 pv 
-Bob 1 : 5 pv 
+Léviathan 1 : 9 pv 
+Kraken 1 : 4 pv 
+TerrorFish 1 : 9 pv 
+Cthulhu 1 : 5 pv 
+DrEvil 1 : 9 pv 
+Bob 1 : 9 pv 
 Écureuil 1 : 7 pv 
-FishNChips 2 : 7 pv 
-Magikarp 1 : 7 pv 
-Bar 1 : 7 pv 
-Meunière 1 : 7 pv 
+FishNChips 1 : 7 pv 
+Magikarp 1 : 3 pv 
+Meunière 1 : 3 pv 
 Carpette 1 : 7 pv 
-Léviathan 2 : 7 pv 
-Cthulhu 2 : 9 pv 
-FishNChips 2 : 9 pv 
-Il reste 8 algues
+Il reste 7 algues
 
 === Tour 7: ===
-Léviathan 2 : 1 pv 
+Léviathan 2 : 8 pv 
+Kraken 1 : 8 pv 
 TerrorFish 1 : 8 pv 
-Cthulhu 3 : 8 pv 
-DrEvil 2 : 9 pv 
-Bob 1 : 9 pv 
+Cthulhu 2 : 9 pv 
+DrEvil 1 : 4 pv 
+Bob 1 : 8 pv 
 Écureuil 1 : 6 pv 
-FishNChips 2 : 6 pv 
-Magikarp 1 : 6 pv 
-Bar 1 : 5 pv 
+FishNChips 1 : 5 pv 
+Magikarp 1 : 5 pv 
 Meunière 1 : 5 pv 
 Carpette 1 : 6 pv 
-Léviathan 2 : 6 pv 
-Cthulhu 2 : 8 pv 
-FishNChips 2 : 8 pv 
-Cthulhu 3 : 9 pv 
-DrEvil 2 : 9 pv 
-Il reste 9 algues
+Léviathan 2 : 9 pv 
+Cthulhu 2 : 9 pv 
+Il reste 7 algues
 
 === Tour 8: ===
+Léviathan 2 : 7 pv 
+Kraken 1 : 7 pv 
 TerrorFish 1 : 7 pv 
-Cthulhu 3 : 7 pv 
-DrEvil 2 : 8 pv 
-Bob 1 : 8 pv 
+Cthulhu 2 : 8 pv 
+DrEvil 1 : 8 pv 
+Bob 1 : 7 pv 
 Écureuil 1 : 5 pv 
-FishNChips 2 : 5 pv 
-Magikarp 1 : 5 pv 
-Bar 1 : 7 pv 
+FishNChips 1 : 3 pv 
+Magikarp 1 : 7 pv 
 Meunière 1 : 7 pv 
 Carpette 1 : 5 pv 
-Léviathan 2 : 5 pv 
-Cthulhu 2 : 7 pv 
-FishNChips 2 : 7 pv 
-Cthulhu 3 : 8 pv 
-DrEvil 2 : 8 pv 
-Il reste 9 algues
+Léviathan 2 : 8 pv 
+Cthulhu 2 : 8 pv 
+Il reste 8 algues
 
 === Tour 9: ===
-TerrorFish 1 : 2 pv 
-Cthulhu 3 : 6 pv 
-DrEvil 2 : 7 pv 
-Bob 1 : 7 pv 
+Léviathan 2 : 6 pv 
+Kraken 1 : 6 pv 
+TerrorFish 2 : 6 pv 
+Cthulhu 2 : 7 pv 
+DrEvil 1 : 7 pv 
+Bob 1 : 6 pv 
 Écureuil 1 : 7 pv 
-FishNChips 2 : 7 pv 
-Magikarp 1 : 7 pv 
-Bar 1 : 6 pv 
-Meunière 1 : 6 pv 
+FishNChips 1 : 5 pv 
+Magikarp 1 : 6 pv 
+Meunière 2 : 6 pv 
 Carpette 1 : 7 pv 
-Léviathan 2 : 9 pv 
-Cthulhu 2 : 6 pv 
-FishNChips 3 : 6 pv 
-Cthulhu 3 : 7 pv 
-DrEvil 2 : 7 pv 
-FishNChips 3 : 9 pv 
-Il reste 10 algues
+Léviathan 2 : 7 pv 
+Cthulhu 2 : 7 pv 
+TerrorFish 2 : 9 pv 
+Meunière 2 : 9 pv 
+Il reste 9 algues
 
 === Tour 10: ===
-TerrorFish 1 : 6 pv 
-Cthulhu 3 : 5 pv 
-Bob 1 : 6 pv 
+Léviathan 2 : 5 pv 
+Kraken 1 : 5 pv 
+TerrorFish 2 : 5 pv 
+Cthulhu 2 : 6 pv 
+Bob 1 : 5 pv 
 Écureuil 1 : 6 pv 
-FishNChips 2 : 6 pv 
-Magikarp 1 : 6 pv 
-Meunière 1 : 5 pv 
+FishNChips 1 : 7 pv 
+Magikarp 1 : 5 pv 
+Meunière 2 : 5 pv 
 Carpette 1 : 6 pv 
-Léviathan 2 : 8 pv 
-Cthulhu 2 : 5 pv 
-FishNChips 3 : 1 pv 
+Léviathan 2 : 6 pv 
 Cthulhu 3 : 6 pv 
-DrEvil 2 : 7 pv 
-FishNChips 3 : 8 pv 
-Il reste 11 algues
+TerrorFish 2 : 8 pv 
+Meunière 2 : 8 pv 
+Cthulhu 3 : 9 pv 
+Il reste 9 algues
 
 === Tour 11: ===
-TerrorFish 1 : 5 pv 
-Cthulhu 3 : 9 pv 
-Bob 1 : 5 pv 
-Écureuil 1 : 5 pv 
-FishNChips 2 : 5 pv 
-Magikarp 1 : 5 pv 
-Meunière 1 : 7 pv 
-Carpette 1 : 5 pv 
-Léviathan 2 : 7 pv 
-Cthulhu 2 : 4 pv 
-FishNChips 3 : 3 pv 
+Léviathan 2 : 9 pv 
+Kraken 1 : 9 pv 
+TerrorFish 2 : 9 pv 
+Cthulhu 2 : 5 pv 
+Bob 1 : 9 pv 
+FishNChips 1 : 6 pv 
+Magikarp 1 : 3 pv 
+Meunière 3 : 7 pv 
+Carpette 1 : 4 pv 
+Léviathan 2 : 5 pv 
 Cthulhu 3 : 5 pv 
-DrEvil 2 : 6 pv 
-FishNChips 3 : 6 pv 
-Il reste 11 algues
+TerrorFish 2 : 7 pv 
+Meunière 2 : 7 pv 
+Cthulhu 3 : 8 pv 
+Meunière 3 : 9 pv 
+Il reste 9 algues
 
 === Tour 12: ===
-TerrorFish 1 : 9 pv 
-Cthulhu 3 : 8 pv 
-Bob 1 : 9 pv 
-Écureuil 1 : 7 pv 
-FishNChips 2 : 7 pv 
-Magikarp 1 : 7 pv 
-Meunière 1 : 2 pv 
-Carpette 1 : 3 pv 
-Léviathan 2 : 6 pv 
-Cthulhu 2 : 8 pv 
-Cthulhu 3 : 9 pv 
-DrEvil 2 : 6 pv 
-FishNChips 3 : 5 pv 
-Il reste 12 algues
+Léviathan 3 : 8 pv 
+Kraken 1 : 8 pv 
+TerrorFish 3 : 4 pv 
+Cthulhu 2 : 9 pv 
+Bob 1 : 8 pv 
+FishNChips 1 : 5 pv 
+Magikarp 1 : 5 pv 
+Meunière 4 : 6 pv 
+Carpette 1 : 6 pv 
+Léviathan 2 : 9 pv 
+Cthulhu 3 : 4 pv 
+TerrorFish 3 : 6 pv 
+Meunière 3 : 6 pv 
+Cthulhu 3 : 7 pv 
+Meunière 3 : 8 pv 
+Léviathan 3 : 9 pv 
+TerrorFish 3 : 5 pv 
+Meunière 4 : 9 pv 
+TerrorFish 3 : 9 pv 
+Meunière 3 : 9 pv 
+Il reste 8 algues
 
 === Tour 13: ===
-TerrorFish 1 : 8 pv 
-Cthulhu 3 : 7 pv 
-Bob 2 : 8 pv 
-Écureuil 1 : 6 pv 
-FishNChips 2 : 6 pv 
-Magikarp 1 : 6 pv 
-Meunière 1 : 4 pv 
-Carpette 1 : 5 pv 
-Léviathan 2 : 5 pv 
-Cthulhu 2 : 7 pv 
-Cthulhu 3 : 8 pv 
-DrEvil 2 : 5 pv 
-FishNChips 3 : 7 pv 
-Bob 2 : 9 pv 
-Il reste 12 algues
-
-=== Tour 14: ===
-TerrorFish 1 : 7 pv 
-Cthulhu 3 : 6 pv 
-Bob 2 : 7 pv 
-Écureuil 1 : 5 pv 
-FishNChips 2 : 1 pv 
-Magikarp 1 : 5 pv 
-Meunière 1 : 6 pv 
-Carpette 1 : 7 pv 
-Léviathan 2 : 9 pv 
-Cthulhu 2 : 6 pv 
-Cthulhu 3 : 3 pv 
-DrEvil 3 : 9 pv 
-FishNChips 3 : 6 pv 
-Bob 2 : 8 pv 
-DrEvil 3 : 9 pv 
-Il reste 13 algues
-
-=== Tour 15: ===
-TerrorFish 1 : 6 pv 
-Cthulhu 3 : 5 pv 
-Bob 2 : 6 pv 
-Écureuil 1 : 7 pv 
+Léviathan 4 : 7 pv 
+Kraken 1 : 7 pv 
+TerrorFish 3 : 8 pv 
+Cthulhu 2 : 8 pv 
+Bob 1 : 7 pv 
 FishNChips 2 : 3 pv 
 Magikarp 1 : 7 pv 
-Meunière 1 : 5 pv 
-Carpette 1 : 6 pv 
+Meunière 4 : 5 pv 
+Carpette 1 : 5 pv 
+Léviathan 2 : 4 pv 
+Cthulhu 3 : 8 pv 
+TerrorFish 3 : 5 pv 
+Meunière 3 : 5 pv 
+Cthulhu 3 : 6 pv 
+Meunière 3 : 7 pv 
+Léviathan 3 : 8 pv 
+TerrorFish 3 : 4 pv 
+Meunière 4 : 8 pv 
+TerrorFish 3 : 8 pv 
+Meunière 3 : 8 pv 
+Léviathan 4 : 9 pv 
+FishNChips 2 : 9 pv 
+Il reste 10 algues
+
+=== Tour 14: ===
+Léviathan 4 : 6 pv 
+Kraken 1 : 6 pv 
+TerrorFish 3 : 7 pv 
+Cthulhu 2 : 7 pv 
+Bob 1 : 6 pv 
+FishNChips 2 : 5 pv 
+Magikarp 1 : 2 pv 
+Meunière 4 : 7 pv 
+Carpette 1 : 7 pv 
 Léviathan 2 : 8 pv 
-Cthulhu 2 : 5 pv 
-Cthulhu 3 : 2 pv 
-DrEvil 4 : 8 pv 
-FishNChips 3 : 5 pv 
-Bob 2 : 7 pv 
-DrEvil 3 : 8 pv 
-DrEvil 4 : 9 pv 
-Il reste 13 algues
+Cthulhu 4 : 8 pv 
+TerrorFish 3 : 4 pv 
+Meunière 3 : 7 pv 
+Cthulhu 3 : 5 pv 
+Meunière 3 : 6 pv 
+Léviathan 3 : 7 pv 
+TerrorFish 3 : 8 pv 
+Meunière 4 : 7 pv 
+TerrorFish 3 : 7 pv 
+Meunière 3 : 7 pv 
+Léviathan 4 : 8 pv 
+FishNChips 2 : 7 pv 
+Cthulhu 4 : 9 pv 
+Il reste 10 algues
+
+=== Tour 15: ===
+Léviathan 4 : 5 pv 
+Kraken 1 : 5 pv 
+TerrorFish 3 : 6 pv 
+Cthulhu 2 : 6 pv 
+Bob 1 : 5 pv 
+FishNChips 2 : 7 pv 
+Magikarp 1 : 4 pv 
+Meunière 4 : 6 pv 
+Carpette 1 : 6 pv 
+Léviathan 2 : 3 pv 
+Cthulhu 4 : 3 pv 
+TerrorFish 3 : 8 pv 
+Meunière 4 : 6 pv 
+Cthulhu 3 : 9 pv 
+Meunière 3 : 5 pv 
+Léviathan 3 : 6 pv 
+TerrorFish 3 : 7 pv 
+Meunière 4 : 6 pv 
+TerrorFish 3 : 6 pv 
+Meunière 3 : 6 pv 
+Léviathan 4 : 7 pv 
+FishNChips 2 : 6 pv 
+Cthulhu 4 : 8 pv 
+Meunière 4 : 9 pv 
+Il reste 10 algues
 
 === Tour 16: ===
-TerrorFish 1 : 5 pv 
-Cthulhu 3 : 9 pv 
-Bob 2 : 1 pv 
-Écureuil 1 : 6 pv 
-FishNChips 2 : 5 pv 
+Léviathan 4 : 4 pv 
+Kraken 1 : 4 pv 
+TerrorFish 3 : 5 pv 
+Cthulhu 2 : 5 pv 
+Bob 1 : 4 pv 
+FishNChips 2 : 6 pv 
 Magikarp 1 : 6 pv 
-Meunière 2 : 7 pv 
+Meunière 4 : 5 pv 
 Carpette 1 : 5 pv 
-Léviathan 3 : 7 pv 
-Cthulhu 2 : 9 pv 
-Cthulhu 3 : 6 pv 
-DrEvil 5 : 7 pv 
-FishNChips 3 : 3 pv 
-Bob 2 : 7 pv 
-DrEvil 3 : 8 pv 
-DrEvil 4 : 8 pv 
-Meunière 2 : 5 pv 
-Léviathan 3 : 9 pv 
-DrEvil 5 : 9 pv 
-Il reste 14 algues
+Léviathan 2 : 7 pv 
+Cthulhu 4 : 3 pv 
+TerrorFish 3 : 7 pv 
+Meunière 4 : 5 pv 
+Cthulhu 3 : 8 pv 
+Meunière 4 : 7 pv 
+Léviathan 3 : 5 pv 
+TerrorFish 3 : 6 pv 
+Meunière 4 : 5 pv 
+TerrorFish 3 : 5 pv 
+Meunière 3 : 5 pv 
+Léviathan 4 : 6 pv 
+FishNChips 2 : 5 pv 
+Cthulhu 4 : 7 pv 
+Meunière 4 : 7 pv 
+Meunière 4 : 9 pv 
+Il reste 11 algues
 
 === Tour 17: ===
-TerrorFish 1 : 9 pv 
-Cthulhu 3 : 8 pv 
-Bob 2 : 5 pv 
-Écureuil 1 : 5 pv 
-FishNChips 2 : 3 pv 
+Léviathan 4 : 8 pv 
+Kraken 2 : 4 pv 
+TerrorFish 3 : 9 pv 
+Cthulhu 2 : 9 pv 
+FishNChips 2 : 1 pv 
 Magikarp 1 : 5 pv 
-Meunière 2 : 6 pv 
-Carpette 1 : 7 pv 
-Léviathan 3 : 6 pv 
-Cthulhu 2 : 8 pv 
-Cthulhu 3 : 5 pv 
-DrEvil 5 : 6 pv 
-FishNChips 3 : 5 pv 
-Bob 2 : 6 pv 
-DrEvil 3 : 7 pv 
-DrEvil 4 : 7 pv 
-Meunière 2 : 7 pv 
-Léviathan 3 : 8 pv 
-DrEvil 5 : 4 pv 
-Il reste 16 algues
+Meunière 5 : 7 pv 
+Carpette 1 : 3 pv 
+Léviathan 2 : 6 pv 
+Cthulhu 4 : 7 pv 
+TerrorFish 3 : 6 pv 
+Meunière 4 : 3 pv 
+Cthulhu 3 : 7 pv 
+Meunière 4 : 6 pv 
+Léviathan 3 : 5 pv 
+TerrorFish 3 : 5 pv 
+Meunière 4 : 7 pv 
+TerrorFish 3 : 9 pv 
+Meunière 3 : 3 pv 
+Léviathan 4 : 5 pv 
+FishNChips 2 : 7 pv 
+Cthulhu 4 : 6 pv 
+Meunière 4 : 6 pv 
+Meunière 4 : 8 pv 
+Kraken 2 : 9 pv 
+Meunière 5 : 9 pv 
+Il reste 12 algues
 
 === Tour 18: ===
-TerrorFish 1 : 8 pv 
-Cthulhu 3 : 7 pv 
-Bob 2 : 9 pv 
-Écureuil 1 : 7 pv 
-FishNChips 2 : 5 pv 
-Meunière 2 : 5 pv 
-Carpette 1 : 6 pv 
-Léviathan 3 : 5 pv 
-Cthulhu 2 : 7 pv 
-Cthulhu 3 : 9 pv 
-DrEvil 5 : 5 pv 
-FishNChips 3 : 7 pv 
-Bob 2 : 5 pv 
-DrEvil 3 : 6 pv 
-DrEvil 4 : 6 pv 
-Meunière 2 : 6 pv 
-Léviathan 3 : 7 pv 
-DrEvil 5 : 3 pv 
-Il reste 17 algues
+Léviathan 4 : 7 pv 
+Kraken 2 : 3 pv 
+TerrorFish 3 : 8 pv 
+Cthulhu 2 : 8 pv 
+FishNChips 2 : 3 pv 
+Magikarp 1 : 7 pv 
+Meunière 5 : 6 pv 
+Carpette 1 : 5 pv 
+Léviathan 2 : 5 pv 
+Cthulhu 4 : 6 pv 
+TerrorFish 3 : 5 pv 
+Meunière 4 : 5 pv 
+Cthulhu 3 : 2 pv 
+Meunière 4 : 5 pv 
+Léviathan 3 : 4 pv 
+TerrorFish 4 : 9 pv 
+Meunière 5 : 6 pv 
+TerrorFish 3 : 8 pv 
+Meunière 3 : 5 pv 
+Léviathan 4 : 4 pv 
+FishNChips 2 : 6 pv 
+Cthulhu 4 : 5 pv 
+Meunière 4 : 5 pv 
+Meunière 4 : 7 pv 
+Kraken 2 : 8 pv 
+Meunière 5 : 8 pv 
+TerrorFish 4 : 9 pv 
+Meunière 5 : 9 pv 
+Il reste 12 algues
 
 === Tour 19: ===
-TerrorFish 1 : 7 pv 
-Cthulhu 3 : 2 pv 
-Bob 3 : 8 pv 
-Écureuil 1 : 6 pv 
-FishNChips 2 : 7 pv 
-Meunière 2 : 3 pv 
-Carpette 1 : 5 pv 
-Léviathan 3 : 9 pv 
-Cthulhu 2 : 6 pv 
-Cthulhu 3 : 4 pv 
-DrEvil 6 : 9 pv 
-FishNChips 3 : 6 pv 
-Bob 2 : 5 pv 
-DrEvil 3 : 5 pv 
-DrEvil 4 : 5 pv 
-Meunière 2 : 5 pv 
-Léviathan 3 : 6 pv 
-DrEvil 6 : 7 pv 
-Bob 3 : 9 pv 
-DrEvil 6 : 9 pv 
-DrEvil 6 : 9 pv 
-Il reste 18 algues
+Léviathan 4 : 6 pv 
+Kraken 2 : 7 pv 
+TerrorFish 3 : 7 pv 
+Cthulhu 2 : 3 pv 
+FishNChips 2 : 5 pv 
+Magikarp 1 : 6 pv 
+Meunière 5 : 5 pv 
+Carpette 1 : 7 pv 
+Léviathan 2 : 5 pv 
+Cthulhu 4 : 2 pv 
+TerrorFish 3 : 9 pv 
+Meunière 4 : 7 pv 
+Cthulhu 3 : 6 pv 
+Meunière 4 : 3 pv 
+Léviathan 3 : 8 pv 
+TerrorFish 4 : 8 pv 
+Meunière 5 : 5 pv 
+TerrorFish 3 : 3 pv 
+Meunière 3 : 7 pv 
+Léviathan 4 : 8 pv 
+FishNChips 2 : 4 pv 
+Cthulhu 4 : 9 pv 
+Meunière 4 : 3 pv 
+Meunière 5 : 6 pv 
+Kraken 2 : 8 pv 
+Meunière 5 : 7 pv 
+TerrorFish 4 : 8 pv 
+Meunière 5 : 8 pv 
+Meunière 5 : 9 pv 
+Il reste 13 algues
 
 === Tour 20: ===
-Léviathan 3 : 8 pv 
-Cthulhu 2 : 5 pv 
-Cthulhu 3 : 8 pv 
-DrEvil 6 : 8 pv 
-FishNChips 3 : 4 pv 
-Bob 2 : 4 pv 
-DrEvil 3 : 9 pv 
-DrEvil 4 : 9 pv 
-Léviathan 3 : 5 pv 
-DrEvil 6 : 6 pv 
-Bob 3 : 8 pv 
-DrEvil 6 : 8 pv 
-DrEvil 6 : 8 pv 
-FishNChips 3 : 9 pv 
-Il reste 19 algues
-
-=== Tour 21: ===
+Léviathan 2 : 9 pv 
+Cthulhu 4 : 6 pv 
+TerrorFish 3 : 8 pv 
+Meunière 4 : 6 pv 
+Cthulhu 3 : 5 pv 
+Meunière 4 : 5 pv 
+Léviathan 3 : 7 pv 
+TerrorFish 4 : 7 pv 
+Meunière 5 : 7 pv 
+TerrorFish 3 : 7 pv 
+Meunière 3 : 6 pv 
 Léviathan 4 : 7 pv 
-Cthulhu 2 : 4 pv 
-Cthulhu 3 : 3 pv 
-DrEvil 6 : 7 pv 
-FishNChips 3 : 6 pv 
-Bob 2 : 8 pv 
-DrEvil 3 : 8 pv 
-DrEvil 4 : 9 pv 
-Léviathan 3 : 4 pv 
-DrEvil 6 : 5 pv 
-Bob 3 : 7 pv 
-DrEvil 6 : 7 pv 
-DrEvil 6 : 7 pv 
-FishNChips 3 : 8 pv 
-Léviathan 4 : 9 pv 
-Il reste 16 algues
-
-=== Tour 22: ===
-Léviathan 4 : 6 pv 
-Cthulhu 2 : 8 pv 
-Cthulhu 3 : 7 pv 
-DrEvil 7 : 6 pv 
-FishNChips 3 : 5 pv 
-Bob 3 : 7 pv 
-DrEvil 3 : 3 pv 
-DrEvil 4 : 8 pv 
-DrEvil 6 : 4 pv 
-Bob 3 : 6 pv 
-DrEvil 6 : 6 pv 
-DrEvil 7 : 6 pv 
-FishNChips 3 : 7 pv 
-Léviathan 4 : 8 pv 
-DrEvil 7 : 9 pv 
-Bob 3 : 9 pv 
-DrEvil 7 : 9 pv 
+FishNChips 2 : 2 pv 
+Cthulhu 4 : 8 pv 
+Meunière 4 : 5 pv 
+Meunière 5 : 5 pv 
+Kraken 2 : 7 pv 
+Meunière 5 : 6 pv 
+TerrorFish 4 : 7 pv 
+Meunière 5 : 6 pv 
+Meunière 5 : 8 pv 
+Kraken 3 : 5 pv 
 Il reste 14 algues
 
+=== Tour 21: ===
+Léviathan 2 : 8 pv 
+Cthulhu 4 : 5 pv 
+TerrorFish 3 : 7 pv 
+Meunière 4 : 5 pv 
+Cthulhu 3 : 9 pv 
+Meunière 4 : 3 pv 
+Léviathan 3 : 6 pv 
+TerrorFish 4 : 6 pv 
+Meunière 5 : 6 pv 
+TerrorFish 3 : 6 pv 
+Meunière 3 : 5 pv 
+Léviathan 4 : 6 pv 
+FishNChips 2 : 4 pv 
+Cthulhu 4 : 7 pv 
+Meunière 5 : 7 pv 
+Meunière 6 : 7 pv 
+Kraken 2 : 6 pv 
+Meunière 5 : 5 pv 
+TerrorFish 5 : 6 pv 
+Meunière 5 : 5 pv 
+Meunière 5 : 6 pv 
+Kraken 3 : 9 pv 
+Meunière 5 : 9 pv 
+Meunière 6 : 9 pv 
+TerrorFish 5 : 9 pv 
+Il reste 12 algues
+
+=== Tour 22: ===
+Léviathan 2 : 7 pv 
+Cthulhu 4 : 9 pv 
+TerrorFish 3 : 6 pv 
+Meunière 5 : 7 pv 
+Cthulhu 3 : 8 pv 
+Meunière 4 : 5 pv 
+Léviathan 3 : 5 pv 
+TerrorFish 4 : 5 pv 
+Meunière 5 : 5 pv 
+TerrorFish 3 : 5 pv 
+Meunière 4 : 7 pv 
+Léviathan 4 : 5 pv 
+FishNChips 2 : 2 pv 
+Cthulhu 4 : 6 pv 
+Meunière 5 : 6 pv 
+Meunière 6 : 6 pv 
+Kraken 2 : 5 pv 
+Meunière 5 : 7 pv 
+TerrorFish 5 : 5 pv 
+Meunière 5 : 7 pv 
+Meunière 5 : 5 pv 
+Kraken 3 : 8 pv 
+Meunière 5 : 8 pv 
+Meunière 6 : 8 pv 
+TerrorFish 5 : 8 pv 
+Meunière 5 : 9 pv 
+Meunière 4 : 9 pv 
+Il reste 10 algues
+
 === Tour 23: ===
-Cthulhu 2 : 7 pv 
-Cthulhu 3 : 6 pv 
-DrEvil 7 : 5 pv 
-FishNChips 3 : 7 pv 
-Bob 3 : 2 pv 
-DrEvil 3 : 2 pv 
-DrEvil 4 : 7 pv 
-DrEvil 7 : 8 pv 
-Bob 3 : 6 pv 
-DrEvil 6 : 6 pv 
-DrEvil 7 : 5 pv 
-FishNChips 3 : 6 pv 
-Léviathan 4 : 7 pv 
-DrEvil 7 : 8 pv 
-Bob 3 : 8 pv 
-DrEvil 7 : 8 pv 
-DrEvil 7 : 9 pv 
-Il reste 15 algues
+Léviathan 2 : 6 pv 
+Cthulhu 4 : 8 pv 
+TerrorFish 3 : 5 pv 
+Meunière 6 : 6 pv 
+Cthulhu 3 : 7 pv 
+Meunière 5 : 3 pv 
+Léviathan 3 : 9 pv 
+TerrorFish 4 : 9 pv 
+Meunière 5 : 7 pv 
+TerrorFish 3 : 9 pv 
+Meunière 5 : 6 pv 
+Léviathan 4 : 5 pv 
+Cthulhu 4 : 5 pv 
+Meunière 5 : 5 pv 
+Meunière 6 : 5 pv 
+Kraken 2 : 9 pv 
+Meunière 5 : 6 pv 
+TerrorFish 5 : 9 pv 
+Meunière 5 : 6 pv 
+Meunière 5 : 7 pv 
+Kraken 3 : 7 pv 
+Meunière 6 : 7 pv 
+TerrorFish 5 : 7 pv 
+Meunière 5 : 8 pv 
+Meunière 4 : 8 pv 
+Meunière 6 : 9 pv 
+Meunière 5 : 9 pv 
+Meunière 5 : 9 pv 
+Il reste 8 algues
 
 === Tour 24: ===
-Cthulhu 2 : 2 pv 
-Cthulhu 3 : 5 pv 
-DrEvil 7 : 4 pv 
-FishNChips 3 : 6 pv 
-Bob 3 : 6 pv 
-DrEvil 3 : 1 pv 
-DrEvil 4 : 6 pv 
-DrEvil 7 : 7 pv 
-Bob 3 : 5 pv 
-DrEvil 6 : 5 pv 
-DrEvil 7 : 4 pv 
-FishNChips 3 : 5 pv 
-Léviathan 4 : 6 pv 
-DrEvil 7 : 7 pv 
-Bob 3 : 7 pv 
-DrEvil 7 : 7 pv 
-DrEvil 7 : 8 pv 
-Il reste 17 algues
+Léviathan 2 : 5 pv 
+Cthulhu 4 : 7 pv 
+TerrorFish 3 : 9 pv 
+Meunière 6 : 5 pv 
+Cthulhu 3 : 6 pv 
+Meunière 5 : 5 pv 
+Léviathan 3 : 8 pv 
+TerrorFish 4 : 8 pv 
+Meunière 5 : 6 pv 
+TerrorFish 3 : 8 pv 
+Meunière 5 : 5 pv 
+Léviathan 4 : 9 pv 
+Cthulhu 4 : 9 pv 
+Meunière 5 : 7 pv 
+Meunière 6 : 7 pv 
+Kraken 2 : 8 pv 
+Meunière 5 : 4 pv 
+TerrorFish 6 : 8 pv 
+Meunière 5 : 5 pv 
+Meunière 5 : 6 pv 
+Kraken 3 : 6 pv 
+Meunière 7 : 6 pv 
+TerrorFish 5 : 6 pv 
+Meunière 5 : 7 pv 
+Meunière 4 : 7 pv 
+Meunière 6 : 7 pv 
+Meunière 5 : 8 pv 
+Meunière 5 : 7 pv 
+TerrorFish 6 : 9 pv 
+Meunière 7 : 9 pv 
+Il reste 8 algues
 
 === Tour 25: ===
-Cthulhu 3 : 9 pv 
-FishNChips 3 : 5 pv 
-Bob 3 : 5 pv 
-DrEvil 4 : 5 pv 
-DrEvil 7 : 6 pv 
-Bob 3 : 9 pv 
-DrEvil 6 : 4 pv 
-DrEvil 7 : 3 pv 
-FishNChips 3 : 3 pv 
-Léviathan 4 : 6 pv 
-DrEvil 7 : 6 pv 
-Bob 4 : 6 pv 
-DrEvil 7 : 6 pv 
-DrEvil 7 : 3 pv 
-Bob 4 : 9 pv 
-Il reste 17 algues
+Léviathan 2 : 9 pv 
+Cthulhu 4 : 6 pv 
+TerrorFish 3 : 8 pv 
+Meunière 6 : 7 pv 
+Cthulhu 3 : 5 pv 
+Meunière 5 : 7 pv 
+Léviathan 3 : 7 pv 
+TerrorFish 4 : 7 pv 
+Meunière 5 : 5 pv 
+TerrorFish 3 : 7 pv 
+Meunière 5 : 7 pv 
+Léviathan 4 : 8 pv 
+Cthulhu 4 : 8 pv 
+Meunière 5 : 6 pv 
+Meunière 6 : 6 pv 
+Kraken 2 : 8 pv 
+Meunière 5 : 6 pv 
+TerrorFish 6 : 7 pv 
+Meunière 5 : 7 pv 
+Meunière 5 : 5 pv 
+Kraken 3 : 5 pv 
+Meunière 7 : 5 pv 
+TerrorFish 5 : 5 pv 
+Meunière 5 : 6 pv 
+Meunière 4 : 5 pv 
+Meunière 6 : 6 pv 
+Meunière 5 : 7 pv 
+Meunière 5 : 6 pv 
+TerrorFish 6 : 8 pv 
+Meunière 7 : 8 pv 
+Lin 1 : 9 pv 
+Anaclet 1 : 9 pv 
+Evariste 1 : 9 pv 
+Il reste 8 algues
 
 === Tour 26: ===
-FishNChips 3 : 7 pv 
-Bob 3 : 5 pv 
-DrEvil 4 : 9 pv 
-DrEvil 7 : 5 pv 
-Bob 3 : 4 pv 
-DrEvil 6 : 3 pv 
-DrEvil 7 : 7 pv 
-FishNChips 3 : 5 pv 
-Léviathan 4 : 5 pv 
-DrEvil 7 : 1 pv 
-Bob 4 : 5 pv 
-DrEvil 7 : 5 pv 
-DrEvil 7 : 2 pv 
-Bob 4 : 8 pv 
-Il reste 17 algues
+TerrorFish 3 : 7 pv 
+Meunière 6 : 6 pv 
+Cthulhu 3 : 9 pv 
+Meunière 5 : 2 pv 
+Léviathan 3 : 6 pv 
+TerrorFish 4 : 6 pv 
+Meunière 5 : 7 pv 
+TerrorFish 3 : 6 pv 
+Meunière 5 : 6 pv 
+Léviathan 4 : 7 pv 
+Cthulhu 4 : 7 pv 
+Meunière 5 : 5 pv 
+Meunière 6 : 5 pv 
+Kraken 2 : 7 pv 
+Meunière 5 : 5 pv 
+TerrorFish 6 : 6 pv 
+Meunière 5 : 6 pv 
+Meunière 5 : 7 pv 
+Kraken 3 : 9 pv 
+Meunière 7 : 3 pv 
+TerrorFish 5 : 9 pv 
+Meunière 5 : 5 pv 
+Meunière 4 : 3 pv 
+Meunière 6 : 5 pv 
+Meunière 5 : 6 pv 
+Meunière 5 : 5 pv 
+TerrorFish 6 : 7 pv 
+Meunière 7 : 7 pv 
+Lin 1 : 8 pv 
+Anaclet 1 : 8 pv 
+Evariste 1 : 8 pv 
+Il reste 6 algues
 
 === Tour 27: ===
-FishNChips 3 : 6 pv 
-Bob 3 : 9 pv 
-DrEvil 4 : 5 pv 
-DrEvil 7 : 4 pv 
-DrEvil 6 : 2 pv 
-DrEvil 7 : 6 pv 
-FishNChips 3 : 7 pv 
-Léviathan 4 : 9 pv 
-DrEvil 7 : 1 pv 
-Bob 4 : 1 pv 
-DrEvil 7 : 9 pv 
-DrEvil 7 : 6 pv 
-Bob 4 : 7 pv 
-Il reste 18 algues
+TerrorFish 3 : 6 pv 
+Meunière 6 : 5 pv 
+Cthulhu 3 : 8 pv 
+Meunière 5 : 4 pv 
+Léviathan 3 : 5 pv 
+TerrorFish 4 : 5 pv 
+Meunière 5 : 6 pv 
+TerrorFish 3 : 5 pv 
+Meunière 5 : 5 pv 
+Léviathan 4 : 6 pv 
+Cthulhu 4 : 6 pv 
+Meunière 5 : 7 pv 
+Meunière 6 : 7 pv 
+Kraken 2 : 6 pv 
+Meunière 5 : 7 pv 
+TerrorFish 6 : 5 pv 
+Meunière 5 : 5 pv 
+Meunière 5 : 6 pv 
+Kraken 3 : 8 pv 
+Meunière 7 : 5 pv 
+TerrorFish 5 : 8 pv 
+Meunière 5 : 7 pv 
+Meunière 4 : 5 pv 
+Meunière 6 : 7 pv 
+Meunière 5 : 5 pv 
+Meunière 5 : 7 pv 
+TerrorFish 6 : 6 pv 
+Meunière 7 : 6 pv 
+Lin 1 : 7 pv 
+Anaclet 1 : 7 pv 
+Evariste 1 : 7 pv 
+Il reste 5 algues
 
 === Tour 28: ===
-Bob 3 : 8 pv 
-DrEvil 4 : 4 pv 
-DrEvil 7 : 3 pv 
-DrEvil 6 : 1 pv 
-DrEvil 7 : 5 pv 
-FishNChips 3 : 2 pv 
-Léviathan 4 : 8 pv 
-Bob 4 : 5 pv 
-DrEvil 7 : 8 pv 
-DrEvil 7 : 5 pv 
-Bob 4 : 6 pv 
-Il reste 17 algues
+Cthulhu 3 : 7 pv 
+Meunière 5 : 6 pv 
+Léviathan 3 : 9 pv 
+TerrorFish 4 : 9 pv 
+Meunière 5 : 5 pv 
+TerrorFish 3 : 4 pv 
+Meunière 5 : 7 pv 
+Léviathan 4 : 5 pv 
+Cthulhu 4 : 5 pv 
+Meunière 5 : 6 pv 
+Meunière 6 : 6 pv 
+Kraken 2 : 5 pv 
+Meunière 5 : 6 pv 
+TerrorFish 6 : 4 pv 
+Meunière 5 : 7 pv 
+Meunière 5 : 5 pv 
+Kraken 3 : 7 pv 
+Meunière 7 : 7 pv 
+TerrorFish 5 : 7 pv 
+Meunière 5 : 5 pv 
+Meunière 4 : 7 pv 
+Meunière 6 : 6 pv 
+Meunière 5 : 7 pv 
+Meunière 5 : 6 pv 
+TerrorFish 6 : 5 pv 
+Meunière 7 : 5 pv 
+Lin 1 : 6 pv 
+Anaclet 1 : 6 pv 
+Evariste 1 : 6 pv 
+Il reste 3 algues
 
 === Tour 29: ===
-Bob 3 : 3 pv 
-DrEvil 4 : 3 pv 
-DrEvil 8 : 3 pv 
-DrEvil 7 : 4 pv 
-FishNChips 3 : 4 pv 
-Léviathan 4 : 7 pv 
-Bob 4 : 5 pv 
-DrEvil 8 : 7 pv 
-DrEvil 7 : 9 pv 
-Bob 4 : 5 pv 
-DrEvil 8 : 9 pv 
-DrEvil 8 : 9 pv 
-Il reste 18 algues
+Meunière 5 : 5 pv 
+Léviathan 3 : 8 pv 
+TerrorFish 4 : 8 pv 
+Meunière 6 : 7 pv 
+TerrorFish 3 : 8 pv 
+Meunière 5 : 6 pv 
+Léviathan 4 : 9 pv 
+Cthulhu 4 : 5 pv 
+Meunière 5 : 5 pv 
+Meunière 6 : 5 pv 
+Kraken 2 : 5 pv 
+Meunière 5 : 4 pv 
+TerrorFish 6 : 8 pv 
+Meunière 5 : 5 pv 
+Meunière 5 : 7 pv 
+Kraken 3 : 6 pv 
+Meunière 7 : 6 pv 
+TerrorFish 5 : 6 pv 
+Meunière 5 : 3 pv 
+Meunière 4 : 6 pv 
+Meunière 6 : 5 pv 
+Meunière 5 : 6 pv 
+Meunière 5 : 5 pv 
+TerrorFish 6 : 9 pv 
+Meunière 7 : 7 pv 
+Lin 1 : 5 pv 
+Anaclet 1 : 5 pv 
+Evariste 1 : 5 pv 
+Meunière 6 : 5 pv 
+Il reste 0 algues
 
 === Tour 30: ===
-Bob 3 : 7 pv 
-DrEvil 5 : 7 pv 
-DrEvil 8 : 2 pv 
-FishNChips 3 : 6 pv 
-Léviathan 4 : 6 pv 
-Bob 4 : 4 pv 
-DrEvil 8 : 6 pv 
-DrEvil 8 : 8 pv 
-DrEvil 8 : 8 pv 
-DrEvil 8 : 8 pv 
-DrEvil 5 : 9 pv 
-DrEvil 8 : 9 pv 
-Il reste 22 algues
+Léviathan 3 : 7 pv 
+TerrorFish 4 : 7 pv 
+Meunière 6 : 6 pv 
+TerrorFish 3 : 7 pv 
+Meunière 5 : 5 pv 
+Léviathan 4 : 8 pv 
+Cthulhu 4 : 9 pv 
+Meunière 5 : 4 pv 
+Meunière 6 : 4 pv 
+Kraken 2 : 4 pv 
+Meunière 5 : 3 pv 
+TerrorFish 6 : 7 pv 
+Meunière 6 : 6 pv 
+Kraken 3 : 5 pv 
+Meunière 7 : 5 pv 
+TerrorFish 5 : 5 pv 
+Meunière 5 : 2 pv 
+Meunière 4 : 1 pv 
+Meunière 6 : 4 pv 
+Meunière 5 : 5 pv 
+Meunière 5 : 4 pv 
+TerrorFish 6 : 8 pv 
+Meunière 7 : 6 pv 
+Lin 1 : 5 pv 
+Anaclet 1 : 9 pv 
+Evariste 1 : 9 pv 
+Meunière 6 : 4 pv 
+Meunière 6 : 9 pv 
+Il reste 0 algues
 
 === Tour 31: ===
-Bob 3 : 6 pv 
-DrEvil 6 : 2 pv 
-DrEvil 8 : 1 pv 
-FishNChips 3 : 5 pv 
-Léviathan 4 : 5 pv 
-Bob 4 : 8 pv 
-DrEvil 8 : 5 pv 
-DrEvil 8 : 7 pv 
-DrEvil 8 : 7 pv 
-DrEvil 8 : 7 pv 
-DrEvil 5 : 8 pv 
-DrEvil 8 : 8 pv 
-DrEvil 6 : 9 pv 
-Il reste 23 algues
+Léviathan 4 : 7 pv 
+Cthulhu 4 : 8 pv 
+Meunière 5 : 3 pv 
+Meunière 6 : 3 pv 
+Kraken 2 : 3 pv 
+Meunière 5 : 2 pv 
+TerrorFish 6 : 6 pv 
+Meunière 6 : 5 pv 
+Kraken 3 : 4 pv 
+TerrorFish 5 : 9 pv 
+Meunière 5 : 1 pv 
+Meunière 6 : 3 pv 
+Meunière 5 : 4 pv 
+Meunière 5 : 3 pv 
+TerrorFish 6 : 7 pv 
+Meunière 7 : 5 pv 
+Lin 1 : 9 pv 
+Anaclet 1 : 8 pv 
+Evariste 1 : 8 pv 
+Meunière 6 : 8 pv 
+Il reste 0 algues
 
 === Tour 32: ===
-DrEvil 6 : 1 pv 
-FishNChips 3 : 7 pv 
-Léviathan 4 : 4 pv 
-Bob 4 : 7 pv 
-DrEvil 8 : 4 pv 
-DrEvil 8 : 6 pv 
-DrEvil 8 : 6 pv 
-DrEvil 8 : 6 pv 
-DrEvil 5 : 7 pv 
-DrEvil 8 : 7 pv 
-DrEvil 6 : 8 pv 
-Il reste 24 algues
+Cthulhu 4 : 7 pv 
+Meunière 5 : 2 pv 
+Meunière 6 : 2 pv 
+Kraken 2 : 7 pv 
+Meunière 5 : 1 pv 
+TerrorFish 6 : 5 pv 
+Meunière 6 : 4 pv 
+Kraken 3 : 8 pv 
+TerrorFish 6 : 8 pv 
+Meunière 6 : 2 pv 
+Meunière 5 : 3 pv 
+Meunière 5 : 2 pv 
+TerrorFish 6 : 6 pv 
+Lin 1 : 8 pv 
+Anaclet 1 : 7 pv 
+Evariste 1 : 7 pv 
+Meunière 6 : 3 pv 
+TerrorFish 6 : 9 pv 
+Il reste 0 algues
 
 === Tour 33: ===
-DrEvil 6 : 5 pv 
-FishNChips 3 : 5 pv 
-Léviathan 4 : 3 pv 
-Bob 4 : 6 pv 
-DrEvil 8 : 3 pv 
-DrEvil 8 : 5 pv 
-DrEvil 8 : 5 pv 
-DrEvil 8 : 5 pv 
-DrEvil 5 : 6 pv 
-DrEvil 9 : 6 pv 
-DrEvil 6 : 7 pv 
-DrEvil 9 : 9 pv 
-Il reste 23 algues
+Meunière 5 : 1 pv 
+Meunière 6 : 1 pv 
+Kraken 2 : 6 pv 
+TerrorFish 6 : 9 pv 
+Meunière 6 : 3 pv 
+Kraken 3 : 7 pv 
+TerrorFish 7 : 7 pv 
+Meunière 6 : 1 pv 
+Meunière 5 : 2 pv 
+TerrorFish 6 : 5 pv 
+Lin 1 : 7 pv 
+Anaclet 2 : 6 pv 
+Evariste 1 : 6 pv 
+Meunière 6 : 2 pv 
+TerrorFish 6 : 8 pv 
+TerrorFish 7 : 9 pv 
+Anaclet 2 : 9 pv 
+Il reste 0 algues
 
 === Tour 34: ===
-Léviathan 4 : 7 pv 
-Bob 4 : 6 pv 
-DrEvil 8 : 7 pv 
-DrEvil 8 : 4 pv 
-DrEvil 8 : 4 pv 
-DrEvil 5 : 5 pv 
-DrEvil 9 : 5 pv 
-DrEvil 6 : 6 pv 
-DrEvil 9 : 8 pv 
-DrEvil 7 : 9 pv 
-Il reste 24 algues
+Kraken 2 : 5 pv 
+TerrorFish 6 : 8 pv 
+Meunière 6 : 2 pv 
+Kraken 3 : 6 pv 
+TerrorFish 8 : 6 pv 
+Meunière 5 : 1 pv 
+TerrorFish 6 : 4 pv 
+Lin 1 : 6 pv 
+Anaclet 2 : 5 pv 
+Evariste 1 : 5 pv 
+Meunière 6 : 1 pv 
+TerrorFish 6 : 7 pv 
+TerrorFish 7 : 8 pv 
+Anaclet 2 : 8 pv 
+TerrorFish 8 : 9 pv 
+Il reste 0 algues
 
 === Tour 35: ===
-Léviathan 5 : 6 pv 
-Bob 4 : 5 pv 
-DrEvil 9 : 6 pv 
-DrEvil 8 : 3 pv 
-DrEvil 8 : 3 pv 
-DrEvil 5 : 4 pv 
-DrEvil 9 : 4 pv 
-DrEvil 6 : 5 pv 
-DrEvil 9 : 7 pv 
-DrEvil 7 : 8 pv 
-Léviathan 5 : 9 pv 
-DrEvil 9 : 9 pv 
-Il reste 24 algues
+Kraken 2 : 9 pv 
+TerrorFish 6 : 7 pv 
+Kraken 3 : 5 pv 
+TerrorFish 8 : 5 pv 
+TerrorFish 6 : 3 pv 
+Lin 1 : 1 pv 
+Anaclet 3 : 9 pv 
+Evariste 1 : 9 pv 
+TerrorFish 6 : 6 pv 
+TerrorFish 7 : 7 pv 
+Anaclet 2 : 7 pv 
+TerrorFish 8 : 8 pv 
+Anaclet 3 : 9 pv 
+Il reste 0 algues
 
 === Tour 36: ===
-Léviathan 5 : 5 pv 
-Bob 4 : 9 pv 
-DrEvil 9 : 5 pv 
-DrEvil 8 : 2 pv 
-DrEvil 8 : 2 pv 
-DrEvil 5 : 3 pv 
-DrEvil 9 : 3 pv 
-DrEvil 6 : 4 pv 
-DrEvil 10 : 6 pv 
-DrEvil 7 : 3 pv 
-Léviathan 5 : 8 pv 
-DrEvil 9 : 8 pv 
-DrEvil 10 : 9 pv 
-Il reste 28 algues
+TerrorFish 6 : 6 pv 
+Kraken 3 : 9 pv 
+TerrorFish 8 : 4 pv 
+Lin 1 : 1 pv 
+Anaclet 4 : 8 pv 
+Evariste 1 : 8 pv 
+TerrorFish 6 : 5 pv 
+TerrorFish 7 : 6 pv 
+Anaclet 3 : 6 pv 
+TerrorFish 8 : 7 pv 
+Anaclet 3 : 8 pv 
+Anaclet 4 : 9 pv 
+Anaclet 3 : 9 pv 
+Il reste 0 algues
 
 === Tour 37: ===
-Léviathan 5 : 4 pv 
-Bob 4 : 8 pv 
-DrEvil 9 : 4 pv 
-DrEvil 8 : 1 pv 
-DrEvil 8 : 1 pv 
-DrEvil 5 : 2 pv 
-DrEvil 9 : 2 pv 
-DrEvil 6 : 3 pv 
-DrEvil 10 : 5 pv 
-DrEvil 7 : 2 pv 
-Léviathan 5 : 7 pv 
-DrEvil 9 : 7 pv 
-DrEvil 10 : 8 pv 
-Il reste 28 algues
+Kraken 3 : 4 pv 
+TerrorFish 9 : 8 pv 
+Lin 1 : 5 pv 
+Anaclet 4 : 7 pv 
+Evariste 1 : 7 pv 
+TerrorFish 6 : 4 pv 
+TerrorFish 7 : 5 pv 
+Anaclet 3 : 5 pv 
+TerrorFish 8 : 6 pv 
+Anaclet 3 : 7 pv 
+Anaclet 4 : 8 pv 
+Anaclet 3 : 8 pv 
+TerrorFish 9 : 9 pv 
+Il reste 0 algues
 
 === Tour 38: ===
-Léviathan 5 : 3 pv 
-Bob 4 : 3 pv 
-DrEvil 9 : 3 pv 
-DrEvil 8 : 5 pv 
-DrEvil 5 : 1 pv 
-DrEvil 9 : 1 pv 
-DrEvil 6 : 2 pv 
-DrEvil 10 : 4 pv 
-DrEvil 7 : 1 pv 
-Léviathan 5 : 6 pv 
-DrEvil 9 : 6 pv 
-DrEvil 10 : 7 pv 
-Il reste 28 algues
+Kraken 3 : 8 pv 
+TerrorFish 9 : 7 pv 
+Lin 1 : 9 pv 
+Anaclet 5 : 6 pv 
+Evariste 1 : 6 pv 
+TerrorFish 6 : 3 pv 
+TerrorFish 8 : 5 pv 
+Anaclet 3 : 6 pv 
+Anaclet 4 : 7 pv 
+Anaclet 3 : 7 pv 
+TerrorFish 9 : 8 pv 
+Anaclet 5 : 9 pv 
+Il reste 0 algues
 
 === Tour 39: ===
-Léviathan 5 : 2 pv 
-Bob 4 : 7 pv 
-DrEvil 9 : 2 pv 
-DrEvil 6 : 1 pv 
-DrEvil 10 : 3 pv 
-Léviathan 5 : 5 pv 
-DrEvil 9 : 5 pv 
-DrEvil 10 : 6 pv 
-Il reste 28 algues
+TerrorFish 10 : 6 pv 
+Lin 1 : 8 pv 
+Anaclet 5 : 5 pv 
+Evariste 1 : 5 pv 
+TerrorFish 6 : 2 pv 
+TerrorFish 8 : 4 pv 
+Anaclet 3 : 5 pv 
+Anaclet 4 : 6 pv 
+Anaclet 3 : 6 pv 
+TerrorFish 9 : 7 pv 
+Anaclet 5 : 8 pv 
+TerrorFish 10 : 9 pv 
+Il reste 0 algues
 
 === Tour 40: ===
-Bob 4 : 2 pv 
-DrEvil 9 : 6 pv 
-DrEvil 10 : 2 pv 
-Léviathan 5 : 4 pv 
-DrEvil 9 : 4 pv 
-DrEvil 10 : 5 pv 
-Il reste 29 algues
+Lin 1 : 3 pv 
+Anaclet 5 : 9 pv 
+Evariste 1 : 4 pv 
+TerrorFish 6 : 1 pv 
+TerrorFish 8 : 3 pv 
+Anaclet 3 : 4 pv 
+Anaclet 4 : 5 pv 
+Anaclet 3 : 5 pv 
+TerrorFish 10 : 6 pv 
+Anaclet 5 : 7 pv 
+TerrorFish 10 : 8 pv 
+TerrorFish 10 : 9 pv 
+Il reste 0 algues
 
 === Tour 41: ===
-DrEvil 10 : 1 pv 
-Léviathan 5 : 3 pv 
-DrEvil 9 : 3 pv 
-DrEvil 10 : 4 pv 
-Il reste 30 algues
+Lin 1 : 3 pv 
+Anaclet 6 : 8 pv 
+Evariste 1 : 8 pv 
+TerrorFish 8 : 2 pv 
+Anaclet 3 : 8 pv 
+Anaclet 4 : 4 pv 
+Anaclet 3 : 4 pv 
+TerrorFish 10 : 1 pv 
+Anaclet 6 : 6 pv 
+TerrorFish 10 : 3 pv 
+TerrorFish 10 : 8 pv 
+Anaclet 6 : 9 pv 
+Anaclet 6 : 9 pv 
+Il reste 0 algues
 
 === Tour 42: ===
-Léviathan 5 : 2 pv 
-DrEvil 9 : 2 pv 
-DrEvil 10 : 3 pv 
-Il reste 30 algues
+Lin 1 : 7 pv 
+Anaclet 7 : 7 pv 
+Evariste 1 : 7 pv 
+TerrorFish 8 : 1 pv 
+Anaclet 3 : 7 pv 
+Anaclet 4 : 3 pv 
+Anaclet 3 : 3 pv 
+Anaclet 6 : 5 pv 
+TerrorFish 10 : 2 pv 
+TerrorFish 10 : 7 pv 
+Anaclet 6 : 4 pv 
+Anaclet 6 : 8 pv 
+Anaclet 7 : 9 pv 
+Il reste 0 algues
 
 === Tour 43: ===
-Léviathan 5 : 1 pv 
-DrEvil 9 : 1 pv 
-DrEvil 10 : 2 pv 
-Il reste 30 algues
+Lin 1 : 6 pv 
+Anaclet 8 : 6 pv 
+Evariste 1 : 6 pv 
+Anaclet 3 : 6 pv 
+Anaclet 4 : 2 pv 
+Anaclet 3 : 2 pv 
+Anaclet 6 : 4 pv 
+TerrorFish 10 : 1 pv 
+TerrorFish 11 : 6 pv 
+Anaclet 6 : 3 pv 
+Anaclet 6 : 7 pv 
+Anaclet 7 : 8 pv 
+Anaclet 8 : 9 pv 
+TerrorFish 11 : 9 pv 
+Il reste 0 algues
 
 === Tour 44: ===
-DrEvil 10 : 1 pv 
-Il reste 29 algues
+Anaclet 3 : 5 pv 
+Anaclet 4 : 1 pv 
+Anaclet 4 : 6 pv 
+Anaclet 6 : 3 pv 
+TerrorFish 10 : 5 pv 
+TerrorFish 11 : 5 pv 
+Anaclet 6 : 2 pv 
+Anaclet 6 : 6 pv 
+Anaclet 7 : 7 pv 
+Anaclet 8 : 8 pv 
+TerrorFish 11 : 8 pv 
+Anaclet 4 : 9 pv 
+Il reste 0 algues
 
 === Tour 45: ===
-Il reste 30 algues
+Anaclet 3 : 4 pv 
+Anaclet 4 : 5 pv 
+Anaclet 6 : 2 pv 
+TerrorFish 10 : 4 pv 
+TerrorFish 11 : 4 pv 
+Anaclet 6 : 1 pv 
+Anaclet 6 : 5 pv 
+Anaclet 8 : 6 pv 
+Anaclet 8 : 7 pv 
+TerrorFish 11 : 7 pv 
+Anaclet 4 : 8 pv 
+Anaclet 8 : 9 pv 
+Il reste 0 algues
 
 === Tour 46: ===
-Il reste 30 algues
+Anaclet 3 : 3 pv 
+Anaclet 4 : 4 pv 
+Anaclet 6 : 1 pv 
+TerrorFish 10 : 3 pv 
+TerrorFish 11 : 3 pv 
+Anaclet 6 : 4 pv 
+Anaclet 8 : 5 pv 
+Anaclet 9 : 6 pv 
+TerrorFish 11 : 6 pv 
+Anaclet 4 : 7 pv 
+Anaclet 8 : 8 pv 
+Anaclet 9 : 9 pv 
+Il reste 0 algues
 
 === Tour 47: ===
-Il reste 30 algues
+Anaclet 3 : 2 pv 
+Anaclet 4 : 3 pv 
+TerrorFish 10 : 2 pv 
+TerrorFish 11 : 2 pv 
+Anaclet 6 : 3 pv 
+Anaclet 8 : 4 pv 
+Anaclet 9 : 5 pv 
+TerrorFish 11 : 5 pv 
+Anaclet 5 : 6 pv 
+Anaclet 8 : 7 pv 
+Anaclet 9 : 8 pv 
+Anaclet 5 : 9 pv 
+Il reste 0 algues
 
 === Tour 48: ===
-Il reste 30 algues
+Anaclet 3 : 1 pv 
+Anaclet 4 : 2 pv 
+TerrorFish 10 : 1 pv 
+TerrorFish 11 : 1 pv 
+Anaclet 6 : 2 pv 
+Anaclet 8 : 3 pv 
+Anaclet 9 : 4 pv 
+TerrorFish 11 : 4 pv 
+Anaclet 5 : 5 pv 
+Anaclet 9 : 6 pv 
+Anaclet 9 : 7 pv 
+Anaclet 5 : 8 pv 
+Anaclet 9 : 9 pv 
+Il reste 0 algues
 
 === Tour 49: ===
-Il reste 29 algues
+Anaclet 4 : 1 pv 
+Anaclet 6 : 1 pv 
+Anaclet 8 : 2 pv 
+Anaclet 9 : 3 pv 
+TerrorFish 11 : 3 pv 
+Anaclet 5 : 4 pv 
+Anaclet 9 : 5 pv 
+Anaclet 10 : 6 pv 
+Anaclet 5 : 7 pv 
+Anaclet 9 : 8 pv 
+Anaclet 10 : 9 pv 
+Il reste 0 algues
 
 === Tour 50: ===
-Il reste 28 algues
+Anaclet 8 : 1 pv 
+Anaclet 9 : 2 pv 
+TerrorFish 11 : 2 pv 
+Anaclet 5 : 3 pv 
+Anaclet 9 : 4 pv 
+Anaclet 10 : 5 pv 
+Anaclet 5 : 6 pv 
+Anaclet 9 : 7 pv 
+Anaclet 10 : 8 pv 
+Il reste 0 algues
 
 === Tour 51: ===
-Il reste 30 algues
+Anaclet 9 : 1 pv 
+TerrorFish 11 : 1 pv 
+Anaclet 5 : 2 pv 
+Anaclet 9 : 3 pv 
+Anaclet 10 : 4 pv 
+Anaclet 5 : 5 pv 
+Anaclet 10 : 6 pv 
+Anaclet 10 : 7 pv 
+Anaclet 10 : 9 pv 
+Il reste 0 algues
 
 === Tour 52: ===
-Il reste 30 algues
+Anaclet 5 : 1 pv 
+Anaclet 9 : 2 pv 
+Anaclet 10 : 3 pv 
+Anaclet 5 : 4 pv 
+Anaclet 10 : 5 pv 
+Anaclet 11 : 6 pv 
+Anaclet 10 : 8 pv 
+Anaclet 11 : 9 pv 
+Il reste 0 algues
 
 === Tour 53: ===
-Il reste 30 algues
+Anaclet 9 : 1 pv 
+Anaclet 10 : 2 pv 
+Anaclet 5 : 3 pv 
+Anaclet 10 : 4 pv 
+Anaclet 11 : 5 pv 
+Anaclet 10 : 7 pv 
+Anaclet 11 : 8 pv 
+Il reste 0 algues
 
 === Tour 54: ===
-Il reste 30 algues
+Anaclet 10 : 1 pv 
+Anaclet 5 : 2 pv 
+Anaclet 10 : 3 pv 
+Anaclet 11 : 4 pv 
+Anaclet 11 : 6 pv 
+Anaclet 11 : 7 pv 
+Anaclet 11 : 9 pv 
+Il reste 0 algues
 
 === Tour 55: ===
-Il reste 30 algues
+Anaclet 5 : 1 pv 
+Anaclet 10 : 2 pv 
+Anaclet 11 : 3 pv 
+Anaclet 11 : 5 pv 
+Anaclet 12 : 6 pv 
+Anaclet 11 : 8 pv 
+Anaclet 12 : 9 pv 
+Il reste 0 algues
 
 === Tour 56: ===
-Il reste 28 algues
+Anaclet 10 : 1 pv 
+Anaclet 11 : 2 pv 
+Anaclet 11 : 4 pv 
+Anaclet 12 : 5 pv 
+Anaclet 11 : 7 pv 
+Anaclet 12 : 8 pv 
+Il reste 0 algues
 
 === Tour 57: ===
-Il reste 30 algues
+Anaclet 11 : 1 pv 
+Anaclet 11 : 3 pv 
+Anaclet 12 : 4 pv 
+Anaclet 12 : 6 pv 
+Anaclet 12 : 7 pv 
+Anaclet 12 : 9 pv 
+Il reste 0 algues
 
 === Tour 58: ===
-Il reste 30 algues
+Anaclet 11 : 2 pv 
+Anaclet 12 : 3 pv 
+Anaclet 12 : 5 pv 
+Anaclet 13 : 6 pv 
+Anaclet 12 : 8 pv 
+Anaclet 13 : 9 pv 
+Il reste 0 algues
 
 === Tour 59: ===
-Il reste 30 algues
+Anaclet 11 : 1 pv 
+Anaclet 12 : 2 pv 
+Anaclet 12 : 4 pv 
+Anaclet 13 : 5 pv 
+Anaclet 12 : 7 pv 
+Anaclet 13 : 8 pv 
+Il reste 0 algues
 
 === Tour 60: ===
-Il reste 30 algues
+Anaclet 12 : 1 pv 
+Anaclet 12 : 3 pv 
+Anaclet 13 : 4 pv 
+Anaclet 13 : 6 pv 
+Anaclet 13 : 7 pv 
+Anaclet 13 : 9 pv 
+Il reste 0 algues
 
 === Tour 61: ===
-Il reste 30 algues
+Anaclet 12 : 2 pv 
+Anaclet 13 : 3 pv 
+Anaclet 13 : 5 pv 
+Anaclet 14 : 6 pv 
+Anaclet 13 : 8 pv 
+Anaclet 14 : 9 pv 
+Il reste 0 algues
 
 === Tour 62: ===
-Il reste 30 algues
+Anaclet 12 : 1 pv 
+Anaclet 13 : 2 pv 
+Anaclet 13 : 4 pv 
+Anaclet 14 : 5 pv 
+Anaclet 13 : 7 pv 
+Anaclet 14 : 8 pv 
+Il reste 0 algues
 
 === Tour 63: ===
-Il reste 30 algues
+Anaclet 13 : 1 pv 
+Anaclet 13 : 3 pv 
+Anaclet 14 : 4 pv 
+Anaclet 14 : 6 pv 
+Anaclet 14 : 7 pv 
+Anaclet 14 : 9 pv 
+Il reste 0 algues
 
 === Tour 64: ===
-Il reste 30 algues
+Anaclet 13 : 2 pv 
+Anaclet 14 : 3 pv 
+Anaclet 14 : 5 pv 
+Anaclet 15 : 6 pv 
+Anaclet 14 : 8 pv 
+Anaclet 15 : 9 pv 
+Il reste 0 algues
 
 === Tour 65: ===
-Il reste 30 algues
+Anaclet 13 : 1 pv 
+Anaclet 14 : 2 pv 
+Anaclet 14 : 4 pv 
+Anaclet 15 : 5 pv 
+Anaclet 14 : 7 pv 
+Anaclet 15 : 8 pv 
+Il reste 0 algues
 
 === Tour 66: ===
-Il reste 29 algues
+Anaclet 14 : 1 pv 
+Anaclet 14 : 3 pv 
+Anaclet 15 : 4 pv 
+Anaclet 14 : 6 pv 
+Anaclet 15 : 7 pv 
+Il reste 0 algues
 
 === Tour 67: ===
-Il reste 30 algues
+Anaclet 14 : 2 pv 
+Anaclet 15 : 3 pv 
+Anaclet 14 : 5 pv 
+Anaclet 15 : 6 pv 
+Il reste 0 algues
 
 === Tour 68: ===
-Il reste 30 algues
+Anaclet 14 : 1 pv 
+Anaclet 15 : 2 pv 
+Anaclet 14 : 4 pv 
+Anaclet 15 : 5 pv 
+Il reste 0 algues
 
 === Tour 69: ===
-Il reste 30 algues
+Anaclet 15 : 1 pv 
+Anaclet 14 : 3 pv 
+Anaclet 15 : 4 pv 
+Il reste 0 algues
 
 === Tour 70: ===
-Il reste 30 algues
+Anaclet 14 : 2 pv 
+Anaclet 15 : 3 pv 
+Il reste 0 algues
 
 === Tour 71: ===
-Il reste 30 algues
+Anaclet 14 : 1 pv 
+Anaclet 15 : 2 pv 
+Il reste 0 algues
 
 === Tour 72: ===
-Il reste 28 algues
+Anaclet 15 : 1 pv 
+Il reste 0 algues
 
 === Tour 73: ===
-Il reste 29 algues
+Il reste 0 algues
 
 === Tour 74: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 75: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 76: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 77: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 78: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 79: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 80: ===
-Il reste 29 algues
+Il reste 0 algues
 
 === Tour 81: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 82: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 83: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 84: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 85: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 86: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 87: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 88: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 89: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 90: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 91: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 92: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 93: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 94: ===
-Il reste 29 algues
+Il reste 0 algues
 
 === Tour 95: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 96: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 97: ===
-Il reste 30 algues
+Il reste 0 algues
 
 === Tour 98: ===
-Il reste 29 algues
+Il reste 0 algues
 
 === Tour 99: ===
-Il reste 29 algues
+Il reste 0 algues
 
 === Tour 100: ===
-Il reste 30 algues
+Il reste 0 algues
 

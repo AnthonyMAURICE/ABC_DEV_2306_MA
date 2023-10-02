@@ -67,14 +67,15 @@ public  class Poissons {
 		}	
 	}
 	
-	public void setGender() { 
-		if(this.race.equals("Bar")|| this.race.equals("Mérou")) {
+	public boolean setGender() { 
+		if(this.race.equals("Bar")|| this.race.equals("Merou")) {
 			if(this.age > 10) {
 				this.female = true;
 			}else {
 				this.female = false;
 			}
 		}
+		return this.female;
 	}
 	
 	public boolean alive(){

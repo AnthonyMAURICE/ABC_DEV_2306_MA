@@ -7,7 +7,7 @@ public class Algue {
 	private boolean exist = true;
 	private Aquarium aquarium;
 	
-	public Algue(int _pv, int _age, boolean _exist, Aquarium _aquarium, int _flag) {
+	public Algue(int _pv, int _age, boolean _exist, Aquarium _aquarium) {
 		this.pv = _pv;
 		this.age = _age;
 		this.exist = _exist;

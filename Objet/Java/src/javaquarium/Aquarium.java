@@ -32,7 +32,7 @@ public class Aquarium {
 		
 	public void addAlgue(int _pv) {	
 		if(this.nbeAlgues.size() < 30) {
-			Algue algue = new Algue(_pv, 0, true, this, nbeAlgues.size());
+			Algue algue = new Algue(_pv, 0, true, this);
 			this.nbeAlgues.add(algue);
 		}else {
 			for(int i = 0; i < this.nbeAlgues.size(); i++) {
@@ -57,7 +57,7 @@ public class Aquarium {
 	public void reproFish(String _name, int _generation, String _race, boolean _carnivore) {
 		int random = ThreadLocalRandom.current().nextInt(0, 1);
 		boolean fem = false;
-		if(random == 1 || _race.equals("Mérou") || _race.equals("Bar")) {
+		if(random == 1 || _race.equals("Merou") || _race.equals("Bar")) {
 			fem = true;
 		}else {
 			fem = false;
@@ -67,11 +67,11 @@ public class Aquarium {
 	}
 	
 	public void start() {
-		Poissons carnivore1 = new Poissons("Léviathan", 1, 10, 0, false, true, "Mérou", this);
+		Poissons carnivore1 = new Poissons("Léviathan", 1, 10, 0, false, true, "Merou", this);
 		Poissons carnivore2 = new Poissons("Kraken", 1, 10, 0, true, true, "Thon", this);
 		Poissons carnivore3 = new Poissons("TerrorFish", 1, 10, 0, true,true, "Poisson-clown", this);
 		Poissons carnivore4 = new Poissons("Cthulhu", 1, 10, 0, false, true, "Thon", this);
-		Poissons carnivore5 = new Poissons("DrEvil", 1, 10, 10, false, true, "Mérou", this);
+		Poissons carnivore5 = new Poissons("DrEvil", 1, 10, 10, false, true, "Merou", this);
 		Poissons carnivore6 = new Poissons("Bob", 1, 10, 0, false, true, "Poisson-clown", this);
 		Poissons herbivore1 = new Poissons("Écureuil", 1, 10, 0, false, false, "Bar", this);
 		Poissons herbivore2 = new Poissons("FishNChips", 1, 10, 0, true, false, "Sole", this);

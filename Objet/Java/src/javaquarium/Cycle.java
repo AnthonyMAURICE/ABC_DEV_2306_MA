@@ -1,11 +1,9 @@
 package javaquarium;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
-
-import javax.swing.SwingUtilities;
 
 public class Cycle {
 	public Cycle() {
@@ -14,10 +12,9 @@ public class Cycle {
 	
 	public void cycling() throws InterruptedException, IOException {
 		int tours = 1; 
-		String state;
+		String state, data = "", data2 = "";
 		String traceLog = "";
-		//int shop = 0;
-		String choice = "";
+
 		Aquarium aquarium = new Aquarium();
 		
 		aquarium.start();
@@ -25,7 +22,39 @@ public class Cycle {
 		Scanner scanner = new Scanner(System.in);
 			while(tours <= 100) {
 				//TimeUnit.SECONDS.sleep(2);
+				
+				if(tours == 25) {
+					
+					
+					File loading = new File("C:\\Users\\amaurice\\Documents\\Git\\ABCDEV_2306_MA\\Objet\\Java\\src\\javaquarium\\loadAlgues.txt");
+					File loading2 = new File("C:\\Users\\amaurice\\Documents\\Git\\ABCDEV_2306_MA\\Objet\\Java\\src\\javaquarium\\loadFish.txt");
+					Scanner load = new Scanner(loading);
+					Scanner load2 = new Scanner(loading2);
+					
+					while(load.hasNextLine()) {
+						data += load.nextLine();
+					}
+					while(load2.hasNextLine()) {
+						data2 += load2.nextLine();
+					}
+					
+					String[] split = data.replace("ans", "").replace("algues", "").split(" ");
+					String[] split2 = data2.replace(",", "").replace("ans", "").split(" ");
+					
+					for(int i = 0; i < split2.length; i+=3) {
+						Poissons poisson = new Poissons(split2[i], 1, 10, 0, true, true, split2[i+1], aquarium);
+						poisson.setGender();
+						aquarium.getPoissons().add(poisson);
+					}
+					
 
+					
+					load.close();
+					load2.close();
+					
+					
+					
+				}
 				/*
 				if(aquarium.getPoissons().size()< 6) {
 					System.out.println("Souhaitez vous acheter un poisson ? (O) pour oui");
@@ -72,7 +101,6 @@ public class Cycle {
 					}
 				}
 
-				//shop++;
 				traceLog += "=== Tour " + tours + ": ===\n" + String.valueOf(aquarium.state() + "\n");
 				System.out.println("===Tour " + tours+"===");
 				tours++;
@@ -85,15 +113,6 @@ public class Cycle {
 			log.close();
 			scanner.close();
 		
-		/*
-		// Interface graphique
-		SwingUtilities.invokeLater(new Runnable() {
-			public void run() {
-				InterfaceGraphique userInterface = new InterfaceGraphique(aquarium);
-				userInterface.setVisible(true);
-			}
-		});
-		*/
 	}
 	
 	
