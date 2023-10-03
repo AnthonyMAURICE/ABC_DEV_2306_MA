@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Cycle {
 	private int tours = 1; 
@@ -20,7 +21,7 @@ public class Cycle {
 		aquarium.start();
 		Scanner scanner = new Scanner(System.in);
 			while(tours <= 100) { // boucle sur 100 tours de jeu (environs 5 générations, du moins pour l'espérance de vie des poissons)
-				//TimeUnit.SECONDS.sleep(2); // timer, 2 secondes par tour
+				TimeUnit.SECONDS.sleep(2); // timer, 2 secondes par tour
 				if(tours == 25) {
 					// au tour 25 (arbitrairement choisi) deux fichiers .txt sont chargés, lus et traités
 					File loading = new File("C:\\Users\\amaurice\\Documents\\Git\\ABCDEV_2306_MA\\Objet\\Java\\src\\javaquarium\\loadAlgues.txt");
@@ -31,7 +32,7 @@ public class Cycle {
 					while(load.hasNextLine()) { // tant qu'il y a quelque chose à lire
 						data += load.nextLine() + " "; // c'est ajouté à une chaine de caractère
 					}
-					while(load2.hasNextLine()) { // idem our le second scanner
+					while(load2.hasNextLine()) { // idem pour le second scanner
 						data2 += load2.nextLine();
 					}
 					

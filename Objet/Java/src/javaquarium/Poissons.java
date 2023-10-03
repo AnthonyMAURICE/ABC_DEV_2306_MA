@@ -59,14 +59,7 @@ public  class Poissons {
 		this.pv += _pv;
 	}
 	
-	public void advanceAge() {
-		this.age++;
-		this.pv--;
-		if(this.isAlive) {
-			this.alive();
-		}	
-	}
-	
+
 	public boolean setGender() { 
 		if(this.race.equals("Bar")|| this.race.equals("Merou")) {
 			if(this.age > 10) {
@@ -76,6 +69,14 @@ public  class Poissons {
 			}
 		}
 		return this.female;
+	}
+	
+	public void advanceAge() {
+		this.age++;
+		this.pv--;
+		if(this.isAlive) {
+			this.alive();
+		}	
 	}
 	
 	public boolean alive(){

@@ -29,6 +29,10 @@ public class Algue {
 		}
 	}
 	
+	public void setPv(int _pv) {
+		this.pv += _pv;
+	}
+	
 	public void advanceAge() {
 		this.age++;
 		this.getExistence();
@@ -41,10 +45,4 @@ public class Algue {
 			this.aquarium.addAlgue(5);
 		}
 	}
-	
-	public void setPv(int _pv) {
-		this.pv += _pv;
-	}
-	
-	
 }

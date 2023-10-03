@@ -98,8 +98,9 @@ public class Aquarium {
 		this.addAlgue(10);
 	}
 	
-
+	/*
 	public void addPoissonManual() {
 		
 	}
+	*/
 }
