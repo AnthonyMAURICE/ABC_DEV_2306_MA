@@ -1,15 +1,29 @@
 === Tour 35: ===
-Kraken 2 : 9 pv 
-TerrorFish 6 : 7 pv 
-Kraken 3 : 5 pv 
-TerrorFish 8 : 5 pv 
-TerrorFish 6 : 3 pv 
-Lin 1 : 1 pv 
+TerrorFish 10 : 1 pv 
+Bob 12 : 5 pv 
+TerrorFish 7 : 1 pv 
+Bob 9 : 3 pv 
+Lin 1 : 2 pv 
+Bob 9 : 5 pv 
+Bob 9 : 5 pv 
+Bob 9 : 3 pv 
+Bob 5 : 1 pv 
+TerrorFish 8 : 2 pv 
+Anaclet 3 : 7 pv 
+Bob 7 : 2 pv 
+Bob 9 : 3 pv 
+Bob 9 : 3 pv 
+TerrorFish 10 : 3 pv 
+TerrorFish 10 : 4 pv 
+Bob 8 : 4 pv 
+Bob 5 : 4 pv 
+Bob 8 : 5 pv 
+Bob 9 : 5 pv 
+Bob 11 : 7 pv 
+Bob 9 : 6 pv 
+Bob 11 : 7 pv 
+Bob 9 : 7 pv 
+Bob 12 : 8 pv 
 Anaclet 3 : 9 pv 
-Evariste 1 : 9 pv 
-TerrorFish 6 : 6 pv 
-TerrorFish 7 : 7 pv 
-Anaclet 2 : 7 pv 
-TerrorFish 8 : 8 pv 
-Anaclet 3 : 9 pv 
-Il reste 0 algues
+Bob 11 : 9 pv 
+Il reste 30 algues
