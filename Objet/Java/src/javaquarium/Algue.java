@@ -3,7 +3,7 @@ package javaquarium;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Algue {
-	private int pv, age, flag;
+	private int pv, age;
 	private boolean exist = true;
 	private Aquarium aquarium;
 	
@@ -16,10 +16,6 @@ public class Algue {
 	
 	public int getPv() {
 		return this.pv;
-	}
-	
-	public int getFlag() {
-		return this.flag;
 	}
 	
 	public boolean getExistence() {

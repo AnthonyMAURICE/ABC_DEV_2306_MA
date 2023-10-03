@@ -3,6 +3,7 @@ package javaquarium;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Cycle {
@@ -32,28 +33,39 @@ public class Cycle {
 					Scanner load2 = new Scanner(loading2);
 					
 					while(load.hasNextLine()) {
-						data += load.nextLine();
+						data += load.nextLine() + " ";
 					}
 					while(load2.hasNextLine()) {
 						data2 += load2.nextLine();
 					}
 					
-					String[] split = data.replace("ans", "").replace("algues", "").split(" ");
-					String[] split2 = data2.replace(",", "").replace("ans", "").split(" ");
+					String[] split = data.split(" ");
+					ArrayList<Integer> algueLoad = new ArrayList<Integer>();
+					for(int i = 0; i < split.length; i++) {
+						if(!split[i].equals("algues") && !split[i].equals("ans")) {
+							algueLoad.add(Integer.parseInt(split[i]));
+							
+						}
+					}
 					
+					for(int i = 0; i < algueLoad.size()-1; i+=2) {
+						for(int j = 0; j < algueLoad.get(i); j++) {
+							Algue algue = new Algue(10, algueLoad.get(i+1), true, aquarium);
+							aquarium.getAlgues().add(algue);
+						}
+					}
+					
+					String[] split2 = data2.replace(",", "").replace("ans", "").split(" ");
+
 					for(int i = 0; i < split2.length; i+=3) {
 						Poissons poisson = new Poissons(split2[i], 1, 10, 0, true, true, split2[i+1], aquarium);
 						poisson.setGender();
 						aquarium.getPoissons().add(poisson);
 					}
-					
-
-					
+	
 					load.close();
 					load2.close();
-					
-					
-					
+
 				}
 				/*
 				if(aquarium.getPoissons().size()< 6) {
