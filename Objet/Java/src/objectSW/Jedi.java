@@ -13,10 +13,6 @@ public class Jedi extends Personnage{ // classe Jedi, qui est aussi parente de l
 	
 	
 	
-	public int getForce() {
-		return this.force;
-	}
-	
 	public void setIgnition() {
 		this.saber.setIgnited();
 	}

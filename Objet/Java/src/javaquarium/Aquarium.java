@@ -1,7 +1,6 @@
 package javaquarium;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Aquarium {
@@ -21,7 +20,7 @@ public class Aquarium {
 		return this.fishList;
 	}
 	
-	public String state() {
+	public String state() { // fonction qui retourne un état des lieux de l'aquarium, poissons et algues en vie
 		String state = "";
 		for(int l = 0; l < this.getPoissons().size(); l++) {
 			state += this.getPoissons().get(l).getName() + " " + this.getPoissons().get(l).getGeneration() + " : " + this.getPoissons().get(l).getPv() + " pv \n";
@@ -30,23 +29,15 @@ public class Aquarium {
 		return state;
 	}
 		
-	public void addAlgue(int _pv) {	
+	public void addAlgue(int _pv) {	// méthode d'ajout d'algue à la liste, si le nombre est inférieur à 30
 		if(this.nbeAlgues.size() < 30) {
 			Algue algue = new Algue(_pv, 0, true, this);
 			this.nbeAlgues.add(algue);
-		}else {
-			for(int i = 0; i < this.nbeAlgues.size(); i++) {
-				if(this.nbeAlgues.get(i).getExistence() == false) {
-					this.nbeAlgues.get(i).setPv(10);
-					this.nbeAlgues.get(i).getExistence();
-					this.nbeAlgues.add(this.nbeAlgues.get(i));
-				}
-			}
+			System.out.println("Une nouvelle algue est née");
 		}
-		System.out.println("Une nouvelle algue est née");
 	}
 	
-	public void removeAlgue() {
+	public void removeAlgue() { // méthode qui "enlève" de la liste les algues mortes
 		for(int i = 0; i < this.nbeAlgues.size(); i++) {
 			if(this.nbeAlgues.get(i).getExistence() == false) {
 				this.nbeAlgues.remove(i);
@@ -54,7 +45,7 @@ public class Aquarium {
 		}
 	}
 	
-	public void reproFish(String _name, int _generation, String _race, boolean _carnivore) {
+	public void reproFish(String _name, int _generation, String _race, boolean _carnivore) { // deuxième partie de la méthode de reproduction des poissons, pour les ajouter à la liste
 		int random = ThreadLocalRandom.current().nextInt(0, 1);
 		boolean fem = false;
 		if(random == 1 || _race.equals("Merou") || _race.equals("Bar")) {
@@ -66,7 +57,7 @@ public class Aquarium {
 		fishList.add(fish);	
 	}
 	
-	public void start() {
+	public void start() { // méthode initialisant l'aquarium avec des poissons et des algues
 		Poissons carnivore1 = new Poissons("Léviathan", 1, 10, 0, false, true, "Merou", this);
 		Poissons carnivore2 = new Poissons("Kraken", 1, 10, 0, true, true, "Thon", this);
 		Poissons carnivore3 = new Poissons("TerrorFish", 1, 10, 0, true,true, "Poisson-clown", this);
@@ -96,8 +87,7 @@ public class Aquarium {
 		this.addAlgue(10);
 		this.addAlgue(10);
 		this.addAlgue(10);
-	}
-	
+	}	
 	/*
 	public void addPoissonManual() {
 		

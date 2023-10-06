@@ -60,7 +60,7 @@ public  class Poissons {
 	}
 	
 
-	public boolean setGender() { 
+	public boolean setGender() { // méthode qui définit le genre des poissons hermaphrodites selon l'âge 
 		if(this.race.equals("Bar")|| this.race.equals("Merou")) {
 			if(this.age > 10) {
 				this.female = true;
@@ -71,15 +71,15 @@ public  class Poissons {
 		return this.female;
 	}
 	
-	public void advanceAge() {
+	public void advanceAge() { // méthode d'avancement de l'âge des poissons
 		this.age++;
 		this.pv--;
 		if(this.isAlive) {
-			this.alive();
+			this.alive(); // qui appelle celle qui détermine sa mort si trop âgé
 		}	
 	}
 	
-	public boolean alive(){
+	public boolean alive(){ // méthode qui détermine si le poisson est en vie, selon son âge et ses points de vie
 		if(this.pv > 0 && age < 20) {
 			return this.isAlive = true;
 		}else {
@@ -87,11 +87,11 @@ public  class Poissons {
 		}
 	}
 	
-	public void manger() {
+	public void manger() { // méthode dy cycle de restauration des poissons
 		
 		int menu = 0;
-		if(this.pv <= 5 && this.isAlive) {
-			if(this.carnivore) {
+		if(this.pv <= 5 && this.isAlive) { // déclenche le cycle de restauration si les points de vie sont inférieurs à 5 et s'il est vivant
+			if(this.carnivore) { // partie pour les carnivores
 				if(this.aquarium.getPoissons().size() > 1) {
 					menu = ThreadLocalRandom.current().nextInt(0, this.aquarium.getPoissons().size());
 				
@@ -108,7 +108,7 @@ public  class Poissons {
 						System.out.println(this.name + " " + this.generation+ " gagne 5 points de vie ! "+ (this.female? "Elle":"Il")+ " est à " + this.pv);
 					}
 				}	
-			}else {
+			}else { // partie pour les herbivores
 				if(this.aquarium.getAlgues().size() > 0) {
 					menu = ThreadLocalRandom.current().nextInt(0, this.aquarium.getAlgues().size());
 					this.aquarium.getAlgues().get(menu).setPv(-2);
@@ -122,7 +122,7 @@ public  class Poissons {
 		}
 	}
 	
-	public void reproduce() {
+	public void reproduce() { // méthode principale du cycle de reproduction des poissons, complêtée dans la classe Aquarium
 		String name = "";
 		int mate = ThreadLocalRandom.current().nextInt(0, this.aquarium.getPoissons().size());
 		if(this.age > 3 && this.aquarium.getPoissons().size()<30) {

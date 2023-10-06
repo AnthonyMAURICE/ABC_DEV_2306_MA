@@ -2,9 +2,11 @@ package objectSW;
 
 public class Mandalorian extends Personnage{
 	private Blaster weapon;
+	private int carburant;
 	public Mandalorian(String _n, int _x, int _y, int _v, Blaster _blaster, int _force, int _cA) {
 		super(_n, _x, _y, _v, _force, _cA);
 		this.weapon = _blaster;
+		this.carburant = _force;
 	}
 	
 	

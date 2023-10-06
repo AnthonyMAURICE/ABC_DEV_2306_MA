@@ -1,6 +1,6 @@
 package objectSW;
 
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class Personnage { // superclasse personnage de laquelle va découler Jedi, Sith et soldats
 	protected String nom;
@@ -37,6 +37,22 @@ public abstract class Personnage { // superclasse personnage de laquelle va déco
 		return this.pointVie;
 	}
 	
+	public int getForce() {
+		return this.force;
+	}
+	
+	public int getCa() {
+		return this.classeArmure;
+	}
+	
+	public boolean isAlive() {
+		if (this.pointVie > 0) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
 	public void setX(int _x) {
 		this.x = _x;
 	}
@@ -44,36 +60,39 @@ public abstract class Personnage { // superclasse personnage de laquelle va déco
 	public void setY(int _y) {
 		this.y = _y;
 	}
+		
+	public void heal() {
+		if(this.pointVie <= 90) {
+			this.pointVie = 100;
+		}else {
+			this.pointVie += 10;
+		}
+	}
+	
+	public void healMax() {
+		this.force = 100;
+		this.pointVie = 100;
+	}
 	
 	public void seDeplacer(int dx, int dy) {
 		this.x = (int) (this.x + dx*this.v);
 		this.y = (int) (this.y + dy*this.v);
 	}
 	
-	public void fight(Personnage _adversaire) {
-		int hp1 = this.pointVie;
-		int hp2 = _adversaire.pointVie;
-		int attack;
-		Random rand = new Random();
-		
-		while(hp1 > 0 && hp2 >0) {
-			attack = rand.nextInt(100) + 1;
-			if(attack >= _adversaire.classeArmure + _adversaire.getWeapon().getDeflect()) {
-				hp2 -= rand.nextInt(this.getWeapon().getDammage() + 1) ;
-			}
-			attack = rand.nextInt(100) + 1;
-			if(attack >= this.classeArmure + this.getWeapon().getDeflect()) {
-				hp1 -= rand.nextInt(_adversaire.getWeapon().getDammage() + 1);
-			}
-		}
-		
-		if(hp2 <= 0) {
-			System.out.println(this.nom + " a gagné");
+	public String attack(Personnage _first, Personnage _adversaire) {
+		String outcome = "";
+		int touch = ThreadLocalRandom.current().nextInt(1, 100);
+		if(touch >= _adversaire.getCa() + _adversaire.getWeapon().getDeflect()) {
+			_adversaire.pointVie -= _first.getWeapon().getDammage();
+			outcome = _first.getNom() + " attaque et inflige " + _first.getWeapon().getDammage() + " points de dégats !";
 		}else {
-			System.out.println(_adversaire.nom + " a gagné");
+			outcome = _first.getNom() + " a manqué son attaque !";
 		}
-		
+		return outcome;
 	}
+	
+	
+	
 	
 	protected abstract Weapons getWeapon();
 

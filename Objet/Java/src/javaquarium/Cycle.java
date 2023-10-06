@@ -7,22 +7,32 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+import javax.swing.SwingUtilities;
+
 public class Cycle {
-	private int tours = 1; 
+	private int tours = 1, nbeCycles; 
 	private String state, data = "", data2 = "";
 	private String traceLog = "";
 	
-	public Cycle() {
-		
+	public Cycle(int _nbeCycles) {
+		this.tours = tours;
+		this.nbeCycles = _nbeCycles;
 	}
 	
 	public void cycling() throws InterruptedException, IOException {
 		Aquarium aquarium = new Aquarium();
 		aquarium.start();
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				Intergraph userInterface = new Intergraph(aquarium.getAlgues(), aquarium.getPoissons());
+				userInterface.setVisible(true);
+			}
+		});
 		Scanner scanner = new Scanner(System.in);
-			while(tours <= 100) { // boucle sur 100 tours de jeu (environs 5 générations, du moins pour l'espérance de vie des poissons)
-				TimeUnit.SECONDS.sleep(2); // timer, 2 secondes par tour
-				if(tours == 25) {
+			//while(this.tours <= this.nbeCycles) { // boucle sur 100 tours de jeu (environs 5 générations, du moins pour l'espérance de vie des poissons)
+				//TimeUnit.SECONDS.sleep(2); // timer, 2 secondes par tour
+				System.out.println("===Tour " + this.tours+"===");
+				if(this.tours == 25 || this.tours == 60) {
 					// au tour 25 (arbitrairement choisi) deux fichiers .txt sont chargés, lus et traités
 					File loading = new File("C:\\Users\\amaurice\\Documents\\Git\\ABCDEV_2306_MA\\Objet\\Java\\src\\javaquarium\\loadAlgues.txt");
 					File loading2 = new File("C:\\Users\\amaurice\\Documents\\Git\\ABCDEV_2306_MA\\Objet\\Java\\src\\javaquarium\\loadFish.txt");
@@ -102,23 +112,25 @@ public class Cycle {
 						j--;
 					}
 					
-					if(tours == 35) { // "sauvegarde" du tour 35 dans un fichier .txt
+					if(this.tours == 35) { // "sauvegarde" du tour 35 dans un fichier .txt
 						FileWriter writer = new FileWriter("C:\\Users\\amaurice\\Documents\\Git\\ABCDEV_2306_MA\\Objet\\Java\\src\\javaquarium\\saveTurn35.txt");
-						writer.write("=== Tour " + tours + ": ===\n" + String.valueOf(aquarium.state()));
+						writer.write("=== Tour " + this.tours + ": ===\n" + String.valueOf(aquarium.state()));
 						writer.close();
 					}
 				}
 
-				traceLog += "=== Tour " + tours + ": ===\n" + String.valueOf(aquarium.state() + "\n"); // "sauvegarde" de chaque tour dans une variable
-				System.out.println("===Tour " + tours+"===");
-				tours++;
+				traceLog += "=== Tour " + this.tours + ": ===\n" + String.valueOf(aquarium.state() + "\n"); // "sauvegarde" de chaque tour dans une variable
+				
+				this.tours++;
 				state = aquarium.state();
 				System.out.println(state);
 				
-			}
+			//}
 			FileWriter log = new FileWriter("C:\\Users\\amaurice\\Documents\\Git\\ABCDEV_2306_MA\\Objet\\Java\\src\\javaquarium\\log.txt");
 			log.write(traceLog); // puis "écris" dans un log.txt
 			log.close();
 			scanner.close();	
+	
+	
 	}
 }
