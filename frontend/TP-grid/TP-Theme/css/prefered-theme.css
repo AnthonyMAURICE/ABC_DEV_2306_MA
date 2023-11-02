@@ -1,0 +1,67 @@
+@media (prefers-color-scheme: dark) {
+    .aside-ads, p, .aside-menu, .title, .main-container, .main-box{
+        background-color: rgb(40, 40, 40);
+    }
+    
+    .main-container{
+        background-color: #111111;
+    }
+    
+    .ad-text, .ad-title, .aside-menu > h2, li{
+        background-color: rgb(60, 60, 60);
+    }
+    
+    .header-title, h2, h3, .articles, .aside-ads{
+        color: #CCCCCC;
+    }
+
+    .btn{
+        background-color: #09bce0;
+    }
+
+    a{
+        color: #09bce0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    @media (prefers-color-scheme: dark){
+        li{
+            background-color: rgb(40, 40, 40);
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    p, .aside-ads, .aside-menu, .title, .main-container, .main-box{
+        background-color: lightgray;
+    }
+    
+    .main-container{
+        background-color: white;
+    }
+    
+    .ad-text, .aside-menu > h2, li, .ad-title{
+        background-color: darkgray;
+    }
+    
+    h2, h3, .articles, .aside-ads{
+        color: black;
+    }
+    
+    a, .ad-title{
+        color: blue;
+    }
+    
+    .btn{
+        background-color: blue;
+        color:#CCCCCC;
+    }
+    
+    .theme{
+        background-color: rgb(60, 60, 60);
+        color:#CCCCCC;
+    }
+
+}
+

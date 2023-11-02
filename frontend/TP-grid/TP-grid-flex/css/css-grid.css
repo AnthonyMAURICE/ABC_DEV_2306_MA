@@ -1,0 +1,50 @@
+.principal{
+    display: grid;
+    grid-template-areas: "one one one one"
+    "two three four four"
+    "two five five six"
+    "two seven eight nine"
+    "two ten ten ten";
+    height: 100%;
+    width: 100%;
+}
+
+#s1{
+    grid-area: one;
+}
+
+#s2{
+    grid-area: two;
+}
+
+#s3{
+    grid-area: three;
+}
+
+#s4{
+    grid-area: four;
+}
+
+#s5{
+    grid-area: five;
+}
+
+#s6{
+    grid-area: six;
+}
+
+#s7{
+    grid-area: seven;
+}
+
+#s8{
+    grid-area: eight;
+}
+
+#s9{
+    grid-area: nine;
+}
+
+#s10{
+    grid-area: ten;
+}

@@ -1,0 +1,147 @@
+{"datas": [
+    {"id": 0,
+    "titre": "Titre 1",
+    "image": "../img/1.jpg",
+    "alt":"L’Ile de Lombok vue depuis l’île de Trawangan (Iles Gili)",
+    "description": "L’Ile de Lombok vue depuis l’île de Trawangan (Iles Gili)"
+    },
+    {"id": 1,
+    "titre": "Titre 2",
+    "image": "../img/2.jpg",
+    "alt":"Le volcan Agung, Bali",
+    "description": "Le volcan Agung, Bali"
+    },
+    {"id": 2,
+    "titre": "Titre 3",
+    "image": "../img/3.jpg",
+    "alt":"Construction d’une embarcation traditionnelle, Lovina Beach, Bali",
+    "description": "Construction d’une embarcation traditionnelle, Lovina Beach, Bali"
+    },
+    {"id": 3,
+    "titre": "Titre 4",
+    "image": "../img/4.jpg",
+    "alt":"Pêcheur artisanal sur la côte balinaise",
+    "description": "Pêcheur artisanal sur la côte balinaise"
+    },
+    {"id": 4,
+    "titre": "Titre 5",
+    "image": "../img/5.jpg",
+    "alt":"Coucher de soleil sur la Mer de Bali",
+    "description": "Coucher de soleil sur la Mer de Bali"
+    },
+    {"id": 5,
+    "titre": "Titre 6",
+    "image": "../img/6.jpg",
+    "alt":"Echange spirituel au temple hindou « Pura Ulun Danu », Bali.",
+    "description": "Echange spirituel au temple hindou « Pura Ulun Danu », Bali."
+    },
+    {"id": 6,
+    "titre": "Titre 7",
+    "image": "../img/7.jpg",
+    "alt":"Scène de vie quotidienne (nourriture destinée aux cochons), Lovina Beach, Bali.",
+    "description": "Scène de vie quotidienne (nourriture destinée aux cochons), Lovina Beach, Bali."
+    },
+    {"id": 7,
+    "titre": "Titre 8",
+    "image": "../img/8.jpg",
+    "alt":"Epouillage en règle à la forêt des singes d’Ubud ; cet animal est sacré pour les Balinais",
+    "description": "Epouillage en règle à la forêt des singes d’Ubud ; cet animal est sacré pour les Balinais"
+    },
+    {"id": 8,
+    "titre": "Titre 9",
+    "image": "../img/9.jpg",
+    "alt":"Des singes en bordure de forêt d’Ubud, Bali",
+    "description": "Des singes en bordure de forêt d’Ubud, Bali"
+    },
+    {"id": 9,
+    "titre": "Titre 10",
+    "image": "../img/10.jpg",
+    "alt":"Arbre de la forêt des singes d’Ubud",
+    "description": "Arbre de la forêt des singes d’Ubud. Il s’agit de racines et non de lianes"
+    },
+    {"id": 10,
+    "titre": "Titre 11",
+    "image": "../img/11.jpg",
+    "alt":"Crépuscule au temple hindou de Luhur Uluwatu, Bali",
+    "description": "Crépuscule au temple hindou de Luhur Uluwatu, Bali"
+    },
+    {"id": 11,
+    "titre": "Titre 12",
+    "image": "../img/12.jpg",
+    "alt":"Nénuphars du jardin aquatique de Tirta Gangga, Bali",
+    "description": "Nénuphars du jardin aquatique de Tirta Gangga, Bali"
+    },
+    {"id": 12,
+    "titre": "Titre 13",
+    "image": "../img/13.jpg",
+    "alt":"Coq dans une cage en bambou.",
+    "description": "Coq dans une cage en bambou. Les combats de coqs sont interdits en dehors de l’enceinte des temples, mais les Balinais en sont friands et en organisent clandestinement"
+    },
+    {"id": 13,
+    "titre": "Titre 14",
+    "image": "../img/14.jpg",
+    "alt":"Rizières de Jatiluwih, Bali",
+    "description": "Rizières de Jatiluwih, Bali"
+    },
+    {"id": 14,
+    "titre": "Titre 15",
+    "image": "../img/15.jpg",
+    "alt":"Cratère du volcan Bromo. Ile de Java",
+    "description": "Cratère du volcan Bromo, vénéré par les Javanais hindous. Haut-lieu de pèlerinage et d’offrandes, un temple est édifié à ses pieds. Ile de Java"
+    },
+    {"id": 15,
+    "titre": "Titre 16",
+    "image": "../img/16.jpg",
+    "alt":"Massif du Tengger, Ile de Java",
+    "description": "Massif du Tengger, très fertile en raison des dépôts volcaniques. Les cultures se situent en bordure de la caldeira du Bromo. Une caldeira est une immense dépression formée consécutivement à l’effondrement de la chambre magmatique du volcan. Ile de Java"
+    },
+    {"id": 16,
+    "titre": "Titre 17",
+    "image": "../img/17.jpg",
+    "alt":"Le Mont Bromo et sa caldeira, île de Java.",
+    "description": "Le Mont Bromo et sa caldeira, avec, en arrière-plan, le Semeru, qui  « explose » toutes les 30 mn environ et qui culmine à 3 676 m, en faisant le point culminant de l’île de Java."
+    },
+    {"id": 17,
+    "titre": "Titre 18",
+    "image": "../img/18.jpg",
+    "alt":"Lac de cratère du volcan Batur, Bali",
+    "description": "Lac de cratère du volcan Batur, Bali"
+    },
+    {"id": 18,
+    "titre": "Titre 19",
+    "image": "../img/19.jpg",
+    "alt":"Cratère du Kawah Ijen, extrême ouest de Java.",
+    "description": "Cratère du Kawah Ijen et son lac acide, sans doute le plus acide au monde ; extrême ouest de Java"
+    },
+    {"id": 19,
+    "titre": "Titre 20",
+    "image": "../img/20.jpg",
+    "alt":"Vapeur d’eau émanant du cratère du volcan Bromo",
+    "description": "L’Ile de Lombok vue depuis l’île de Trawangan (Iles Gili)"
+    },
+    {"id": 20,
+    "titre": "Titre 21",
+    "image": "../img/21.jpg",
+    "alt":"Vapeur d’eau émanant du cratère du volcan Bromo",
+    "description": "Idem"
+    },
+    {"id": 21,
+    "titre": "Titre 22",
+    "image": "../img/22.jpg",
+    "alt":"Affleurement lors de l’ascension du Kawah Ijen, extrême ouest de Java.",
+    "description": "Affleurement lors de l’ascension du Kawah Ijen, à l’extrême ouest de Java."
+    },
+    {"id": 22,
+    "titre": "Titre 23",
+    "image": "../img/23.jpg",
+    "alt":"Chargement de plaques de soufre extraites du cratère du Kawah Ijen, extrême ouest de Java",
+    "description": "Chargement de plaques de soufre extraites du cratère du Kawah Ijen, à l’extrême ouest de Java. La production est remontée à dos d’hommes, sans équipement particulier et peut peser jusqu’à 80kg."
+    },
+    {"id": 23,
+    "titre": "Titre 24",
+    "image": "../img/24.jpg",
+    "alt":"Zone d’extraction du soufre",
+    "description": "Zone d’extraction du soufre, dont les gaz concentrés dans des conduits se liquéfient et ruissellent, prenant une couleur orangée (environ 120 degrés). La fumée est extrêmement toxique. Une fois refroidi, le soufre sera cassé à la barre à mine et chargé dans de simples paniers."
+    }
+    ]
+}

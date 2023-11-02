@@ -1,0 +1,64 @@
+/* style theme*/
+
+/* dark mode toggle */
+.dark-mode .aside-ads,.dark-mode p, .dark-mode .aside-menu, .dark-mode .title, .dark-mode .main-container, .dark-mode .main-box{
+    background-color: rgb(40, 40, 40);
+}
+
+.dark-mode .main-container{
+    background-color: #111111;
+}
+
+.dark-mode .ad-text, .dark-mode .ad-title, .dark-mode .aside-menu > h2, .dark-mode li{
+    background-color: rgb(60, 60, 60);
+}
+
+.dark-mode .header-title, .dark-mode h2, .dark-mode h3, .dark-mode .articles, .dark-mode .aside-ads{
+    color: #CCCCCC;
+}
+
+.dark-mode a{
+    color: #09bce0;
+}
+
+/* light mode toggle */
+
+.light-mode p, .light-mode .aside-ads, .light-mode .aside-menu, .light-mode .title, .light-mode .main-container, .light-mode .main-box, .light-mode ul{
+    background-color: lightgray;
+}
+
+.light-mode .main-container{
+    background-color: white;
+}
+
+.light-mode .ad-text, .light-mode .aside-menu > h2, .light-mode li, .light-mode .ad-title{
+    background-color: darkgray;
+}
+
+.light-mode h2, .light-mode h3,  .light-mode .articles, .light-mode .aside-ads{
+    color: black;
+}
+
+.light-mode a, .light-mode .ad-title{
+    color: blue;
+}
+
+.light-mode .btn{
+    background-color: blue;
+    color:#CCCCCC;
+}
+
+.light-mode .theme{
+    background-color: rgb(60, 60, 60);
+    color:#CCCCCC;
+}
+
+@media screen and (max-width: 850px) {
+    .dark-mode li{
+        background-color: rgb(40, 40, 40);
+    }
+
+    .light-mode li{
+        background-color: lightgray;
+    }
+}

@@ -1,0 +1,7 @@
+.principal{
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+}
+
+

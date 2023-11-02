@@ -1,0 +1,131 @@
+body{
+    display: grid;
+    grid-template-areas: "header header header header"
+    "nav articles articles articles"
+    "nav footer footer footer";
+    margin: 10px;
+    grid-auto-columns: 1fr;
+    height: 97vh;
+}
+
+header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+}
+
+h1{
+    grid-column: 1/5;
+    padding: 25px;
+}
+
+aside{
+    grid-column: 5/6;
+    padding: 25px;
+    font-weight: bold;
+}
+
+nav{
+    grid-area: nav;
+}
+
+main{
+    grid-area: articles;
+    padding-bottom: 25px;
+}
+
+article{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+h2{
+    width: 100%;
+    margin: 30px;
+    font-size: large;
+}
+
+section{
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+    width: 40%;
+    min-height: 180px;
+    border-radius: 10px;
+}
+
+h3{
+    margin: 20px 5px;
+    font-size: large;
+}
+
+p{
+    margin: 15px 5px;
+    text-align: justify;
+}
+
+footer{
+    grid-area: footer;
+    min-height: 50px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+h1, aside, nav, main, footer{
+    background-color: #BBCCFF;
+    margin: 5px;
+    font-size: large;
+    border-radius: 10px;
+}
+
+/* Media Querries */
+
+@media screen and (max-width: 768px) {
+    body{
+        grid-template-areas: "header"
+        "header"
+        "nav"
+        "articles"
+        "articles"
+        "articles"
+        "articles"
+        "footer"
+    }
+
+    header{
+        grid-template-rows: repeat(2, fr);
+    }
+
+    h1{
+        grid-column: 1/6;
+        grid-row: 1;
+    }
+
+    aside{
+        grid-column: 1/6;
+        grid-row: 2;
+    }
+
+    article{
+        padding-right: 0;
+        justify-content: center;
+    }
+
+    article h2{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 666px) {
+    article{
+        flex-flow: column;
+        align-items: center;
+    }
+
+    section{
+        width: 90%;
+    }
+}
